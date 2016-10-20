@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="css/materialize.css">
     <!--Animate css-->
     <link rel="stylesheet" href="css/animate/animate.min.css">
+    <link rel="stylesheet" href="css/mentes.css">
+    
     <style>
         #video {
             width: 100%;

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-09-15 00:38:44
+/* Smarty version 3.1.30, created on 2016-10-11 16:44:20
   from "C:\xampp\htdocs\mentes\view\principal\header.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_57d9d174ab7b60_58998091',
+  'unifunc' => 'content_57fcfac40074e8_43100459',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c0cc20284a76f3e96ef71fd04388e3d5eeccebca' => 
     array (
       0 => 'C:\\xampp\\htdocs\\mentes\\view\\principal\\header.tpl',
-      1 => 1473892688,
+      1 => 1476197031,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_57d9d174ab7b60_58998091 (Smarty_Internal_Template $_smarty_tpl) {
+function content_57fcfac40074e8_43100459 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -39,6 +39,8 @@ function content_57d9d174ab7b60_58998091 (Smarty_Internal_Template $_smarty_tpl)
     <link rel="stylesheet" href="css/materialize.css">
     <!--Animate css-->
     <link rel="stylesheet" href="css/animate/animate.min.css">
+    <link rel="stylesheet" href="css/mentes.css">
+    
     <style>
         #video {
             width: 100%;
@@ -47,5 +49,6 @@ function content_57d9d174ab7b60_58998091 (Smarty_Internal_Template $_smarty_tpl)
         }
     </style>
 </head>
-<body><?php }
+<body>
+<?php }
 }
