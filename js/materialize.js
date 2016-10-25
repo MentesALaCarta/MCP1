@@ -1,5 +1,5 @@
 $(".button-collapse").sideNav({
-    closeOnClick: true 
+    closeOnClick: true
 });
 $(".button-collapse").show();
 
@@ -21,87 +21,87 @@ $(".button-collapse").show();
 //Slider
 var pasar_slider;
  var pasar =  function(){
-    
+
          $('#slider-1').find('div').each(
-        
+
             function(index, value){
                 if($(this).hasClass('s_visible'))
                 {
                     $(this).removeClass('animated fadeIn s_visible');
-                    
+
                     if(index + 1 < slides )
                         {
                             $($('#slider-1').find('.s_element').get(index + 1)).addClass('s_visible animated fadeIn');
-                            
+
                         }else{
                             $($('#slider-1').find('.s_element').get(0)).addClass('s_visible animated fadeIn');
                         }
-                        
-                    
+
+
                     return false;
-                }    
-                
+                }
+
         });
-         
-             
+
+
     }
 
  //Slider 2
  var pasar_slider2;
  var pasar2 =  function(){
-    
+
          $('#slider-2').find('div').each(
-        
+
             function(index, value){
                 if($(this).hasClass('s_visible'))
                 {
                     $(this).removeClass('animated fadeIn s_visible');
-                    
+
                     if(index + 1 < slides2 )
                         {
                             $($('#slider-2').find('.s_element').get(index + 1)).addClass('s_visible animated fadeIn');
-                            
+
                         }else{
                             $($('#slider-2').find('.s_element').get(0)).addClass('s_visible animated fadeIn');
                         }
-                        
-                    
+
+
                     return false;
-                }    
-                
+                }
+
         });
-         
-             
+
+
     }
- 
+
  //Slider 3
  var pasar_slider3;
  var pasar3 =  function(){
-    
+
          $('#slider-3').find('div').each(
-        
+
             function(index, value){
                 if($(this).hasClass('s_visible'))
                 {
                     $(this).removeClass('animated fadeIn s_visible');
-                    
+
                     if(index + 1 < slides3 )
                         {
                             $($('#slider-3').find('.s_element').get(index + 1)).addClass('s_visible animated fadeIn');
-                            
+
                         }else{
                             $($('#slider-3').find('.s_element').get(0)).addClass('s_visible animated fadeIn');
                         }
-                        
-                    
+
+
                     return false;
-                }    
-                
+                }
+
         });
-         
-             
+
+
     }
- 
+
 $(document).ready(function(){
     $('.slider').slider({full_width: true});
     $('.carousel').carousel();
@@ -114,15 +114,15 @@ $(document).ready(function(){
     }, 3000);
 });
 
-    
 
-    
+
+
 /*$('#col-slider-1').hover(function(){
         clearInterval(pasar_slider);
     }, function(){
         pasar_slider = setInterval(pasar, 4000);
     });*/
-        
+
 $('#btn_siguiente').click(function(){
         pasar();
 
@@ -140,20 +140,20 @@ $('#btn_siguiente').click(function(){
             next = 1;
             console.log('Next es igual a ' + next);
         }*/
-        
-        
+
+
     }); //End Function btn_seiguiente Click
-    
+
 $('#btn_anterior').click(function(){
-        
-        
+
+
         $('#slider-1').find('div').each(
-        
+
             function(index, value){
                 if($(this).hasClass('s_visible'))
                 {
                     $(this).removeClass('animated fadeIn s_visible');
-                    
+
                     console.log(index);
                     if(index == 0)
                         {
@@ -163,30 +163,30 @@ $('#btn_anterior').click(function(){
                              $($('#slider-1').find('.s_element').get(index - 1)).addClass('s_visible animated fadeIn');
                         }
                            return false;
-                }    
-                
+                }
+
         });
-    
+
         clearInterval(pasar_slider);
-        
-        
-      
+
+
+
     });
-  
+
 
 /*End Slider*/
 
 
 
-    
 
-    
+
+
 /*$('#col-slider-1').hover(function(){
         clearInterval(pasar_slider);
     }, function(){
         pasar_slider = setInterval(pasar, 4000);
     });*/
-        
+
 $('#btn_siguiente_2').click(function(){
         pasar2();
 
@@ -204,20 +204,20 @@ $('#btn_siguiente_2').click(function(){
             next = 1;
             console.log('Next es igual a ' + next);
         }*/
-        
-        
+
+
     }); //End Function btn_seiguiente Click
-    
+
 $('#btn_anterior_2').click(function(){
-        
-        
+
+
         $('#slider-2').find('div').each(
-        
+
             function(index, value){
                 if($(this).hasClass('s_visible'))
                 {
                     $(this).removeClass('animated fadeIn s_visible');
-                    
+
                     console.log(index);
                     if(index == 0)
                         {
@@ -226,16 +226,16 @@ $('#btn_anterior_2').click(function(){
                              $($('#slider-2').find('.s_element').get(index - 1)).addClass('s_visible animated fadeIn');
                         }
                            return false;
-                }    
-                
+                }
+
         });
-    
+
         clearInterval(pasar_slider2);
-        
-        
-      
+
+
+
     });
-  
+
 
 /*End Slider*/
 
@@ -259,20 +259,20 @@ $('#btn_siguiente_3').click(function(){
             next = 1;
             console.log('Next es igual a ' + next);
         }*/
-        
-        
+
+
 }); //End Function btn_seiguiente Click
 
 $('#btn_anterior_3').click(function(){
-        
-        
+
+
         $('#slider-3').find('div').each(
-        
+
             function(index, value){
                 if($(this).hasClass('s_visible'))
                 {
                     $(this).removeClass('animated fadeIn s_visible');
-                    
+
                     console.log(index);
                     if(index == 0)
                         {
@@ -281,14 +281,14 @@ $('#btn_anterior_3').click(function(){
                              $($('#slider-3').find('.s_element').get(index - 1)).addClass('s_visible animated fadeIn');
                         }
                            return false;
-                }    
-                
+                }
+
         });
-    
+
         clearInterval(pasar_slider3);
-        
-        
-      
+
+
+
     });
 
 $(window).scroll(function(){
@@ -303,18 +303,18 @@ $(window).scroll(function(){
        $('#logo-principal').show();
        $('#logo-principal-2').hide();
    }
-    
+
    // Servicios Fijos
     var fijos = $('#section-innovafacil');
     var posi_fijo = fijos.position();
     var scrollVal = $(document).scrollTop();
-    
+
     if((scrollVal + 50) > posi_fijo.top){
        $('#services').show();
     }else{
         $('#services').hide();
     }
-    
+
 });
 
 $('.innovafacil').click(function(){
@@ -332,7 +332,7 @@ $('.proyecto_innovacion').click(function(){
     $('body, html').animate({
         scrollTop: posicion.top
     }, 1000);
-    
+
 });
 
 $('.conocimiento_carta').click(function(){
@@ -341,7 +341,7 @@ $('.conocimiento_carta').click(function(){
     $('body, html').animate({
         scrollTop: posicion.top
     }, 1000);
-   
+
 });
 
 $('.nuestras_mentes').click(function(){
@@ -350,13 +350,17 @@ $('.nuestras_mentes').click(function(){
     $('body, html').animate({
         scrollTop: posicion.top - 20
     }, 1000);
-   
+
 });
 
 $('.inicio').click(function(){
     $('body, html').animate({
         scrollTop: 0
     }, 1000);
-   
+
 });
 
+
+$('#registrar').click(function(){
+  alert('registrar');
+});

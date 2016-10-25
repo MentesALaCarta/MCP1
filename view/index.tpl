@@ -53,11 +53,17 @@
                      </article>
                  </section>
              </div>
+             <div class="col l12 center">
+               <h6>¿Quieres ser una mente a la carta?</h6>
+               <a href="?view=registrar">
+                 <button type="button" name="button" class="btn btn-primary waves-effect grey waves-light" style="font-size: 0.7em !important; padding-top: 1px !important; ">Registrarme</button>
+               </a>
+             </div>
          </div>
      </div>
 </section>
 
-<div id="banner-home" style="position: relative;">
+<div id="banner-home" style="position: relative; margin-top: 2em;">
   <div class="img-nube"></div>
    <div class="container">
      <!--Mentes a la carta-->
@@ -1047,3 +1053,4 @@
 
 <div class="spacing-1"></div>
 {include file="view/principal/footer.tpl"}
+{include file="view/principal/script.tpl"}

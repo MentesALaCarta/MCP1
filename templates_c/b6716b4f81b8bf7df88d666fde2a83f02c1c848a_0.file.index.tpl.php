@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-10-11 17:05:09
+/* Smarty version 3.1.30, created on 2016-10-25 16:46:51
   from "C:\xampp\htdocs\mentes\view\index.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_57fcffa53fa956_34031451',
+  'unifunc' => 'content_580f705ba180e1_16388684',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b6716b4f81b8bf7df88d666fde2a83f02c1c848a' => 
     array (
       0 => 'C:\\xampp\\htdocs\\mentes\\view\\index.tpl',
-      1 => 1476198308,
+      1 => 1477406752,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:view/principal/footer.tpl' => 1,
   ),
 ),false)) {
-function content_57fcffa53fa956_34031451 (Smarty_Internal_Template $_smarty_tpl) {
+function content_580f705ba180e1_16388684 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -83,11 +83,17 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
                      </article>
                  </section>
              </div>
+             <div class="col l12 center">
+               <h6>¿Quieres ser una mente a la carta?</h6>
+               <a href="?view=registrar">
+                 <button type="button" name="button" class="btn btn-primary waves-effect grey waves-light" style="font-size: 0.7em !important; padding-top: 1px !important; ">Registrarme</button>
+               </a>
+             </div>
          </div>
      </div>
 </section>
 
-<div id="banner-home" style="position: relative;">
+<div id="banner-home" style="position: relative; margin-top: 2em;">
   <div class="img-nube"></div>
    <div class="container">
      <!--Mentes a la carta-->

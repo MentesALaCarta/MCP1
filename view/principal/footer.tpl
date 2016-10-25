@@ -54,7 +54,7 @@
                   </li>
                 </ul>
               </div>
-              
+
               <div class="col s12 l4">
                   <h5 class="white-text font-300 footer-title">Contáctanos</h5>
                   <ul class="size-descripcion-footer font-300">
@@ -82,9 +82,3 @@
             </div>
           </div>
         </footer>
-
-    <script  src="js/jquery.js"></script>
-    <script  src="js/materialize.min.js"></script>
-    <script async src="js/materialize.js"></script>
-</body>
-</html>
