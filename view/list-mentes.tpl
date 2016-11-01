@@ -4,7 +4,7 @@
 <section class="row">
    <div class="container">
     <article class="col s12 center">
-        <h3 class="grey-text text-darken-3 title-home">Mentes a la carta</h3>
+        <h3 class="grey-text text-darken-3 title-home">Nuestras mentes a la carta</h3>
     </article>
 
 

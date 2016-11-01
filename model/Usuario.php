@@ -201,6 +201,7 @@
     {
       parent::conectar();
       parent::query('delete from brain where usuario_id="'.$_SESSION['id'].'"');
+
       $consulta = parent::query('insert into brain(descripcion, usuario_id) values'.$datos.'');
       if($consulta){
         parent::query('update fire_step set step=4 where usuario_id="'.$_SESSION['id'].'"');
@@ -291,6 +292,25 @@
         </tr>
         ';
       }
+    }
+
+    public function getAptitudes()
+    {
+      parent::conectar();
+      $datos = array();
+      $consulta = parent::query('select DISTINCT(descripcion) from habilidades');
+      while($row = mysqli_fetch_array($consulta)){
+        $datos[] = $row['descripcion'];
+      }
+      echo json_encode($datos);
+      parent::cerrar();
+    }
+
+    public function new_step($paso)
+    {
+      parent::conectar();
+      parent::query('update fire_step set step="'.$paso.'" where usuario_id="'.$_SESSION['id'].'"');
+      parent::cerrar();
     }
 
   }

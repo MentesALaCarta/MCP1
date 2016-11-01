@@ -165,7 +165,7 @@
 
     <div class="row">
       <div class="col s12 m3 offset-m2 ">
-        <a id="add_new_experience" class="hover">Agregar otra experiencia</a>
+        <a id="add_new_experience" class="hover" style="color: #EBA820 !important;">Agregar otra experiencia</a>
       </div>
     </div>
 

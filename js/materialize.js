@@ -442,20 +442,23 @@ $(document).on('click', '#step3_previous', function(){
   });
 });
 
+$(document).on('click', '#step4_previous', function(){
+  $.ajax({
+    method: 'post',
+    url: 'controller/user/step4_previous.php',
+    success: function(answer){
+      location.reload();
+    }
+  });
+});
+
 
 $(document).on('click', '#step2', function(){
-  var des = $('#textarea').val();
   $.ajax({
     method: 'POST',
     url: 'controller/user/step2.php',
-    data: {des: des},
     success: function(answer){
-      if(answer == 'error_1'){
-        swal('', 'Por favor ingresa tus aptitudes', 'warning');
-      }else{
-
         location.reload();
-      }
     }
   });
 });
@@ -474,35 +477,23 @@ $(document).on('click', '.area', function(){
 $(document).on('click', '#step3', function(){
 
   if($('#item1').hasClass('area_active')){
-    $('#services1').val('Ser consultado o entrevistado');
+    $('#services1').val('Proyectos innovadores');
   }
 
   if($('#item2').hasClass('area_active')){
-    $('#services2').val('Participar en din&aacutemicas grupales');
+    $('#services2').val('Mentoring');
   }
 
   if($('#item3').hasClass('area_active')){
-    $('#services3').val('Generar contenido escrito');
+    $('#services3').val('Asesoramiento');
   }
 
   if($('#item4').hasClass('area_active')){
-    $('#services4').val('Impartir formaci&oacuten');
+    $('#services4').val('Formaci&oacuten');
   }
 
   if($('#item5').hasClass('area_active')){
-    $('#services5').val('Afrontar retos de innovaci&oacuten');
-  }
-
-  if($('#item6').hasClass('area_active')){
-    $('#services6').val('Proponer proyectos innovadores');
-  }
-
-  if($('#item7').hasClass('area_active')){
-    $('#services7').val('Participar en proyectos innovadores');
-  }
-
-  if($('#item8').hasClass('area_active')){
-    $('#services8').val('Apadrinar proyectos');
+    $('#services5').val('Contenidos');
   }
 
   $.ajax({
@@ -510,7 +501,11 @@ $(document).on('click', '#step3', function(){
     url: 'controller/user/step3.php',
     data: $('#form_services').serialize(),
     success: function(answer){
-      location.reload();
+      if(answer == 'error_1'){
+        swal('', 'Por favor selecciona almenos una opción', 'warning');
+      }else{
+        location.reload();
+      }
     }
   });
 });
@@ -530,11 +525,11 @@ $(document).on('click', '#step4', function(){
     contentType: false,
     processData: false,
     success: function(answer){
-      if(answer == 'error_1'){
-        swal('', 'Por favor ingresa todos los campos', 'warning');
-      }else if(answer == 'error_2'){
+      console.log(answer);
+      if(answer == 'error_2'){
         swal('', 'Por favor selecciona una imagen', 'error');
       }else{
+
         swal({
           title: 'Gracias',
           text: 'Te has registrado satisfactoriamente en Mentes a la carta, pronto nos contactaremos contigo',

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-01 18:39:49
+/* Smarty version 3.1.30, created on 2016-11-01 19:37:11
   from "C:\xampp\htdocs\mentes\view\principal\header.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5818d36555ab80_79921260',
+  'unifunc' => 'content_5818e0d7f31145_24211023',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c0cc20284a76f3e96ef71fd04388e3d5eeccebca' => 
     array (
       0 => 'C:\\xampp\\htdocs\\mentes\\view\\principal\\header.tpl',
-      1 => 1478021907,
+      1 => 1478025429,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5818d36555ab80_79921260 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5818e0d7f31145_24211023 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -49,6 +49,10 @@ function content_5818d36555ab80_79921260 (Smarty_Internal_Template $_smarty_tpl)
     <?php echo '<script'; ?>
  type="text/javascript" src="js/sweetalert.min.js"><?php echo '</script'; ?>
 >
+    <?php echo '<script'; ?>
+ src="js/jquery-ui.js"><?php echo '</script'; ?>
+>
+    <link rel="stylesheet" href="css/jquery-ui.css">
 
     <style>
         #video {

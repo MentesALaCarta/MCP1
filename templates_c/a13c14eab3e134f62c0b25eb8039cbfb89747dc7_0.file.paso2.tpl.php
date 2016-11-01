@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-01 18:42:05
+/* Smarty version 3.1.30, created on 2016-11-01 20:21:32
   from "C:\xampp\htdocs\mentes\view\wits\paso2.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5818d3ed3a94f2_38695590',
+  'unifunc' => 'content_5818eb3c1c0351_81206764',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a13c14eab3e134f62c0b25eb8039cbfb89747dc7' => 
     array (
       0 => 'C:\\xampp\\htdocs\\mentes\\view\\wits\\paso2.tpl',
-      1 => 1478022068,
+      1 => 1478027880,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:view/principal/script.tpl' => 1,
   ),
 ),false)) {
-function content_5818d3ed3a94f2_38695590 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5818eb3c1c0351_81206764 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -69,10 +69,8 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
 <div class="spacing-2"></div>
 <div class="row">
   <div class="input-field col s6 m3 offset-m3">
-    <form id="formulario_prueba" action="#">
       <input id="aptitud" value="" type="text" class="validate">
       <label for="aptitud">Aptitud</label>
-    </form>
   </div>
   <div class="col s6 m3">
     <div class="spacing-1"></div>
@@ -127,6 +125,43 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
     </button>
   </div>
 </div>
+
+<?php echo '<script'; ?>
+>
+// var availableTags = [
+// "ActionScript",
+// "AppleScript",
+// "Asp",
+// "BASIC",
+// "C",
+// "C++",
+// "Clojure",
+// "COBOL",
+// "ColdFusion",
+// "Erlang",
+// "Fortran",
+// "Groovy",
+// "Haskell",
+// "Java",
+// "JavaScript",
+// "Lisp",
+// "Perl",
+// "PHP",
+// "Python",
+// "Ruby",
+// "Scala",
+// "Scheme"
+// ];
+$(document).ready(function(){
+
+  $("#autocomplete").autocomplete({
+    source: "controller/user/traerAptitud.php",
+    minLength: 2,//search after two characters
+  });
+
+});
+<?php echo '</script'; ?>
+>
 
 <?php $_smarty_tpl->_subTemplateRender("file:view/principal/cerrarSesion.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
