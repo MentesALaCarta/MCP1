@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-09-15 20:26:37
+/* Smarty version 3.1.30, created on 2016-10-25 19:13:59
   from "C:\xampp\htdocs\mentes\view\principal\footer.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_57dae7dd7529c6_94604292',
+  'unifunc' => 'content_580f92d78b3019_45668580',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6f5b80ba97e4aabb2a1fa26ba46e025825b6cfd3' => 
     array (
       0 => 'C:\\xampp\\htdocs\\mentes\\view\\principal\\footer.tpl',
-      1 => 1473963957,
+      1 => 1477407895,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_57dae7dd7529c6_94604292 (Smarty_Internal_Template $_smarty_tpl) {
+function content_580f92d78b3019_45668580 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
 <footer class="page-footer grey darken-3">
@@ -78,7 +78,7 @@ function content_57dae7dd7529c6_94604292 (Smarty_Internal_Template $_smarty_tpl)
                   </li>
                 </ul>
               </div>
-              
+
               <div class="col s12 l4">
                   <h5 class="white-text font-300 footer-title">Contáctanos</h5>
                   <ul class="size-descripcion-footer font-300">
@@ -106,16 +106,5 @@ function content_57dae7dd7529c6_94604292 (Smarty_Internal_Template $_smarty_tpl)
             </div>
           </div>
         </footer>
-
-    <?php echo '<script'; ?>
-  src="js/jquery.js"><?php echo '</script'; ?>
->
-    <?php echo '<script'; ?>
-  src="js/materialize.min.js"><?php echo '</script'; ?>
->
-    <?php echo '<script'; ?>
- async src="js/materialize.js"><?php echo '</script'; ?>
->
-</body>
-</html><?php }
+<?php }
 }

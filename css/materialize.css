@@ -20,15 +20,15 @@
         text-transform: uppercase;
         font-family: gobold;
     }
-    
+
     .home-2{
-        transform: translateY(25%); position: absolute; 
+        transform: translateY(25%); position: absolute;
     }
 }
 
 /*Escritorio grande*/
 @media only screen and (max-width: 1500px) {
-   
+
 }
 
 
@@ -42,7 +42,7 @@
 
 /*Acercandose a escritorio*/
 @media only screen and (max-width: 800px) {
-       
+
 }
 
 /*En Celulares pequeños*/
@@ -51,38 +51,38 @@
         padding-top: 4em;
         padding-bottom: 0px;
     }
-    
+
     .slider-1{
         height: 200px !important;
     }
-    
+
     .slider-2{
         height: 200px !important;
     }
-    
+
     .slider-3{
         height: 200px !important;
     }
-    
+
     .icon-transform {
         transform: translateY(35%);
     }
-    
+
     .title-home {
         color: white;
         font-size: 1.3em;
         text-transform: uppercase;
         font-family: gobold;
     }
-    
+
     .home-2{
-        transform: translateY(0%); position: absolute; 
+        transform: translateY(0%); position: absolute;
     }
 
 }
 
 #banner-home {
-    
+
       /* Ubicación de la imagen */
 	  background-image: url(../images/home-banner.png);
 	  /* Nos aseguramos que la imagen de fondo este centrada vertical y
@@ -93,7 +93,7 @@
 	  /* La imagen de fondo está fija en el viewport, de modo que no se mueva cuando
 	     la altura del contenido supere la altura de la imagen. */
       /*Nuestra propiedad mágica*/
-      /*background-attachment: fixed;*/ 
+      /*background-attachment: fixed;*/
 	  background-size: cover;
 	  /* Fijamos un color de fondo para que se muestre mientras se está
 	    cargando la imagen de fondo o si hay problemas para cargarla  */
@@ -122,11 +122,11 @@
 .padding-spacing {
     padding-top: 4em !important;
     padding-bottom: 10em !important;
-} 
+}
 
 
 .no-margin {
-    margin: 0px !important; 
+    margin: 0px !important;
 }
 
 .no-padding-1 {
@@ -145,11 +145,15 @@
     margin-top: 2em;
 }
 
+.spacing-3 {
+    margin-top: 5em;
+}
+
 .btn-service {
     background-color: white;
     border-radius: 20px;
     padding: 10px 25px;
-    width: 100%;   
+    width: 100%;
 }
 
 .service-1 {
@@ -203,7 +207,7 @@
 .service-3 {
     border: 1px solid #D69F4A;
     color: #D69F4A;
-    transition: 0.5s; 
+    transition: 0.5s;
 }
 
 .service-3:hover{
@@ -226,7 +230,7 @@
 
 .b-section-1 {
    background-color: #F9FAFB;
-   position: relative; 
+   position: relative;
    overflow: hidden;
 }
 
@@ -281,7 +285,7 @@
 }
 
 .bg-innova {
-    
+
 }
 
 .text-accent {
@@ -289,7 +293,7 @@
 }
 
 .section-title {
-    font-size: 2em; 
+    font-size: 2em;
     font-family: gobolds;
 }
 
@@ -312,7 +316,7 @@
 }
 
 .text-testimonio-orange {
-    color: #323232 !important; 
+    color: #323232 !important;
     font-style: italic;
 }
 
@@ -384,22 +388,22 @@
 .btn-slide-orange {
     color: #D69F18;
     font-size: 2em;
-    margin-top: 0.5em;   
+    margin-top: 0.5em;
 }
 
 
 
 .img-circle {
-    border-radius: 50% !important;       
+    border-radius: 50% !important;
 }
 
 .bordes-imagen {
     padding: 15px 20px 15px 20px;
-    background-color: #F7F8FA;   
+    background-color: #F7F8FA;
 }
 
 .descripcion {
-    padding-top: 5px !important; 
+    padding-top: 5px !important;
 }
 
 .spacing-icon {
@@ -411,7 +415,7 @@
     padding: 0px;
     margin-top: 5px;
     font-size: 1.1em !important;
-   
+
 }
 
 .font-400 {
@@ -475,13 +479,13 @@
 
 .titulo {
     font-size: 2em !important;
-   margin-bottom: 0px !important; 
+   margin-bottom: 0px !important;
 }
 
 
 
 .spacing-img-3 {
-    height: 2em; 
+    height: 2em;
     padding-top: 12em;
     padding-bottom: 12em;
 }
@@ -494,7 +498,7 @@
 
 #section-proyectos_innovacion {
   background-color: #D69F4A;
-    
+
 }
 
 #section-conocimiento_carta {
@@ -562,7 +566,7 @@
 
 
 .translate {
-    
+
 }
 
 .mentes {
@@ -709,7 +713,7 @@ margin-top: 0.5em;
 .texto-pru {
     font-weight: 300;
     color: gray;
-    font-size: 1.3em;   
+    font-size: 1.3em;
 }
 
 .re-size {
@@ -739,7 +743,7 @@ margin-top: 0.5em;
 }
 
 .parrafo-home {
-    color: white; 
+    color: white;
     font-size: 1.3em;
     font-weight: 300;
 }

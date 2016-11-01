@@ -362,5 +362,250 @@ $('.inicio').click(function(){
 
 
 $('#registrar').click(function(){
-  alert('registrar');
+
+  // Lectura de variables
+  var nombres = $('#nombres').val();
+  var apellidos = $('#apellidos').val();
+  var email = $('#email').val();
+  var clave = $('#clave').val();
+
+  $.ajax({
+    method: 'POST',
+    url: 'controller/user/registrar.php',
+    data: {nombres: nombres, apellidos: apellidos, email: email, clave: clave},
+    success: function(respuesta){
+
+      if(respuesta == 'error_1'){
+        swal('', 'Por favor ingresa todos los campos', 'warning');
+      }else if(respuesta == 'error_2'){
+        swal('', 'El correo electrónico que ingresaste ya se encuentra registrado', 'warning');
+      }else{
+        window.location.href=respuesta;
+      }
+
+    }
+  });
+});
+
+
+$(document).on('click', '#step1', function(){
+
+  $.ajax({
+    method: 'POST',
+    url: 'controller/user/step1.php',
+    data: $('#step1_form').serialize(),
+    success: function(answer){
+        location.reload();
+
+    }
+  });
+
+});
+
+var contador = 0;
+$(document).on('click', '#add_new_experience', function(){
+  contador++;
+  $.ajax({
+    method: 'post',
+    url: 'controller/user/add_item_experience.php',
+    data: {contador: contador},
+    success: function(answer){
+      $('#eliminar_1').show();
+      $('#experience').append(answer);
+    }
+  });
+});
+
+$(document).on('click', '.delete_experience', function(){
+    contador--;
+    var id = $(this).attr('id');
+    $('#experience_item'+id).remove();
+});
+
+$(document).on('click', '#step2_previous', function(){
+  $.ajax({
+    method: 'post',
+    url: 'controller/user/step2_previous.php',
+    success: function(answer){
+      location.reload();
+    }
+  });
+});
+
+$(document).on('click', '#step3_previous', function(){
+  $.ajax({
+    method: 'post',
+    url: 'controller/user/step3_previous.php',
+    success: function(answer){
+      location.reload();
+    }
+  });
+});
+
+
+$(document).on('click', '#step2', function(){
+  var des = $('#textarea').val();
+  $.ajax({
+    method: 'POST',
+    url: 'controller/user/step2.php',
+    data: {des: des},
+    success: function(answer){
+      if(answer == 'error_1'){
+        swal('', 'Por favor ingresa tus aptitudes', 'warning');
+      }else{
+
+        location.reload();
+      }
+    }
+  });
+});
+
+
+$(document).on('click', '.area', function(){
+  var id = $(this).attr('id');
+  if($('#'+id).hasClass('area_active')){
+    $('#'+id).removeClass('area_active');
+  }else{
+    $('#'+id).addClass('area_active');
+  }
+});
+
+
+$(document).on('click', '#step3', function(){
+
+  if($('#item1').hasClass('area_active')){
+    $('#services1').val('Ser consultado o entrevistado');
+  }
+
+  if($('#item2').hasClass('area_active')){
+    $('#services2').val('Participar en din&aacutemicas grupales');
+  }
+
+  if($('#item3').hasClass('area_active')){
+    $('#services3').val('Generar contenido escrito');
+  }
+
+  if($('#item4').hasClass('area_active')){
+    $('#services4').val('Impartir formaci&oacuten');
+  }
+
+  if($('#item5').hasClass('area_active')){
+    $('#services5').val('Afrontar retos de innovaci&oacuten');
+  }
+
+  if($('#item6').hasClass('area_active')){
+    $('#services6').val('Proponer proyectos innovadores');
+  }
+
+  if($('#item7').hasClass('area_active')){
+    $('#services7').val('Participar en proyectos innovadores');
+  }
+
+  if($('#item8').hasClass('area_active')){
+    $('#services8').val('Apadrinar proyectos');
+  }
+
+  $.ajax({
+    method: 'POST',
+    url: 'controller/user/step3.php',
+    data: $('#form_services').serialize(),
+    success: function(answer){
+      location.reload();
+    }
+  });
+});
+
+$(document).on('click', '#close-sesion', function(){
+  window.location.href= "?view=index";
+});
+
+
+$(document).on('click', '#step4', function(){
+  var formData = new FormData(document.getElementById("form4"));
+  $.ajax({
+    method: 'POST',
+    url: 'controller/user/step4.php',
+    data: formData,
+    dataType: "html",
+    contentType: false,
+    processData: false,
+    success: function(answer){
+      if(answer == 'error_1'){
+        swal('', 'Por favor ingresa todos los campos', 'warning');
+      }else if(answer == 'error_2'){
+        swal('', 'Por favor selecciona una imagen', 'error');
+      }else{
+        swal({
+          title: 'Gracias',
+          text: 'Te has registrado satisfactoriamente en Mentes a la carta, pronto nos contactaremos contigo',
+          type: 'success'
+        }, function(){
+          window.location.href="?view=index";
+        });
+      }
+    }
+  });
+});
+
+function setAptitud(){
+  var aptitud = $('#aptitud').val();
+
+  $.ajax({
+    method: 'POST',
+    url: 'controller/user/validarDes.php',
+    data: {des: aptitud},
+    success: function(answer) {
+      if(answer == 'error_1'){
+        swal('', 'Por favor ingresa una aptitud', 'warning');
+      }else{
+
+        $.ajax({
+          method: 'POST',
+          url: 'controller/user/setAptitud.php',
+          data: {aptitud: aptitud},
+          beforeSend: function(){
+            $('#getAptitudes').html('<div class="container" id="load"><div class="col s2 offset-s7"><img src="images/perfiles/load.gif" alt="load aptitud" width="100%;"></div></div>');
+          },
+          success: function(answer){
+            $('#load').remove();
+            $('#aptitud').val('')
+            $('#getAptitudes').html(answer);
+          }
+        });
+
+      }
+    }
+  });
+
+
+
+}
+
+
+$('#add_new_aptitud').click(function(){
+  setAptitud();
+});
+
+
+$('#aptitud').keyup(function(e){
+  if(e.which == 13){
+    setAptitud();
+  }
+});
+
+
+$(document).on('click', '.eliminar_habilidad', function(){
+  var id = $(this).attr('id');
+  $.ajax({
+    method: 'POST',
+    url: 'controller/user/deleteHabilidad.php',
+    data: {id: id},
+    beforeSend: function(){
+      $('#getAptitudes').html('<div class="container" id="load"><div class="col s2 offset-s7"><img src="images/perfiles/load.gif" alt="load aptitud" width="100%;"></div></div>');
+    },
+    success: function(answer) {
+      $('#load').remove();
+      $('#getAptitudes').html(answer);
+    }
+  });
 });

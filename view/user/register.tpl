@@ -40,6 +40,10 @@
     </div>
 
     <div class="col s12 center-align">
+      <span class="grey-text text-darken-1">Al inscribirte aceptas <a href="#">los términos y condiciones de servicio</a></span>
+    </div>
+
+    <div class="col s12 center-align">
       <div class="spacing-1"></div>
       <button id="registrar" class="btn waves-effect waves-light orange" type="button"  name="button">¡Sigamos!</button>
     </div>
@@ -48,6 +52,5 @@
   </div>
 
 </div>
-
 
 {include file="view/principal/script.tpl"}

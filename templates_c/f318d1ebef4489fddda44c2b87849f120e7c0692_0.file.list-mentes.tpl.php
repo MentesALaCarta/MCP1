@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-10-20 23:48:11
+/* Smarty version 3.1.30, created on 2016-11-01 15:19:32
   from "C:\xampp\htdocs\mentes\view\list-mentes.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58093b9b669781_72314128',
+  'unifunc' => 'content_5818a474ef7427_12980779',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f318d1ebef4489fddda44c2b87849f120e7c0692' => 
     array (
       0 => 'C:\\xampp\\htdocs\\mentes\\view\\list-mentes.tpl',
-      1 => 1476999285,
+      1 => 1477407637,
       2 => 'file',
     ),
   ),
@@ -20,9 +20,10 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
     'file:view/principal/header.tpl' => 1,
     'file:view/principal/footer.tpl' => 1,
+    'file:view/principal/script.tpl' => 1,
   ),
 ),false)) {
-function content_58093b9b669781_72314128 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5818a474ef7427_12980779 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -1841,7 +1842,7 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
                 </div>
                 <div class="card-content descripcion" style="padding-bottom: 4px;">
                   <span class="activator grey-text text-darken-4">
-                      <span class="nombre grey-text text-darken-3 font-400">Diego_Boado</span>
+                      <span class="nombre grey-text text-darken-3 font-400">Diego Boado</span>
                       <i class="fa fa-info-circle hover-icon right accent-orange" style="font-size: 1.5em;" aria-hidden="true"></i>
                       <br class="hide-on-med-up">
                       <span class="grey-text">Finanzas <br>Colombia-Cali</span>
@@ -1861,6 +1862,9 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
 </section>
 
 <?php $_smarty_tpl->_subTemplateRender("file:view/principal/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+
+<?php $_smarty_tpl->_subTemplateRender("file:view/principal/script.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
 <?php }

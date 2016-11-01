@@ -2,30 +2,60 @@
   cursor: pointer;
 }
 
+.area{
+  width: 100%;
+  height: 210px;
+  padding-top: 2.5em;
+  border: 1px solid #EBA820;
+  color: #D1D2D3;
+  transition: 0.5s;
+}
+
+
+.accent-grey{
+  color: #929497;
+}
+
+.area:hover{
+  background-color: #EBA820;
+  color: white;
+  transition: 0.5s;
+}
+
+.area_active{
+    background-color: #EBA820;
+    color: white;
+    transition: 0.5s;
+}
+
 /* label color */
   .input-field label {
     color: #424242;
   }
   /* label focus color */
   .input-field input[type=text]:focus + label,
-  .input-field input[type=password]:focus + label{
+  .input-field input[type=password]:focus + label,
+  #textarea:focus + label{
     color: #424242;
   }
   /* label underline focus color */
   .input-field input[type=text]:focus,
-  .input-field input[type=password]:focus {
+  .input-field input[type=password]:focus,
+  #textarea:focus {
     border-bottom: 1px solid #424242;
     box-shadow: 0 1px 0 0 #424242;
   }
   /* valid color */
   .input-field input[type=text].valid,
-  .input-field input[type=text].valid {
+  .input-field input[type=text].valid,
+  #textarea.valid {
     border-bottom: 1px solid #424242;
     box-shadow: 0 1px 0 0 #424242;
   }
   /* invalid color */
   .input-field input[type=text].invalid,
-  .input-field input[type=text].invalid {
+  .input-field input[type=text].invalid,
+  #textarea.invalid {
     border-bottom: 1px solid #424242;
     box-shadow: 0 1px 0 0 #424242;
   }
@@ -33,3 +63,68 @@
   .input-field .prefix.active {
     color: #424242;
   }
+
+
+
+/* Stylos del progress bar pasos */
+
+  .progressbar {
+      counter-reset: step;
+  }
+  .progressbar li {
+      list-style-type: none;
+      width: 25%;
+      float: left;
+      font-size: 12px;
+      position: relative;
+      text-align: center;
+      text-transform: uppercase;
+      color: #7d7d7d;
+  }
+  .progressbar li:before {
+      width: 30px;
+      height: 30px;
+      content: counter(step);
+      counter-increment: step;
+      line-height: 30px;
+      border: 2px solid #7d7d7d;
+      display: block;
+      text-align: center;
+      margin: 0 auto 10px auto;
+      border-radius: 50%;
+      background-color: white;
+  }
+  .progressbar li:after {
+      width: 100%;
+      height: 2px;
+      content: '';
+      position: absolute;
+      background-color: #7d7d7d;
+      top: 15px;
+      left: -50%;
+      z-index: -1;
+  }
+  .progressbar li:first-child:after {
+      content: none;
+  }
+  .progressbar li.active {
+      color: #EBA820;
+  }
+  .progressbar li.active:before {
+      border-color: #EBA820;
+  }
+  .progressbar li.active + li:after {
+      background-color: #EBA820;
+  }
+
+
+/* End progress bar */
+
+
+.title-orange{
+  color: #EBA820;
+}
+
+.spacing-bottom{
+  margin-bottom: 7em;
+}

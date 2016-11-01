@@ -9,6 +9,8 @@
     <link rel="icon" type="image/png" href="images/favicon.png" />
     <!--Materialize min-->
     <link rel="stylesheet" href="css/materialize.min.css">
+    <!-- Importamos jquery -->
+    <script  src="js/jquery3.js"></script>
     <!--Fuente de iconos-->
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <!--Fuentes personalizadas-->
@@ -16,7 +18,10 @@
     <!--Animate css-->
     <link rel="stylesheet" href="css/animate/animate.min.css">
     <link rel="stylesheet" href="css/mentes.css">
-    
+    <!-- Sweet Alert -->
+    <link rel="stylesheet" href="css/sweetalert.css">
+    <script type="text/javascript" src="js/sweetalert.min.js"></script>
+
     <style>
         #video {
             width: 100%;

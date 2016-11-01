@@ -2,7 +2,7 @@
 
     # Clase conexion: permite conectar a la base de datos y ejecutar consultas sql
 
-    class conexion
+    class Conexion
     {
 
         # Atributos de la clase conexion
@@ -40,6 +40,13 @@
             return $this->mysqli->query($consulta);
         }
 
+        # Escapa los caracteres especiales de un string para evitar las inyecciones sql
+
+        public function salvar($des)
+        {
+          $string = $this->mysqli->real_escape_string($des);
+          return $string;
+        }
 
         # Funcion que retorna el numero de filas afectadas por una consulta sql
 
@@ -64,6 +71,14 @@
             # Accedemos al atributo de conexion y cerramos la conexion
 
             $this->mysqli->close();
+        }
+
+
+        # Retorna el objeto de conexion
+
+        public function getLink()
+        {
+          return $this->mysqli;
         }
 
 
