@@ -373,8 +373,11 @@ $('#registrar').click(function(){
     method: 'POST',
     url: 'controller/user/registrar.php',
     data: {nombres: nombres, apellidos: apellidos, email: email, clave: clave},
+    beforeSend: function(){
+      $('#load').show();
+    },
     success: function(respuesta){
-
+      $('#load').hide();
       if(respuesta == 'error_1'){
         swal('', 'Por favor ingresa todos los campos', 'warning');
       }else if(respuesta == 'error_2'){

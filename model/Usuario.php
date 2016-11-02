@@ -16,6 +16,55 @@
 
       parent::conectar();
 
+      # Prevenimos inyección SQL
+      $nombres = parent::salvar($nombres);
+      $apellidos = parent::salvar($apellidos);
+      $email = parent::salvar($email);
+      $clave = parent::salvar($clave);
+
+
+
+      /* Notificar email */
+
+      // título
+          $titulo = 'Registro de un nuevo usuario';
+
+          $mensaje = "
+              <html>
+                  <head>
+                    <title>Registro de usuario</title>
+                  </head>
+                  <body>
+              ";
+
+           $mensaje .= "
+
+              <h4 style='color: #03BBED;'>Datos Wits:<h4>
+              <br>
+              <span>Nombre: ".$nombres."</span><br>
+              <span>Apellido: ".$apelidos."</span><br>
+              <span>E-mail: ".$email."<span><br>
+              ";
+
+          $mensaje .="
+                      </body>
+                  </html>
+                  ";
+
+
+          # Cabeceras
+          $cabeceras  = 'MIME-Version: 1.0' . "\r\n";
+          $cabeceras .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+          $cabeceras .= "From:". "info@mentesalacarta.com";
+
+          # Envio de mensaje
+          mail('mjyara9@misena.edu.co', $titulo, $mensaje, $cabeceras);
+          mail('juliana@witpick.com.co', $titulo, $mensaje, $cabeceras);
+
+
+      /* End notificar email */
+
+
       # Convertir todos los datos a minuculas
       $nombres    = $this->filterName($nombres);
       $apellidos  = $this->filterName($apellidos);

@@ -39,9 +39,17 @@
       <label for="clave">Contraseña</label>
     </div>
 
+    <div class="container" id="load" hidden="hidden">
+      <div class="col s2 offset-s5 m1 offset-m5">
+        <img src="images/perfiles/load.gif" alt="load aptitud" width="100%;">
+      </div>
+    </div>
+
     <div class="col s12 center-align">
       <span class="grey-text text-darken-1">Al inscribirte aceptas <a href="#">los términos y condiciones de servicio</a></span>
     </div>
+
+
 
     <div class="col s12 center-align">
       <div class="spacing-1"></div>

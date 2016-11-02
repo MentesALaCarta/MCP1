@@ -1,6 +1,6 @@
 <?php
 
-  # Lectura de variables 
+  # Lectura de variables
   $nombres    = $_POST['nombres'];
   $apellidos  = $_POST['apellidos'];
   $email      = $_POST['email'];
