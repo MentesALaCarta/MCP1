@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-01 16:02:27
+/* Smarty version 3.1.30, created on 2016-11-01 22:34:34
   from "C:\xampp\htdocs\mentes\view\wits\index.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5818ae83c5bf31_63468305',
+  'unifunc' => 'content_58190a6a783952_43539504',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a9ff41efd708b6c2145e6acd6c138f4844d0c765' => 
     array (
       0 => 'C:\\xampp\\htdocs\\mentes\\view\\wits\\index.tpl',
-      1 => 1478012546,
+      1 => 1478032969,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:view/principal/script.tpl' => 1,
   ),
 ),false)) {
-function content_5818ae83c5bf31_63468305 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58190a6a783952_43539504 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -214,7 +214,7 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
 
     <div class="row">
       <div class="col s12 m3 offset-m2 ">
-        <a id="add_new_experience" class="hover">Agregar otra experiencia</a>
+        <a id="add_new_experience" class="hover" style="color: #EBA820 !important;">Agregar otra experiencia</a>
       </div>
     </div>
 

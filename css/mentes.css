@@ -40,27 +40,31 @@
   /* label focus color */
   .input-field input[type=text]:focus + label,
   .input-field input[type=password]:focus + label,
-  #textarea:focus + label{
+  #textarea:focus + label,
+  #tweets:focus + label{
     color: #424242;
   }
   /* label underline focus color */
   .input-field input[type=text]:focus,
   .input-field input[type=password]:focus,
-  #textarea:focus {
+  #textarea:focus,
+  #tweets:focus{
     border-bottom: 1px solid #424242;
     box-shadow: 0 1px 0 0 #424242;
   }
   /* valid color */
   .input-field input[type=text].valid,
   .input-field input[type=text].valid,
-  #textarea.valid {
+  #textarea.valid,
+  #tweets.valid{
     border-bottom: 1px solid #424242;
     box-shadow: 0 1px 0 0 #424242;
   }
   /* invalid color */
   .input-field input[type=text].invalid,
   .input-field input[type=text].invalid,
-  #textarea.invalid {
+  #textarea.invalid,
+  #tweets.invalid{
     border-bottom: 1px solid #424242;
     box-shadow: 0 1px 0 0 #424242;
   }

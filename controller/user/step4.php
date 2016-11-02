@@ -7,6 +7,7 @@
     $tel = $_POST['tel'];
     $idiomas = $_POST['idiomas'];
     $des = $_POST['area'];
+    $tweets = $_POST['tweets'];
     session_start();
 
     if($imagen != null){
@@ -34,20 +35,28 @@
       clearstatcache();
       $imagen->clean();
 
+      # Actualizamos la imagen de perfil en la base de datos
+      require_once('../../model/Usuario.php');
+      $usuario = new Usuario();
+
+      $usuario -> step4('perfiles/perfil'.$_SESSION['id'].'.png', $ciudad, $tel, $idiomas, $des, $tweets);
+
 
     }else{
       // No es una imagen
       echo 'error_2';
     }
 
-  }
-
+  }else{
 
     # Actualizamos la imagen de perfil en la base de datos
     require_once('../../model/Usuario.php');
     $usuario = new Usuario();
 
-    $usuario -> step4('perfiles/perfil'.$_SESSION['id'].'.png', $ciudad, $tel, $idiomas, $des);
+    $usuario -> step4('perfiles/perfil'.$_SESSION['id'].'.png', $ciudad, $tel, $idiomas, $des, $tweets);
+  }
+
+
 
 
 ?>

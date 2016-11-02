@@ -4,7 +4,7 @@
 
     $persona = new Usuario();
 
-    $persona -> getAptitudes(3);
+    $persona -> getAptitudes($_GET['term']); 
 
 
 

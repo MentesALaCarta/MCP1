@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-01 20:21:32
+/* Smarty version 3.1.30, created on 2016-11-02 16:16:34
   from "C:\xampp\htdocs\mentes\view\wits\paso2.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5818eb3c1c0351_81206764',
+  'unifunc' => 'content_581a0352906a73_10900655',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a13c14eab3e134f62c0b25eb8039cbfb89747dc7' => 
     array (
       0 => 'C:\\xampp\\htdocs\\mentes\\view\\wits\\paso2.tpl',
-      1 => 1478027880,
+      1 => 1478099791,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:view/principal/script.tpl' => 1,
   ),
 ),false)) {
-function content_5818eb3c1c0351_81206764 (Smarty_Internal_Template $_smarty_tpl) {
+function content_581a0352906a73_10900655 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -128,35 +128,10 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
 
 <?php echo '<script'; ?>
 >
-// var availableTags = [
-// "ActionScript",
-// "AppleScript",
-// "Asp",
-// "BASIC",
-// "C",
-// "C++",
-// "Clojure",
-// "COBOL",
-// "ColdFusion",
-// "Erlang",
-// "Fortran",
-// "Groovy",
-// "Haskell",
-// "Java",
-// "JavaScript",
-// "Lisp",
-// "Perl",
-// "PHP",
-// "Python",
-// "Ruby",
-// "Scala",
-// "Scheme"
-// ];
 $(document).ready(function(){
 
-  $("#autocomplete").autocomplete({
-    source: "controller/user/traerAptitud.php",
-    minLength: 2,//search after two characters
+  $("#aptitud").autocomplete({
+    source: "controller/user/traerAptitud.php"
   });
 
 });

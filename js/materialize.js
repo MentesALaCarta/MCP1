@@ -529,7 +529,6 @@ $(document).on('click', '#step4', function(){
       if(answer == 'error_2'){
         swal('', 'Por favor selecciona una imagen', 'error');
       }else{
-
         swal({
           title: 'Gracias',
           text: 'Te has registrado satisfactoriamente en Mentes a la carta, pronto nos contactaremos contigo',
@@ -603,4 +602,13 @@ $(document).on('click', '.eliminar_habilidad', function(){
       $('#getAptitudes').html(answer);
     }
   });
+});
+
+
+
+var pre_des = 144;
+$('#tweets').keyup(function(Event){
+    caracteres = $('#tweets').val().length;
+    var diferencia = pre_des - caracteres;
+    $('#pre-des').html(diferencia);
 });

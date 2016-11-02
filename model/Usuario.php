@@ -9,6 +9,7 @@
   class Usuario extends Conexion
   {
 
+
     function registrar($nombres, $apellidos, $email, $clave)
     {
 
@@ -213,7 +214,7 @@
       parent::cerrar();
     }
 
-    public function step4($imagen, $ciudad, $tel, $idiomas, $des){
+    public function step4($imagen, $ciudad, $tel, $idiomas, $des, $tweets){
       # Reemplazamos los acentos
       $buscar = array('á', 'é', 'í', 'ó', 'ú', 'Á', 'É', 'Í', 'Ó', 'Ú', 'ñ', 'Ñ');
       $reemplazar = array('&aacute','&eacute', '&iacute', '&oacute', '&uacute', '&Aacute', '&Eacute', '&Iacute', '&Oacute', '&Uacute', '&ntilde', '&Ntilde');
@@ -224,6 +225,7 @@
       $idiomas = parent::salvar($idiomas);
       $idiomas = str_replace(' ', '', $idiomas);
       $des = parent::salvar($des);
+      $tweets = parent::salvar($tweets);
       $idiomas = str_replace($buscar, $reemplazar, $idiomas);
       $idiomas = explode(',', $idiomas);
 
@@ -231,7 +233,7 @@
       $ciudad = str_replace($buscar, $reemplazar, $ciudad);
       $des = str_replace($buscar, $reemplazar, $des);
 
-      $consulta = parent::query('insert into contacto(imagen, ciudad, tel, des, usuario_id) values("'.$imagen.'", "'.$ciudad.'", "'.$tel.'",  "'.$des.'", "'.$_SESSION['id'].'")');
+      $consulta = parent::query('insert into contacto(imagen, ciudad, tel, des, tweets, usuario_id) values("'.$imagen.'", "'.$ciudad.'", "'.$tel.'",  "'.$des.'", "'.$tweets.'", "'.$_SESSION['id'].'")');
 
       $string = '';
       for($i= 0; $i < count($idiomas); $i++){
@@ -264,9 +266,16 @@
       # Prevenimos inyeccion sql
       $des = parent::salvar($des);
 
-      parent::query('insert into habilidades(descripcion, usuario_id) values("'.$des.'", "'.$_SESSION['id'].'")');
+      $verificar = parent::verificarRegistros('select id from habilidades where descripcion="'.$des.'"');
+      if($verificar > 0){
+        $this->getHabilidades1();
+      }else{
+        parent::query('insert into habilidades(descripcion, usuario_id) values("'.$des.'", "'.$_SESSION['id'].'")');
+        $this->getHabilidades1();
+      }
 
-      $this->getHabilidades1();
+
+
       parent::cerrar();
     }
 
@@ -294,11 +303,11 @@
       }
     }
 
-    public function getAptitudes()
+    public function getAptitudes($des)
     {
       parent::conectar();
       $datos = array();
-      $consulta = parent::query('select DISTINCT(descripcion) from habilidades');
+      $consulta = parent::query('select DISTINCT(descripcion) from habilidades where descripcion like "%'.$des.'%"');
       while($row = mysqli_fetch_array($consulta)){
         $datos[] = $row['descripcion'];
       }

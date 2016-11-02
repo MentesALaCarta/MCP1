@@ -44,7 +44,7 @@
     <div class="row">
 
       <div class="col s12">
-          <label for="" style="font-size: 1rem; color: #424242;">Imagen de perfil</label>
+          <label for="" style="font-size: 1rem; color: #424242;">Foto de perfil</label>
           <div class="file-field input-field">
             <div class="btn" style="background-color: #EBA820;">
               <span><i class="fa fa-user" style="font-size: 2rem; color: white;"></i></span>
@@ -71,6 +71,11 @@
       <div class="input-field col s12">
         <input type="text" id="idiomas" name="idiomas">
         <label for="idiomas">¿Qué idiomas hablas?</label>
+      </div>
+
+      <div class="input-field col s12">
+        <textarea maxlength="144" id="tweets" class="materialize-textarea" name="tweets"></textarea>
+        <label for="tweets">Deja un texto que te describa <span class="text-accent">(<span id="pre-des">144</span>)</span></label>
       </div>
 
         <div class="input-field col s12">

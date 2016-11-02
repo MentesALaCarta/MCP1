@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-01 15:19:32
+/* Smarty version 3.1.30, created on 2016-11-01 22:30:21
   from "C:\xampp\htdocs\mentes\view\list-mentes.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5818a474ef7427_12980779',
+  'unifunc' => 'content_5819096d1503d0_75013862',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f318d1ebef4489fddda44c2b87849f120e7c0692' => 
     array (
       0 => 'C:\\xampp\\htdocs\\mentes\\view\\list-mentes.tpl',
-      1 => 1477407637,
+      1 => 1478032862,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:view/principal/script.tpl' => 1,
   ),
 ),false)) {
-function content_5818a474ef7427_12980779 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5819096d1503d0_75013862 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -32,7 +32,7 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
 <section class="row">
    <div class="container">
     <article class="col s12 center">
-        <h3 class="grey-text text-darken-3 title-home">Mentes a la carta</h3>
+        <h3 class="grey-text text-darken-3 title-home">Nuestras mentes a la carta</h3>
     </article>
 
 

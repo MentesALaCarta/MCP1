@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-01 22:22:05
+/* Smarty version 3.1.30, created on 2016-11-02 16:01:07
   from "C:\xampp\htdocs\mentes\view\wits\paso4.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5819077d35a040_81534810',
+  'unifunc' => 'content_5819ffb360e7a6_49662001',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8b02b102c007ae76674389be7d6f816d34e0863e' => 
     array (
       0 => 'C:\\xampp\\htdocs\\mentes\\view\\wits\\paso4.tpl',
-      1 => 1478035323,
+      1 => 1478098860,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:view/principal/script.tpl' => 1,
   ),
 ),false)) {
-function content_5819077d35a040_81534810 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5819ffb360e7a6_49662001 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -72,7 +72,7 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
     <div class="row">
 
       <div class="col s12">
-          <label for="" style="font-size: 1rem; color: #424242;">Imagen de perfil</label>
+          <label for="" style="font-size: 1rem; color: #424242;">Foto de perfil</label>
           <div class="file-field input-field">
             <div class="btn" style="background-color: #EBA820;">
               <span><i class="fa fa-user" style="font-size: 2rem; color: white;"></i></span>
@@ -99,6 +99,11 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
       <div class="input-field col s12">
         <input type="text" id="idiomas" name="idiomas">
         <label for="idiomas">¿Qué idiomas hablas?</label>
+      </div>
+
+      <div class="input-field col s12">
+        <textarea maxlength="144" id="tweets" class="materialize-textarea" name="tweets"></textarea>
+        <label for="tweets">Deja un texto que te describa <span class="text-accent">(<span id="pre-des">144</span>)</span></label>
       </div>
 
         <div class="input-field col s12">
