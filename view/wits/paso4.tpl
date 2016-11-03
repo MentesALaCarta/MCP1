@@ -87,6 +87,14 @@
   </form>
 </div>
 
+<div class="container" id="load" hidden="hidden">
+  <div class="row">
+    <div class="col s2 offset-s5 m1 offset-m5">
+      <img src="images/perfiles/load.gif" alt="load aptitud" width="100%;">
+    </div>
+  </div>
+</div>
+
 <div class="row spacing-bottom">
   <div class="col s6 m4 offset-m2 l3 offset-l3">
     <button id="step4_previous" style="width: 100%;" class="btn waves-effect waves-light grey" type="button"  name="button">Volver</button>

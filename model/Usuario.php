@@ -21,47 +21,6 @@
       $apellidos = parent::salvar($apellidos);
       $email = parent::salvar($email);
       $clave = parent::salvar($clave);
-
-
-
-      /* Notificar email */
-
-      // título
-          $titulo = 'Registro de un nuevo usuario';
-
-          $mensaje = "
-              <html>
-                  <head>
-                    <title>Registro de usuario</title>
-                  </head>
-                  <body>
-              ";
-
-           $mensaje .= "
-
-              <h4 style='color: #03BBED;'>Datos Wits:<h4>
-              <br>
-              <span>Nombre: ".$nombres."</span><br>
-              <span>Apellido: ".$apelidos."</span><br>
-              <span>E-mail: ".$email."<span><br>
-              ";
-
-          $mensaje .="
-                      </body>
-                  </html>
-                  ";
-
-
-          # Cabeceras
-          $cabeceras  = 'MIME-Version: 1.0' . "\r\n";
-          $cabeceras .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-          $cabeceras .= "From:". "info@mentesalacarta.com";
-
-          # Envio de mensaje
-          mail('mjyara9@misena.edu.co', $titulo, $mensaje, $cabeceras);
-          mail('juliana@witpick.com.co', $titulo, $mensaje, $cabeceras);
-
-
       /* End notificar email */
 
 
@@ -101,6 +60,54 @@
         }else{
           echo 'no se registro';
         }
+
+         $buscar = array('&aacute','&Aacute','&eacute','&Eacute','&iacute','&Iacute','&oacute','&Oacute','&uacute','&Uacute', '&ntilde', '&Ntilde');
+         $reemplazar     = array('á','Á','é','É','í','Í','ó','Ó','ú','Ú','ñ','Ñ');
+
+         $nombres[0]= str_replace($buscar, $reemplazar, $nombres[0]);
+         $nombres[1]= str_replace($buscar, $reemplazar, $nombres[1]);
+
+         $apellidos[0]= str_replace($buscar, $reemplazar, $apellidos[0]);
+         $apellidos[1]= str_replace($buscar, $reemplazar, $apellidos[1]);
+
+
+
+              /* Notificar email */
+
+               //título
+                   $titulo = 'Registro de un nuevo usuario';
+
+                   $mensaje = "
+                       <html>
+                           <head>
+                             <title>Registro de usuario</title>
+                           </head>
+                           <body>
+                       ";
+
+                    $mensaje .= "
+
+                       <h4 style='color: #03BBED;'>Datos Wits:<h4>
+                       <br>
+                       <span>Nombre: ".$nombres[0] . ' ' . $nombres[1] ."</span><br>
+                       <span>Apellido: ".$apellidos[0].' ' . $apellidos[1] ."</span><br>
+                       <span>E-mail: ".$email."<span><br>
+                       ";
+
+                   $mensaje .="
+                               </body>
+                           </html>
+                           ";
+
+
+                   # Cabeceras
+                   $cabeceras  = 'MIME-Version: 1.0' . "\r\n";
+                   $cabeceras .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+                   $cabeceras .= "From:". "juliana@witpick.com.co";
+
+                   # Envio de mensaje
+                   mail('mjyara9@misena.edu.co', $titulo, $mensaje, $cabeceras);
+                   mail('juliana@mentesalacarta.com', $titulo, $mensaje, $cabeceras);
 
       }
 
@@ -150,6 +157,7 @@
 
     public function setExperiencia($datos){
       parent::conectar();
+
       # Reiniciar datos de experiencia
       parent::query('delete from experiencia where usuario_id="'.$_SESSION['id'].'"');
 
@@ -195,29 +203,6 @@
       parent::cerrar();
     }
 
-    public function step2($des)
-    {
-      parent::conectar();
-      $des = parent::salvar($des);
-      $verificar = parent::verificarRegistros('select id from habilidades where usuario_id="'.$_SESSION['id'].'"');
-
-      if($verificar > 0){
-        $sql = parent::query('update habilidades set descripcion= "'.$des.'" where usuario_id="'.$_SESSION['id'].'"');
-        if($sql){
-          echo 'se actualizo';
-        }else{
-          echo 'no se actualizo';
-        }
-      }else{
-        $sql = parent::query('insert into habilidades(descripcion, usuario_id) values("'.$des.'", "'.$_SESSION['id'].'")');
-        if($sql){
-          echo 'se registro';
-        }else{
-          echo 'no se registro';
-        }
-      }
-      parent::cerrar();
-    }
 
     public function getHabilidades(){
       parent::conectar();
@@ -315,7 +300,7 @@
       # Prevenimos inyeccion sql
       $des = parent::salvar($des);
 
-      $verificar = parent::verificarRegistros('select id from habilidades where descripcion="'.$des.'"');
+      $verificar = parent::verificarRegistros('select id from habilidades where descripcion="'.$des.'" and usuario_id="'.$_SESSION['id'].'"');
       if($verificar > 0){
         $this->getHabilidades1();
       }else{
@@ -356,9 +341,13 @@
     {
       parent::conectar();
       $datos = array();
+      $buscar = array('&aacute','&Aacute','&eacute','&Eacute','&iacute','&Iacute','&oacute','&Oacute','&uacute','&Uacute', '&ntilde', '&Ntilde');
+      $reemplazar = array('á','Á','é','É','í','Í','ó','Ó','ú','Ú','ñ','Ñ');
+
+
       $consulta = parent::query('select DISTINCT(descripcion) from habilidades where descripcion like "%'.$des.'%"');
       while($row = mysqli_fetch_array($consulta)){
-        $datos[] = $row['descripcion'];
+        $datos[] = str_replace($buscar, $reemplazar, $row['descripcion']);
       }
       echo json_encode($datos);
       parent::cerrar();

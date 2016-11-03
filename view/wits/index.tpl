@@ -39,7 +39,7 @@
   </div>
 </div>
 
-<form name="step1" id="step1_form">
+<form name="step1" id="step1_form"  >
 
   <div id="experience">
 

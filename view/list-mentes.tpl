@@ -1078,7 +1078,7 @@ Talent</p>
 
                 </div>
                 <div class="card-reveal">
-                  <span class="card-title grey-text text-darken-4">Andrés <i class="fa fa-times right red-text" aria-hidden="true"></i></span>
+                  <span class="card-title grey-text text-darken-4">Mauricio<i class="fa fa-times right red-text" aria-hidden="true"></i></span>
                   <p class="text-accent">Arquitecto y diseñador gráfico con experiencia en talleres de diseño arquitectónico nacionales e internacionales desarrollando proyectos constructivos para edificios educacionales, habitacionales, comerciales, deportivos y culturales. Al igual que su mobiliario y espacio público. Ha formado parte de los equipos de diseño para edificios singulares como la cafetería del Colegio Los Nogales y la sede de Compensar Suba, ambas en Bogotá; también en notables espacios públicos como el Intercambiador Vial Neomundo en Bucaramanga. En el 2010 fue premiado con el primer puesto en la X Anual de Estudiantes de Arquitectura organizada por la SCA Bogotá, en la categoría proyecto arquitectónico por su trabajo de grado titulado Biblioteca Pública Mandela. En el 2006 hizo parte de un equipo conformado por MWarq y Region Landscape, el cual recibió una mención honorífica por sus diseños de mobiliario urbano para la Villa Olímpica de Beijing 2008. Su trabajo ha sido expuesto en la sede de la SCA Bogotá y en Massachusetts Institute of Technology. Igualmente ha sido publicado por la SCA, Archiprix International y la Universidad Jorge Tadeo Lozano.</p>
                 </div>
             </div>
@@ -1189,7 +1189,7 @@ Talent</p>
 
                 </div>
                 <div class="card-reveal">
-                  <span class="card-title grey-text text-darken-4">Andrés <i class="fa fa-times right red-text" aria-hidden="true"></i></span>
+                  <span class="card-title grey-text text-darken-4">Maria<i class="fa fa-times right red-text" aria-hidden="true"></i></span>
                   <p class="text-accent">Publicista y Máster en Dirección de Marketing, Comunicación y Publicidad. Bilingüe, Líder, Sociable, y de un perfil muy comercial. Amplia Experiencia en Mercadeo-Comercial en varios sectores de servicios como el financiero, entretenimiento y medios; abierta al cambio; con perspectiva multicultural, comprometida con el constante aprendizaje y con el logro de metas en pro del crecimiento personal y de la compañía.</p>
                 </div>
             </div>
@@ -1410,7 +1410,7 @@ Talent</p>
 
                   </div>
                   <div class="card-reveal">
-                    <span class="card-title grey-text text-darken-4">Andrés <i class="fa fa-times right red-text" aria-hidden="true"></i></span>
+                    <span class="card-title grey-text text-darken-4">Jose<i class="fa fa-times right red-text" aria-hidden="true"></i></span>
                     <p class="text-accent">Consultor, Conferencista y coach. Siempre hay maneras para ser mejores personas, para ser un gran equipo, para alcanzar lo que nos hemos propuesto.</p>
                   </div>
               </div>
@@ -1674,7 +1674,7 @@ Talent</p>
 
                 </div>
                 <div class="card-reveal">
-                  <span class="card-title grey-text text-darken-4">Andrés <i class="fa fa-times right red-text" aria-hidden="true"></i></span>
+                  <span class="card-title grey-text text-darken-4">Ernesto<i class="fa fa-times right red-text" aria-hidden="true"></i></span>
                   <p></p>
                 </div>
             </div>
@@ -1718,7 +1718,7 @@ Talent</p>
 
                 </div>
                 <div class="card-reveal">
-                  <span class="card-title grey-text text-darken-4">Andrés <i class="fa fa-times right red-text" aria-hidden="true"></i></span>
+                  <span class="card-title grey-text text-darken-4">Enrique<i class="fa fa-times right red-text" aria-hidden="true"></i></span>
                   <p class="text-accent">Apasionado del Management y de su divulgación. Conferenciante y escritor. 4 libros publicados: "Funny-Pop", "ZigZag", "Animaladas", "La empresa de la A a la Z con H de humor". 2 libros publicados como co-autor: "En clave de talento", "2021 Odisea Management". Más de 100 artículos publicados en revistas de Management.</p>
                 </div>
             </div>
@@ -1740,8 +1740,8 @@ Talent</p>
 
                 </div>
                 <div class="card-reveal">
-                  <span class="card-title grey-text text-darken-4">Andrés <i class="fa fa-times right red-text" aria-hidden="true"></i></span>
-                  <p>Director - Profesional en Estrategia Financiero en Accesa</p>
+                  <span class="card-title grey-text text-darken-4">Daniela<i class="fa fa-times right red-text" aria-hidden="true"></i></span>
+                  <p></p>
                 </div>
             </div>
         </article>

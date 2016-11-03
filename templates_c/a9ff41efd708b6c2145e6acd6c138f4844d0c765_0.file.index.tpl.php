@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-01 22:34:34
+/* Smarty version 3.1.30, created on 2016-11-03 15:08:11
   from "C:\xampp\htdocs\mentes\view\wits\index.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58190a6a783952_43539504',
+  'unifunc' => 'content_581b44cb8c5730_59674996',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a9ff41efd708b6c2145e6acd6c138f4844d0c765' => 
     array (
       0 => 'C:\\xampp\\htdocs\\mentes\\view\\wits\\index.tpl',
-      1 => 1478032969,
+      1 => 1478122018,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:view/principal/script.tpl' => 1,
   ),
 ),false)) {
-function content_58190a6a783952_43539504 (Smarty_Internal_Template $_smarty_tpl) {
+function content_581b44cb8c5730_59674996 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -67,7 +67,7 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
   </div>
 </div>
 
-<form name="step1" id="step1_form">
+<form name="step1" id="step1_form"  >
 
   <div id="experience">
 

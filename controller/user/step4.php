@@ -2,7 +2,7 @@
     require_once('../../core/upload/class.upload.php');
 
     # Validamos que todos los campos lleguen bien
-    $imagen = isset($_FILES['imagen-upload']) ? $_FILES['imagen-upload']: null;
+    $imagen = $_FILES['imagen-upload'];
     $ciudad = $_POST['ciudad'];
     $tel = $_POST['tel'];
     $idiomas = $_POST['idiomas'];
@@ -10,7 +10,7 @@
     $tweets = $_POST['tweets'];
     session_start();
 
-    if($imagen != null){
+    if(empty($imagen)){
 
       $tipo = $_FILES["imagen-upload"]["type"];
 

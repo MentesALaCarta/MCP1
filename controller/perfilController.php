@@ -1,8 +1,11 @@
 <?php
 
-    session_start();
+    session_start([
+      'cookie_lifetime' => 86400,
+      'read_and_close'  => true
+    ]);
 
-    if(!isset($_SESSION['email'])){
+    if(!isset($_SESSION['id'])){
       header('location: ?view=registrar');
     }
 
@@ -26,7 +29,7 @@
 
       case '2':
           $datos = $persona -> getHabilidades($_SESSION['id']);
-          $template -> assign('aptitud', $datos); 
+          $template -> assign('aptitud', $datos);
 
           $template -> display('view/wits/paso2.tpl');
         break;

@@ -16,25 +16,25 @@
 
 
     <!-- Nombre -->
-    <div class="input-field col s6 m4 offset-m2">
+    <div class="input-field col s12 m4 offset-m2">
       <input id="nombres" type="text" class="validate">
       <label for="nombres">Nombres</label>
     </div>
 
     <!-- Apellidos -->
-    <div class="input-field col s6 m4 ">
+    <div class="input-field col s12 m4 ">
       <input id="apellidos" type="text" class="validate">
       <label for="apellidos">Apellidos</label>
     </div>
 
     <!-- Email -->
-    <div class="input-field col s6 m4 offset-m2">
+    <div class="input-field col s12 m4 offset-m2">
       <input id="email" type="text" class="validate">
       <label for="email">Dirección de correo electrónico</label>
     </div>
 
     <!-- Contraseña -->
-    <div class="input-field col s6 m4">
+    <div class="input-field col s12 m4">
       <input id="clave" type="password" class="validate">
       <label for="clave">Contraseña</label>
     </div>

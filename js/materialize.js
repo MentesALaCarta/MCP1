@@ -398,8 +398,7 @@ $(document).on('click', '#step1', function(){
     url: 'controller/user/step1.php',
     data: $('#step1_form').serialize(),
     success: function(answer){
-        location.reload();
-
+      location.reload();
     }
   });
 
@@ -527,7 +526,11 @@ $(document).on('click', '#step4', function(){
     dataType: "html",
     contentType: false,
     processData: false,
+    beforeSend: function(){
+      $('#load').show();
+    },
     success: function(answer){
+      $('#load').hide();
       console.log(answer);
       if(answer == 'error_2'){
         swal('', 'Por favor selecciona una imagen', 'error');
