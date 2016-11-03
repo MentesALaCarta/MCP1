@@ -75,7 +75,7 @@
 
       <div class="input-field col s12">
         <textarea maxlength="144" id="tweets" class="materialize-textarea" name="tweets"></textarea>
-        <label for="tweets">Deja un texto que te describa <span class="text-accent">(<span id="pre-des">144</span>)</span></label>
+        <label for="tweets">Describete en <span class="text-accent">(<span id="pre-des">144</span>)</span> caracteres</label>
       </div>
 
         <div class="input-field col s12">

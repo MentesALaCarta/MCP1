@@ -57,7 +57,7 @@
        <thead>
          <tr>
              <th data-field="id">Aptitudes</th>
-             <th data-field="name">Operaciones</th>
+             <th data-field="name"></th>
          </tr>
        </thead>
 

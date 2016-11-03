@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-03 15:08:54
+/* Smarty version 3.1.30, created on 2016-11-03 18:03:00
   from "C:\xampp\htdocs\mentes\view\wits\paso2.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_581b44f6344e46_80513041',
+  'unifunc' => 'content_581b6dc4673b85_92529816',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a13c14eab3e134f62c0b25eb8039cbfb89747dc7' => 
     array (
       0 => 'C:\\xampp\\htdocs\\mentes\\view\\wits\\paso2.tpl',
-      1 => 1478117328,
+      1 => 1478192578,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:view/principal/script.tpl' => 1,
   ),
 ),false)) {
-function content_581b44f6344e46_80513041 (Smarty_Internal_Template $_smarty_tpl) {
+function content_581b6dc4673b85_92529816 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -85,7 +85,7 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
        <thead>
          <tr>
              <th data-field="id">Aptitudes</th>
-             <th data-field="name">Operaciones</th>
+             <th data-field="name"></th>
          </tr>
        </thead>
 

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-02 16:01:07
+/* Smarty version 3.1.30, created on 2016-11-03 18:04:13
   from "C:\xampp\htdocs\mentes\view\wits\paso4.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5819ffb360e7a6_49662001',
+  'unifunc' => 'content_581b6e0da7f126_96547299',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8b02b102c007ae76674389be7d6f816d34e0863e' => 
     array (
       0 => 'C:\\xampp\\htdocs\\mentes\\view\\wits\\paso4.tpl',
-      1 => 1478098860,
+      1 => 1478192650,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:view/principal/script.tpl' => 1,
   ),
 ),false)) {
-function content_5819ffb360e7a6_49662001 (Smarty_Internal_Template $_smarty_tpl) {
+function content_581b6e0da7f126_96547299 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -103,7 +103,7 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
 
       <div class="input-field col s12">
         <textarea maxlength="144" id="tweets" class="materialize-textarea" name="tweets"></textarea>
-        <label for="tweets">Deja un texto que te describa <span class="text-accent">(<span id="pre-des">144</span>)</span></label>
+        <label for="tweets">Describete en <span class="text-accent">(<span id="pre-des">144</span>)</span> caracteres</label>
       </div>
 
         <div class="input-field col s12">
@@ -113,6 +113,14 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
 
     </div>
   </form>
+</div>
+
+<div class="container" id="load" hidden="hidden">
+  <div class="row">
+    <div class="col s2 offset-s5 m1 offset-m5">
+      <img src="images/perfiles/load.gif" alt="load aptitud" width="100%;">
+    </div>
+  </div>
 </div>
 
 <div class="row spacing-bottom">

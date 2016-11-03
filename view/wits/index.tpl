@@ -39,125 +39,154 @@
   </div>
 </div>
 
-<form name="step1" id="step1_form"  >
+<form name="step1" id="step1_form" >
 
   <div id="experience">
 
     {if $experience != 0 }
     <div id="experience_item0">
-
       <div class="container">
-        <div class="col s12 right-align" id="eliminar_1">
-          <a class="delete_experience hover red-text" id="0"><i class="fa fa-close"></i></a>
-        </div>
-      </div>
+        <div class="row">
+          <div class="col s12 m10 offset-m1 item_experence">
 
-    <!-- company name -->
-    <div class="row">
-      <div class="input-field col s6 m4 offset-m2">
-        <div class="spacing-2"></div>
-        <input id="company" value="{$experience[0][1]}" type="text" class="validate" name="company[0]">
-        <label for="company">Nombre de la empresa</label>
-      </div>
+            <!-- Bottom eliminar -->
+            <div class="col s12 right-align" id="eliminar_1">
+              <a class="delete_experience hover red-text" id="0"><i class="fa fa-close"></i></a>
+            </div>
 
-      <div class="input-field col s6 m4">
-        <div class="spacing-2"></div>
-        <input id="sector" value="{$experience[0][2]}" type="text" class="validate" name="sector[0]">
-        <label for="sector">Sector</label>
-      </div>
+            <!-- Datos form -->
+            <div class="row">
 
-      <div class="input-field col s6 m4 offset-m2">
-        <input id="position" value="{$experience[0][3]}" type="text" class="validate" name="position[0]">
-        <label for="position">Cargo</label>
-      </div>
+              <!-- company name -->
+              <div class="input-field col s6">
+                <div class="spacing-2"></div>
+                <input id="company" type="text" value="{$experience[0][1]}" class="validate" name="company[0]">
+                <label for="company">Nombre de la empresa</label>
+              </div>
 
-      <div class="input-field col s6 m4">
-        <input id="country" value="{$experience[0][4]}" type="text" class="validate" name="country[0]">
-        <label for="country">Pais</label>
-      </div>
+              <!-- Sector -->
+              <div class="input-field col s6">
+                <div class="spacing-2"></div>
+                <input id="sector" type="text" value="{$experience[0][2]}" class="validate" name="sector[0]">
+                <label for="sector">Sector</label>
+              </div>
 
-    </div><!-- Row -->
+              <!-- Cargo -->
+              <div class="input-field col s6">
+                <input id="position" type="text" value="{$experience[0][3]}" class="validate" name="position[0]">
+                <label for="position">Cargo</label>
+              </div>
 
-  </div> <!-- Experience item -->
+              <!-- Pais -->
+              <div class="input-field col s6">
+                <input id="country" type="text" value="{$experience[0][4]}" class="validate" name="country[0]">
+                <label for="country">Pais</label>
+              </div>
+
+            </div><!-- / End Row datos form -->
+          </div><!-- / Columnas del contendor principal-->
+        </div><!-- Row contenedor principal -->
+      </div><!-- / End Container -->
+    </div> <!-- / Item  -->
+
     {if count($experience) > 1}
 
       {for $i = 1 to count($experience) -1}
 
-      <!-- company name -->
-      <div class="row" id="experience_item{$experience[$i][0]}">
-
+      <div id="experience_item{$experience[$i][0]}">
         <div class="container">
-          <div class="divider"></div>
-          <div class="spacing-2"></div>
-          <div class="col s12 right-align">
-            <a class="delete_experience hover red-text" id="{$experience[$i][0]}"><i class="fa fa-close"></i></a>
-          </div>
-        </div>
+          <div class="row">
+            <div class="col s12 m10 offset-m1 item_experence">
 
-        <div class="input-field col s6 m4 offset-m2">
-          <div class="spacing-2"></div>
-          <input id="company" type="text" value="{$experience[$i][1]}" class="validate" name="company[{$i}]">
-          <label for="company">Nombre de la empresa</label>
-        </div>
+              <!-- Bottom eliminar -->
+              <div class="col s12 right-align">
+                <a class="delete_experience hover red-text" id="{$experience[$i][0]}"><i class="fa fa-close"></i></a>
+              </div>
 
-        <div class="input-field col s6 m4">
-          <div class="spacing-2"></div>
-          <input id="sector" type="text" value="{$experience[$i][2]}" class="validate" name="sector[{$i}]">
-          <label for="sector">Sector</label>
-        </div>
+              <!-- Datos form -->
+              <div class="row">
 
-        <div class="input-field col s6 m4 offset-m2">
-          <input id="position" type="text" value="{$experience[$i][3]}" class="validate" name="position[{$i}]">
-          <label for="position">Cargo</label>
-        </div>
+                <!-- company name -->
+                <div class="input-field col s6">
+                  <div class="spacing-2"></div>
+                  <input id="company" type="text" value="{$experience[$i][1]}" class="validate" name="company[{$i}]">
+                  <label for="company">Nombre de la empresa</label>
+                </div>
 
-        <div class="input-field col s6 m4">
-          <input id="country" type="text" value="{$experience[$i][4]}" class="validate" name="country[{$i}]">
-          <label for="country">Pais</label>
-        </div>
+                <!-- Sector -->
+                <div class="input-field col s6">
+                  <div class="spacing-2"></div>
+                  <input id="sector" type="text" value="{$experience[$i][2]}" class="validate" name="sector[{$i}]">
+                  <label for="sector">Sector</label>
+                </div>
 
-      </div>
+                <!-- Cargo -->
+                <div class="input-field col s6">
+                  <input id="position" type="text" value="{$experience[$i][3]}" class="validate" name="position[{$i}]">
+                  <label for="position">Cargo</label>
+                </div>
 
+                <!-- Pais -->
+                <div class="input-field col s6">
+                  <input id="country" type="text" value="{$experience[$i][4]}" class="validate" name="country[{$i}]">
+                  <label for="country">Pais</label>
+                </div>
+
+              </div><!-- / End Row datos form -->
+            </div><!-- / Columnas del contendor principal-->
+          </div><!-- Row contenedor principal -->
+        </div><!-- / End Container -->
+      </div> <!-- / Item  -->
       {/for}
+
     {/if}
 
     {else}
+
     <div id="experience_item0">
-
       <div class="container">
-        <div class="col s12 right-align" id="eliminar_1" hidden="hidden">
-          <a class="delete_experience hover red-text" id="0"><i class="fa fa-close"></i></a>
-        </div>
-      </div>
+        <div class="row">
+          <div class="col s12 m10 offset-m1 item_experence">
 
-    <!-- company name -->
-    <div class="row">
-      <div class="input-field col s6 m4 offset-m2">
-        <div class="spacing-2"></div>
-        <input id="company" type="text" class="validate" name="company[0]">
-        <label for="company">Nombre de la empresa</label>
-      </div>
+            <!-- Bottom eliminar -->
+            <div class="col s12 right-align" id="eliminar_1" hidden="hidden">
+              <a class="delete_experience hover red-text" id="0"><i class="fa fa-close"></i></a>
+            </div>
 
-      <div class="input-field col s6 m4">
-        <div class="spacing-2"></div>
-        <input id="sector" type="text" class="validate" name="sector[0]">
-        <label for="sector">Sector</label>
-      </div>
+            <!-- Datos form -->
+            <div class="row">
 
-      <div class="input-field col s6 m4 offset-m2">
-        <input id="position" type="text" class="validate" name="position[0]">
-        <label for="position">Cargo</label>
-      </div>
+              <!-- company name -->
+              <div class="input-field col s6">
+                <div class="spacing-2"></div>
+                <input id="company" type="text" class="validate" name="company[0]">
+                <label for="company">Nombre de la empresa</label>
+              </div>
 
-      <div class="input-field col s6 m4">
-        <input id="country" type="text" class="validate" name="country[0]">
-        <label for="country">Pais</label>
-      </div>
+              <!-- Sector -->
+              <div class="input-field col s6">
+                <div class="spacing-2"></div>
+                <input id="sector" type="text" class="validate" name="sector[0]">
+                <label for="sector">Sector</label>
+              </div>
 
-    </div><!-- Row -->
+              <!-- Cargo -->
+              <div class="input-field col s6">
+                <input id="position" type="text" class="validate" name="position[0]">
+                <label for="position">Cargo</label>
+              </div>
 
-  </div> <!-- / End eliminar row -->
+              <!-- Pais -->
+              <div class="input-field col s6">
+                <input id="country" type="text" class="validate" name="country[0]">
+                <label for="country">Pais</label>
+              </div>
 
+            </div><!-- / End Row datos form -->
+          </div><!-- / Columnas del contendor principal-->
+        </div><!-- Row contenedor principal -->
+      </div><!-- / End Container -->
+    </div> <!-- / Item  -->
     {/if}
 
 

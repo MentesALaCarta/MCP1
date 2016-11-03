@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-03 15:08:11
+/* Smarty version 3.1.30, created on 2016-11-03 18:01:58
   from "C:\xampp\htdocs\mentes\view\wits\index.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_581b44cb8c5730_59674996',
+  'unifunc' => 'content_581b6d86462261_44257804',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a9ff41efd708b6c2145e6acd6c138f4844d0c765' => 
     array (
       0 => 'C:\\xampp\\htdocs\\mentes\\view\\wits\\index.tpl',
-      1 => 1478122018,
+      1 => 1478192516,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:view/principal/script.tpl' => 1,
   ),
 ),false)) {
-function content_581b44cb8c5730_59674996 (Smarty_Internal_Template $_smarty_tpl) {
+function content_581b6d86462261_44257804 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -67,50 +67,60 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
   </div>
 </div>
 
-<form name="step1" id="step1_form"  >
+<form name="step1" id="step1_form" >
 
   <div id="experience">
 
     <?php if ($_smarty_tpl->tpl_vars['experience']->value != 0) {?>
     <div id="experience_item0">
-
       <div class="container">
-        <div class="col s12 right-align" id="eliminar_1">
-          <a class="delete_experience hover red-text" id="0"><i class="fa fa-close"></i></a>
-        </div>
-      </div>
+        <div class="row">
+          <div class="col s12 m10 offset-m1 item_experence">
 
-    <!-- company name -->
-    <div class="row">
-      <div class="input-field col s6 m4 offset-m2">
-        <div class="spacing-2"></div>
-        <input id="company" value="<?php echo $_smarty_tpl->tpl_vars['experience']->value[0][1];?>
-" type="text" class="validate" name="company[0]">
-        <label for="company">Nombre de la empresa</label>
-      </div>
+            <!-- Bottom eliminar -->
+            <div class="col s12 right-align" id="eliminar_1">
+              <a class="delete_experience hover red-text" id="0"><i class="fa fa-close"></i></a>
+            </div>
 
-      <div class="input-field col s6 m4">
-        <div class="spacing-2"></div>
-        <input id="sector" value="<?php echo $_smarty_tpl->tpl_vars['experience']->value[0][2];?>
-" type="text" class="validate" name="sector[0]">
-        <label for="sector">Sector</label>
-      </div>
+            <!-- Datos form -->
+            <div class="row">
 
-      <div class="input-field col s6 m4 offset-m2">
-        <input id="position" value="<?php echo $_smarty_tpl->tpl_vars['experience']->value[0][3];?>
-" type="text" class="validate" name="position[0]">
-        <label for="position">Cargo</label>
-      </div>
+              <!-- company name -->
+              <div class="input-field col s6">
+                <div class="spacing-2"></div>
+                <input id="company" type="text" value="<?php echo $_smarty_tpl->tpl_vars['experience']->value[0][1];?>
+" class="validate" name="company[0]">
+                <label for="company">Nombre de la empresa</label>
+              </div>
 
-      <div class="input-field col s6 m4">
-        <input id="country" value="<?php echo $_smarty_tpl->tpl_vars['experience']->value[0][4];?>
-" type="text" class="validate" name="country[0]">
-        <label for="country">Pais</label>
-      </div>
+              <!-- Sector -->
+              <div class="input-field col s6">
+                <div class="spacing-2"></div>
+                <input id="sector" type="text" value="<?php echo $_smarty_tpl->tpl_vars['experience']->value[0][2];?>
+" class="validate" name="sector[0]">
+                <label for="sector">Sector</label>
+              </div>
 
-    </div><!-- Row -->
+              <!-- Cargo -->
+              <div class="input-field col s6">
+                <input id="position" type="text" value="<?php echo $_smarty_tpl->tpl_vars['experience']->value[0][3];?>
+" class="validate" name="position[0]">
+                <label for="position">Cargo</label>
+              </div>
 
-  </div> <!-- Experience item -->
+              <!-- Pais -->
+              <div class="input-field col s6">
+                <input id="country" type="text" value="<?php echo $_smarty_tpl->tpl_vars['experience']->value[0][4];?>
+" class="validate" name="country[0]">
+                <label for="country">Pais</label>
+              </div>
+
+            </div><!-- / End Row datos form -->
+          </div><!-- / Columnas del contendor principal-->
+        </div><!-- Row contenedor principal -->
+      </div><!-- / End Container -->
+    </div> <!-- / Item  -->
+
     <?php if (count($_smarty_tpl->tpl_vars['experience']->value) > 1) {?>
 
       <?php
@@ -119,94 +129,113 @@ if ($_smarty_tpl->tpl_vars['i']->total > 0) {
 for ($_smarty_tpl->tpl_vars['i']->value = 1, $_smarty_tpl->tpl_vars['i']->iteration = 1;$_smarty_tpl->tpl_vars['i']->iteration <= $_smarty_tpl->tpl_vars['i']->total;$_smarty_tpl->tpl_vars['i']->value += $_smarty_tpl->tpl_vars['i']->step, $_smarty_tpl->tpl_vars['i']->iteration++) {
 $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1;$_smarty_tpl->tpl_vars['i']->last = $_smarty_tpl->tpl_vars['i']->iteration == $_smarty_tpl->tpl_vars['i']->total;?>
 
-      <!-- company name -->
-      <div class="row" id="experience_item<?php echo $_smarty_tpl->tpl_vars['experience']->value[$_smarty_tpl->tpl_vars['i']->value][0];?>
+      <div id="experience_item<?php echo $_smarty_tpl->tpl_vars['experience']->value[$_smarty_tpl->tpl_vars['i']->value][0];?>
 ">
-
         <div class="container">
-          <div class="divider"></div>
-          <div class="spacing-2"></div>
-          <div class="col s12 right-align">
-            <a class="delete_experience hover red-text" id="<?php echo $_smarty_tpl->tpl_vars['experience']->value[$_smarty_tpl->tpl_vars['i']->value][0];?>
-"><i class="fa fa-close"></i></a>
-          </div>
-        </div>
+          <div class="row">
+            <div class="col s12 m10 offset-m1 item_experence">
 
-        <div class="input-field col s6 m4 offset-m2">
-          <div class="spacing-2"></div>
-          <input id="company" type="text" value="<?php echo $_smarty_tpl->tpl_vars['experience']->value[$_smarty_tpl->tpl_vars['i']->value][1];?>
+              <!-- Bottom eliminar -->
+              <div class="col s12 right-align">
+                <a class="delete_experience hover red-text" id="<?php echo $_smarty_tpl->tpl_vars['experience']->value[$_smarty_tpl->tpl_vars['i']->value][0];?>
+"><i class="fa fa-close"></i></a>
+              </div>
+
+              <!-- Datos form -->
+              <div class="row">
+
+                <!-- company name -->
+                <div class="input-field col s6">
+                  <div class="spacing-2"></div>
+                  <input id="company" type="text" value="<?php echo $_smarty_tpl->tpl_vars['experience']->value[$_smarty_tpl->tpl_vars['i']->value][1];?>
 " class="validate" name="company[<?php echo $_smarty_tpl->tpl_vars['i']->value;?>
 ]">
-          <label for="company">Nombre de la empresa</label>
-        </div>
+                  <label for="company">Nombre de la empresa</label>
+                </div>
 
-        <div class="input-field col s6 m4">
-          <div class="spacing-2"></div>
-          <input id="sector" type="text" value="<?php echo $_smarty_tpl->tpl_vars['experience']->value[$_smarty_tpl->tpl_vars['i']->value][2];?>
+                <!-- Sector -->
+                <div class="input-field col s6">
+                  <div class="spacing-2"></div>
+                  <input id="sector" type="text" value="<?php echo $_smarty_tpl->tpl_vars['experience']->value[$_smarty_tpl->tpl_vars['i']->value][2];?>
 " class="validate" name="sector[<?php echo $_smarty_tpl->tpl_vars['i']->value;?>
 ]">
-          <label for="sector">Sector</label>
-        </div>
+                  <label for="sector">Sector</label>
+                </div>
 
-        <div class="input-field col s6 m4 offset-m2">
-          <input id="position" type="text" value="<?php echo $_smarty_tpl->tpl_vars['experience']->value[$_smarty_tpl->tpl_vars['i']->value][3];?>
+                <!-- Cargo -->
+                <div class="input-field col s6">
+                  <input id="position" type="text" value="<?php echo $_smarty_tpl->tpl_vars['experience']->value[$_smarty_tpl->tpl_vars['i']->value][3];?>
 " class="validate" name="position[<?php echo $_smarty_tpl->tpl_vars['i']->value;?>
 ]">
-          <label for="position">Cargo</label>
-        </div>
+                  <label for="position">Cargo</label>
+                </div>
 
-        <div class="input-field col s6 m4">
-          <input id="country" type="text" value="<?php echo $_smarty_tpl->tpl_vars['experience']->value[$_smarty_tpl->tpl_vars['i']->value][4];?>
+                <!-- Pais -->
+                <div class="input-field col s6">
+                  <input id="country" type="text" value="<?php echo $_smarty_tpl->tpl_vars['experience']->value[$_smarty_tpl->tpl_vars['i']->value][4];?>
 " class="validate" name="country[<?php echo $_smarty_tpl->tpl_vars['i']->value;?>
 ]">
-          <label for="country">Pais</label>
-        </div>
+                  <label for="country">Pais</label>
+                </div>
 
-      </div>
-
+              </div><!-- / End Row datos form -->
+            </div><!-- / Columnas del contendor principal-->
+          </div><!-- Row contenedor principal -->
+        </div><!-- / End Container -->
+      </div> <!-- / Item  -->
       <?php }
 }
 ?>
 
+
     <?php }?>
 
     <?php } else { ?>
+
     <div id="experience_item0">
-
       <div class="container">
-        <div class="col s12 right-align" id="eliminar_1" hidden="hidden">
-          <a class="delete_experience hover red-text" id="0"><i class="fa fa-close"></i></a>
-        </div>
-      </div>
+        <div class="row">
+          <div class="col s12 m10 offset-m1 item_experence">
 
-    <!-- company name -->
-    <div class="row">
-      <div class="input-field col s6 m4 offset-m2">
-        <div class="spacing-2"></div>
-        <input id="company" type="text" class="validate" name="company[0]">
-        <label for="company">Nombre de la empresa</label>
-      </div>
+            <!-- Bottom eliminar -->
+            <div class="col s12 right-align" id="eliminar_1" hidden="hidden">
+              <a class="delete_experience hover red-text" id="0"><i class="fa fa-close"></i></a>
+            </div>
 
-      <div class="input-field col s6 m4">
-        <div class="spacing-2"></div>
-        <input id="sector" type="text" class="validate" name="sector[0]">
-        <label for="sector">Sector</label>
-      </div>
+            <!-- Datos form -->
+            <div class="row">
 
-      <div class="input-field col s6 m4 offset-m2">
-        <input id="position" type="text" class="validate" name="position[0]">
-        <label for="position">Cargo</label>
-      </div>
+              <!-- company name -->
+              <div class="input-field col s6">
+                <div class="spacing-2"></div>
+                <input id="company" type="text" class="validate" name="company[0]">
+                <label for="company">Nombre de la empresa</label>
+              </div>
 
-      <div class="input-field col s6 m4">
-        <input id="country" type="text" class="validate" name="country[0]">
-        <label for="country">Pais</label>
-      </div>
+              <!-- Sector -->
+              <div class="input-field col s6">
+                <div class="spacing-2"></div>
+                <input id="sector" type="text" class="validate" name="sector[0]">
+                <label for="sector">Sector</label>
+              </div>
 
-    </div><!-- Row -->
+              <!-- Cargo -->
+              <div class="input-field col s6">
+                <input id="position" type="text" class="validate" name="position[0]">
+                <label for="position">Cargo</label>
+              </div>
 
-  </div> <!-- / End eliminar row -->
+              <!-- Pais -->
+              <div class="input-field col s6">
+                <input id="country" type="text" class="validate" name="country[0]">
+                <label for="country">Pais</label>
+              </div>
 
+            </div><!-- / End Row datos form -->
+          </div><!-- / Columnas del contendor principal-->
+        </div><!-- Row contenedor principal -->
+      </div><!-- / End Container -->
+    </div> <!-- / Item  -->
     <?php }?>
 
 
