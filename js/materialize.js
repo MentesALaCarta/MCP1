@@ -611,10 +611,29 @@ $(document).on('click', '.eliminar_habilidad', function(){
 });
 
 
+$(document).ready(function() {
+    $('select').material_select();
+  });
+
 
 var pre_des = 144;
 $('#tweets').keyup(function(Event){
     caracteres = $('#tweets').val().length;
     var diferencia = pre_des - caracteres;
     $('#pre-des').html(diferencia);
+});
+
+$(document).on('click', '.perfil', function(){
+  var id = $(this).attr('id');
+  alert(id);
+});
+
+$(document).on('click', '.aprobar', function(){
+  var id = $(this).attr('id');
+  alert(id);
+});
+
+$(document).on('click', '.denegar', function(){
+  var id = $(this).attr('id');
+  alert(id);
 });

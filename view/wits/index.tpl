@@ -61,7 +61,7 @@
               <div class="input-field col s6">
                 <div class="spacing-2"></div>
                 <input id="company" type="text" value="{$experience[0][1]}" class="validate" name="company[0]">
-                <label for="company">Nombre de la empresa</label>
+                <label for="company">Empresa</label>
               </div>
 
               <!-- Sector -->
@@ -80,7 +80,7 @@
               <!-- Pais -->
               <div class="input-field col s6">
                 <input id="country" type="text" value="{$experience[0][4]}" class="validate" name="country[0]">
-                <label for="country">Pais</label>
+                <label for="country">País</label>
               </div>
 
             </div><!-- / End Row datos form -->
@@ -129,7 +129,7 @@
                 <!-- Pais -->
                 <div class="input-field col s6">
                   <input id="country" type="text" value="{$experience[$i][4]}" class="validate" name="country[{$i}]">
-                  <label for="country">Pais</label>
+                  <label for="country">País</label>
                 </div>
 
               </div><!-- / End Row datos form -->
@@ -179,7 +179,7 @@
               <!-- Pais -->
               <div class="input-field col s6">
                 <input id="country" type="text" class="validate" name="country[0]">
-                <label for="country">Pais</label>
+                <label for="country">País</label>
               </div>
 
             </div><!-- / End Row datos form -->

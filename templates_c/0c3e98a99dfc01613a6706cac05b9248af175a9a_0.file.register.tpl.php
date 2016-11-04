@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-03 15:06:59
+/* Smarty version 3.1.30, created on 2016-11-03 21:45:47
   from "C:\xampp\htdocs\mentes\view\user\register.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_581b448394daa3_76191537',
+  'unifunc' => 'content_581ba1fbb47777_29308494',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0c3e98a99dfc01613a6706cac05b9248af175a9a' => 
     array (
       0 => 'C:\\xampp\\htdocs\\mentes\\view\\user\\register.tpl',
-      1 => 1478119943,
+      1 => 1478205946,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:view/principal/script.tpl' => 1,
   ),
 ),false)) {
-function content_581b448394daa3_76191537 (Smarty_Internal_Template $_smarty_tpl) {
+function content_581ba1fbb47777_29308494 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -81,6 +81,14 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
     <div class="col s12 center-align">
       <div class="spacing-1"></div>
       <button id="registrar" class="btn waves-effect waves-light orange" type="button"  name="button">¡Sigamos!</button>
+    </div>
+
+    <!-- Registrarse -->
+    <div class="row">
+      <div class="col s12 center-align">
+        <div class="spacing-1"></div>
+        <span class="text-accent">¿Ya tienes una cuenta? <a href="?view=acceder">Iniciar sesión</a></span>
+      </div>
     </div>
 
 

@@ -56,6 +56,14 @@
       <button id="registrar" class="btn waves-effect waves-light orange" type="button"  name="button">¡Sigamos!</button>
     </div>
 
+    <!-- Registrarse -->
+    <div class="row">
+      <div class="col s12 center-align">
+        <div class="spacing-1"></div>
+        <span class="text-accent">¿Ya tienes una cuenta? <a href="?view=acceder">Iniciar sesión</a></span>
+      </div>
+    </div>
+
 
   </div>
 

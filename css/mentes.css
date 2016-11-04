@@ -2,10 +2,130 @@
   cursor: pointer;
 }
 
+.accent-text1{
+  color: #787878;
+}
+
+.text-accent1{
+  color: #A2A2A2;
+}
+
+.item-nav-right1:hover{
+    background-color: #293C4F;
+    cursor: pointer;
+    color: white;
+}
+
+.active-item{
+  background-color: #293C4F;
+  cursor: pointer;
+  color: white;
+}
+
+.resize{
+  font-size: 1.5rem;
+}
+
+.accent-text{
+  color: #424242;
+}
+
+.item-nav-right1{
+    padding-left: 20px;
+    font-size: 1.2rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.no-hover-item:hover {
+    background-color: #34495E !important;
+    cursor: default;
+}
+
+.no-hover-item:focus {
+    background-color: #34495E;
+    cursor: default;
+}
+
+.no-hover-item{
+    background-color: #34495E;
+    cursor: default;
+}
+
+.no-hover-item:active {
+    background-color: #34495E;
+    cursor: default;
+}
+
+.no-padding-1 {
+    padding: 0px !important;
+}
+
+.no-margin-b {
+    margin-bottom: 0px !important;
+}
+
+.margin-t-phone {
+    margin-top: 1em !important;
+}
+
+.accent-li1 {
+    color: #34495E !important;
+}
+
+/*Estilos barra navegación del perfil*/
+.nav-right1 {
+    background-color: #eaeaea;
+    height: 100%;
+    position: fixed;
+    padding: 0px !important;
+}
+
+.accent{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.69);
+  position: absolute;
+  z-index: -1;
+}
+
+.des-wit{
+  color: white;
+}
+
+.des-wit-2{
+  color: rgba(255,255,255,0.5);
+}
+
+.nav-wit{
+  justify-content: space-between;
+  background-color: #1f1815;
+  background-image: url('../images/perfiles/font/bg.jpg');
+  background-attachment: scroll,	fixed;
+  background-repeat: repeat,	no-repeat;
+  background-size: auto,	auto 100%;
+  background-position: 50% 50%;
+
+  height: 100%;
+  position: fixed;
+  padding: 0px !important;
+}
+
+/* Menu */
+
 .item_experence{
   background-color: #eaeaea;
   padding: 1em !important;
   border-radius: 10px;
+}
+
+.area-wit{
+  width: 80%;
+  margin: 0px auto;
+  height: 150px;
+  padding-top: 3em;
+  border: 1px solid #EBA820;
+  color: #D1D2D3;
 }
 
 .area{

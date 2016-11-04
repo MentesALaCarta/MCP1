@@ -37,7 +37,7 @@
           <!-- Pais -->
           <div class="input-field col s6">
             <input id="country" type="text" class="validate" name="country[<?php echo $contador; ?>]">
-            <label for="country">Pais</label>
+            <label for="country">País</label>
           </div>
 
         </div><!-- / End Row datos form -->

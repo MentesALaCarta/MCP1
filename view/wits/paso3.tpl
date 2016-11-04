@@ -34,6 +34,7 @@
 
   <div class="row">
 
+    <!-- Proyectos innovadores -->
     <div class="col s8 offset-s2 m4 l2 offset-l1 center-align" >
       <div class="spacing-1"></div>
       <div class="area center-align circle hover" id="item1">
@@ -48,6 +49,7 @@
       <input type="text" id="services1" name="services[0]"  hidden="hidden">
     </div>
 
+    <!-- Mentoring -->
     <div class="col s8 offset-s2 m4 l2 center-align">
       <div class="spacing-1"></div>
       <div class="area center-align circle hover" id="item2">
@@ -62,6 +64,8 @@
       <input type="text" id="services2" name="services[1]"  hidden="hidden">
     </div>
 
+
+    <!-- Asesoramiento -->
     <div class="col s8 offset-s2 m4 l2 center-align">
       <div class="spacing-1"></div>
       <div class="area center-align circle hover" id="item3">
@@ -76,6 +80,8 @@
       <input type="text" id="services3" name="services[2]"  hidden="hidden">
     </div>
 
+
+    <!-- Formación -->
     <div class="col s8 offset-s2 m4 l2 center-align">
       <div class="spacing-1"></div>
       <div class="area center-align circle hover" id="item4">
@@ -90,8 +96,7 @@
       <input type="text" id="services4" name="services[3]"  hidden="hidden">
     </div>
 
-    <!-- Section 2 -->
-
+    <!-- Contenidos -->
     <div class="col s8 offset-s2 m4 l2 center-align">
       <div class="spacing-1"></div>
       <div class="area center-align circle hover" id="item5">

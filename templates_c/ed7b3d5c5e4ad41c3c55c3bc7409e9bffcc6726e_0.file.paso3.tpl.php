@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-01 21:31:52
+/* Smarty version 3.1.30, created on 2016-11-04 15:04:02
   from "C:\xampp\htdocs\mentes\view\wits\paso3.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5818fbb8033d67_59176343',
+  'unifunc' => 'content_581c955280f350_65526623',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ed7b3d5c5e4ad41c3c55c3bc7409e9bffcc6726e' => 
     array (
       0 => 'C:\\xampp\\htdocs\\mentes\\view\\wits\\paso3.tpl',
-      1 => 1478032310,
+      1 => 1478267368,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:view/principal/script.tpl' => 1,
   ),
 ),false)) {
-function content_5818fbb8033d67_59176343 (Smarty_Internal_Template $_smarty_tpl) {
+function content_581c955280f350_65526623 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -62,6 +62,7 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
 
   <div class="row">
 
+    <!-- Proyectos innovadores -->
     <div class="col s8 offset-s2 m4 l2 offset-l1 center-align" >
       <div class="spacing-1"></div>
       <div class="area center-align circle hover" id="item1">
@@ -76,6 +77,7 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
       <input type="text" id="services1" name="services[0]"  hidden="hidden">
     </div>
 
+    <!-- Mentoring -->
     <div class="col s8 offset-s2 m4 l2 center-align">
       <div class="spacing-1"></div>
       <div class="area center-align circle hover" id="item2">
@@ -90,6 +92,8 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
       <input type="text" id="services2" name="services[1]"  hidden="hidden">
     </div>
 
+
+    <!-- Asesoramiento -->
     <div class="col s8 offset-s2 m4 l2 center-align">
       <div class="spacing-1"></div>
       <div class="area center-align circle hover" id="item3">
@@ -104,6 +108,8 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
       <input type="text" id="services3" name="services[2]"  hidden="hidden">
     </div>
 
+
+    <!-- Formación -->
     <div class="col s8 offset-s2 m4 l2 center-align">
       <div class="spacing-1"></div>
       <div class="area center-align circle hover" id="item4">
@@ -118,8 +124,7 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
       <input type="text" id="services4" name="services[3]"  hidden="hidden">
     </div>
 
-    <!-- Section 2 -->
-
+    <!-- Contenidos -->
     <div class="col s8 offset-s2 m4 l2 center-align">
       <div class="spacing-1"></div>
       <div class="area center-align circle hover" id="item5">
