@@ -38,7 +38,12 @@
         echo 'error_2';
       }else{
 
-        $consulta = parent::query('insert into usuario(primer_nombre, segundo_nombre, primer_apellido, segundo_apellido, email, clave) values("'.$nombres[0].'", "'.$nombres[1].'", "'.$apellidos[0].'", "'.$apellidos[1].'", "'.$email.'", MD5("'.$clave.'") )');
+        date_default_timezone_set('America/bogota');
+
+        //Fecha registro
+        $fecha_registro = date("d-m-Y, g:i:s A");
+
+        $consulta = parent::query('insert into usuario(primer_nombre, segundo_nombre, primer_apellido, segundo_apellido, email, clave, estado, fecha) values("'.$nombres[0].'", "'.$nombres[1].'", "'.$apellidos[0].'", "'.$apellidos[1].'", "'.$email.'", MD5("'.$clave.'"), "I", "'.$fecha_registro.'" )');
 
         if($consulta){
 
@@ -248,7 +253,7 @@
       parent::cerrar();
     }
 
-    public function step4($imagen, $ciudad, $tel, $idiomas, $des, $tweets){
+    public function step4($imagen, $ciudad, $tel, $idiomas, $des, $tweets, $pais){
       # Reemplazamos los acentos
       $buscar = array('á', 'é', 'í', 'ó', 'ú', 'Á', 'É', 'Í', 'Ó', 'Ú', 'ñ', 'Ñ');
       $reemplazar = array('&aacute','&eacute', '&iacute', '&oacute', '&uacute', '&Aacute', '&Eacute', '&Iacute', '&Oacute', '&Uacute', '&ntilde', '&Ntilde');
@@ -260,14 +265,18 @@
       $idiomas = str_replace(' ', '', $idiomas);
       $des = parent::salvar($des);
       $tweets = parent::salvar($tweets);
+      $tweets = str_replace($buscar, $reemplazar, $tweets);
       $idiomas = str_replace($buscar, $reemplazar, $idiomas);
       $idiomas = explode(',', $idiomas);
+      $pais = parent::salvar($pais);
+      $pais = str_replace($buscar, $reemplazar, $pais);
+      $pais = strtolower($pais);
 
 
       $ciudad = str_replace($buscar, $reemplazar, $ciudad);
       $des = str_replace($buscar, $reemplazar, $des);
 
-      $consulta = parent::query('insert into contacto(imagen, ciudad, tel, des, tweets, usuario_id) values("'.$imagen.'", "'.$ciudad.'", "'.$tel.'",  "'.$des.'", "'.$tweets.'", "'.$_SESSION['id'].'")');
+      $consulta = parent::query('insert into contacto(imagen, ciudad, tel, des, tweets, usuario_id, pais) values("'.$imagen.'", "'.$ciudad.'", "'.$tel.'",  "'.$des.'", "'.$tweets.'", "'.$_SESSION['id'].'" , "'.$pais.'")');
 
       $string = '';
       for($i= 0; $i < count($idiomas); $i++){

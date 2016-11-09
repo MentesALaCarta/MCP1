@@ -43,7 +43,7 @@
         break;
 
       case '5':
-          $template -> display('view/wits/profile.tpl');
+          header('location: ?view=index');
         break;
 
       default:

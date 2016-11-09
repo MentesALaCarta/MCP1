@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-03 18:01:58
+/* Smarty version 3.1.30, created on 2016-11-08 18:20:12
   from "C:\xampp\htdocs\mentes\view\wits\index.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_581b6d86462261_44257804',
+  'unifunc' => 'content_5822094c72a036_46014003',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a9ff41efd708b6c2145e6acd6c138f4844d0c765' => 
     array (
       0 => 'C:\\xampp\\htdocs\\mentes\\view\\wits\\index.tpl',
-      1 => 1478192516,
+      1 => 1478266886,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:view/principal/script.tpl' => 1,
   ),
 ),false)) {
-function content_581b6d86462261_44257804 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5822094c72a036_46014003 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -90,7 +90,7 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
                 <div class="spacing-2"></div>
                 <input id="company" type="text" value="<?php echo $_smarty_tpl->tpl_vars['experience']->value[0][1];?>
 " class="validate" name="company[0]">
-                <label for="company">Nombre de la empresa</label>
+                <label for="company">Empresa</label>
               </div>
 
               <!-- Sector -->
@@ -112,7 +112,7 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
               <div class="input-field col s6">
                 <input id="country" type="text" value="<?php echo $_smarty_tpl->tpl_vars['experience']->value[0][4];?>
 " class="validate" name="country[0]">
-                <label for="country">Pais</label>
+                <label for="country">País</label>
               </div>
 
             </div><!-- / End Row datos form -->
@@ -175,7 +175,7 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
                   <input id="country" type="text" value="<?php echo $_smarty_tpl->tpl_vars['experience']->value[$_smarty_tpl->tpl_vars['i']->value][4];?>
 " class="validate" name="country[<?php echo $_smarty_tpl->tpl_vars['i']->value;?>
 ]">
-                  <label for="country">Pais</label>
+                  <label for="country">País</label>
                 </div>
 
               </div><!-- / End Row datos form -->
@@ -228,7 +228,7 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
               <!-- Pais -->
               <div class="input-field col s6">
                 <input id="country" type="text" class="validate" name="country[0]">
-                <label for="country">Pais</label>
+                <label for="country">País</label>
               </div>
 
             </div><!-- / End Row datos form -->

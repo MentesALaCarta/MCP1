@@ -61,15 +61,17 @@
         </thead>
 
         <tbody>
-          <tr id="1">
-            <td>Michael velasquez</td>
-            <td>03/11/2011</td>
-            <td>Cali</td>
-            <td><a href="?view=perfil-wit&id=1">Ver perfil</a></td>
-            <td><button width="100%" id="1" type="button" class="btn waves-effect waves-light green aprobar" name="button">Aprobar</button>
+          {for $i = 0 to count($wit) -1}
+          <tr id="{$wit[$i][0]}">
+            <td>{$wit[$i][1]} {$wit[$i][2]}</td>
+            <td>{$wit[$i][3]}</td>
+            <td>{$wit[$i][4]}</td>
+            <td><a href="?view=perfil-wit&id={$wit[$i][0]}">Ver perfil</a></td>
+            <td><button width="100%" id="{$wit[$i][0]}" type="button" class="btn waves-effect waves-light green aprobar" name="button">Aprobar</button>
             </td>
-            <td><button width="100%" id="1" type="button" class="btn waves-effect waves-light red denegar" name="button">Denegar</button></td>
+            <td><button width="100%" id="{$wit[$i][0]}" type="button" class="btn waves-effect waves-light red denegar" name="button">Denegar</button></td>
           </tr>
+          {/for}
         </tbody>
       </table>
       </div>

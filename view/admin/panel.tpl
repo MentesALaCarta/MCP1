@@ -134,19 +134,23 @@
         <table class="highlight hover">
         <thead>
           <tr>
-              <th data-field="id">Nombre</th>
-              <th data-field="name">Sector</th>
-              <th data-field="price">Ciudad</th>
+              <th>Nombre</th>
+              <th>Sector</th>
+              <th>Ciudad</th>
+              <th>País</th>
           </tr>
         </thead>
 
         <tbody>
-          <tr id="1" class="perfil">
-            <td>Alvin</td>
-            <td>Eclair</td>
-            <td>$0.87</td>
-            </a>
+
+          {for $i = 0 to count($wits) -1}
+          <tr class="verPerfil" id="{$wits[$i][0]}">
+            <td>{$wits[$i][1]}</td>
+            <td>{$wits[$i][2]}</td>
+            <td>{$wits[$i][3]}</td>
+            <td>{$wits[$i][4]}</td>
           </tr>
+          {/for}
         </tbody>
       </table>
       </div>

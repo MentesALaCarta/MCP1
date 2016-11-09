@@ -7,12 +7,14 @@
     $tel = $_POST['tel'];
     $idiomas = $_POST['idiomas'];
     $des = $_POST['area'];
+    $pais = $_POST['pais'];
     $tweets = $_POST['tweets'];
+
     session_start();
 
-    if(empty($imagen)){
+    if(!empty($_FILES["imagen-upload"]["name"])){ // No selecciono imagen
 
-      $tipo = $_FILES["imagen-upload"]["type"];
+    $tipo = $_FILES["imagen-upload"]["type"];
 
     if($tipo == "image/x-png" || $tipo == "image/png" || $tipo == "image/gif" || $tipo == "image/gif" || $tipo == "image/pjpeg" || $tipo == "image/jpeg"){
 
@@ -39,7 +41,7 @@
       require_once('../../model/Usuario.php');
       $usuario = new Usuario();
 
-      $usuario -> step4('perfiles/perfil'.$_SESSION['id'].'.png', $ciudad, $tel, $idiomas, $des, $tweets);
+      $usuario -> step4('perfiles/perfil'.$_SESSION['id'].'.png', $ciudad, $tel, $idiomas, $des, $tweets, $pais);
 
 
     }else{
@@ -53,7 +55,7 @@
     require_once('../../model/Usuario.php');
     $usuario = new Usuario();
 
-    $usuario -> step4('perfiles/perfil'.$_SESSION['id'].'.png', $ciudad, $tel, $idiomas, $des, $tweets);
+    $usuario -> step4('perfiles/perfil.png', $ciudad, $tel, $idiomas, $des, $tweets, $pais);
   }
 
 

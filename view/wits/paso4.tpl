@@ -68,9 +68,14 @@
       </div>
 
 
-      <div class="input-field col s12">
+      <div class="input-field col s12 m6">
         <input type="text" id="idiomas" name="idiomas">
         <label for="idiomas">¿Qué idiomas hablas?</label>
+      </div>
+
+      <div class="input-field col s12 m6">
+        <input type="text" id="pais" name="pais">
+        <label for="pais">¿En que país vives?</label>
       </div>
 
       <div class="input-field col s12">

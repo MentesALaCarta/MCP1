@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-04 15:16:16
+/* Smarty version 3.1.30, created on 2016-11-08 22:57:46
   from "C:\xampp\htdocs\mentes\view\admin\panel.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_581c9830abd030_90734895',
+  'unifunc' => 'content_58224a5a193bd2_74541654',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9ffb19a34455e230fa0b6186c671c0876dd56fed' => 
     array (
       0 => 'C:\\xampp\\htdocs\\mentes\\view\\admin\\panel.tpl',
-      1 => 1478268934,
+      1 => 1478642237,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:view/principal/script.tpl' => 1,
   ),
 ),false)) {
-function content_581c9830abd030_90734895 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58224a5a193bd2_74541654 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -161,19 +161,35 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
         <table class="highlight hover">
         <thead>
           <tr>
-              <th data-field="id">Nombre</th>
-              <th data-field="name">Sector</th>
-              <th data-field="price">Ciudad</th>
+              <th>Nombre</th>
+              <th>Sector</th>
+              <th>Ciudad</th>
+              <th>País</th>
           </tr>
         </thead>
 
         <tbody>
-          <tr id="1" class="perfil">
-            <td>Alvin</td>
-            <td>Eclair</td>
-            <td>$0.87</td>
-            </a>
+
+          <?php
+$_smarty_tpl->tpl_vars['i'] = new Smarty_Variable(null, $_smarty_tpl->isRenderingCache);$_smarty_tpl->tpl_vars['i']->step = 1;$_smarty_tpl->tpl_vars['i']->total = (int) ceil(($_smarty_tpl->tpl_vars['i']->step > 0 ? count($_smarty_tpl->tpl_vars['wits']->value)-1+1 - (0) : 0-(count($_smarty_tpl->tpl_vars['wits']->value)-1)+1)/abs($_smarty_tpl->tpl_vars['i']->step));
+if ($_smarty_tpl->tpl_vars['i']->total > 0) {
+for ($_smarty_tpl->tpl_vars['i']->value = 0, $_smarty_tpl->tpl_vars['i']->iteration = 1;$_smarty_tpl->tpl_vars['i']->iteration <= $_smarty_tpl->tpl_vars['i']->total;$_smarty_tpl->tpl_vars['i']->value += $_smarty_tpl->tpl_vars['i']->step, $_smarty_tpl->tpl_vars['i']->iteration++) {
+$_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1;$_smarty_tpl->tpl_vars['i']->last = $_smarty_tpl->tpl_vars['i']->iteration == $_smarty_tpl->tpl_vars['i']->total;?>
+          <tr class="verPerfil" id="<?php echo $_smarty_tpl->tpl_vars['wits']->value[$_smarty_tpl->tpl_vars['i']->value][0];?>
+">
+            <td><?php echo $_smarty_tpl->tpl_vars['wits']->value[$_smarty_tpl->tpl_vars['i']->value][1];?>
+</td>
+            <td><?php echo $_smarty_tpl->tpl_vars['wits']->value[$_smarty_tpl->tpl_vars['i']->value][2];?>
+</td>
+            <td><?php echo $_smarty_tpl->tpl_vars['wits']->value[$_smarty_tpl->tpl_vars['i']->value][3];?>
+</td>
+            <td><?php echo $_smarty_tpl->tpl_vars['wits']->value[$_smarty_tpl->tpl_vars['i']->value][4];?>
+</td>
           </tr>
+          <?php }
+}
+?>
+
         </tbody>
       </table>
       </div>

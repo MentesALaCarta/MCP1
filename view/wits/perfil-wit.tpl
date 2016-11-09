@@ -11,13 +11,13 @@
       <div class="row">
         <div class="col s3 offset-s8" style="margin-top: 5em;">
           <div class="spacing-2"></div>
-          <img src="images/perfiles/perfil12.png" class="circle" alt="Imagen de perfil wit michael" width="100%">
+          <img src="images/{$usuario['imagen']}" class="circle" alt="Imagen de perfil wit michael" width="100%">
         </div>
       </div>
 
       <div class="row">
         <div class="col s11 right-align">
-          <h4 class="des-wit">Michael yara</h4>
+          <h4 class="des-wit">{ucwords($usuario['nombres'])} <br> {ucwords($usuario['apellidos'])}</h4>
         </div>
       </div>
 
@@ -28,31 +28,31 @@
           <!-- Telefono-->
           <div class="row">
             <div class="col s6"><span class="des-wit">Telefono:</span></div>
-            <div class="col s6 "><span class="des-wit-2">3168848349</span></div>
+            <div class="col s6 "><span class="des-wit-2">{$contacto[0][2]}</span></div>
           </div>
 
           <!-- Ciudad -->
           <div class="row">
             <div class="col s6"><span class="des-wit">Ciudad:</span></div>
-            <div class="col s6 "><span class="des-wit-2">Cali</span></div>
+            <div class="col s6 "><span class="des-wit-2">{$contacto[0][1]}</span></div>
           </div>
 
           <!-- Ciudad -->
           <div class="row">
             <div class="col s6"><span class="des-wit">Pais:</span></div>
-            <div class="col s6 "><span class="des-wit-2">Colombia</span></div>
+            <div class="col s6 "><span class="des-wit-2">{$usuario['pais']}</span></div>
           </div>
 
           <!-- Ciudad -->
           <div class="row">
             <div class="col s6"><span class="des-wit">Correo electrónico:</span></div>
-            <div class="col s6 "><span class="des-wit-2">mjyara9agmail.com</span></div>
+            <div class="col s6 "><span class="des-wit-2">{$usuario['email']}</span></div>
           </div>
 
           <!-- Telefono-->
           <div class="row">
             <div class="col s6"><span class="des-wit">Idiomas:</span></div>
-            <div class="col s6 "><span class="des-wit-2">Inglés, Español</span></div>
+            <div class="col s6 "><span class="des-wit-2">{$idiomas}</span></div>
           </div>
 
         </div>
@@ -86,120 +86,20 @@
             </thead>
 
             <tbody>
+              {for $i=0 to count($experiencia) -1}
               <tr>
-                <td>Mentes a la carta</td>
-                <td>Software</td>
-                <td>Desarrollador web</td>
-                <td>Colombia</td>
-                <td>Si</td>
+                <td>{$experiencia[$i][0]}</td>
+                <td>{$experiencia[$i][1]}</td>
+                <td>{$experiencia[$i][2]}</td>
+                <td>{$experiencia[$i][3]}</td>
               </tr>
-              <tr>
-                <td>Mentes a la carta</td>
-                <td>Software</td>
-                <td>Desarrollador web</td>
-                <td>Colombia</td>
-                <td>No</td>
-              </tr>
-              <tr>
-                <td>Mentes a la carta</td>
-                <td>Software</td>
-                <td>Desarrollador web</td>
-                <td>Colombia</td>
-                <td>No</td>
-              </tr>
+              {/for}
             </tbody>
           </table>
         </div>
       </div>
     </div>
 
-
-    <!-- Actividades -->
-    <div class="row">
-      <div class="col s12">
-        <h4 class="accent-text1">Actividades</h4>
-      </div>
-    </div>
-
-    <div class="row">
-
-      <!-- Proyectos innovadores -->
-      <div class="col s8 offset-s2 m4 l3 center-align" >
-        <div class="spacing-1"></div>
-        <div class="area-wit center-align circle hover" id="item1">
-          <i class="fa fa-microphone" aria-hidden="true" style=" font-size: 4rem;"></i>
-        </div>
-        <div class="spacing-1"></div>
-        <span style="color: #EBA820; font-size: 18px;">Proyectos innovadores</span>
-        <br>
-        <span class="accent-grey">
-          Participar en proyectos innovadores <br><span style="visibility: hidden;">lorem ipsum</span>
-        </span>
-        <input type="text" id="services1" name="services[0]"  hidden="hidden">
-      </div>
-
-      <!-- Mentoring -->
-      <div class="col s8 offset-s2 m4 l3 center-align">
-        <div class="spacing-1"></div>
-        <div class="area-wit center-align circle hover" id="item2">
-          <i class="fa fa-users" style=" font-size: 4rem;"></i>
-        </div>
-        <div class="spacing-1"></div>
-        <span style="color: #EBA820; font-size: 18px;">Mentoring</span>
-        <br>
-        <span class="accent-grey">
-          Ser mentor de emprendimientos y proyectos innovadores
-        </span>
-        <input type="text" id="services2" name="services[1]"  hidden="hidden">
-      </div>
-
-
-      <!-- Asesoramiento -->
-      <div class="col s8 offset-s2 m4 l3 center-align">
-        <div class="spacing-1"></div>
-        <div class="area-wit center-align circle hover" id="item3">
-          <i class="fa fa-pencil" style=" font-size: 4rem;"></i>
-        </div>
-        <div class="spacing-1"></div>
-        <span style="color: #EBA820; font-size: 18px;">Asesoramiento</span>
-        <br>
-        <span class="accent-grey">
-          Brindar asesoría a empresas y emprendedores <br><span style="visibility: hidden;">lorem ipsum</span>
-        </span>
-        <input type="text" id="services3" name="services[2]"  hidden="hidden">
-      </div>
-
-
-      <!-- Formación -->
-      <div class="col s8 offset-s2 m4 l3 center-align">
-        <div class="spacing-1"></div>
-        <div class="area-wit center-align circle hover" id="item4">
-          <i class="fa fa-bullhorn" style=" font-size: 4rem;"></i>
-        </div>
-        <div class="spacing-1"></div>
-        <span style="color: #EBA820; font-size: 18px;">Formación</span>
-        <br>
-        <span class="accent-grey">
-          Impartir charlas y formación<br><span style="visibility: hidden;">lorem ipsum lorem ipsum lorem ipsum</span>
-        </span>
-        <input type="text" id="services4" name="services[3]"  hidden="hidden">
-      </div>
-
-      <!-- Contenidos -->
-      <div class="col s8 offset-s2 m4 l3 center-align">
-        <div class="spacing-1"></div>
-        <div class="area-wit center-align circle hover" id="item5">
-          <i class="fa fa-check" style=" font-size: 4rem;"></i>
-        </div>
-        <div class="spacing-1"></div>
-        <span style="color: #EBA820; font-size: 18px;">Contenidos</span>
-        <br>
-        <span class="accent-grey">
-          Generar contenido escrito o audiovisual <br><span style="visibility: hidden;">lorem ipsum</span>
-        </span>
-        <input type="text" id="services5" name="services[4]"  hidden="hidden">
-      </div>
-    </div>
 
     <!-- *Aptitudes -->
     <div class="row">
@@ -218,19 +118,114 @@
           </thead>
 
           <tbody>
-            <tr>
-              <td>Desarrollo web</td>
-            </tr>
-            <tr>
-              <td>Trabajo en equipo</td>
-            </tr>
-            <tr>
-              <td>susceptible</td>
-            </tr>
+            {for $i = 0 to count($aptitudes) -1}
+              <tr>
+                <td>{$aptitudes[$i]}</td>
+              </tr>
+            {/for}
           </tbody>
         </table>
       </div>
     </div>
+
+    <!-- Actividades -->
+    <div class="row">
+      <div class="col s12">
+        <h4 class="accent-text1">Actividades</h4>
+      </div>
+    </div>
+
+    <div class="row">
+
+      {if $brain[0] == true }
+      <!-- Proyectos innovadores -->
+      <div class="col s8 offset-s2 m4 l3 center-align" >
+        <div class="spacing-1"></div>
+        <div class="area-wit center-align circle hover" id="item1">
+          <i class="fa fa-microphone" aria-hidden="true" style=" font-size: 4rem;"></i>
+        </div>
+        <div class="spacing-1"></div>
+        <span style="color: #EBA820; font-size: 18px;">Proyectos innovadores</span>
+        <br>
+        <span class="accent-grey">
+          Participar en proyectos innovadores <br><span style="visibility: hidden;">lorem ipsum</span>
+        </span>
+        <input type="text" id="services1" name="services[0]"  hidden="hidden">
+      </div>
+      {/if}
+
+      {if $brain[1] == true}
+      <!-- Mentoring -->
+      <div class="col s8 offset-s2 m4 l3 center-align">
+        <div class="spacing-1"></div>
+        <div class="area-wit center-align circle hover" id="item2">
+          <i class="fa fa-users" style=" font-size: 4rem;"></i>
+        </div>
+        <div class="spacing-1"></div>
+        <span style="color: #EBA820; font-size: 18px;">Mentoring</span>
+        <br>
+        <span class="accent-grey">
+          Ser mentor de emprendimientos y proyectos innovadores
+        </span>
+        <input type="text" id="services2" name="services[1]"  hidden="hidden">
+      </div>
+      {/if}
+
+      {if $brain[2] == true}
+      <!-- Asesoramiento -->
+      <div class="col s8 offset-s2 m4 l3 center-align">
+        <div class="spacing-1"></div>
+        <div class="area-wit center-align circle hover" id="item3">
+          <i class="fa fa-pencil" style=" font-size: 4rem;"></i>
+        </div>
+        <div class="spacing-1"></div>
+        <span style="color: #EBA820; font-size: 18px;">Asesoramiento</span>
+        <br>
+        <span class="accent-grey">
+          Brindar asesoría a empresas y emprendedores <br><span style="visibility: hidden;">lorem ipsum</span>
+        </span>
+        <input type="text" id="services3" name="services[2]"  hidden="hidden">
+      </div>
+      {/if}
+
+
+      {if $brain[3] == true}
+      <!-- Formación -->
+      <div class="col s8 offset-s2 m4 l3 center-align">
+        <div class="spacing-1"></div>
+        <div class="area-wit center-align circle hover" id="item4">
+          <i class="fa fa-bullhorn" style=" font-size: 4rem;"></i>
+        </div>
+        <div class="spacing-1"></div>
+        <span style="color: #EBA820; font-size: 18px;">Formación</span>
+        <br>
+        <span class="accent-grey">
+          Impartir charlas y formación<br><span style="visibility: hidden;">lorem ipsum lorem ipsum lorem ipsum</span>
+        </span>
+        <input type="text" id="services4" name="services[3]"  hidden="hidden">
+      </div>
+      {/if}
+
+      {if $brain[4] == true}
+      <!-- Contenidos -->
+      <div class="col s8 offset-s2 m4 l3 center-align">
+        <div class="spacing-1"></div>
+        <div class="area-wit center-align circle hover" id="item5">
+          <i class="fa fa-check" style=" font-size: 4rem;"></i>
+        </div>
+        <div class="spacing-1"></div>
+        <span style="color: #EBA820; font-size: 18px;">Contenidos</span>
+        <br>
+        <span class="accent-grey">
+          Generar contenido escrito o audiovisual <br><span style="visibility: hidden;">lorem ipsum</span>
+        </span>
+        <input type="text" id="services5" name="services[4]"  hidden="hidden">
+      </div>
+      {/if}
+
+    </div>
+
+
 
     <!-- Descripcion del wit -->
     <div class="row">
@@ -242,7 +237,7 @@
     <div class="row">
       <div class="col s12">
         <span class="text-accent1">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          {$contacto[0][4]}
         </span>
       </div>
     </div>
@@ -257,7 +252,7 @@
     <div class="row">
       <div class="col s12">
         <span class="text-accent1">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          {$contacto[0][3]}
         </span>
       </div>
     </div>

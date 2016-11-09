@@ -531,7 +531,7 @@ $(document).on('click', '#step4', function(){
     },
     success: function(answer){
       $('#load').hide();
-      console.log(answer);
+
       if(answer == 'error_2'){
         swal('', 'Por favor selecciona una imagen', 'error');
       }else{
@@ -623,17 +623,82 @@ $('#tweets').keyup(function(Event){
     $('#pre-des').html(diferencia);
 });
 
-$(document).on('click', '.perfil', function(){
+$(document).on('click', '.verPerfil', function(){
   var id = $(this).attr('id');
-  alert(id);
+  window.location.href="?view=perfil-wit&id="+id;
 });
 
 $(document).on('click', '.aprobar', function(){
   var id = $(this).attr('id');
-  alert(id);
+
+      swal({
+      title: "Aprobar wit",
+      text: "",
+      type: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#DD6B55",
+      confirmButtonText: "Aprobar",
+      cancelButtonText: "Cancelar",
+      closeOnConfirm: false,
+      closeOnCancel: false
+    },
+    function(isConfirm){
+      if (isConfirm) {
+        swal({
+          title: "Wit aprobado",
+          text: "Se ha aprobado el wit correctamente",
+          type: "success"
+        }, function(){
+          $.ajax({
+            method: 'POST',
+            url: 'controller/admin/aprobar.php',
+            data: {id: id},
+            success: function(){
+              location.reload();
+            }
+          });
+        });
+      } else {
+    	    swal("Cancelado", "Se ha cancelado el proceso", "error");
+      }
+    });
+
+
 });
 
 $(document).on('click', '.denegar', function(){
+
   var id = $(this).attr('id');
-  alert(id);
+
+      swal({
+      title: "No aprobar wit",
+      text: "",
+      type: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#DD6B55",
+      confirmButtonText: "No aprobar",
+      cancelButtonText: "Cancelar",
+      closeOnConfirm: false,
+      closeOnCancel: false
+    },
+    function(isConfirm){
+      if (isConfirm) {
+        swal({
+          title: "Denegar wit",
+          text: "El wit ha sido denegado en Mentes a la carta correctamente",
+          type: "success"
+        }, function(){
+          $.ajax({
+            method: 'POST',
+            url: 'controller/admin/desAprobar.php',
+            data: {id: id},
+            success: function(){
+              location.reload();
+            }
+          });
+        });
+      } else {
+          swal("Cancelado", "Se ha cancelado el proceso", "error");
+      }
+    });
 });

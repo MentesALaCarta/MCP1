@@ -56,7 +56,7 @@
              <div class="col s12 l12 center">
                <h6>¿Quieres ser una mente a la carta?</h6>
                <a href="?view=registrar">
-                 <button type="button" name="button" class="btn btn-primary waves-effect grey waves-light" style="font-size: 0.7em !important; padding-top: 1px !important; ">Registrarme</button>
+                 <button type="button" name="button" class="btn btn-primary waves-effect grey waves-light" style="font-size: 0.7em !important; padding-top: 1px !important; ">Postulate</button>
                </a>
              </div>
          </div>

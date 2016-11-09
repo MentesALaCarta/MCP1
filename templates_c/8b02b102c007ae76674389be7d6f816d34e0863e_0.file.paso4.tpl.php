@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-03 18:04:13
+/* Smarty version 3.1.30, created on 2016-11-08 21:24:07
   from "C:\xampp\htdocs\mentes\view\wits\paso4.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_581b6e0da7f126_96547299',
+  'unifunc' => 'content_58223467b1d6c3_01037898',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8b02b102c007ae76674389be7d6f816d34e0863e' => 
     array (
       0 => 'C:\\xampp\\htdocs\\mentes\\view\\wits\\paso4.tpl',
-      1 => 1478192650,
+      1 => 1478636198,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:view/principal/script.tpl' => 1,
   ),
 ),false)) {
-function content_581b6e0da7f126_96547299 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58223467b1d6c3_01037898 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -96,9 +96,14 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
       </div>
 
 
-      <div class="input-field col s12">
+      <div class="input-field col s12 m6">
         <input type="text" id="idiomas" name="idiomas">
         <label for="idiomas">¿Qué idiomas hablas?</label>
+      </div>
+
+      <div class="input-field col s12 m6">
+        <input type="text" id="pais" name="pais">
+        <label for="pais">¿En que país vives?</label>
       </div>
 
       <div class="input-field col s12">
