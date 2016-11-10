@@ -238,7 +238,7 @@
     {
       parent::conectar();
 
-      $consulta = 'select u.id, u.primer_nombre from usuario u inner join experiencia e on e.usuario_id = u.id where u.estado = "A" and ('.$sectores.') and ('.$empresas.')';
+      $consulta = 'select DISTINCT(u.id), u.primer_nombre from usuario u inner join experiencia e on e.usuario_id = u.id where u.estado = "A" and ('.$sectores.') and ('.$empresas.')';
 
       $verificar = parent::verificarRegistros($consulta);
 
@@ -266,7 +266,7 @@
     {
       parent::conectar();
 
-      $consulta = 'select u.id, u.primer_nombre from usuario u inner join experiencia e on e.usuario_id = u.id where u.estado = "A" and ('.$sectores.') ';
+      $consulta = 'select DISTINCT(u.id), u.primer_nombre from usuario u inner join experiencia e on e.usuario_id = u.id where u.estado = "A" and ('.$sectores.') ';
 
       $verificar = parent::verificarRegistros($consulta);
 
@@ -293,7 +293,7 @@
     {
       parent::conectar();
 
-      $consulta = 'select u.id, u.primer_nombre from usuario u inner join experiencia e on e.usuario_id = u.id where u.estado = "A" and ('.$empresas.') ';
+      $consulta = 'select DISTINCT(u.id), u.primer_nombre from usuario u inner join experiencia e on e.usuario_id = u.id where u.estado = "A" and ('.$empresas.') ';
 
       $verificar = parent::verificarRegistros($consulta);
 
@@ -330,6 +330,198 @@
           <td>'.$row['pais'].'</td>
         </tr>
         ';
+      }
+
+      parent::cerrar();
+    }
+
+    public function consultByCiudad($ciudad)
+    {
+      parent::conectar();
+
+      $consulta = 'select u.id, u.primer_nombre from usuario u inner join contacto c on c.usuario_id = u.id where u.estado = "A" and ('.$ciudad.') ';
+
+      $verificar = parent::verificarRegistros($consulta);
+
+      if($verificar > 0){
+        $sql = parent::query($consulta);
+        while($row = mysqli_fetch_array($sql)){
+          echo '
+          <tr class="verPerfil" id="'.$row['id'].'">
+            <td>'.$row['id'].'</td>
+            <td>'.$row['primer_nombre'].'</td>
+          </tr>
+
+        ';
+        }
+
+      }else{
+        echo ' No hay registros';
+      }
+
+      parent::cerrar();
+    }
+
+    public function consultByCargo($cargos)
+    {
+      parent::conectar();
+
+      $consulta = 'select DISTINCT(u.id), u.primer_nombre from usuario u inner join experiencia e on e.usuario_id = u.id where u.estado = "A" and ('.$cargos.') ';
+
+      $verificar = parent::verificarRegistros($consulta);
+
+      if($verificar > 0){
+        $sql = parent::query($consulta);
+        while($row = mysqli_fetch_array($sql)){
+          echo '
+          <tr class="verPerfil" id="'.$row['id'].'">
+            <td>'.$row['id'].'</td>
+            <td>'.$row['primer_nombre'].'</td>
+          </tr>
+
+        ';
+        }
+
+      }else{
+        echo ' No hay registros';
+      }
+
+      parent::cerrar();
+    }
+
+    public function consultByActividad($actividad)
+    {
+      parent::conectar();
+
+      $consulta = 'select DISTINCT(u.id), u.primer_nombre from usuario u inner join brain b on b.usuario_id = u.id where u.estado = "A" and ('.$actividad.') ';
+
+      $verificar = parent::verificarRegistros($consulta);
+
+      if($verificar > 0){
+        $sql = parent::query($consulta);
+        while($row = mysqli_fetch_array($sql)){
+          echo '
+          <tr class="verPerfil" id="'.$row['id'].'">
+            <td>'.$row['id'].'</td>
+            <td>'.$row['primer_nombre'].'</td>
+          </tr>
+
+        ';
+        }
+
+      }else{
+        echo ' No hay registros';
+      }
+
+      parent::cerrar();
+    }
+
+    public function consultByAptitudes($aptitudes)
+    {
+      parent::conectar();
+
+      $consulta = 'select DISTINCT(u.id), u.primer_nombre from usuario u inner join habilidades h on h.usuario_id = u.id where u.estado = "A" and ('.$aptitudes.') ';
+      echo $consulta;
+      $verificar = parent::verificarRegistros($consulta);
+
+      if($verificar > 0){
+        $sql = parent::query($consulta);
+        while($row = mysqli_fetch_array($sql)){
+          echo '
+          <tr class="verPerfil" id="'.$row['id'].'">
+            <td>'.$row['id'].'</td>
+            <td>'.$row['primer_nombre'].'</td>
+          </tr>
+
+        ';
+        }
+
+      }else{
+        echo ' No hay registros';
+      }
+
+      parent::cerrar();
+    }
+
+
+    # Funcion que consulta  wits aprobados por nombre de empresa y sector
+    public function consultByPaisAndIdioma($sectores, $empresas)
+    {
+      parent::conectar();
+
+      $consulta = 'select DISTINCT(u.id), u.primer_nombre from usuario u inner join idiomas i on i.usuario_id = u.id inner join contacto c on c.usuario_id = u.id where u.estado = "A" and ('.$sectores.') and ('.$empresas.')';
+
+      $verificar = parent::verificarRegistros($consulta);
+
+      if($verificar > 0){
+        $sql = parent::query($consulta);
+        while($row = mysqli_fetch_array($sql)){
+          echo '
+          <tr class="verPerfil" id="'.$row['id'].'">
+            <td>'.$row['id'].'</td>
+            <td>'.$row['primer_nombre'].'</td>
+          </tr>
+
+        ';
+        }
+
+      }else{
+        echo ' No hay registros';
+      }
+
+      parent::cerrar();
+    }
+
+
+    public function consultByPais($sectores)
+    {
+      parent::conectar();
+
+      $consulta = 'select DISTINCT(u.id), u.primer_nombre from usuario u inner join contacto c on c.usuario_id = u.id where u.estado = "A" and ('.$sectores.') ';
+
+      $verificar = parent::verificarRegistros($consulta);
+
+      if($verificar > 0){
+        $sql = parent::query($consulta);
+        while($row = mysqli_fetch_array($sql)){
+          echo '
+          <tr class="verPerfil" id="'.$row['id'].'">
+            <td>'.$row['id'].'</td>
+            <td>'.$row['primer_nombre'].'</td>
+          </tr>
+
+        ';
+        }
+
+      }else{
+        echo ' No hay registros';
+      }
+
+      parent::cerrar();
+    }
+
+    public function consultByIdioma($empresas)
+    {
+      parent::conectar();
+
+      $consulta = 'select DISTINCT(u.id), u.primer_nombre from usuario u inner join idiomas i on i.usuario_id = u.id where u.estado = "A" and ('.$empresas.') ';
+
+      $verificar = parent::verificarRegistros($consulta);
+
+      if($verificar > 0){
+        $sql = parent::query($consulta);
+        while($row = mysqli_fetch_array($sql)){
+          echo '
+          <tr class="verPerfil" id="'.$row['id'].'">
+            <td>'.$row['id'].'</td>
+            <td>'.$row['primer_nombre'].'</td>
+          </tr>
+
+        ';
+        }
+
+      }else{
+        echo ' No hay registros';
       }
 
       parent::cerrar();

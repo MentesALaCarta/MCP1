@@ -732,8 +732,6 @@ $(document).on('keyup', '#busqueda-text', function(){
 */
 
 $(document).on('change', '#sectores_empresas', function(){
-  console.log($(this).val());
-
   $.ajax({
     method: 'POST',
     url: 'controller/admin/select/sectores_empresas.php',
@@ -744,7 +742,63 @@ $(document).on('change', '#sectores_empresas', function(){
   });
 });
 
+$(document).on('change', '#ciudad_dinamic', function(){
+  $.ajax({
+    method: 'POST',
+    url: 'controller/admin/select/ciudad.php',
+    data: {ciudad: $(this).val()},
+    success: function(res){
+      $('#wits-aprobados-panel').html(res);
+    }
+  });
+});
 
 
+
+$(document).on('change', '#cargos_dinamic', function(){
+
+  $.ajax({
+    method: 'POST',
+    url: 'controller/admin/select/cargos.php',
+    data: {cargos: $(this).val()},
+    success: function(res){
+      $('#wits-aprobados-panel').html(res);
+    }
+  });
+});
+
+$(document).on('change', '#actividad_dinamic', function(){
+  $.ajax({
+    method: 'POST',
+    url: 'controller/admin/select/actividad.php',
+    data: {actividad: $(this).val()},
+    success: function(res){
+      $('#wits-aprobados-panel').html(res);
+    }
+  });
+});
+
+$(document).on('change', '#aptitudes_dinamic', function(){
+  $.ajax({
+    method: 'POST',
+    url: 'controller/admin/select/aptitudes.php',
+    data: {aptitud: $(this).val()},
+    success: function(res){
+      $('#wits-aprobados-panel').html(res);
+    }
+  });
+});
+
+$(document).on('change', '#pais_idioma_dinamic', function(){
+
+  $.ajax({
+    method: 'POST',
+    url: 'controller/admin/select/pais_idioma.php',
+    data: {pais_idioma: $(this).val()},
+    success: function(res){
+      $('#wits-aprobados-panel').html(res);
+    }
+  });
+});
 
 // *********    End Algoritmo     *********

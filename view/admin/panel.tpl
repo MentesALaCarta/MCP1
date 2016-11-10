@@ -88,7 +88,7 @@
 
       <!-- Ciudades -->
       <div class="input-field col s12 m6">
-        <select multiple>
+        <select multiple id="ciudad_dinamic">
           <option value="" disabled selected></option>
           {for $i = 0 to count($ciudad) -1}
             <option value="{$ciudad[$i]}">{$ciudad[$i]}</option>
@@ -99,7 +99,7 @@
 
       <!-- Cargos -->
       <div class="input-field col s12 m6">
-        <select multiple>
+        <select multiple id="cargos_dinamic">
           <option value="" disabled selected></option>
           {for $i = 0 to count($cargos) -1}
             <option value="{$cargos[$i]}">{$cargos[$i]}</option>
@@ -110,7 +110,7 @@
 
       <!-- Actividades -->
       <div class="input-field col s12 m6">
-        <select multiple>
+        <select multiple id="actividad_dinamic">
           <option value="" disabled selected></option>
           {for $i = 0 to count($brains) -1}
             <option value="{$brains[$i]}">{$brains[$i]}</option>
@@ -121,14 +121,14 @@
 
       <!-- Paises y empresas -->
       <div class="input-field col s12 m6">
-        <select multiple>
+        <select multiple id="pais_idioma_dinamic">
           <option value="" disabled selected>Paises</option>
           {for $i = 0 to count($paises) -1}
-            <option value="{$paises[$i]}">{ucwords($paises[$i])}</option>
+            <option value="pais{$paises[$i]}">{ucwords($paises[$i])}</option>
           {/for}
           <option value="" disabled selected>Idiomas</option>
           {for $i = 0 to count($idiomas) -1}
-            <option value="{$idiomas[$i]}">{ucwords($idiomas[$i])}</option>
+            <option value="idioma{$idiomas[$i]}">{ucwords($idiomas[$i])}</option>
           {/for}
         </select>
         <label>Paises / Idiomas </label>
@@ -136,7 +136,7 @@
 
       <!-- Aptitudes -->
       <div class="input-field col s12">
-        <select multiple>
+        <select multiple id="aptitudes_dinamic">
           <option value="" disabled selected></option>
           {for $i = 0 to count($habilidades) -1}
             <option value="{$habilidades[$i]}">{ucwords($habilidades[$i])}</option>

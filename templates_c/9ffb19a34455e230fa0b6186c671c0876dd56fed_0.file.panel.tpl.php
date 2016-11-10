@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-10 18:08:43
+/* Smarty version 3.1.30, created on 2016-11-10 22:26:36
   from "C:\xampp\htdocs\mentes\view\admin\panel.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5824a99b90fcf1_34846622',
+  'unifunc' => 'content_5824e60c47c279_72672746',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9ffb19a34455e230fa0b6186c671c0876dd56fed' => 
     array (
       0 => 'C:\\xampp\\htdocs\\mentes\\view\\admin\\panel.tpl',
-      1 => 1478797720,
+      1 => 1478813193,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:view/principal/script.tpl' => 1,
   ),
 ),false)) {
-function content_5824a99b90fcf1_34846622 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5824e60c47c279_72672746 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -133,7 +133,7 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
 
       <!-- Ciudades -->
       <div class="input-field col s12 m6">
-        <select multiple>
+        <select multiple id="ciudad_dinamic">
           <option value="" disabled selected></option>
           <?php
 $_smarty_tpl->tpl_vars['i'] = new Smarty_Variable(null, $_smarty_tpl->isRenderingCache);$_smarty_tpl->tpl_vars['i']->step = 1;$_smarty_tpl->tpl_vars['i']->total = (int) ceil(($_smarty_tpl->tpl_vars['i']->step > 0 ? count($_smarty_tpl->tpl_vars['ciudad']->value)-1+1 - (0) : 0-(count($_smarty_tpl->tpl_vars['ciudad']->value)-1)+1)/abs($_smarty_tpl->tpl_vars['i']->step));
@@ -153,7 +153,7 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
 
       <!-- Cargos -->
       <div class="input-field col s12 m6">
-        <select multiple>
+        <select multiple id="cargos_dinamic">
           <option value="" disabled selected></option>
           <?php
 $_smarty_tpl->tpl_vars['i'] = new Smarty_Variable(null, $_smarty_tpl->isRenderingCache);$_smarty_tpl->tpl_vars['i']->step = 1;$_smarty_tpl->tpl_vars['i']->total = (int) ceil(($_smarty_tpl->tpl_vars['i']->step > 0 ? count($_smarty_tpl->tpl_vars['cargos']->value)-1+1 - (0) : 0-(count($_smarty_tpl->tpl_vars['cargos']->value)-1)+1)/abs($_smarty_tpl->tpl_vars['i']->step));
@@ -173,7 +173,7 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
 
       <!-- Actividades -->
       <div class="input-field col s12 m6">
-        <select multiple>
+        <select multiple id="actividad_dinamic">
           <option value="" disabled selected></option>
           <?php
 $_smarty_tpl->tpl_vars['i'] = new Smarty_Variable(null, $_smarty_tpl->isRenderingCache);$_smarty_tpl->tpl_vars['i']->step = 1;$_smarty_tpl->tpl_vars['i']->total = (int) ceil(($_smarty_tpl->tpl_vars['i']->step > 0 ? count($_smarty_tpl->tpl_vars['brains']->value)-1+1 - (0) : 0-(count($_smarty_tpl->tpl_vars['brains']->value)-1)+1)/abs($_smarty_tpl->tpl_vars['i']->step));
@@ -193,14 +193,14 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
 
       <!-- Paises y empresas -->
       <div class="input-field col s12 m6">
-        <select multiple>
+        <select multiple id="pais_idioma_dinamic">
           <option value="" disabled selected>Paises</option>
           <?php
 $_smarty_tpl->tpl_vars['i'] = new Smarty_Variable(null, $_smarty_tpl->isRenderingCache);$_smarty_tpl->tpl_vars['i']->step = 1;$_smarty_tpl->tpl_vars['i']->total = (int) ceil(($_smarty_tpl->tpl_vars['i']->step > 0 ? count($_smarty_tpl->tpl_vars['paises']->value)-1+1 - (0) : 0-(count($_smarty_tpl->tpl_vars['paises']->value)-1)+1)/abs($_smarty_tpl->tpl_vars['i']->step));
 if ($_smarty_tpl->tpl_vars['i']->total > 0) {
 for ($_smarty_tpl->tpl_vars['i']->value = 0, $_smarty_tpl->tpl_vars['i']->iteration = 1;$_smarty_tpl->tpl_vars['i']->iteration <= $_smarty_tpl->tpl_vars['i']->total;$_smarty_tpl->tpl_vars['i']->value += $_smarty_tpl->tpl_vars['i']->step, $_smarty_tpl->tpl_vars['i']->iteration++) {
 $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1;$_smarty_tpl->tpl_vars['i']->last = $_smarty_tpl->tpl_vars['i']->iteration == $_smarty_tpl->tpl_vars['i']->total;?>
-            <option value="<?php echo $_smarty_tpl->tpl_vars['paises']->value[$_smarty_tpl->tpl_vars['i']->value];?>
+            <option value="pais<?php echo $_smarty_tpl->tpl_vars['paises']->value[$_smarty_tpl->tpl_vars['i']->value];?>
 "><?php echo ucwords($_smarty_tpl->tpl_vars['paises']->value[$_smarty_tpl->tpl_vars['i']->value]);?>
 </option>
           <?php }
@@ -213,7 +213,7 @@ $_smarty_tpl->tpl_vars['i'] = new Smarty_Variable(null, $_smarty_tpl->isRenderin
 if ($_smarty_tpl->tpl_vars['i']->total > 0) {
 for ($_smarty_tpl->tpl_vars['i']->value = 0, $_smarty_tpl->tpl_vars['i']->iteration = 1;$_smarty_tpl->tpl_vars['i']->iteration <= $_smarty_tpl->tpl_vars['i']->total;$_smarty_tpl->tpl_vars['i']->value += $_smarty_tpl->tpl_vars['i']->step, $_smarty_tpl->tpl_vars['i']->iteration++) {
 $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1;$_smarty_tpl->tpl_vars['i']->last = $_smarty_tpl->tpl_vars['i']->iteration == $_smarty_tpl->tpl_vars['i']->total;?>
-            <option value="<?php echo $_smarty_tpl->tpl_vars['idiomas']->value[$_smarty_tpl->tpl_vars['i']->value];?>
+            <option value="idioma<?php echo $_smarty_tpl->tpl_vars['idiomas']->value[$_smarty_tpl->tpl_vars['i']->value];?>
 "><?php echo ucwords($_smarty_tpl->tpl_vars['idiomas']->value[$_smarty_tpl->tpl_vars['i']->value]);?>
 </option>
           <?php }
@@ -226,7 +226,7 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
 
       <!-- Aptitudes -->
       <div class="input-field col s12">
-        <select multiple>
+        <select multiple id="aptitudes_dinamic">
           <option value="" disabled selected></option>
           <?php
 $_smarty_tpl->tpl_vars['i'] = new Smarty_Variable(null, $_smarty_tpl->isRenderingCache);$_smarty_tpl->tpl_vars['i']->step = 1;$_smarty_tpl->tpl_vars['i']->total = (int) ceil(($_smarty_tpl->tpl_vars['i']->step > 0 ? count($_smarty_tpl->tpl_vars['habilidades']->value)-1+1 - (0) : 0-(count($_smarty_tpl->tpl_vars['habilidades']->value)-1)+1)/abs($_smarty_tpl->tpl_vars['i']->step));
