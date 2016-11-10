@@ -48,84 +48,122 @@
     <div class="row">
 
       <!-- Nombres o apellidos -->
-      <div class="input-field col s12 m6">
-        <input id="last_name" type="text" class="validate">
-        <label for="last_name">Nombres / Apellidos </label>
+      <!-- <div class="input-field col s12 m4">
+        <input id="busqueda-text" type="text" class="validate">
+        <label for="busqueda-text">Ingresa tu búsqueda</label>
+      </div> -->
+
+      <!-- Busqueda / test -->
+      <div class="input-field col s12 m4">
+        <input id="busqueda-text-dinamic" type="text" class="validate">
+        <label for="busqueda-text-dinamic">Ingresa tu búsqueda</label>
+      </div>
+
+
+      <!-- Tipo de busqueda / Test -->
+      <div class="input-field col s12 m4">
+        <select>
+          <option value="" disabled selected></option>
+          <option value="name">Nombre o Apellido</option>
+          <option value="sector">Sector</option>
+          <option value="empresa">Empresa</option>
+          <option value="ciudad">Ciudad</option>
+          <option value="cargo">Cargo</option>
+          <option value="Actividad">Actividades</option>
+          <option value="Pais">País</option>
+          <option value="Idiomas">Idiomas</option>
+          <option value="Aptitud">Aptitud</option>
+
+        </select>
+        <label>Tipo de búsqueda</label>
+      </div>
+
+      <!-- Tipo de busqueda / Test -->
+      <div class="input-field col s12 m4">
+        <select>
+          <option value="" disabled selected></option>
+          <div id="sugerencias">
+            <option value="name">Cali</option>
+            <option value="name">Bogotá</option>
+            <option value="name">Medellín</option>
+          </div>
+        </select>
+        <label class="primary-color">Sugerencias</label>
       </div>
 
       <!-- Sectores y empresas -->
-      <div class="input-field col s12 m6">
+      <!-- <div class="input-field col s12 m6">
         <select multiple>
           <option value="" disabled selected>Sectores</option>
-          <option value="1">Option 1</option>
-          <option value="2">Option 2</option>
-          <option value="3">Option 3</option>
+          {for $i = 0 to count($sectores) -1}
+            <option value="{$sectores[$i]}">{$sectores[$i]}</option>
+          {/for}
           <option value="" disabled selected>Empresas</option>
-          <option value="4">Option 4</option>
-          <option value="5">Option 5</option>
-          <option value="6">Option 6</option>
+          {for $i = 0 to count($empresas) -1}
+            <option value="{$empresas[$i]}">{$empresas[$i]}</option>
+          {/for}
         </select>
         <label>Sectores / Empresas </label>
-      </div>
+      </div> -->
 
       <!-- Ciudades -->
-      <div class="input-field col s12 m6">
+      <!-- <div class="input-field col s12 m6">
         <select multiple>
           <option value="" disabled selected></option>
-          <option value="1">Cali</option>
-          <option value="2">Medellín</option>
-          <option value="3">Bógota</option>
+          {for $i = 0 to count($ciudad) -1}
+            <option value="{$ciudad[$i]}">{$ciudad[$i]}</option>
+          {/for}
         </select>
         <label>Ciudades</label>
-      </div>
+      </div> -->
 
       <!-- Cargos -->
-      <div class="input-field col s12 m6">
+      <!-- <div class="input-field col s12 m6">
         <select multiple>
           <option value="" disabled selected></option>
-          <option value="1">Periodista</option>
-          <option value="2">Analista</option>
-          <option value="3">Desarrollador web</option>
+          {for $i = 0 to count($cargos) -1}
+            <option value="{$cargos[$i]}">{$cargos[$i]}</option>
+          {/for}
         </select>
         <label>Cargos</label>
-      </div>
+      </div> -->
 
       <!-- Actividades -->
-      <div class="input-field col s12 m6">
+      <!-- <div class="input-field col s12 m6">
         <select multiple>
           <option value="" disabled selected></option>
-          <option value="1">Periodista</option>
-          <option value="2">Analista</option>
-          <option value="3">Desarrollador web</option>
+          {for $i = 0 to count($brains) -1}
+            <option value="{$brains[$i]}">{$brains[$i]}</option>
+          {/for}
         </select>
         <label>Actividades</label>
-      </div>
+      </div> -->
 
       <!-- Paises y empresas -->
-      <div class="input-field col s12 m6">
+      <!-- <div class="input-field col s12 m6">
         <select multiple>
           <option value="" disabled selected>Paises</option>
-          <option value="1">Option 1</option>
-          <option value="2">Option 2</option>
-          <option value="3">Option 3</option>
+          {for $i = 0 to count($paises) -1}
+            <option value="{$paises[$i]}">{ucwords($paises[$i])}</option>
+          {/for}
           <option value="" disabled selected>Idiomas</option>
-          <option value="4">Option 4</option>
-          <option value="5">Option 5</option>
-          <option value="6">Option 6</option>
+          {for $i = 0 to count($idiomas) -1}
+            <option value="{$idiomas[$i]}">{ucwords($idiomas[$i])}</option>
+          {/for}
         </select>
         <label>Paises / Idiomas </label>
-      </div>
+      </div> -->
 
       <!-- Aptitudes -->
-      <div class="input-field col s12">
+      <!-- <div class="input-field col s12">
         <select multiple>
           <option value="" disabled selected></option>
-          <option value="1">Periodista</option>
-          <option value="2">Analista</option>
-          <option value="3">Desarrollador web</option>
+          {for $i = 0 to count($habilidades) -1}
+            <option value="{$habilidades[$i]}">{ucwords($habilidades[$i])}</option>
+          {/for}
         </select>
         <label>Aptitudes</label>
-      </div>
+      </div> -->
 
     </div>
 
@@ -135,13 +173,13 @@
         <thead>
           <tr>
               <th>Nombre</th>
-              <th>Sector</th>
+              <th>Apellido</th>
               <th>Ciudad</th>
               <th>País</th>
           </tr>
         </thead>
 
-        <tbody>
+        <tbody id="wits-aprobados-panel">
 
           {for $i = 0 to count($wits) -1}
           <tr class="verPerfil" id="{$wits[$i][0]}">
@@ -151,10 +189,12 @@
             <td>{$wits[$i][4]}</td>
           </tr>
           {/for}
+
         </tbody>
       </table>
       </div>
     </div>
+
   </div>
 
 </div><!-- / End .Panel-->

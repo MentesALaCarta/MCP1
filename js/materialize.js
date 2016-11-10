@@ -702,3 +702,20 @@ $(document).on('click', '.denegar', function(){
       }
     });
 });
+
+// Detecta el evento del teclado
+$(document).on('keyup', '#busqueda-text', function(){
+
+  // Leemos la busqueda
+  var busqueda = $(this).val();
+
+  $.ajax({
+    method: 'POST',
+    url: 'controller/admin/busqueda.php',
+    data: {busqueda: busqueda},
+    success: function(respuestas){
+      $('#wits-aprobados-panel').html(respuestas);
+    }
+  });
+
+});
