@@ -3,7 +3,6 @@
 <div class="row">
    <div class="col s12" id="home" style="padding: 0px; margin: 0px; position: relative; overflow: hidden;">
        <!--<img class="img-right" src="images/Logo%20Blanco%20MALC.png">-->
-       <div class="img-nube"></div>
         <video class="hide-on-med-and-down" id="video" src="video/video5.mp4" autoplay loop>
         </video>
         <!-- Banner para Mobie pequeño-->

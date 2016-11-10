@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-08 22:06:01
+/* Smarty version 3.1.30, created on 2016-11-10 16:37:34
   from "C:\xampp\htdocs\mentes\view\index.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58223e3987ebb9_01471203',
+  'unifunc' => 'content_5824943e5f4928_81181062',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b6716b4f81b8bf7df88d666fde2a83f02c1c848a' => 
     array (
       0 => 'C:\\xampp\\htdocs\\mentes\\view\\index.tpl',
-      1 => 1478639158,
+      1 => 1478792252,
       2 => 'file',
     ),
   ),
@@ -24,7 +24,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:view/principal/script.tpl' => 1,
   ),
 ),false)) {
-function content_58223e3987ebb9_01471203 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5824943e5f4928_81181062 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -34,7 +34,6 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
 <div class="row">
    <div class="col s12" id="home" style="padding: 0px; margin: 0px; position: relative; overflow: hidden;">
        <!--<img class="img-right" src="images/Logo%20Blanco%20MALC.png">-->
-       <div class="img-nube"></div>
         <video class="hide-on-med-and-down" id="video" src="video/video5.mp4" autoplay loop>
         </video>
         <!-- Banner para Mobie pequeño-->

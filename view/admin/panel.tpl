@@ -48,66 +48,46 @@
     <div class="row">
 
       <!-- Nombres o apellidos -->
-      <!-- <div class="input-field col s12 m4">
+      <div class="input-field col s12 m6">
         <input id="busqueda-text" type="text" class="validate">
         <label for="busqueda-text">Ingresa tu búsqueda</label>
-      </div> -->
-
-      <!-- Busqueda / test -->
-      <div class="input-field col s12 m4">
-        <input id="busqueda-text-dinamic" type="text" class="validate">
-        <label for="busqueda-text-dinamic">Ingresa tu búsqueda</label>
       </div>
 
-
       <!-- Tipo de busqueda / Test -->
-      <div class="input-field col s12 m4">
-        <select>
+      <!-- <div class="input-field col s12 m4">
+        <select id="tipo_busqueda_dinamic">
           <option value="" disabled selected></option>
           <option value="name">Nombre o Apellido</option>
           <option value="sector">Sector</option>
           <option value="empresa">Empresa</option>
           <option value="ciudad">Ciudad</option>
           <option value="cargo">Cargo</option>
-          <option value="Actividad">Actividades</option>
-          <option value="Pais">País</option>
-          <option value="Idiomas">Idiomas</option>
-          <option value="Aptitud">Aptitud</option>
+          <option value="actividad">Actividades</option>
+          <option value="pais">País</option>
+          <option value="idiomas">Idiomas</option>
+          <option value="aptitud">Aptitud</option>
 
         </select>
         <label>Tipo de búsqueda</label>
-      </div>
-
-      <!-- Tipo de busqueda / Test -->
-      <div class="input-field col s12 m4">
-        <select>
-          <option value="" disabled selected></option>
-          <div id="sugerencias">
-            <option value="name">Cali</option>
-            <option value="name">Bogotá</option>
-            <option value="name">Medellín</option>
-          </div>
-        </select>
-        <label class="primary-color">Sugerencias</label>
-      </div>
+      </div> -->
 
       <!-- Sectores y empresas -->
-      <!-- <div class="input-field col s12 m6">
-        <select multiple>
+      <div class="input-field col s12 m6">
+        <select multiple id="sectores_empresas">
           <option value="" disabled selected>Sectores</option>
           {for $i = 0 to count($sectores) -1}
-            <option value="{$sectores[$i]}">{$sectores[$i]}</option>
+            <option value="sector{$sectores[$i]}">{$sectores[$i]}</option>
           {/for}
           <option value="" disabled selected>Empresas</option>
           {for $i = 0 to count($empresas) -1}
-            <option value="{$empresas[$i]}">{$empresas[$i]}</option>
+            <option value="empresa{$empresas[$i]}">{$empresas[$i]}</option>
           {/for}
         </select>
         <label>Sectores / Empresas </label>
-      </div> -->
+      </div>
 
       <!-- Ciudades -->
-      <!-- <div class="input-field col s12 m6">
+      <div class="input-field col s12 m6">
         <select multiple>
           <option value="" disabled selected></option>
           {for $i = 0 to count($ciudad) -1}
@@ -115,10 +95,10 @@
           {/for}
         </select>
         <label>Ciudades</label>
-      </div> -->
+      </div>
 
       <!-- Cargos -->
-      <!-- <div class="input-field col s12 m6">
+      <div class="input-field col s12 m6">
         <select multiple>
           <option value="" disabled selected></option>
           {for $i = 0 to count($cargos) -1}
@@ -126,10 +106,10 @@
           {/for}
         </select>
         <label>Cargos</label>
-      </div> -->
+      </div>
 
       <!-- Actividades -->
-      <!-- <div class="input-field col s12 m6">
+      <div class="input-field col s12 m6">
         <select multiple>
           <option value="" disabled selected></option>
           {for $i = 0 to count($brains) -1}
@@ -137,10 +117,10 @@
           {/for}
         </select>
         <label>Actividades</label>
-      </div> -->
+      </div>
 
       <!-- Paises y empresas -->
-      <!-- <div class="input-field col s12 m6">
+      <div class="input-field col s12 m6">
         <select multiple>
           <option value="" disabled selected>Paises</option>
           {for $i = 0 to count($paises) -1}
@@ -152,10 +132,10 @@
           {/for}
         </select>
         <label>Paises / Idiomas </label>
-      </div> -->
+      </div>
 
       <!-- Aptitudes -->
-      <!-- <div class="input-field col s12">
+      <div class="input-field col s12">
         <select multiple>
           <option value="" disabled selected></option>
           {for $i = 0 to count($habilidades) -1}
@@ -163,7 +143,7 @@
           {/for}
         </select>
         <label>Aptitudes</label>
-      </div> -->
+      </div>
 
     </div>
 

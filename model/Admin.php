@@ -230,10 +230,110 @@
       }
 
       parent::cerrar();
-      
+
+    }
+
+    # Funcion que consulta  wits aprobados por nombre de empresa y sector
+    public function consultBySectorAndEmpresa($sectores, $empresas)
+    {
+      parent::conectar();
+
+      $consulta = 'select u.id, u.primer_nombre from usuario u inner join experiencia e on e.usuario_id = u.id where u.estado = "A" and ('.$sectores.') and ('.$empresas.')';
+
+      $verificar = parent::verificarRegistros($consulta);
+
+      if($verificar > 0){
+        $sql = parent::query($consulta);
+        while($row = mysqli_fetch_array($sql)){
+          echo '
+          <tr class="verPerfil" id="'.$row['id'].'">
+            <td>'.$row['id'].'</td>
+            <td>'.$row['primer_nombre'].'</td>
+          </tr>
+
+        ';
+        }
+
+      }else{
+        echo ' No hay registros';
+      }
+
+      parent::cerrar();
     }
 
 
+    public function consultBySector($sectores)
+    {
+      parent::conectar();
+
+      $consulta = 'select u.id, u.primer_nombre from usuario u inner join experiencia e on e.usuario_id = u.id where u.estado = "A" and ('.$sectores.') ';
+
+      $verificar = parent::verificarRegistros($consulta);
+
+      if($verificar > 0){
+        $sql = parent::query($consulta);
+        while($row = mysqli_fetch_array($sql)){
+          echo '
+          <tr class="verPerfil" id="'.$row['id'].'">
+            <td>'.$row['id'].'</td>
+            <td>'.$row['primer_nombre'].'</td>
+          </tr>
+
+        ';
+        }
+
+      }else{
+        echo ' No hay registros';
+      }
+
+      parent::cerrar();
+    }
+
+    public function consultByEmpresa($empresas)
+    {
+      parent::conectar();
+
+      $consulta = 'select u.id, u.primer_nombre from usuario u inner join experiencia e on e.usuario_id = u.id where u.estado = "A" and ('.$empresas.') ';
+
+      $verificar = parent::verificarRegistros($consulta);
+
+      if($verificar > 0){
+        $sql = parent::query($consulta);
+        while($row = mysqli_fetch_array($sql)){
+          echo '
+          <tr class="verPerfil" id="'.$row['id'].'">
+            <td>'.$row['id'].'</td>
+            <td>'.$row['primer_nombre'].'</td>
+          </tr>
+
+        ';
+        }
+
+      }else{
+        echo ' No hay registros';
+      }
+
+      parent::cerrar();
+    }
+
+
+    public function getWitsAprobados()
+    {
+      parent::conectar();
+      $sql = parent::query('select u.id, u.primer_nombre, u.segundo_nombre, u.primer_apellido, u.segundo_apellido, c.ciudad, c.pais from usuario u inner join contacto c on u.id = c.usuario_id where estado ="A"');
+      while($row = mysqli_fetch_array($sql)){
+        echo '
+        <tr class="verPerfil" id="'.$row['id'].'">
+          <td>'.$row['primer_nombre']. ' ' .$row['segundo_nombre'].'</td>
+          <td>'.$row['primer_apellido']. ' ' .$row['segundo_apellido'].'</td>
+          <td>'.$row['ciudad'].'</td>
+          <td>'.$row['pais'].'</td>
+        </tr>
+        ';
+      }
+
+      parent::cerrar();
+    }
 
   }
 

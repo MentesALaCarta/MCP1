@@ -719,3 +719,32 @@ $(document).on('keyup', '#busqueda-text', function(){
   });
 
 });
+
+
+// ******** Algoritmo para el buscador ******
+
+/*
+
+  Primera funcionalidad:
+  Al seleccionar una opcion del criterio de busqueda se desplegaran las sugerencias
+  segun sea el caso.
+
+*/
+
+$(document).on('change', '#sectores_empresas', function(){
+  console.log($(this).val());
+
+  $.ajax({
+    method: 'POST',
+    url: 'controller/admin/select/sectores_empresas.php',
+    data: {sectores_empresas: $(this).val()},
+    success: function(res){
+      $('#wits-aprobados-panel').html(res);
+    }
+  });
+});
+
+
+
+
+// *********    End Algoritmo     *********

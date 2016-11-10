@@ -1,7 +1,7 @@
 <?php
 
   # Incluimos la clase de conexion
-  include('Conexion.php');
+  require_once('Conexion.php');
 
 
   class Wit extends Conexion
