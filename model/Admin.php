@@ -210,35 +210,12 @@
     }
 
 
-    public function busqueda($busqueda)
-    {
-
-      parent::conectar();
-
-      # Busqueda por primer nombre
-      $sql = parent::query('select u.id, u.primer_nombre, u.segundo_nombre, u.primer_apellido, u.segundo_apellido,  e.sector, c.ciudad, c.pais from usuario u inner join experiencia e on u.id = e.usuario_id inner join contacto c on u.id = c.usuario_id where (primer_nombre like "%'.$busqueda.'%" and u.estado ="A")  or (segundo_nombre like "%'.$busqueda.'%" and u.estado ="A")  or (primer_apellido like "%'.$busqueda.'%" and u.estado ="A")  or (segundo_apellido like "%'.$busqueda.'%" and u.estado ="A") or (e.name_business like "%'.$busqueda.'%" and u.estado ="A")  or (e.sector like "%'.$busqueda.'%" and u.estado ="A") or (e.position like "%'.$busqueda.'%" and u.estado ="A") or (e.country like "%'.$busqueda.'%" and u.estado ="A")  or (c.ciudad like "%'.$busqueda.'%" and u.estado ="A") or (c.tel like "%'.$busqueda.'%" and u.estado ="A") or (c.pais like "%'.$busqueda.'%" and u.estado ="A") ');
-
-      while($row = mysqli_fetch_array($sql)){
-        echo '
-        <tr class="verPerfil" id="'.$row['id'].'">
-          <td>'.$row['primer_nombre']. ' ' .$row['segundo_nombre'].'</td>
-          <td>'.$row['primer_apellido']. ' ' .$row['segundo_apellido'].'</td>
-          <td>'.$row['ciudad'].'</td>
-          <td>'.$row['pais'].'</td>
-        </tr>
-        ';
-      }
-
-      parent::cerrar();
-
-    }
-
     # Funcion que consulta  wits aprobados por nombre de empresa y sector
     public function consultBySectorAndEmpresa($sectores, $empresas)
     {
       parent::conectar();
 
-      $consulta = 'select DISTINCT(u.id), u.primer_nombre from usuario u inner join experiencia e on e.usuario_id = u.id where u.estado = "A" and ('.$sectores.') and ('.$empresas.')';
+      $consulta = 'select DISTINCT(u.id), u.primer_nombre, u.segundo_nombre, u.primer_apellido, u.segundo_apellido, c.ciudad, c.pais from usuario u inner join experiencia e on e.usuario_id = u.id inner join contacto c on u.id = c.usuario_id where u.estado = "A" and ('.$sectores.') and ('.$empresas.')';
 
       $verificar = parent::verificarRegistros($consulta);
 
@@ -247,8 +224,10 @@
         while($row = mysqli_fetch_array($sql)){
           echo '
           <tr class="verPerfil" id="'.$row['id'].'">
-            <td>'.$row['id'].'</td>
-            <td>'.$row['primer_nombre'].'</td>
+            <td>'.$row['primer_nombre'] .' ' .$row['segundo_nombre'].'</td>
+            <td>'.$row['primer_apellido']. ' '.$row['segundo_apellido'].'</td>
+            <td>'.$row['ciudad'].'</td>
+            <td>'.$row['pais'].'</td>
           </tr>
 
         ';
@@ -266,7 +245,7 @@
     {
       parent::conectar();
 
-      $consulta = 'select DISTINCT(u.id), u.primer_nombre from usuario u inner join experiencia e on e.usuario_id = u.id where u.estado = "A" and ('.$sectores.') ';
+      $consulta = 'select DISTINCT(u.id), u.primer_nombre, u.segundo_nombre, u.primer_apellido, u.segundo_apellido, c.ciudad, c.pais from usuario u inner join experiencia e on e.usuario_id = u.id inner join contacto c on u.id = c.usuario_id where u.estado = "A" and ('.$sectores.') ';
 
       $verificar = parent::verificarRegistros($consulta);
 
@@ -275,8 +254,10 @@
         while($row = mysqli_fetch_array($sql)){
           echo '
           <tr class="verPerfil" id="'.$row['id'].'">
-            <td>'.$row['id'].'</td>
-            <td>'.$row['primer_nombre'].'</td>
+            <td>'.$row['primer_nombre'] .' ' .$row['segundo_nombre'].'</td>
+            <td>'.$row['primer_apellido']. ' '.$row['segundo_apellido'].'</td>
+            <td>'.$row['ciudad'].'</td>
+            <td>'.$row['pais'].'</td>
           </tr>
 
         ';
@@ -293,7 +274,7 @@
     {
       parent::conectar();
 
-      $consulta = 'select DISTINCT(u.id), u.primer_nombre from usuario u inner join experiencia e on e.usuario_id = u.id where u.estado = "A" and ('.$empresas.') ';
+      $consulta = 'select DISTINCT(u.id), u.primer_nombre, u.segundo_nombre, u.primer_apellido, u.segundo_apellido, c.ciudad, c.pais from usuario u inner join experiencia e on e.usuario_id = u.id inner join contacto c on u.id = c.usuario_id where u.estado = "A" and ('.$empresas.') ';
 
       $verificar = parent::verificarRegistros($consulta);
 
@@ -302,8 +283,10 @@
         while($row = mysqli_fetch_array($sql)){
           echo '
           <tr class="verPerfil" id="'.$row['id'].'">
-            <td>'.$row['id'].'</td>
-            <td>'.$row['primer_nombre'].'</td>
+            <td>'.$row['primer_nombre'] .' ' .$row['segundo_nombre'].'</td>
+            <td>'.$row['primer_apellido']. ' '.$row['segundo_apellido'].'</td>
+            <td>'.$row['ciudad'].'</td>
+            <td>'.$row['pais'].'</td>
           </tr>
 
         ';
@@ -339,7 +322,7 @@
     {
       parent::conectar();
 
-      $consulta = 'select u.id, u.primer_nombre from usuario u inner join contacto c on c.usuario_id = u.id where u.estado = "A" and ('.$ciudad.') ';
+      $consulta = 'select u.id, u.primer_nombre, u.segundo_nombre, u.primer_apellido, u.segundo_apellido, c.ciudad, c.pais from usuario u inner join contacto c on c.usuario_id = u.id where u.estado = "A" and ('.$ciudad.') ';
 
       $verificar = parent::verificarRegistros($consulta);
 
@@ -348,8 +331,10 @@
         while($row = mysqli_fetch_array($sql)){
           echo '
           <tr class="verPerfil" id="'.$row['id'].'">
-            <td>'.$row['id'].'</td>
-            <td>'.$row['primer_nombre'].'</td>
+            <td>'.$row['primer_nombre'] .' ' .$row['segundo_nombre'].'</td>
+            <td>'.$row['primer_apellido']. ' '.$row['segundo_apellido'].'</td>
+            <td>'.$row['ciudad'].'</td>
+            <td>'.$row['pais'].'</td>
           </tr>
 
         ';
@@ -366,7 +351,7 @@
     {
       parent::conectar();
 
-      $consulta = 'select DISTINCT(u.id), u.primer_nombre from usuario u inner join experiencia e on e.usuario_id = u.id where u.estado = "A" and ('.$cargos.') ';
+      $consulta = 'select DISTINCT(u.id), u.primer_nombre, u.segundo_nombre, u.primer_apellido, u.segundo_apellido, c.ciudad, c.pais from usuario u inner join experiencia e on e.usuario_id = u.id inner join contacto c on u.id = c.usuario_id where u.estado = "A" and ('.$cargos.') ';
 
       $verificar = parent::verificarRegistros($consulta);
 
@@ -375,8 +360,10 @@
         while($row = mysqli_fetch_array($sql)){
           echo '
           <tr class="verPerfil" id="'.$row['id'].'">
-            <td>'.$row['id'].'</td>
-            <td>'.$row['primer_nombre'].'</td>
+            <td>'.$row['primer_nombre'] .' ' .$row['segundo_nombre'].'</td>
+            <td>'.$row['primer_apellido']. ' '.$row['segundo_apellido'].'</td>
+            <td>'.$row['ciudad'].'</td>
+            <td>'.$row['pais'].'</td>
           </tr>
 
         ';
@@ -393,7 +380,7 @@
     {
       parent::conectar();
 
-      $consulta = 'select DISTINCT(u.id), u.primer_nombre from usuario u inner join brain b on b.usuario_id = u.id where u.estado = "A" and ('.$actividad.') ';
+      $consulta = 'select DISTINCT(u.id), u.primer_nombre, u.segundo_nombre, u.primer_apellido, u.segundo_apellido, c.ciudad, c.pais from usuario u inner join brain b on b.usuario_id = u.id inner join contacto c on u.id = c.usuario_id where u.estado = "A" and ('.$actividad.') ';
 
       $verificar = parent::verificarRegistros($consulta);
 
@@ -402,8 +389,10 @@
         while($row = mysqli_fetch_array($sql)){
           echo '
           <tr class="verPerfil" id="'.$row['id'].'">
-            <td>'.$row['id'].'</td>
-            <td>'.$row['primer_nombre'].'</td>
+            <td>'.$row['primer_nombre'] .' ' .$row['segundo_nombre'].'</td>
+            <td>'.$row['primer_apellido']. ' '.$row['segundo_apellido'].'</td>
+            <td>'.$row['ciudad'].'</td>
+            <td>'.$row['pais'].'</td>
           </tr>
 
         ';
@@ -420,8 +409,8 @@
     {
       parent::conectar();
 
-      $consulta = 'select DISTINCT(u.id), u.primer_nombre from usuario u inner join habilidades h on h.usuario_id = u.id where u.estado = "A" and ('.$aptitudes.') ';
-      echo $consulta;
+      $consulta = 'select DISTINCT(u.id), u.primer_nombre, u.segundo_nombre, u.primer_apellido, u.segundo_apellido, c.ciudad, c.pais from usuario u inner join habilidades h on h.usuario_id = u.id inner join contacto c on  u.id = c.usuario_id where u.estado = "A" and ('.$aptitudes.') ';
+
       $verificar = parent::verificarRegistros($consulta);
 
       if($verificar > 0){
@@ -429,8 +418,10 @@
         while($row = mysqli_fetch_array($sql)){
           echo '
           <tr class="verPerfil" id="'.$row['id'].'">
-            <td>'.$row['id'].'</td>
-            <td>'.$row['primer_nombre'].'</td>
+            <td>'.$row['primer_nombre'] .' ' .$row['segundo_nombre'].'</td>
+            <td>'.$row['primer_apellido']. ' '.$row['segundo_apellido'].'</td>
+            <td>'.$row['ciudad'].'</td>
+            <td>'.$row['pais'].'</td>
           </tr>
 
         ';
@@ -449,7 +440,7 @@
     {
       parent::conectar();
 
-      $consulta = 'select DISTINCT(u.id), u.primer_nombre from usuario u inner join idiomas i on i.usuario_id = u.id inner join contacto c on c.usuario_id = u.id where u.estado = "A" and ('.$sectores.') and ('.$empresas.')';
+      $consulta = 'select DISTINCT(u.id), u.primer_nombre, u.segundo_nombre, u.primer_apellido, u.segundo_apellido, c.ciudad, c.pais from usuario u inner join idiomas i on i.usuario_id = u.id inner join contacto c on c.usuario_id = u.id where u.estado = "A" and ('.$sectores.') and ('.$empresas.')';
 
       $verificar = parent::verificarRegistros($consulta);
 
@@ -458,8 +449,10 @@
         while($row = mysqli_fetch_array($sql)){
           echo '
           <tr class="verPerfil" id="'.$row['id'].'">
-            <td>'.$row['id'].'</td>
-            <td>'.$row['primer_nombre'].'</td>
+            <td>'.$row['primer_nombre'] .' ' .$row['segundo_nombre'].'</td>
+            <td>'.$row['primer_apellido']. ' '.$row['segundo_apellido'].'</td>
+            <td>'.$row['ciudad'].'</td>
+            <td>'.$row['pais'].'</td>
           </tr>
 
         ';
@@ -477,7 +470,7 @@
     {
       parent::conectar();
 
-      $consulta = 'select DISTINCT(u.id), u.primer_nombre from usuario u inner join contacto c on c.usuario_id = u.id where u.estado = "A" and ('.$sectores.') ';
+      $consulta = 'select DISTINCT(u.id), u.primer_nombre, u.segundo_nombre, u.primer_apellido, u.segundo_apellido, c.ciudad, c.pais from usuario u inner join contacto c on c.usuario_id = u.id where u.estado = "A" and ('.$sectores.') ';
 
       $verificar = parent::verificarRegistros($consulta);
 
@@ -486,8 +479,10 @@
         while($row = mysqli_fetch_array($sql)){
           echo '
           <tr class="verPerfil" id="'.$row['id'].'">
-            <td>'.$row['id'].'</td>
-            <td>'.$row['primer_nombre'].'</td>
+            <td>'.$row['primer_nombre'] .' ' .$row['segundo_nombre'].'</td>
+            <td>'.$row['primer_apellido']. ' '.$row['segundo_apellido'].'</td>
+            <td>'.$row['ciudad'].'</td>
+            <td>'.$row['pais'].'</td>
           </tr>
 
         ';
@@ -504,7 +499,7 @@
     {
       parent::conectar();
 
-      $consulta = 'select DISTINCT(u.id), u.primer_nombre from usuario u inner join idiomas i on i.usuario_id = u.id where u.estado = "A" and ('.$empresas.') ';
+      $consulta = 'select DISTINCT(u.id), u.primer_nombre, u.segundo_nombre, u.primer_apellido, u.segundo_apellido, c.ciudad, c.pais from usuario u inner join idiomas i on i.usuario_id = u.id where u.estado = "A" and ('.$empresas.') ';
 
       $verificar = parent::verificarRegistros($consulta);
 
@@ -513,21 +508,202 @@
         while($row = mysqli_fetch_array($sql)){
           echo '
           <tr class="verPerfil" id="'.$row['id'].'">
-            <td>'.$row['id'].'</td>
-            <td>'.$row['primer_nombre'].'</td>
+            <td>'.$row['primer_nombre'] .' ' .$row['segundo_nombre'].'</td>
+            <td>'.$row['primer_apellido']. ' '.$row['segundo_apellido'].'</td>
+            <td>'.$row['ciudad'].'</td>
+            <td>'.$row['pais'].'</td>
           </tr>
 
         ';
         }
 
       }else{
-        echo ' No hay registros';
+        echo 'No hay registros';
       }
 
       parent::cerrar();
     }
 
-  }
+    # Funcion que permite consulta dinamica con varias parametros en una sola palabra
+    public function buscarWit($busqueda)
+    {
+      parent::conectar();
+      $busqueda = parent::salvar($busqueda);
+
+
+      $sql = 'select DISTINCT(u.id), u.primer_nombre, u.segundo_nombre, u.primer_apellido, u.segundo_apellido, c.ciudad, c.pais from usuario u
+      inner join
+      brain b
+      on u.id = b.usuario_id
+      inner join
+      contacto c
+      on u.id = c.usuario_id
+      inner join
+      experiencia e
+      on u.id = e.usuario_id
+      inner join
+      fire_step f
+      on u.id = f.usuario_id
+      inner join
+      habilidades h
+      on u.id = h.usuario_id
+      inner join
+      idiomas i
+      on u.id = i.usuario_id
+      where
+      u.estado = "A"
+      and
+      (
+        u.primer_nombre like "%'.$busqueda.'%"
+        or
+        u.segundo_nombre like "%'.$busqueda.'%"
+        or
+        u.primer_apellido like "%'.$busqueda.'%"
+        or
+        u.segundo_apellido like "%'.$busqueda.'%"
+        or
+        b.descripcion like "%'.$busqueda.'%"
+        or
+        c.ciudad like "%'.$busqueda.'%"
+        or
+        c.tel like "%'.$busqueda.'%"
+        or
+        c.pais like "%'.$busqueda.'%"
+        or
+        e.name_business like "%'.$busqueda.'%"
+        or
+        e.sector like "%'.$busqueda.'%"
+        or
+        e.position like "%'.$busqueda.'%"
+        or
+        e.country like "%'.$busqueda.'%"
+        or
+        h.descripcion like "%'.$busqueda.'%"
+        or
+        i.des like "%'.$busqueda.'%"
+        )';
+
+        $verificar = parent::verificarRegistros($sql);
+        if($verificar > 0 ){
+
+          $consulta = parent::query($sql);
+
+          while($row = mysqli_fetch_array($consulta)){
+            echo '
+            <tr class="verPerfil" id="'.$row['id'].'">
+              <td>'.$row['primer_nombre']. ' ' .$row['segundo_nombre'].'</td>
+              <td>'.$row['primer_apellido']. ' ' .$row['segundo_apellido'].'</td>
+              <td>'.$row['ciudad'].'</td>
+              <td>'.$row['pais'].'</td>
+            </tr>
+            ';
+          }
+        }else{
+          echo 'No se encontraron registros';
+        }
+
+
+      parent::cerrar();
+    } // End function
+
+
+    public function buscarByNombre($busqueda)
+    {
+      parent::conectar();
+
+      $palabras = count($busqueda);
+
+      if($palabras == 2){
+        $busqueda[2] = 'lopez gobez hos dakjs';
+        $busqueda[3] = 'lopez gobez hos dakjs';
+      }else if($palabras == 3){
+        $busqueda[3] = 'lopez gobez hos dakjs';
+      }
+
+      $busqueda[0] = parent::salvar($busqueda[0]);
+      $busqueda[1] = parent::salvar($busqueda[1]);
+      $busqueda[2] = parent::salvar($busqueda[2]);
+      $busqueda[3] = parent::salvar($busqueda[3]);
+
+      $sql = 'select DISTINCT(u.id), u.primer_nombre, u.segundo_nombre, u.primer_apellido, u.segundo_apellido, c.ciudad, c.pais from usuario u
+      inner join
+      brain b
+      on u.id = b.usuario_id
+      inner join
+      contacto c
+      on u.id = c.usuario_id
+      inner join
+      experiencia e
+      on u.id = e.usuario_id
+      inner join
+      fire_step f
+      on u.id = f.usuario_id
+      inner join
+      habilidades h
+      on u.id = h.usuario_id
+      inner join
+      idiomas i
+      on u.id = i.usuario_id
+      where
+      u.estado = "A"
+      and
+      (
+        u.primer_nombre like "%'.$busqueda[0].'%"
+        or
+        u.primer_nombre like "%'.$busqueda[1].'%"
+        or
+        u.primer_nombre like "%'.$busqueda[2].'%"
+        or
+        u.primer_nombre like "%'.$busqueda[3].'%"
+        or
+        u.segundo_nombre like "%'.$busqueda[0].'%"
+        or
+        u.segundo_nombre like "%'.$busqueda[1].'%"
+        or
+        u.segundo_nombre like "%'.$busqueda[2].'%"
+        or
+        u.segundo_nombre like "%'.$busqueda[3].'%"
+        or
+        u.primer_apellido like "%'.$busqueda[0].'%"
+        or
+        u.primer_apellido like "%'.$busqueda[1].'%"
+        or
+        u.primer_apellido like "%'.$busqueda[2].'%"
+        or
+        u.primer_apellido like "%'.$busqueda[3].'%"
+        or
+        u.segundo_apellido like "%'.$busqueda[0].'%"
+        or
+        u.segundo_apellido like "%'.$busqueda[1].'%"
+        or
+        u.segundo_apellido like "%'.$busqueda[2].'%"
+        or
+        u.segundo_apellido like "%'.$busqueda[3].'%"
+      )';
+
+      $verificar = parent::verificarRegistros($sql);
+      if($verificar > 0){
+        $consulta = parent::query($sql);
+
+        while($row = mysqli_fetch_array($consulta)){
+          echo '
+          <tr class="verPerfil" id="'.$row['id'].'">
+          <td>'.$row['primer_nombre']. ' ' .$row['segundo_nombre'].'</td>
+          <td>'.$row['primer_apellido']. ' ' .$row['segundo_apellido'].'</td>
+          <td>'.$row['ciudad'].'</td>
+          <td>'.$row['pais'].'</td>
+          </tr>
+          ';
+        }
+
+      }else{
+        echo 'No se encontraron registro';
+      }
+
+      parent::cerrar();
+    }
+
+  } // END Class
 
 
 
