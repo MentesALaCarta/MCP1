@@ -6,7 +6,7 @@
   <div class="row">
     <div class="col s12">
 
-      <!-- Logo Mentes a la Carta -->
+      <!-- Logo Mentes a la Carta --> 
       <div class="row">
         <div class="col s12 center-align">
           <div class="spacing-2"></div>
@@ -31,13 +31,22 @@
         </div>
       </div>
 
+      <div class="row" id="load" hidden="hidden">
+        <div class="col s4 offset-s4">
+          <p class="center-align">
+            Cargando...
+          </p>
+          <div class="progress">
+              <div class="indeterminate"></div>
+          </div>
+        </div>
+      </div>
+
 
       <!-- Boton de inicar sesión -->
       <div class="row">
         <div class="col-s12 center-align">
-          <a href="?view=panel">
-            <button type="button" class="btn waves-effect waves-light amber darken-1" name="button">Iniciar sesión</button>
-          </a>
+            <button type="button" class="btn waves-effect waves-light amber darken-1" name="button" id="login">Iniciar sesión</button>
         </div>
       </div>
 

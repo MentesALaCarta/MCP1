@@ -27,7 +27,7 @@
                   Wits Pendientes
                 </li>
               </a>
-              <a href="?view=index" class="accent-li1">
+              <a href="?view=acceder" class="accent-li1">
                 <li class="item-nav-right1" id="asesores-pro">
                   <i class="fa fa-sign-out left resize"></i>
                   Cerrar sesión

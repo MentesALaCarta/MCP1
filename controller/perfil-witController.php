@@ -5,7 +5,7 @@
 
   if(empty($id)){
     header('Location: ?view=index');
-  } 
+  }
 
   # Incluimos la clase de  wit
   require_once('model/wit.php');

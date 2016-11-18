@@ -802,3 +802,37 @@ $(document).on('change', '#pais_idioma_dinamic', function(){
 });
 
 // *********    End Algoritmo     *********
+
+
+// Login
+$(document).on('click', '#login', function(){
+
+  // Leemos las variables
+  var $email = $('#email').val();
+  var $pass  = $('#pass').val();
+
+  $.ajax({
+    method: 'POST',
+    url: 'controller/firewall/validarLogin.php',
+    data: {email: $email, pass: $pass },
+    beforeSend: function(){
+      $('#load').show();
+
+    },
+    success: function(res){
+      $('#load').hide();
+
+      if(res == 'error_1'){
+        swal('Campos requeridos', 'Por favor ingrese todos los campos', 'warning');
+      }else if(res == 'error_2'){
+        swal('Usuario no registrado', 'No hemos podido encontrar a un usuario con esa dirección de correo electrónica', 'error');
+      }else if(res == 'error_3'){
+        swal('Usuario no registrado', 'La contraseña que ingresaste no es correcta', 'error');
+      }else{
+        window.location.href= res;
+      }
+
+    }
+  });
+
+});

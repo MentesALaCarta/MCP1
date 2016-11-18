@@ -1,9 +1,10 @@
 <?php
 
+  session_start();
 
-  // if(!isset($_SESSION['id'])){
-  //   header('location: ?view=index');
-  // }
+  if(!isset($_SESSION['id']) || isset($_SESSION['cargo']) && $_SESSION['cargo'] != 1){
+    header('location: ?view=acceder');
+  }
 
   # Incluimos la clase wit
   require_once('model/wit.php');
