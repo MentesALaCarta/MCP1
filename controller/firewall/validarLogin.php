@@ -9,7 +9,7 @@
   }else{
 
     # Incluimos la clase firewall
-    require_once('../../model/Firewall.php');
+    require_once('../../model/firewall.php');
 
     $fire = new Firewall();
 

@@ -15,7 +15,7 @@
       $datos = array();
 
       # Consultamos todos los wits que no estan aprobados
-      $sql = parent::query('select * from usuario inner join fire_step f on usuario.id = f.usuario_id where usuario.estado = "I" and step ="5" order by usuario.id ');
+      $sql = parent::query('select * from usuario inner join fire_step f on usuario.id = f.usuario_id where usuario.estado = "I" and step ="5" and cargo = "2" order by usuario.id ');
 
       while($row = mysqli_fetch_array($sql)){
 

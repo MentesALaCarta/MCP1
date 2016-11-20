@@ -43,7 +43,7 @@
         //Fecha registro
         $fecha_registro = date("d-m-Y, g:i:s A");
 
-        $consulta = parent::query('insert into usuario(primer_nombre, segundo_nombre, primer_apellido, segundo_apellido, email, clave, estado, fecha) values("'.$nombres[0].'", "'.$nombres[1].'", "'.$apellidos[0].'", "'.$apellidos[1].'", "'.$email.'", MD5("'.$clave.'"), "I", "'.$fecha_registro.'" )');
+        $consulta = parent::query('insert into usuario(primer_nombre, segundo_nombre, primer_apellido, segundo_apellido, email, clave, estado, fecha, cargo) values("'.$nombres[0].'", "'.$nombres[1].'", "'.$apellidos[0].'", "'.$apellidos[1].'", "'.$email.'", MD5("'.$clave.'"), "I", "'.$fecha_registro.'" , "2")');
 
         if($consulta){
 
