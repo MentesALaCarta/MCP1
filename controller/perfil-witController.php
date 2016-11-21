@@ -1,5 +1,10 @@
 <?php
 
+  # Incluimos la clase de  wit
+  require_once('model/wit.php');
+  $wit = new Wit();
+  $template = new smarty();
+
   # Leemos la variable del wit
   $id = isset($_GET['id']) ? $_GET['id'] : null;
 
@@ -7,10 +12,14 @@
     header('Location: ?view=index');
   }
 
-  # Incluimos la clase de  wit
-  require_once('model/wit.php');
-  $wit = new Wit();
-  $template = new smarty();
+  if($wit -> validarPerfil($id) == false)
+  {
+    header('location: ?view=error');
+  }
+
+  session_start();
+  $datos = $wit -> estado($id);
+  $template -> assign('estado', $datos);
 
   $datos = $wit -> experiencia($id);
   $template -> assign('experiencia', $datos);

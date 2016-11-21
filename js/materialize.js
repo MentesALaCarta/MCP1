@@ -513,7 +513,13 @@ $(document).on('click', '#step3', function(){
 });
 
 $(document).on('click', '#close-sesion', function(){
-  window.location.href= "?view=acceder";
+  $.ajax({
+    method: 'POST',
+    url: 'controller/user/cerrarSesion.php',
+    success: function(res){
+      window.location.href=res;
+    }
+  });
 });
 
 

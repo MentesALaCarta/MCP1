@@ -1,3 +1,5 @@
 <?php
-    echo 'página de error';
+    $template = new smarty();
+
+    $template -> display('view/error.tpl');
 ?>

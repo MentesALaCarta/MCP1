@@ -155,6 +155,32 @@
       parent::cerrar();
     }
 
+    # Extra el estado de la mente a la carta
+    public function estado($id)
+    {
+      parent::conectar();
+      parent::salvar($id);
+      $estado = parent::consultaArreglo('select estado from usuario where id="'.$id.'"');
+      return $estado['estado'];
+      parent::cerrar();
+    }
+
+    # Valida si el usuario existe o no
+    public function validarPerfil($id)
+    {
+      parent::conectar();
+      $id = parent::salvar($id);
+      $validar = parent::verificarRegistros('select id from usuario where id ="'.$id.'"');
+      if($validar > 0)
+      {
+        return true;
+      }else{
+        return false;
+      }
+      parent::cerrar();
+    }
+
+
   }
 
 
