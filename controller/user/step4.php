@@ -5,7 +5,6 @@
     $imagen = $_FILES['imagen-upload'];
     $ciudad = $_POST['ciudad'];
     $tel = $_POST['tel'];
-    $idiomas = $_POST['idiomas'];
     $des = $_POST['area'];
     $pais = $_POST['pais'];
     $tweets = $_POST['tweets'];
@@ -41,7 +40,7 @@
       require_once('../../model/Usuario.php');
       $usuario = new Usuario();
 
-      $usuario -> step4('perfiles/perfil'.$_SESSION['id'].'.png', $ciudad, $tel, $idiomas, $des, $tweets, $pais);
+      $usuario -> step4('perfiles/perfil'.$_SESSION['id'].'.png', $ciudad, $tel, $des, $tweets, $pais);
 
 
     }else{
@@ -55,7 +54,7 @@
     require_once('../../model/Usuario.php');
     $usuario = new Usuario();
 
-    $usuario -> step4('perfiles/perfil.png', $ciudad, $tel, $idiomas, $des, $tweets, $pais);
+    $usuario -> step4('perfiles/perfil.png', $ciudad, $tel, $des, $tweets, $pais);
   }
 
 

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-21 02:26:05
+/* Smarty version 3.1.30, created on 2016-11-21 13:18:36
   from "/opt/lampp/htdocs/mentes/view/wits/paso4.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58324d2d7044b2_52508591',
+  'unifunc' => 'content_5832e61cda1897_46775618',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1096c29859726e2c8f481569b5c2a4486247a73d' => 
     array (
       0 => '/opt/lampp/htdocs/mentes/view/wits/paso4.tpl',
-      1 => 1479691427,
+      1 => 1479730453,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:view/principal/script.tpl' => 1,
   ),
 ),false)) {
-function content_58324d2d7044b2_52508591 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5832e61cda1897_46775618 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -118,7 +118,39 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
       </div>
       <div class="col s6 m3">
         <div class="spacing-1"></div>
-        <button type="button" class="btn waves-effect waves-light" name="button" style="background-color: #EBA820;" id="add_new_aptitud">Agregar</button>
+        <button type="button" class="btn waves-effect waves-light" name="button" style="background-color: #EBA820;" id="add_new_idioma">Agregar</button>
+      </div>
+
+      <div class="col s12 m8">
+        <table>
+          <thead>
+            <tr>
+              <th>Idiomas</th>
+              <th></th>
+            </tr>
+          </thead>
+
+          <tbody id="getIdiomas">
+            <?php if ($_smarty_tpl->tpl_vars['idiomas']->value != 0) {?>
+              <?php
+$_smarty_tpl->tpl_vars['i'] = new Smarty_Variable(null, $_smarty_tpl->isRenderingCache);$_smarty_tpl->tpl_vars['i']->step = 1;$_smarty_tpl->tpl_vars['i']->total = (int) ceil(($_smarty_tpl->tpl_vars['i']->step > 0 ? count($_smarty_tpl->tpl_vars['idiomas']->value)-1+1 - (0) : 0-(count($_smarty_tpl->tpl_vars['idiomas']->value)-1)+1)/abs($_smarty_tpl->tpl_vars['i']->step));
+if ($_smarty_tpl->tpl_vars['i']->total > 0) {
+for ($_smarty_tpl->tpl_vars['i']->value = 0, $_smarty_tpl->tpl_vars['i']->iteration = 1;$_smarty_tpl->tpl_vars['i']->iteration <= $_smarty_tpl->tpl_vars['i']->total;$_smarty_tpl->tpl_vars['i']->value += $_smarty_tpl->tpl_vars['i']->step, $_smarty_tpl->tpl_vars['i']->iteration++) {
+$_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1;$_smarty_tpl->tpl_vars['i']->last = $_smarty_tpl->tpl_vars['i']->iteration == $_smarty_tpl->tpl_vars['i']->total;?>
+              <tr id="habilidad<?php echo $_smarty_tpl->tpl_vars['idiomas']->value[$_smarty_tpl->tpl_vars['i']->value][0];?>
+">
+                <td><?php echo $_smarty_tpl->tpl_vars['idiomas']->value[$_smarty_tpl->tpl_vars['i']->value][1];?>
+</td>
+                <td class="hover eliminar_idioma" id="<?php echo $_smarty_tpl->tpl_vars['idiomas']->value[$_smarty_tpl->tpl_vars['i']->value][0];?>
+"><i class="fa fa-close red-text "></i> <span class="red-text">Eliminar</span></td>
+              </tr>
+              <?php }
+}
+?>
+
+            <?php }?>
+          </tbody>
+        </table>
       </div>
 
 

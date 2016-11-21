@@ -253,7 +253,7 @@
       parent::cerrar();
     }
 
-    public function step4($imagen, $ciudad, $tel, $idiomas, $des, $tweets, $pais){
+    public function step4($imagen, $ciudad, $tel,  $des, $tweets, $pais){
       # Reemplazamos los acentos
       $buscar = array('á', 'é', 'í', 'ó', 'ú', 'Á', 'É', 'Í', 'Ó', 'Ú', 'ñ', 'Ñ');
       $reemplazar = array('&aacute','&eacute', '&iacute', '&oacute', '&uacute', '&Aacute', '&Eacute', '&Iacute', '&Oacute', '&Uacute', '&ntilde', '&Ntilde');
@@ -261,13 +261,9 @@
       parent::conectar();
       $ciudad = parent::salvar($ciudad);
       $tel = parent::salvar($tel);
-      $idiomas = parent::salvar($idiomas);
-      $idiomas = str_replace(' ', '', $idiomas);
       $des = parent::salvar($des);
       $tweets = parent::salvar($tweets);
       $tweets = str_replace($buscar, $reemplazar, $tweets);
-      $idiomas = str_replace($buscar, $reemplazar, $idiomas);
-      $idiomas = explode(',', $idiomas);
       $pais = parent::salvar($pais);
       $pais = str_replace($buscar, $reemplazar, $pais);
       $pais = strtolower($pais);
@@ -277,14 +273,6 @@
       $des = str_replace($buscar, $reemplazar, $des);
 
       $consulta = parent::query('insert into contacto(imagen, ciudad, tel, des, tweets, usuario_id, pais) values("'.$imagen.'", "'.$ciudad.'", "'.$tel.'",  "'.$des.'", "'.$tweets.'", "'.$_SESSION['id'].'" , "'.$pais.'")');
-
-      $string = '';
-      for($i= 0; $i < count($idiomas); $i++){
-        $string .= '("'.$idiomas[$i].'", "'.$_SESSION['id'].'"),';
-      }
-      $string = substr($string, 0, -1);
-
-      $idiomas = parent::query('insert into idiomas(des, usuario_id) values'.$string.'');
 
       parent::query('update fire_step set step="5" where usuario_id="'.$_SESSION['id'].'"');
 
@@ -384,6 +372,88 @@
       echo json_encode($datos);
       parent::cerrar();
     }
+
+    # Extra los idiomas del usuario
+    public function getIdiomasList(){
+      parent::conectar();
+
+      $verificar = parent::verificarRegistros('select id from idiomas where usuario_id="'.$_SESSION['id'].'"');
+
+      if($verificar > 0){
+        $datos = array();
+
+        $consulta = parent::query('select id, des from idiomas where usuario_id="'.$_SESSION['id'].'" order by id desc');
+
+        while($row = mysqli_fetch_array($consulta)){
+          $datos[] = array($row['id'], ucwords($row['des']));
+        }
+
+        return $datos;
+      }else{
+        return 0;
+      }
+      parent::cerrar();
+    }
+
+    # Registra un idioma para el usuario
+    public function setIdioma($des)
+    {
+
+      parent::conectar();
+      # Validaciones posibles para la cadena
+
+      # Eliminamos acentos
+      $des = $this->acentos($des);
+
+      # Eliminamos los espacios iniciales y finales
+      $des = trim($des);
+
+      # Convertimos la cadena en minúsculas
+      $des = strtolower($des);
+
+      # Prevenimos inyeccion sql
+      $des = parent::salvar($des);
+
+      $verificar = parent::verificarRegistros('select id from idiomas where des="'.$des.'" and usuario_id="'.$_SESSION['id'].'"');
+
+      if($verificar > 0){
+        $this->getIdiomas1();
+      }else{
+        parent::query('insert into idiomas(des, usuario_id) values("'.$des.'", "'.$_SESSION['id'].'")');
+        $this->getIdiomas1();
+      }
+
+      parent::cerrar();
+
+    }
+
+    # Actualiza la lista de los datos dinamicamente
+    public function getIdiomas1()
+    {
+
+      $consulta = parent::query('select id, des from idiomas where usuario_id="'.$_SESSION['id'].'" order by id desc');
+
+      # Extraemos las habilidades del usuario
+      while($row = mysqli_fetch_array($consulta)){
+        echo '
+        <tr id="habilidad'.$row['id'].'">
+          <td>'.ucwords($row['des']).'</td>
+          <td class="hover eliminar_habilidad" id="'.$row['id'].'"><i class="fa fa-close red-text "></i> <span class="red-text">Eliminar</span></td>
+        </tr>
+        ';
+      }
+
+    }
+
+    # Elimina un idioma del usuario por habilidad
+    public function deleteIdioma($id){
+      parent::conectar();
+      $id = parent::salvar($id);
+      parent::query('delete from idiomas where id="'.$id.'"');
+      $this->getIdiomas1();
+      parent::cerrar();
+    }
+
 
   }
 

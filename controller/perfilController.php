@@ -39,6 +39,10 @@
         break;
 
       case '4':
+
+          $datos = $persona -> getIdiomasList($_SESSION['id']);
+          $template -> assign('idiomas', $datos);
+
           $template -> display('view/wits/paso4.tpl');
         break;
 

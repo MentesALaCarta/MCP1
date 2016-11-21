@@ -518,7 +518,9 @@ $(document).on('click', '#close-sesion', function(){
 
 
 $(document).on('click', '#step4', function(){
+
   var formData = new FormData(document.getElementById("form4"));
+
   $.ajax({
     method: 'POST',
     url: 'controller/user/step4.php',
@@ -545,6 +547,7 @@ $(document).on('click', '#step4', function(){
       }
     }
   });
+
 });
 
 function setAptitud(){
@@ -840,3 +843,60 @@ $(document).on('click', '#login', function(){
 $("#idiomas").autocomplete({
   source: "controller/user/traerIdiomas.php"
 });
+
+// Agregar idioma
+
+  // Funcion que agrega un nuevo idioma
+  function agregarIdioma(){
+
+    // Leemos la variable de texto
+    var idioma = $('#idiomas').val();
+
+    $.ajax({
+      method: 'POST',
+      url: 'controller/user/setIdiomas.php',
+      data: {idioma: idioma},
+      beforeSend: function(){
+        $('#getIdiomas').html('<div class="container" id="load"><div class="col s2 offset-s7"><img src="images/perfiles/load.gif" alt="load aptitud" width="100%;"></div></div>');
+      },
+      success: function(res){
+        $('#load').hide();
+        $('#idiomas').val('');
+        $('#getIdiomas').html(res);
+      }
+    });
+
+
+  }
+
+  // Por click
+  $('#add_new_idioma').click(function(){
+    agregarIdioma();
+  });
+
+  // Por Tecla enter
+  $(document).on('keyup', '#idiomas', function(e){
+
+    if(e.which == 13){
+      agregarIdioma();
+    }
+
+  });
+
+
+  // Eliminar idioma
+  $(document).on('click', '.eliminar_idioma', function(){
+    var id = $(this).attr('id');
+    $.ajax({
+      method: 'POST',
+      url: 'controller/user/deleteIdioma.php',
+      data: {id: id},
+      beforeSend: function(){
+        $('#getIdiomas').html('<div class="container" id="load"><div class="col s2 offset-s7"><img src="images/perfiles/load.gif" alt="load aptitud" width="100%;"></div></div>');
+      },
+      success: function(res) {
+        $('#load').remove();
+        $('#getIdiomas').html(res);
+      }
+    });
+  });

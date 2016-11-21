@@ -90,7 +90,29 @@
       </div>
       <div class="col s6 m3">
         <div class="spacing-1"></div>
-        <button type="button" class="btn waves-effect waves-light" name="button" style="background-color: #EBA820;" id="add_new_aptitud">Agregar</button>
+        <button type="button" class="btn waves-effect waves-light" name="button" style="background-color: #EBA820;" id="add_new_idioma">Agregar</button>
+      </div>
+
+      <div class="col s12 m8">
+        <table>
+          <thead>
+            <tr>
+              <th>Idiomas</th>
+              <th></th>
+            </tr>
+          </thead>
+
+          <tbody id="getIdiomas">
+            {if $idiomas != 0}
+              {for $i = 0 to count($idiomas) - 1}
+              <tr id="habilidad{$idiomas[$i][0]}">
+                <td>{$idiomas[$i][1]}</td>
+                <td class="hover eliminar_idioma" id="{$idiomas[$i][0]}"><i class="fa fa-close red-text "></i> <span class="red-text">Eliminar</span></td>
+              </tr>
+              {/for}
+            {/if}
+          </tbody>
+        </table>
       </div>
 
 
