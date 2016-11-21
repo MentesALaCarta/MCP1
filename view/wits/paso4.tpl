@@ -1,9 +1,10 @@
 {include file="view/principal/header.tpl"}
 
 <!-- Imagen del logo -->
-<div class="row col s8 offset-s2 center-align">
-  <div class="spacing-2"></div>
-  <img src="images/bradlogo.png" alt="logo mentes a la carta">
+<div class="row">
+  <div class="col s8 offset-s2 m2 offset-m1">
+    <img src="images/bradlogo.png" alt="logo mentes a la carta" width="100%">
+  </div>
 </div>
 
 
@@ -67,12 +68,6 @@
         <label for="Telefono">Teléfono móvil</label>
       </div>
 
-
-      <div class="input-field col s12 m6">
-        <input type="text" id="idiomas" name="idiomas">
-        <label for="idiomas">¿Qué idiomas hablas?</label>
-      </div>
-
       <div class="input-field col s12 m6">
         <input type="text" id="pais" name="pais">
         <label for="pais">¿En que país vives?</label>
@@ -83,10 +78,21 @@
         <label for="tweets">Describete en <span class="text-accent">(<span id="pre-des">144</span>)</span> caracteres</label>
       </div>
 
-        <div class="input-field col s12">
-          <textarea id="textarea" class="materialize-textarea" name="area"></textarea>
-          <label for="textarea">Déjanos una frase o pensamiento propio o cuéntanos si hay algo más que debemos saber de ti</label>
-        </div>
+      <div class="input-field col s12">
+        <textarea id="textarea" class="materialize-textarea" name="area"></textarea>
+        <label for="textarea">Déjanos una frase o pensamiento propio o cuéntanos si hay algo más que debemos saber de ti</label>
+      </div>
+
+      <!-- Idiomas -->
+      <div class="input-field col s6 m6">
+        <input id="idiomas" value="" type="text" class="validate">
+        <label for="idiomas">¿Qué idiomas hablas?</label>
+      </div>
+      <div class="col s6 m3">
+        <div class="spacing-1"></div>
+        <button type="button" class="btn waves-effect waves-light" name="button" style="background-color: #EBA820;" id="add_new_aptitud">Agregar</button>
+      </div>
+
 
     </div>
   </form>
@@ -108,7 +114,6 @@
     <button id="step4" style="width: 100%; background-color: #EBA820;"class="btn waves-effect waves-light" type="button"  name="button">¡Finalizar!</button>
   </div>
 </div>
-
 
 {include file="view/principal/cerrarSesion.tpl"}
 {include file="view/principal/script.tpl"}

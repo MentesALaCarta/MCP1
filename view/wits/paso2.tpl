@@ -1,11 +1,11 @@
 {include file="view/principal/header.tpl"}
 
 <!-- Imagen del logo -->
-<div class="row col s8 offset-s2 center-align">
-  <div class="spacing-2"></div>
-  <img src="images/bradlogo.png" alt="logo mentes a la carta">
+<div class="row">
+  <div class="col s8 offset-s2 m2 offset-m1">
+    <img src="images/bradlogo.png" alt="logo mentes a la carta" width="100%">
+  </div>
 </div>
-
 
 <!-- Titulo dinamico -->
 <div class="row col s8 offset-s2 center-align">
@@ -15,7 +15,7 @@
 </div>
 
 <div class="row">
-  <div class="col s12 m8 offset-m2 l4 offset-l4 center-align">
+  <div class="col s12 m10 offset-m1 center-align">
     <span class="grey-text text-darken-2">
       ¿Cuáles son las áreas de tu profesión en las que te sientes más fuerte?
     </span>
@@ -48,7 +48,7 @@
     <div class="spacing-1"></div>
     <button type="button" class="btn waves-effect waves-light" name="button" style="background-color: #EBA820;" id="add_new_aptitud">Agregar</button>
   </div>
-</div>
+</div> 
 
 <div class="container">
   <div class="row">

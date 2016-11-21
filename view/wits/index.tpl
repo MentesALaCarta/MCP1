@@ -1,9 +1,10 @@
 {include file="view/principal/header.tpl"}
 
 <!-- Imagen del logo -->
-<div class="row col s8 offset-s2 center-align">
-  <div class="spacing-2"></div>
-  <img src="images/bradlogo.png" alt="logo mentes a la carta">
+<div class="row">
+  <div class="col s8 offset-s2 m2 offset-m1">
+    <img src="images/bradlogo.png" alt="logo mentes a la carta" width="100%">
+  </div>
 </div>
 
 
@@ -11,22 +12,11 @@
 <div class="row col s8 offset-s2 center-align">
   <div class="spacing-2"></div>
   <h3 class="title-orange">¿En donde esta tu mente?</h3>
-
-</div>
-
-
-<div class="row">
-  <div class="col s12 m8 offset-m2 l4 offset-l4 center-align">
-    <span class="grey-text text-darken-2">
-      La información que te pedimos en esta sección es de vital importancia para que tu mente pueda ser seleccionada en diversos proyectos.
-    </span>
-  </div>
 </div>
 
 
 <div class="row">
   <div class="col s12 m12 l8 offset-l2">
-    <div class="spacing-1"></div>
     <!-- Progress bar -->
     <div class="container">
       <ul class="progressbar">
@@ -193,18 +183,17 @@
   </div> <!-- /. Experience -->
 
     <div class="row">
-      <div class="col s12 m3 offset-m2 ">
+
+      <div class="col s6 m3 offset-m2 ">
+        <div class="spacing-1"></div>
         <a id="add_new_experience" class="hover" style="color: #EBA820 !important;">Agregar otra experiencia</a>
       </div>
+      <div class="col s5 right-align">
+        <div class="spacing-1"></div>
+        
+        <button id="step1" class="btn waves-effect waves-light orange" type="button"  name="button">Siguiente</button>
+      </div>
     </div>
-
-  <div class="row">
-    <div class="col s12 center-align">
-      <div class="spacing-1"></div>
-      <button id="step1" class="btn waves-effect waves-light orange" type="button"  name="button">Siguiente</button>
-    </div>
-  </div>
-
 
 </form>
 

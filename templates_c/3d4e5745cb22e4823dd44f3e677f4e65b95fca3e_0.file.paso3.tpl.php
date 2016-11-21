@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-20 18:12:17
+/* Smarty version 3.1.30, created on 2016-11-20 21:03:31
   from "/opt/lampp/htdocs/mentes/view/wits/paso3.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5831d9714a35e0_23704954',
+  'unifunc' => 'content_5832019303aca6_67782070',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '3d4e5745cb22e4823dd44f3e677f4e65b95fca3e' => 
     array (
       0 => '/opt/lampp/htdocs/mentes/view/wits/paso3.tpl',
-      1 => 1478249370,
+      1 => 1479672209,
       2 => 'file',
     ),
   ),
@@ -23,20 +23,26 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:view/principal/script.tpl' => 1,
   ),
 ),false)) {
-function content_5831d9714a35e0_23704954 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5832019303aca6_67782070 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
 
 <!-- Imagen del logo -->
+<div class="row">
+  <div class="col s8 offset-s2 m2 offset-m1">
+    <img src="images/bradlogo.png" alt="logo mentes a la carta" width="100%">
+  </div>
+</div>
+
+<!-- Titulo dinamico -->
 <div class="row col s8 offset-s2 center-align">
   <div class="spacing-2"></div>
-  <img src="images/bradlogo.png" alt="logo mentes a la carta">
+  <h4 class="title-orange">Elige en qué actividades quisieras participar</h4>
 </div>
 
 <div class="row">
   <div class="col s12 m12 l8 offset-l2">
-    <div class="spacing-1"></div>
     <!-- Progress bar -->
     <div class="container">
       <ul class="progressbar">
@@ -49,13 +55,6 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
   </div>
 </div>
 
-<div class="spacing-3"></div>
-
-<!-- Titulo dinamico -->
-<div class="row col s8 offset-s2 center-align">
-  <div class="spacing-2"></div>
-  <h3 class="title-orange">Elige en qué actividades quisieras participar</h3>
-</div>
 
 <!-- Brain Mining -->
 <form action="" id="form_services">

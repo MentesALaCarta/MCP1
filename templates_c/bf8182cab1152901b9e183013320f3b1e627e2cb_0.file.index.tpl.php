@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-20 18:11:08
+/* Smarty version 3.1.30, created on 2016-11-20 20:58:49
   from "/opt/lampp/htdocs/mentes/view/wits/index.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5831d92cde43c8_47719472',
+  'unifunc' => 'content_58320079e29ae2_59544079',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'bf8182cab1152901b9e183013320f3b1e627e2cb' => 
     array (
       0 => '/opt/lampp/htdocs/mentes/view/wits/index.tpl',
-      1 => 1478248888,
+      1 => 1479671917,
       2 => 'file',
     ),
   ),
@@ -23,15 +23,16 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:view/principal/script.tpl' => 1,
   ),
 ),false)) {
-function content_5831d92cde43c8_47719472 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58320079e29ae2_59544079 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
 
 <!-- Imagen del logo -->
-<div class="row col s8 offset-s2 center-align">
-  <div class="spacing-2"></div>
-  <img src="images/bradlogo.png" alt="logo mentes a la carta">
+<div class="row">
+  <div class="col s8 offset-s2 m2 offset-m1">
+    <img src="images/bradlogo.png" alt="logo mentes a la carta" width="100%">
+  </div>
 </div>
 
 
@@ -39,22 +40,11 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
 <div class="row col s8 offset-s2 center-align">
   <div class="spacing-2"></div>
   <h3 class="title-orange">¿En donde esta tu mente?</h3>
-
-</div>
-
-
-<div class="row">
-  <div class="col s12 m8 offset-m2 l4 offset-l4 center-align">
-    <span class="grey-text text-darken-2">
-      La información que te pedimos en esta sección es de vital importancia para que tu mente pueda ser seleccionada en diversos proyectos.
-    </span>
-  </div>
 </div>
 
 
 <div class="row">
   <div class="col s12 m12 l8 offset-l2">
-    <div class="spacing-1"></div>
     <!-- Progress bar -->
     <div class="container">
       <ul class="progressbar">
@@ -242,18 +232,17 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
   </div> <!-- /. Experience -->
 
     <div class="row">
-      <div class="col s12 m3 offset-m2 ">
+
+      <div class="col s6 m3 offset-m2 ">
+        <div class="spacing-1"></div>
         <a id="add_new_experience" class="hover" style="color: #EBA820 !important;">Agregar otra experiencia</a>
       </div>
+      <div class="col s5 right-align">
+        <div class="spacing-1"></div>
+        
+        <button id="step1" class="btn waves-effect waves-light orange" type="button"  name="button">Siguiente</button>
+      </div>
     </div>
-
-  <div class="row">
-    <div class="col s12 center-align">
-      <div class="spacing-1"></div>
-      <button id="step1" class="btn waves-effect waves-light orange" type="button"  name="button">Siguiente</button>
-    </div>
-  </div>
-
 
 </form>
 

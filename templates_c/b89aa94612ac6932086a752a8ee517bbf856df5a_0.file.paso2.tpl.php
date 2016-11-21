@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-20 18:11:33
+/* Smarty version 3.1.30, created on 2016-11-21 02:11:47
   from "/opt/lampp/htdocs/mentes/view/wits/paso2.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5831d9451759e5_93501524',
+  'unifunc' => 'content_583249d3b2cc74_03872689',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b89aa94612ac6932086a752a8ee517bbf856df5a' => 
     array (
       0 => '/opt/lampp/htdocs/mentes/view/wits/paso2.tpl',
-      1 => 1478174580,
+      1 => 1479683681,
       2 => 'file',
     ),
   ),
@@ -23,17 +23,17 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:view/principal/script.tpl' => 1,
   ),
 ),false)) {
-function content_5831d9451759e5_93501524 (Smarty_Internal_Template $_smarty_tpl) {
+function content_583249d3b2cc74_03872689 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
 
 <!-- Imagen del logo -->
-<div class="row col s8 offset-s2 center-align">
-  <div class="spacing-2"></div>
-  <img src="images/bradlogo.png" alt="logo mentes a la carta">
+<div class="row">
+  <div class="col s8 offset-s2 m2 offset-m1">
+    <img src="images/bradlogo.png" alt="logo mentes a la carta" width="100%">
+  </div>
 </div>
-
 
 <!-- Titulo dinamico -->
 <div class="row col s8 offset-s2 center-align">
@@ -43,7 +43,7 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
 </div>
 
 <div class="row">
-  <div class="col s12 m8 offset-m2 l4 offset-l4 center-align">
+  <div class="col s12 m10 offset-m1 center-align">
     <span class="grey-text text-darken-2">
       ¿Cuáles son las áreas de tu profesión en las que te sientes más fuerte?
     </span>
@@ -76,7 +76,7 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
     <div class="spacing-1"></div>
     <button type="button" class="btn waves-effect waves-light" name="button" style="background-color: #EBA820;" id="add_new_aptitud">Agregar</button>
   </div>
-</div>
+</div> 
 
 <div class="container">
   <div class="row">

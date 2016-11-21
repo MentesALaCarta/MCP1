@@ -369,6 +369,22 @@
       parent::cerrar();
     }
 
+    public function getIdiomas($des)
+    {
+      parent::conectar();
+      $datos = array();
+      $buscar = array('&aacute','&Aacute','&eacute','&Eacute','&iacute','&Iacute','&oacute','&Oacute','&uacute','&Uacute', '&ntilde', '&Ntilde');
+      $reemplazar = array('á','Á','é','É','í','Í','ó','Ó','ú','Ú','ñ','Ñ');
+
+      $consulta = parent::query('select DISTINCT(des) from idiomas where des like "%'.$des.'%"');
+      while($row = mysqli_fetch_array($consulta)){
+        $datos[] = str_replace($buscar, $reemplazar, $row['des']);
+      }
+
+      echo json_encode($datos);
+      parent::cerrar();
+    }
+
   }
 
 ?>

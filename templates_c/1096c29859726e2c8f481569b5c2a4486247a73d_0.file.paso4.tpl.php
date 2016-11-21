@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-20 18:12:23
+/* Smarty version 3.1.30, created on 2016-11-21 02:26:05
   from "/opt/lampp/htdocs/mentes/view/wits/paso4.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5831d977edf4b3_49912610',
+  'unifunc' => 'content_58324d2d7044b2_52508591',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1096c29859726e2c8f481569b5c2a4486247a73d' => 
     array (
       0 => '/opt/lampp/htdocs/mentes/view/wits/paso4.tpl',
-      1 => 1478618200,
+      1 => 1479691427,
       2 => 'file',
     ),
   ),
@@ -23,15 +23,16 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:view/principal/script.tpl' => 1,
   ),
 ),false)) {
-function content_5831d977edf4b3_49912610 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58324d2d7044b2_52508591 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
 
 <!-- Imagen del logo -->
-<div class="row col s8 offset-s2 center-align">
-  <div class="spacing-2"></div>
-  <img src="images/bradlogo.png" alt="logo mentes a la carta">
+<div class="row">
+  <div class="col s8 offset-s2 m2 offset-m1">
+    <img src="images/bradlogo.png" alt="logo mentes a la carta" width="100%">
+  </div>
 </div>
 
 
@@ -95,12 +96,6 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
         <label for="Telefono">Teléfono móvil</label>
       </div>
 
-
-      <div class="input-field col s12 m6">
-        <input type="text" id="idiomas" name="idiomas">
-        <label for="idiomas">¿Qué idiomas hablas?</label>
-      </div>
-
       <div class="input-field col s12 m6">
         <input type="text" id="pais" name="pais">
         <label for="pais">¿En que país vives?</label>
@@ -111,10 +106,21 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
         <label for="tweets">Describete en <span class="text-accent">(<span id="pre-des">144</span>)</span> caracteres</label>
       </div>
 
-        <div class="input-field col s12">
-          <textarea id="textarea" class="materialize-textarea" name="area"></textarea>
-          <label for="textarea">Déjanos una frase o pensamiento propio o cuéntanos si hay algo más que debemos saber de ti</label>
-        </div>
+      <div class="input-field col s12">
+        <textarea id="textarea" class="materialize-textarea" name="area"></textarea>
+        <label for="textarea">Déjanos una frase o pensamiento propio o cuéntanos si hay algo más que debemos saber de ti</label>
+      </div>
+
+      <!-- Idiomas -->
+      <div class="input-field col s6 m6">
+        <input id="idiomas" value="" type="text" class="validate">
+        <label for="idiomas">¿Qué idiomas hablas?</label>
+      </div>
+      <div class="col s6 m3">
+        <div class="spacing-1"></div>
+        <button type="button" class="btn waves-effect waves-light" name="button" style="background-color: #EBA820;" id="add_new_aptitud">Agregar</button>
+      </div>
+
 
     </div>
   </form>
@@ -136,7 +142,6 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
     <button id="step4" style="width: 100%; background-color: #EBA820;"class="btn waves-effect waves-light" type="button"  name="button">¡Finalizar!</button>
   </div>
 </div>
-
 
 <?php $_smarty_tpl->_subTemplateRender("file:view/principal/cerrarSesion.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>

@@ -1,14 +1,20 @@
 {include file="view/principal/header.tpl"}
 
 <!-- Imagen del logo -->
+<div class="row">
+  <div class="col s8 offset-s2 m2 offset-m1">
+    <img src="images/bradlogo.png" alt="logo mentes a la carta" width="100%">
+  </div>
+</div>
+
+<!-- Titulo dinamico -->
 <div class="row col s8 offset-s2 center-align">
   <div class="spacing-2"></div>
-  <img src="images/bradlogo.png" alt="logo mentes a la carta">
+  <h4 class="title-orange">Elige en qué actividades quisieras participar</h4>
 </div>
 
 <div class="row">
   <div class="col s12 m12 l8 offset-l2">
-    <div class="spacing-1"></div>
     <!-- Progress bar -->
     <div class="container">
       <ul class="progressbar">
@@ -21,13 +27,6 @@
   </div>
 </div>
 
-<div class="spacing-3"></div>
-
-<!-- Titulo dinamico -->
-<div class="row col s8 offset-s2 center-align">
-  <div class="spacing-2"></div>
-  <h3 class="title-orange">Elige en qué actividades quisieras participar</h3>
-</div>
 
 <!-- Brain Mining -->
 <form action="" id="form_services">

@@ -47,16 +47,10 @@
                  <section class="row">
                      <article class="col s8 offset-s2 align-justify">
                          <span style="color: gray; margin-top: 10px;  display: block; font-size: 1.1rem; font-weight: 300;">
-                             <!--Hemos comprobado que en la variedad está el éxito.--> Contamos con más de 500 profesionales activos en múltiples sectores y países que seleccionamos a la carta según las necesidades de innovación de su negocio.
+                            Contamos con más de 500 profesionales activos en múltiples sectores y países que le ayudarán a crear soluciones innovadoras en su negocio.
                          </span>
                      </article>
                  </section>
-             </div>
-             <div class="col s12 l12 center">
-               <h6>¿Quieres ser una mente a la carta?</h6>
-               <a href="?view=registrar">
-                 <button type="button" name="button" class="btn btn-primary waves-effect grey waves-light" style="font-size: 0.7em !important; padding-top: 1px !important; ">Postulate</button>
-               </a>
              </div>
          </div>
      </div>
@@ -279,18 +273,33 @@
                 </a>
         </div>
     </article>
+
+    <!-- Botones -->
+    <div class="row">
+      <!-- Ver más -->
+      <div class="col s12 m2 offset-m3">
+        <div class="spacing-1"></div>
+        <a href="?view=mentes-a-la-carta">
+          <button type="button" name="button" class="btn grey waves-effect waves-light">Ver más</button>
+        </a>
+      </div>
+      <!-- Quiero ser una mente -->
+      <div class="col s12 m7">
+        <div class="spacing-1"></div>
+        <a href="?view=registrar">
+          <button type="button" name="button" class="btn grey waves-effect waves-light">Quiero ser una mente a la carta</button>
+        </a>
+      </div>
+    </div>
+
+    <!-- Especiadores -->
+    <div class="spacing-3"></div>
+    <div class="spacing-3"></div>
 </section>
 
-      <!--Boton todos los -->
-      <section class="row no-margin">
-          <article class="col s6 offset-s3 center-align">
-             <a href="?view=mentes-a-la-carta">
-              <button class="grey btn waves-effect waves-light btn-more">Ver Más Mentes</button>
-              </a>
-          </article>
-      </section>
 
    </div>
+
 </div>
 
 <div class="spacing-1"></div>
@@ -300,7 +309,6 @@
     <article class="col l12 center-align">
         <div class="container">
         <h4 class="accent-color font-300 titulo-per">Servicios</h4>
-        <span class="grey-text text-darken-1 size-descripcion re-size">Nos apoyamos en nuestras más de 500 Mentes a la Carta para ofrecerte: </span>
         <div class="spacing-2"></div>
             <section class="row">
                 <article class="col s12 l4" style="margin-top: 0.5em;">

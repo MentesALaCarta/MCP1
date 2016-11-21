@@ -836,3 +836,7 @@ $(document).on('click', '#login', function(){
   });
 
 });
+
+$("#idiomas").autocomplete({
+  source: "controller/user/traerIdiomas.php"
+});

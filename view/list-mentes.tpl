@@ -4,7 +4,7 @@
 <section class="row">
    <div class="container">
     <article class="col s12 center">
-        <h3 class="grey-text text-darken-3 title-home">Nuestras mentes a la carta</h3>
+        <h3 class="grey-text text-darken-3 title-home">Algunas mentes a la carta</h3>
     </article>
 
 
@@ -156,7 +156,7 @@ Talent</p>
                   <span class="nombre grey-text text-darken-3 font-400">Antonio Vicente</span>
                   <i class="fa fa-info-circle hover-icon right accent-orange" style="font-size: 1.5em;" aria-hidden="true"></i>
                   <br class="hide-on-med-up">
-                  <span class="grey-text">Apps Móviles y Software <br>España-Murcia</span>
+                  <span class="grey-text">Software <br>España-Murcia</span>
               </span>
 
             </div>
@@ -332,7 +332,7 @@ Talent</p>
                   <span class="nombre grey-text text-darken-3 font-400">Christian Bataller</span>
                   <i class="fa fa-info-circle hover-icon right accent-orange" style="font-size: 1.5em;" aria-hidden="true"></i>
                   <br class="hide-on-med-up">
-                  <span class="grey-text">Director de Marketing<br>España-Madrid</span>
+                  <span class="grey-text">Marketing<br>España-Madrid</span>
               </span>
 
             </div>
@@ -1117,7 +1117,7 @@ Talent</p>
                       <span class="nombre grey-text text-darken-3 font-400">Martin Giusepponi</span>
                       <i class="fa fa-info-circle hover-icon right accent-orange" style="font-size: 1.5em;" aria-hidden="true"></i>
                       <br class="hide-on-med-up">
-                      <span class="grey-text">Coordinador General<br>Santa Fe-Rosario</span>
+                      <span class="grey-text">Coordinador<br>Santa Fe-Rosario</span>
                   </span>
 
                 </div>
@@ -1576,7 +1576,7 @@ Talent</p>
                 <div class="card-image waves-effect waves-block waves-light bordes-imagen">
                   <img class="activator " width="150" src="images/list/new/Fernando_Araujo.jpg" alt="mentes a la carta andres">
                 </div>
-                <div class="card-content descripcion" style="padding-bottom: 3px;">
+                <div class="card-content descripcion" style="padding-bottom: 5px;">
                   <span class="activator grey-text text-darken-4">
                       <span class="nombre grey-text text-darken-3 font-400">Fernando Araújo</span>
                       <i class="fa fa-info-circle hover-icon right accent-orange" style="font-size: 1.5em;" aria-hidden="true"></i>
@@ -1625,7 +1625,7 @@ Talent</p>
                       <span class="nombre grey-text text-darken-3 font-400">Esteban Mancuso</span>
                       <i class="fa fa-info-circle hover-icon right accent-orange" style="font-size: 1.5em;" aria-hidden="true"></i>
                       <br class="hide-on-med-up">
-                      <span class="grey-text">Innovación estratégica<br>Colombia-Medellín</span>
+                      <span class="grey-text">Estrategia<br>Colombia-Medellín</span>
                   </span>
 
                 </div>
