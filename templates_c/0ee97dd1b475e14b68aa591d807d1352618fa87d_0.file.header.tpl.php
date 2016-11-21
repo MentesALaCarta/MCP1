@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-20 05:54:47
+/* Smarty version 3.1.30, created on 2016-11-21 15:00:40
   from "/opt/lampp/htdocs/mentes/view/principal/header.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58312c974ba632_84409127',
+  'unifunc' => 'content_5832fe08b04ba1_71832053',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0ee97dd1b475e14b68aa591d807d1352618fa87d' => 
     array (
       0 => '/opt/lampp/htdocs/mentes/view/principal/header.tpl',
-      1 => 1478007430,
+      1 => 1479736837,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58312c974ba632_84409127 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5832fe08b04ba1_71832053 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -46,6 +46,9 @@ function content_58312c974ba632_84409127 (Smarty_Internal_Template $_smarty_tpl)
     <link rel="stylesheet" href="css/mentes.css">
     <!-- Sweet Alert -->
     <link rel="stylesheet" href="css/sweetalert.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/ico" href="images/icon.ico">
+
     <?php echo '<script'; ?>
  type="text/javascript" src="js/sweetalert.min.js"><?php echo '</script'; ?>
 >

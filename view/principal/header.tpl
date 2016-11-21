@@ -20,6 +20,9 @@
     <link rel="stylesheet" href="css/mentes.css">
     <!-- Sweet Alert -->
     <link rel="stylesheet" href="css/sweetalert.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/ico" href="images/icon.ico">
+
     <script type="text/javascript" src="js/sweetalert.min.js"></script>
     <script src="js/jquery-ui.js"></script>
     <link rel="stylesheet" href="css/jquery-ui.css">
