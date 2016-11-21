@@ -1,28 +1,29 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-20 18:16:11
+/* Smarty version 3.1.30, created on 2016-11-21 20:04:46
   from "/opt/lampp/htdocs/mentes/view/admin/panel.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5831da5b6a5976_85152926',
+  'unifunc' => 'content_5833454e107e53_89766292',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2aeb63cc71d2bd9ed3cddb4b64ccb3c24cfcdf0f' => 
     array (
       0 => '/opt/lampp/htdocs/mentes/view/admin/panel.tpl',
-      1 => 1479479076,
+      1 => 1479755043,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
     'file:view/principal/header.tpl' => 1,
+    'file:view/principal/cerrarSesion.tpl' => 1,
     'file:view/principal/script.tpl' => 1,
   ),
 ),false)) {
-function content_5831da5b6a5976_85152926 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5833454e107e53_89766292 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -45,13 +46,13 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
               <a href="?view=panel" class="accent-li1">
                 <li class="item-nav-right1 active-item" id="project-pro">
                   <i class="fa fa-users left resize"></i>
-                  Wits
+                  Mentes a la carta
                 </li>
               </a>
               <a href="?view=wits-pendientes" class="accent-li1">
                 <li class="item-nav-right1" id="asesores-pro">
                   <i class="fa fa-user-secret left resize"></i>
-                  Wits Pendientes
+                  Mentes a la carta pendientes
                 </li>
               </a>
               <a href="?view=acceder" class="accent-li1">
@@ -289,6 +290,8 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
   </div>
 
 </div><!-- / End .Panel-->
+<?php $_smarty_tpl->_subTemplateRender("file:view/principal/cerrarSesion.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
 
 <?php $_smarty_tpl->_subTemplateRender("file:view/principal/script.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>

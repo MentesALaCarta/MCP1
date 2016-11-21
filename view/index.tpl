@@ -2,13 +2,26 @@
 {include file="view/principal/nav.tpl"}
 <div class="row">
    <div class="col s12" id="home" style="padding: 0px; margin: 0px; position: relative; overflow: hidden;">
-       <!--<img class="img-right" src="images/Logo%20Blanco%20MALC.png">-->
-        <video class="hide-on-med-and-down" id="video" src="video/video5.mp4" autoplay loop>
-        </video>
+        <!-- <video class="hide-on-med-and-down" id="video" src="video/video5.mp4" autoplay loop>
+        </video> -->
+          <div class="slider-banner hide-on-med-and-down" >
+            <div id="elemento1" class="elemento s_visible">
+              <img id="imagen1" src="images/banner/bg01.jpg" alt="banner innovafacil" width="125%" class=""/>
+            </div>
+            <div id="elemento2" class="elemento">
+              <img id="imagen2" src="images/banner/bg02.jpg" alt="banner innovafacil" width="125%" class=""/>
+            </div>
+            <div id="elemento3" class="elemento">
+              <img id="imagen3" src="images/banner/bg03.jpg" alt="banner innovafacil" width="125%" class=""/>
+            </div>
+          </div>
+
+
         <!-- Banner para Mobie pequeño-->
         <img class="hide-on-med-and-up img-banner-main" src="images/mobie-banner-mobie.jpg" alt="Baner de mentes a la carta">
         <!-- Banner para Mobie pequeño-->
         <img class="hide-on-small-only hide-on-large-only img-banner-main" src="images/mobie-banner.jpg" alt="Baner de mentes a la carta">
+
          <div class="row" style="margin-bottom: 0px;">
              <div class="col s12">
                  <div class="centrado-porcentual">
@@ -25,12 +38,12 @@
                  </div>
              </div>
          </div>
-         <div class="dark">
-         </div>
-        <!--<img class="img-ban2 hide-on-med-and-up" width="100%" src="images/BAN18.png">
-        <img class="img-ban hide-on-small-only" width="100%" src="images/BAN18.png">-->
+
+        <!-- Color de sobreponer -->
+        <div class="dark"></div>
+
+        <!-- COmplemento para los celulares -->
         <img src="images/ban11.png" class="img-ban2 hide-on-med-and-up" width="100%" alt="">
-        <!--<img src="images/ban11.png" class="img-ban hide-on-small-only" width="100%" alt="">-->
     </div>
 </div>
 
@@ -275,7 +288,7 @@
     </article>
 
     <!-- Botones -->
-    <div class="row">
+    <div class="row hide-on-small-only">
       <!-- Ver más -->
       <div class="col s12 m2 offset-m3">
         <div class="spacing-1"></div>
@@ -285,6 +298,24 @@
       </div>
       <!-- Quiero ser una mente -->
       <div class="col s12 m7">
+        <div class="spacing-1"></div>
+        <a href="?view=registrar">
+          <button type="button" name="button" class="btn grey waves-effect waves-light">Quiero ser una mente a la carta</button>
+        </a>
+      </div>
+    </div>
+
+    <!-- Botones -->
+    <div class="row hide-on-large-only">
+      <!-- Ver más -->
+      <div class="col s12 center-align">
+        <div class="spacing-1"></div>
+        <a href="?view=mentes-a-la-carta">
+          <button type="button" name="button" class="btn grey waves-effect waves-light">Ver más</button>
+        </a>
+      </div>
+      <!-- Quiero ser una mente -->
+      <div class="col s12 center-align">
         <div class="spacing-1"></div>
         <a href="?view=registrar">
           <button type="button" name="button" class="btn grey waves-effect waves-light">Quiero ser una mente a la carta</button>

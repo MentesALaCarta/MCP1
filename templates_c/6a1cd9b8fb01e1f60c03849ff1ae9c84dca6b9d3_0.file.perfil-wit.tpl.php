@@ -1,28 +1,29 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-20 18:13:40
+/* Smarty version 3.1.30, created on 2016-11-21 20:07:25
   from "/opt/lampp/htdocs/mentes/view/wits/perfil-wit.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5831d9c4418f94_06087116',
+  'unifunc' => 'content_583345edb909a6_95995434',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6a1cd9b8fb01e1f60c03849ff1ae9c84dca6b9d3' => 
     array (
       0 => '/opt/lampp/htdocs/mentes/view/wits/perfil-wit.tpl',
-      1 => 1478620412,
+      1 => 1479754753,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
     'file:view/principal/header.tpl' => 1,
+    'file:view/principal/cerrarSesion.tpl' => 1,
     'file:view/principal/script.tpl' => 1,
   ),
 ),false)) {
-function content_5831d9c4418f94_06087116 (Smarty_Internal_Template $_smarty_tpl) {
+function content_583345edb909a6_95995434 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -315,6 +316,11 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
 
   </div>
 </div>
+<?php if (isset($_SESSION['id'])) {?>
+  <?php $_smarty_tpl->_subTemplateRender("file:view/principal/cerrarSesion.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+
+<?php }?>
 
 <?php $_smarty_tpl->_subTemplateRender("file:view/principal/script.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>

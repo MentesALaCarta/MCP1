@@ -1,11 +1,11 @@
 <?php
 
+  session_start();
+
   # Verificamos que exista una sesion iniciada
-  // if(isset($_SESSION['id'])){
-  //     echo 'sesion iniciada';
-  // }else{
-  //     echo 'sesion no iniciada';
-  // }
+  if(!isset($_SESSION['id']) || isset($_SESSION['cargo']) && $_SESSION['cargo'] != 1){
+    header('location: ?view=acceder');
+  }
 
   # Incluimos la clase admin
   require_once('model/Admin.php');

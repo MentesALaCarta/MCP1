@@ -4,7 +4,6 @@ $(".button-collapse").sideNav({
 $(".button-collapse").show();
 
 
-
 /*Slider 1*/
  var slides = $('#slider-1').find('div').length;
  var next = 0;
@@ -112,6 +111,7 @@ $(document).ready(function(){
     setInterval(function(){
         $('.carousel').carousel('next',1); // Move next n times.
     }, 3000);
+    // setInterval(slider_principal, 7000);
 });
 
 
@@ -513,7 +513,7 @@ $(document).on('click', '#step3', function(){
 });
 
 $(document).on('click', '#close-sesion', function(){
-  window.location.href= "?view=index";
+  window.location.href= "?view=acceder";
 });
 
 
@@ -542,7 +542,7 @@ $(document).on('click', '#step4', function(){
           text: 'Te has registrado satisfactoriamente en Mentes a la carta, pronto nos contactaremos contigo',
           type: 'success'
         }, function(){
-          window.location.href="?view=index";
+          window.location.href= answer;
         });
       }
     }
@@ -900,3 +900,28 @@ $("#idiomas").autocomplete({
       }
     });
   });
+
+
+// Funcionalidades para el slider principal
+function slider_principal(){
+
+  if($('#elemento1').hasClass('s_visible')){
+
+    $('#elemento2').addClass('s_visible');
+    $('#elemento1').removeClass('s_visible');
+    $('#elemento3').removeClass('s_visible');
+
+
+  }else if($('#elemento2').hasClass('s_visible')){
+    $('#elemento1').removeClass('s_visible');
+    $('#elemento2').removeClass('s_visible');
+    $('#elemento3').addClass('s_visible');
+
+  }else if($('#elemento3').hasClass('s_visible')){
+
+    $('#elemento3').removeClass('s_visible');
+    $('#elemento2').removeClass('s_visible');
+    $('#elemento1').addClass('s_visible');
+  }
+  console.log('cambiar');
+}

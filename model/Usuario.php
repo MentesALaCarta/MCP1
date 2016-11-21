@@ -276,6 +276,8 @@
 
       parent::query('update fire_step set step="5" where usuario_id="'.$_SESSION['id'].'"');
 
+      echo '?view=perfil-wit&id='.$_SESSION['id'];
+
       parent::cerrar();
     }
 

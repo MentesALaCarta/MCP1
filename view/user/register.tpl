@@ -11,7 +11,7 @@
   <div class="row">
     <div class="spacing-2"></div>
     <div class="col s12 center-align">
-      <h3 class="grey-text text-darken-4">Regístrate como Wit</h3>
+      <h3 class="grey-text text-darken-4">Regístrate como Mente a la carta</h3>
     </div>
 
 

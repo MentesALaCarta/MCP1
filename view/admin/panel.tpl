@@ -18,13 +18,13 @@
               <a href="?view=panel" class="accent-li1">
                 <li class="item-nav-right1 active-item" id="project-pro">
                   <i class="fa fa-users left resize"></i>
-                  Wits
+                  Mentes a la carta
                 </li>
               </a>
               <a href="?view=wits-pendientes" class="accent-li1">
                 <li class="item-nav-right1" id="asesores-pro">
                   <i class="fa fa-user-secret left resize"></i>
-                  Wits Pendientes
+                  Mentes a la carta pendientes
                 </li>
               </a>
               <a href="?view=acceder" class="accent-li1">
@@ -178,5 +178,5 @@
   </div>
 
 </div><!-- / End .Panel-->
-
+{include file="view/principal/cerrarSesion.tpl"}
 {include file="view/principal/script.tpl"}

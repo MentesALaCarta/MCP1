@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-20 18:16:35
+/* Smarty version 3.1.30, created on 2016-11-21 19:09:31
   from "/opt/lampp/htdocs/mentes/view/admin/wits-pendientes.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5831da73eb7234_18509675',
+  'unifunc' => 'content_5833385bebc059_46118056',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '09e80b082571141bb1887f335b0a41a0578e3c2c' => 
     array (
       0 => '/opt/lampp/htdocs/mentes/view/admin/wits-pendientes.tpl',
-      1 => 1479479088,
+      1 => 1479751768,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:view/principal/script.tpl' => 1,
   ),
 ),false)) {
-function content_5831da73eb7234_18509675 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5833385bebc059_46118056 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -45,13 +45,13 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
               <a href="?view=panel" class="accent-li1">
                 <li class="item-nav-right1 " id="project-pro">
                   <i class="fa fa-users left resize"></i>
-                  Wits
+                  Mentes a la carta
                 </li>
               </a>
               <a href="?view=wits-pendientes " class="accent-li1">
                 <li class="item-nav-right1 active-item" id="asesores-pro">
                   <i class="fa fa-user-secret left resize"></i>
-                  Wits Pendientes
+                  Mentes a la carta pendientes
                 </li>
               </a>
               <a href="?view=acceder" class="accent-li1">

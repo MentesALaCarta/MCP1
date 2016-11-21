@@ -8,6 +8,29 @@
     src: url('../fonts/gobold/Gobold Light.ttf');
 }
 
+.slider-banner{
+  width: 100%;
+  height: 700px;
+  overflow: hidden;
+}
+
+
+.elemento{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.pasar{
+  transition: 35s;
+  transform: translateX(-15%);
+}
+
+.s_visible{
+  display: block;
+}
+
 
 /*Escritorio super grande*/
 @media only screen and (max-width: 4000px) {

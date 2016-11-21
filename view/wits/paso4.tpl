@@ -68,7 +68,7 @@
         <label for="Telefono">Teléfono móvil</label>
       </div>
 
-      <div class="input-field col s12 m6">
+      <div class="input-field col s12">
         <input type="text" id="pais" name="pais">
         <label for="pais">¿En que país vives?</label>
       </div>

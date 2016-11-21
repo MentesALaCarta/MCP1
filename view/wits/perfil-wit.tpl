@@ -259,5 +259,8 @@
 
   </div>
 </div>
+{if isset($smarty.session.id)}
+  {include file="view/principal/cerrarSesion.tpl"}
+{/if}
 
 {include file="view/principal/script.tpl"}
