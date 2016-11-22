@@ -2,8 +2,26 @@ body{
     margin: 0px;
     padding: 0px;
     /*background-color: rgba(85,172,238,.3);*/
-    
+}
 
+.spacing-1{
+  margin-top: 1em;
+}
+
+.strong{
+  font-weight: bold;
+}
+
+.spacing-2{
+  margin-top: 2.5em;
+}
+
+.spacing-3{
+  margin-top: 0.5em;
+}
+
+.no-padding-top{
+  margin-top: 0px;
 }
 
 /* Establece el color blanco como fondo */
@@ -33,7 +51,7 @@ body{
     font-size: 24px;
     color: #292F33;
     margin-top: 0.2em !important;
-    font-weight: bold;        
+    font-weight: bold;
 }
 
 .form-registro > input, button {
@@ -67,7 +85,7 @@ body{
 .btn-register {
     background-color: #55ACEE;
     color: white;
-    text-decoration: none;   
+    text-decoration: none;
 }
 
 .accent-blue{
@@ -117,5 +135,5 @@ body{
 }
 
 .text-accent {
-    
+
 }

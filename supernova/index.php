@@ -1,4 +1,4 @@
-<?php  
+<?php
     /*
         # Si existe una variable por get llamada view se asigna a la variable $view de lo contrario se le asignara a get el valor de index
     */
@@ -18,6 +18,5 @@
         //Página de error
         include('controller/errorController.php');
     }
-    
+
 ?>
-   
