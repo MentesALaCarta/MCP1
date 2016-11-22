@@ -21,6 +21,17 @@
         </div>
       </div>
 
+      {if isset($smarty.session.id) && $smarty.session.id == $smarty.get['id'] }
+      <!-- Editar perfil -->
+      <div class="row">
+        <div class="col s11 right-align">
+          <a href="?view=editar-perfil" class="tooltipped" data-position="left" data-delay="50" data-tooltip="Editar perfil">
+            <i class="fa fa-cog hover" aria-hidden="true" style="color: white; font-size: 2em;"></i>
+          </a>
+        </div>
+      </div>
+      {/if}
+
       <!-- Datos de contacto -->
       <div class="row">
         <div class="col s11 right-align">
@@ -37,19 +48,19 @@
             <div class="col s6 "><span class="des-wit-2">{$contacto[0][1]}</span></div>
           </div>
 
-          <!-- Ciudad -->
+          <!-- Pais -->
           <div class="row">
             <div class="col s6"><span class="des-wit">Pais:</span></div>
             <div class="col s6 "><span class="des-wit-2">{$usuario['pais']}</span></div>
           </div>
 
-          <!-- Ciudad -->
+          <!-- email -->
           <div class="row">
             <div class="col s6"><span class="des-wit">Correo electrónico:</span></div>
             <div class="col s6 "><span class="des-wit-2">{$usuario['email']}</span></div>
           </div>
 
-          <!-- Telefono-->
+          <!-- idiomas -->
           <div class="row">
             <div class="col s6"><span class="des-wit">Idiomas:</span></div>
             <div class="col s6 "><span class="des-wit-2">{$idiomas}</span></div>

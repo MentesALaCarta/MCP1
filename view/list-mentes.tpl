@@ -24,7 +24,7 @@
 
             </div>
             <div class="card-reveal">
-              <span class="card-title grey-text text-darken-4">Carlos Cruz<i class="fa fa-times right red-text" aria-hidden="true"></i></span>
+              <span class="card-title grey-text text-darken-4">Carlos<i class="fa fa-times right red-text" aria-hidden="true"></i></span>
               <p class="text-accent">Las cosas complejas no tienen porque explicarse de forma compleja. La economía colaborativa supone una innovación organizacional radical, tú eliges si quieres aprovecharla.</p>
             </div>
         </div>

@@ -31,6 +31,10 @@
   display: none;
 }
 
+.padding-edit{
+  padding: 1em;
+}
+
 .pasar{
   transition: 35s;
   transform: translateX(-15%);
@@ -321,7 +325,7 @@
 }
 
 .text-accent {
-    color: #68739D !important;
+    color: black !important;
 }
 
 .section-title {

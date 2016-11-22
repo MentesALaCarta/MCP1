@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-20 20:44:53
+/* Smarty version 3.1.30, created on 2016-11-21 21:29:04
   from "/opt/lampp/htdocs/mentes/view/list-mentes.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5831fd351a6591_15596499',
+  'unifunc' => 'content_58335910c8d892_84034858',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c08d3425861107ed58e93f8bcd37c30f0f6b9a12' => 
     array (
       0 => '/opt/lampp/htdocs/mentes/view/list-mentes.tpl',
-      1 => 1479671080,
+      1 => 1479760142,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:view/principal/script.tpl' => 1,
   ),
 ),false)) {
-function content_5831fd351a6591_15596499 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58335910c8d892_84034858 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -52,7 +52,7 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
 
             </div>
             <div class="card-reveal">
-              <span class="card-title grey-text text-darken-4">Carlos Cruz<i class="fa fa-times right red-text" aria-hidden="true"></i></span>
+              <span class="card-title grey-text text-darken-4">Carlos<i class="fa fa-times right red-text" aria-hidden="true"></i></span>
               <p class="text-accent">Las cosas complejas no tienen porque explicarse de forma compleja. La economía colaborativa supone una innovación organizacional radical, tú eliges si quieres aprovecharla.</p>
             </div>
         </div>

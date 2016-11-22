@@ -1,0 +1,121 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    /*background-color: rgba(85,172,238,.3);*/
+    
+
+}
+
+/* Establece el color blanco como fondo */
+.white {
+    background-color: white;
+}
+
+.navbar-personalizado {
+    background-color: white;
+    margin: 0px;
+    /*-webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);*/
+    border-color: white !important;
+}
+
+.panel-login {
+    border-top: none;
+    background-color: rgba(85,172,238,.3);
+    margin-top: 5em;
+}
+
+.spacing-xs {
+    margin-top: 1em;
+}
+
+.titulo {
+    font-size: 24px;
+    color: #292F33;
+    margin-top: 0.2em !important;
+    font-weight: bold;        
+}
+
+.form-registro > input, button {
+    margin-top: 0.5em;
+}
+
+
+
+.spacing-form {
+    margin-top: 1.5em;
+}
+
+.titulo-2 {
+    font-size: 19px;
+    color: #66757F;
+}
+
+.agregar {
+    color: #55ACEE;
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.icon-add {
+    letter-spacing: 5px;
+}
+
+
+
+.btn-register {
+    background-color: #55ACEE;
+    color: white;
+    text-decoration: none;   
+}
+
+.accent-blue{
+    color: #55ACEE;
+}
+
+
+
+.bg-accent-blue{
+    background-color: #55ACEE;
+}
+
+.btn-register:hover{
+    background-color: #54A7E6 !important;
+    color: white !important;
+    border: 1px solid #54A7E6 !important;
+}
+
+.btn-register:focus{
+    background-color: #54A7E6 !important;
+    color: white !important;
+    border: 1px solid #54A7E6 !important;
+}
+
+.btn-register:active{
+    background-color: #54A7E6 !important;
+    color: white !important;
+    border: 1px solid #54A7E6 !important;
+}
+
+.message-text {
+    color: rgba(102,117,127,0.6);
+}
+
+.icon-close:hover {
+    cursor: pointer;
+}
+
+#agregar {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.bold {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.text-accent {
+    
+}

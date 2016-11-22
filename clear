@@ -1,0 +1,131 @@
+[33mcommit f7a898cc580133d5560afee4d45f5096e0b49559[m
+Author: MIchael yara <mjyara9@gmail.com>
+Date:   Mon Nov 21 15:14:35 2016 -0500
+
+    Ahora en el perfil de la mente a la carta se valida el estado, si el usuario que ha iniciado sesion coincide con el perfil que esta visualizando y ademas tiene el estado en I(inactivo) mostrara un mensaje. Se mejoro la funcionalidad de cerrar sesion, al igual que se agrego en las vistas de perfil y panel del administrador, ahora se valida el id para que la mente a la carta si exista antes de ver un perfil que probablemente no exista, se ajusto la pagina de error ahora es mas agradable para el usuario, se mejoro el login ahora si existe una sesion redireccionara a la pagina segun el rol
+
+[33mcommit ceb9106d681ebea8a02fb9877657a0607f17e949[m
+Author: MIchael yara <mjyara9@gmail.com>
+Date:   Mon Nov 21 14:09:22 2016 -0500
+
+    mejoras en la seguridad de las paginas se cambio el texto de wit a mentes a la carta, ahora cuando el usuario se registra lo redirecciona a su perfil, algo a agregar es un mensaje que diga que estamos validando la información ingresada.
+
+[33mcommit e59b560d4b2e213f53dc3a614a2cb49513c06792[m
+Author: MIchael yara <mjyara9@gmail.com>
+Date:   Mon Nov 21 09:04:00 2016 -0500
+
+    Ahora la pagina de mentes a la carta cuenta con favicon
+
+[33mcommit c62d31d127abc93bf55b2ea22ba495583bc8bc74[m
+Author: MIchael yara <mjyara9@gmail.com>
+Date:   Mon Nov 21 07:23:49 2016 -0500
+
+    Ahora el registro de el paso 4 agrega idiomas dinamicamente, no elimino idiomas del formulario del registro global del paso 4, falta cambiar el baner, editar perfil por wit y al registrarse mostrarle el perfil de la  mente a la carta
+
+[33mcommit 1452a2d9be15e5acd90b2c6936fa46a2ab55d9bd[m
+Author: MIchael yara <mjyara9@gmail.com>
+Date:   Sun Nov 20 23:35:37 2016 -0500
+
+    se realizaron algunos cambios de las observaciones de alex ahora solo falta registrar los idiomas ya que trae correctamente el autocompletado, cambiar el video por imagenes en movimiento, validar cada pagina que exista una sesion y en el login si existe una sesion redireccionar a la pagina del login, habilitar la edicion del perfil, y al registrarse redireccionar al perfil, ahora si es una mente a la carta que le aparesca cerrar sesion
+
+[33mcommit d13371d0b404ba87e763ce6ddebd2c8c674bc0b4[m
+Author: MIchael yara <mjyara9@gmail.com>
+Date:   Sun Nov 20 13:59:22 2016 -0500
+
+    Inicio de la segunda version del proyecto ahora el login funciona se ve el perfil de los wits pero no se editan, los siguientes cambios seran las anotaciones de alex
+
+[33mcommit 7153ade303d7c21f9bf19eb224525863f342febd[m
+Author: Michael <mjyara9@gmail.com>
+Date:   Fri Nov 18 14:26:24 2016 -0500
+
+    Ahora el login funciona correctamente con las diferentes validaciones, se ajusto la validacion del panel ya que daba un error, ahora el panel esta completo falta crear los apuntos de alex
+
+[33mcommit 691494fac579aef81eb876fd3d9b2a99703075b8[m
+Author: Michael <mjyara9@gmail.com>
+Date:   Tue Nov 15 15:55:21 2016 -0500
+
+    Ahora el buscador esta 100% funcional, falta el login para acceder como administrador y como mente a la carta
+
+[33mcommit 1eb3629c9db27e1e22bf875cee07245c25b05993[m
+Author: Michael <mjyara9@gmail.com>
+Date:   Thu Nov 10 16:46:05 2016 -0500
+
+    el buscador mediante los select esta funcionando (no trae los datos de ciudad y pais pero funciona xd) falta la caja de texto dinamica u.u )
+
+[33mcommit f712f35cc6895fd5eff2dc61495251c9b5bfe5b4[m
+Author: Michael <mjyara9@gmail.com>
+Date:   Thu Nov 10 15:32:16 2016 -0500
+
+    Desarrollo del algoritmo para las busquedas mas efectivas, ahora el buscador busca por sector y por empresa carga dinamicamente la lista
+
+[33mcommit e1884e2c7e95aa61c189dd04f032db67f9981873[m
+Author: Michael <mjyara9@gmail.com>
+Date:   Thu Nov 10 09:50:49 2016 -0500
+
+    se carga correctamente la informacion del buscador pero el algoritmo no fue efectivo para soportar tanto dinamismo asi que se opto por otra estructura de busqueda tratando de ser dinamica pero con ayuda del usuario, ademas de un campo extra que seran las rcomendaciones donde se desplegaran los registros posibles de la opcion de busqueda que selecciono el usuario
+
+[33mcommit 031b6b1ec5573065c32a6521450462c8fe5bdf69[m
+Author: Michael <mjyara9@gmail.com>
+Date:   Wed Nov 9 10:15:27 2016 -0500
+
+    En el registro se optimizo el paso 4 ya que presentaba problemas cuando se adjuntaba la imagen de perfil, ahora en el panel del administrador puede ver la lista de wits pendientes por aprobar, aprobarlos o denegarlos (pensar en la lista de wits denegados) ahora el perfil de los wits son cargados dinamicamente (falta agregar en el formulario si es el trabajo actual)
+
+[33mcommit eacd685fbac667727b12f32c3f09875dc2e74094[m
+Author: Michael <mjyara9@gmail.com>
+Date:   Fri Nov 4 11:33:43 2016 -0500
+
+    se creo la interfaz del aministrador y el perfil de los wits, falta todo lo funcional y que el registro del wit no redireccione a la pagina principal sino a su perfil
+
+[33mcommit 08ea7a68438f946c19faacc8b710a5d9e8345e26[m
+Author: Michael <mjyara9@gmail.com>
+Date:   Thu Nov 3 13:31:33 2016 -0500
+
+    Correccion de interfaz e interactividad con el usuario, se comienza a realizar la interfaz del administrador
+
+[33mcommit 3b1a45dfe65d7113fba01599c76f67a6905669da[m
+Author: Michael <mjyara9@gmail.com>
+Date:   Thu Nov 3 11:25:07 2016 -0500
+
+    Primera version estable del registro, se corrigieron errores grabes, se habilito el registro en la pagina se notifica por email todo correcto, ahora se deben realizar otros cambios solicitados por alex, y pasar las anteriores mentes a la nueva pagina
+
+[33mcommit 9af666653be3330374a97bd4803bb0ceded6643c[m
+Author: Michael <mjyara9@gmail.com>
+Date:   Wed Nov 2 15:10:17 2016 -0500
+
+    se crea la primera version estable de la pagina con registro y notificacion del mismo, ademas las mentes a la carta ya cuentan con su respectiva informacion
+
+[33mcommit f920dd0c1a0da002fcd75f0d7ffca3e3a4c1c649[m
+Author: Michael <mjyara9@gmail.com>
+Date:   Wed Nov 2 10:30:47 2016 -0500
+
+    Version funcional del registro, con los cambios solicitados por alex y juliana el dia 01 del 11 del 2016
+
+[33mcommit e17b377b6aa9d0e1728fed8a1e6908be49a1a1ea[m
+Author: Michael <mjyara9@gmail.com>
+Date:   Tue Nov 1 16:28:34 2016 -0500
+
+    se hicieron los cambios solicitados, quedo faltando el twett de 144 caracteres y el autocompletado
+
+[33mcommit 952a4b5fa249a51bea818dc28a852e9e4f374e76[m
+Author: Michael <mjyara9@gmail.com>
+Date:   Tue Nov 1 12:50:36 2016 -0500
+
+    version primaria funcional del registro de wits
+
+[33mcommit bd8d319019d3177e605219be784b71a2426c11a9[m
+Author: Michael <mjyara9@gmail.com>
+Date:   Tue Oct 25 10:19:33 2016 -0500
+
+    Se agregaron muchas mentes a la carta, se ahbilito el boton de ver mas, se creo el formulario inicial del registro de wits
+
+[33mcommit 43eb1d8be67714a9ad8fc83c0bf6dd08a3007eca[m
+Author: Michael <mjyara9@gmail.com>
+Date:   Thu Oct 20 10:02:50 2016 -0500
+
+    Se agrego el boton, ver mas mentes a la carta y se agregaron nuevas mentes a la carta
+
+[33mcommit c90507d8607d6a992d6821e557b575cf3b83cd7b[m
+Author: Michael <mjyara9@gmail.com>
+Date:   Tue Oct 11 09:32:59 2016 -0500
+
+    Inicializacion del proyecto, seguimiento de versiones, iniciamos con la pagina terminada, se deben agregar mas mentes a la carta para habilitar el boton ver mas mentes a la carta

@@ -297,7 +297,7 @@
       $des = strtolower($des);
 
       # Prevenimos inyeccion sql
-      $des = parent::salvar($des);
+      $des = parent::salvar($des); 
 
       $verificar = parent::verificarRegistros('select id from habilidades where descripcion="'.$des.'" and usuario_id="'.$_SESSION['id'].'"');
       if($verificar > 0){
