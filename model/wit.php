@@ -181,6 +181,60 @@
     }
 
 
+    # Extrae el nombre de la empresa
+    public function getNameEmpresas(){
+      parent::conectar();
+      $datos = array();
+      $sql = 'select id, name_business from experiencia where usuario_id="'.$_SESSION['id'].'"';
+      $verificar = parent::verificarRegistros($sql);
+      if($verificar > 0){
+        $consulta = parent::query($sql);
+
+        while($row = mysqli_fetch_array($consulta)){
+          $datos[] = array($row['id'], $row['name_business']);
+        }
+        return $datos;
+      }else{
+        return 0;
+      }
+
+      parent::cerrar();
+    }
+
+    # Carga los datos de la empresa
+    public function loadEmpresa($id)
+    {
+      parent::conectar();
+      $id = parent::salvar($id);
+      $datos = array();
+      // Validamos con id y con id de usuario por seguridad a algun hackeo
+      $verificar = parent::verificarRegistros('select id from experiencia where id="'.$id.'" and usuario_id="'.$_SESSION['id'].'"');
+
+      if($verificar > 0){
+        $empresa = parent::consultaArreglo('select * from experiencia where id="'.$id.'"');
+        $datos['nombre']    = $this->recuperar($empresa['name_business']);
+        $datos['sector'] = $this->recuperar($empresa['sector']);
+        $datos['cargo']          = $this->recuperar($empresa['position']);
+        $datos['ciudad']         = $this->recuperar($empresa['country']);
+        $datos['error']          = false;
+      }else{
+        $datos['error'] = true;
+      }
+
+      echo json_encode($datos);
+
+      parent::cerrar();
+    }
+
+    public function recuperar($string){
+      $reemplazar = array('á', 'é', 'í', 'ó', 'ú', 'Á', 'É', 'Í', 'Ó', 'Ú', 'ñ', 'Ñ');
+      $buscar = array('&aacute','&eacute', '&iacute', '&oacute', '&uacute', '&Aacute', '&Eacute', '&Iacute', '&Oacute', '&Uacute', '&ntilde', '&Ntilde');
+
+      $res = str_replace($buscar, $reemplazar, $string);
+
+      return $res;
+    }
+
   }
 
 

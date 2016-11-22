@@ -52,6 +52,11 @@
     cursor: default;
 }
 
+.underline:hover{
+  cursor: pointer;
+  text-decoration: underline;
+}
+
 .no-hover-item:active {
     background-color: #34495E;
     cursor: default;

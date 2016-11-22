@@ -83,7 +83,7 @@
       <div class="row">
         <div class="col-xs-12">
           <span class="strong">
-            ¿No comples con los requisitos?
+            ¿No cumples con los requisitos?
           </span><br>
           <span>Ingresa tu correo electrónico y nos comunicaremos contigo</span>
         </div>

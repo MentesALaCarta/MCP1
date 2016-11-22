@@ -931,3 +931,58 @@ function slider_principal(){
   }
   console.log('cambiar');
 }
+
+// Eliminar empresa
+$(document).on('click', '.eliminar_empresa', function(){
+
+
+  swal({
+    title: "¿Estás seguro?",
+    text: "¡No podras recuperar la información!",
+    showCancelButton: true,
+    confirmButtonColor: "#424242",
+    confirmButtonText: "Si, ¡Eliminar!",
+    closeOnConfirm: false
+  },
+  function(){
+    swal({
+      title: 'Eliminado',
+      text: "La experiencia ha sido eliminada satisfactoriamente",
+      type: "success",
+      confirmButtonColor: "#424242",
+      confirmButtonText: "Aceptar"
+    }, function(){
+
+    });
+  });
+
+
+});
+
+// Editar empresa
+$(document).on('click', '.editar_empresa', function(){
+  $.ajax({
+    method: 'POST',
+    dataType: 'json',
+    url: 'controller/wit/loadEmpresa.php',
+    data: {id: $(this).attr('id')},
+    beforeSend: function(){
+      $('#load').show();
+    },
+    success: function(res){
+      $('#load').hide();
+        if(res.error == true){
+          swal('error', 'Error inesperado');
+        }else{
+          $('#country').focus();
+          $('#country').val(res.ciudad);
+          $('#position').focus();
+          $('#position').val(res.cargo);
+          $('#company').focus();
+          $('#company').val(res.nombre);
+          $('#sector').focus();
+          $('#sector').val(res.sector);
+        }
+    }
+  });
+});

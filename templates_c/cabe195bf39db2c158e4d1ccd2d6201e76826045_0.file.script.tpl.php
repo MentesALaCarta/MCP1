@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-20 05:54:47
+/* Smarty version 3.1.30, created on 2016-11-22 20:56:28
   from "/opt/lampp/htdocs/mentes/view/principal/script.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58312c974e8ed2_20155992',
+  'unifunc' => 'content_5834a2ec0728d5_93035036',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'cabe195bf39db2c158e4d1ccd2d6201e76826045' => 
     array (
       0 => '/opt/lampp/htdocs/mentes/view/principal/script.tpl',
-      1 => 1478001688,
+      1 => 1479844584,
       2 => 'file',
     ),
   ),
@@ -20,14 +20,14 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58312c974e8ed2_20155992 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5834a2ec0728d5_93035036 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
 <?php echo '<script'; ?>
   src="js/materialize.min.js"><?php echo '</script'; ?>
 >
 <?php echo '<script'; ?>
- async src="js/materialize.js"><?php echo '</script'; ?>
+ src="js/materialize.js"><?php echo '</script'; ?>
 >
 </body>
 </html>
