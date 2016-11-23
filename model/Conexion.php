@@ -86,6 +86,20 @@
           return $this->mysqli;
         }
 
+        public function filtrar($string){
+
+          $res = $this->salvar($string);
+          # Reemplazamos los acentos
+          $buscar = array('á', 'é', 'í', 'ó', 'ú', 'Á', 'É', 'Í', 'Ó', 'Ú', 'ñ', 'Ñ');
+          $reemplazar = array('&aacute','&eacute', '&iacute', '&oacute', '&uacute', '&Aacute', '&Eacute', '&Iacute', '&Oacute', '&Uacute', '&ntilde', '&Ntilde');
+
+          $res = str_replace($buscar, $reemplazar, $string);
+
+          $res = strtolower($res);
+
+          return $res;
+        }
+
 
     }
 

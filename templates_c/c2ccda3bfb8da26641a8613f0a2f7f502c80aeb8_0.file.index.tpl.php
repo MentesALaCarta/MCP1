@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-21 17:55:00
+/* Smarty version 3.1.30, created on 2016-11-23 16:26:29
   from "/opt/lampp/htdocs/mentes/view/index.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_583326e4122a84_03293920',
+  'unifunc' => 'content_5835b525a15976_39462008',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c2ccda3bfb8da26641a8613f0a2f7f502c80aeb8' => 
     array (
       0 => '/opt/lampp/htdocs/mentes/view/index.tpl',
-      1 => 1479747298,
+      1 => 1479912897,
       2 => 'file',
     ),
   ),
@@ -24,7 +24,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:view/principal/script.tpl' => 1,
   ),
 ),false)) {
-function content_583326e4122a84_03293920 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5835b525a15976_39462008 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -39,12 +39,12 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
             <div id="elemento1" class="elemento s_visible">
               <img id="imagen1" src="images/banner/bg01.jpg" alt="banner innovafacil" width="125%" class=""/>
             </div>
-            <div id="elemento2" class="elemento">
+            <!-- <div id="elemento2" class="elemento">
               <img id="imagen2" src="images/banner/bg02.jpg" alt="banner innovafacil" width="125%" class=""/>
             </div>
             <div id="elemento3" class="elemento">
               <img id="imagen3" src="images/banner/bg03.jpg" alt="banner innovafacil" width="125%" class=""/>
-            </div>
+            </div> -->
           </div>
 
 

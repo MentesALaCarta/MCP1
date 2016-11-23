@@ -111,7 +111,6 @@ $(document).ready(function(){
     setInterval(function(){
         $('.carousel').carousel('next',1); // Move next n times.
     }, 3000);
-    // setInterval(slider_principal, 7000);
 });
 
 
@@ -908,33 +907,28 @@ $("#idiomas").autocomplete({
   });
 
 
-// Funcionalidades para el slider principal
-function slider_principal(){
 
-  if($('#elemento1').hasClass('s_visible')){
+function limpiar(){
+  $('#company').val('');
+  $('#sector').val('');
+  $('#position').val('');
+  $('#country').val('');
+  $('#limpiar').hide();
 
-    $('#elemento2').addClass('s_visible');
-    $('#elemento1').removeClass('s_visible');
-    $('#elemento3').removeClass('s_visible');
+  // Removemos el focus
+  $('#country').blur();
+  $('#position').blur();
+  $('#company').blur();
+  $('#sector').blur();
 
-
-  }else if($('#elemento2').hasClass('s_visible')){
-    $('#elemento1').removeClass('s_visible');
-    $('#elemento2').removeClass('s_visible');
-    $('#elemento3').addClass('s_visible');
-
-  }else if($('#elemento3').hasClass('s_visible')){
-
-    $('#elemento3').removeClass('s_visible');
-    $('#elemento2').removeClass('s_visible');
-    $('#elemento1').addClass('s_visible');
-  }
-  console.log('cambiar');
+  // Reiniciamos el id
+  $('#identificador').val('0');
 }
 
 // Eliminar empresa
 $(document).on('click', '.eliminar_empresa', function(){
 
+  var id = $(this).attr('id');
 
   swal({
     title: "¿Estás seguro?",
@@ -945,15 +939,26 @@ $(document).on('click', '.eliminar_empresa', function(){
     closeOnConfirm: false
   },
   function(){
-    swal({
-      title: 'Eliminado',
-      text: "La experiencia ha sido eliminada satisfactoriamente",
-      type: "success",
-      confirmButtonColor: "#424242",
-      confirmButtonText: "Aceptar"
-    }, function(){
+    $.ajax({
+      method: 'POST',
+      url: 'controller/wit/eliminarExperiencia.php',
+      data: {id: id},
+      success: function(res){
+            swal({
+              title: 'Eliminado',
+              text: "La experiencia ha sido eliminada satisfactoriamente",
+              type: "success",
+              confirmButtonColor: "#424242",
+              confirmButtonText: "Aceptar"
+            }, function(){
 
+              limpiar();
+              $('#lista_de_experiencia').html(res);
+            });
+
+      }
     });
+
   });
 
 
@@ -961,6 +966,7 @@ $(document).on('click', '.eliminar_empresa', function(){
 
 // Editar empresa
 $(document).on('click', '.editar_empresa', function(){
+
   $.ajax({
     method: 'POST',
     dataType: 'json',
@@ -974,6 +980,7 @@ $(document).on('click', '.editar_empresa', function(){
         if(res.error == true){
           swal('error', 'Error inesperado');
         }else{
+          $('#limpiar').show();
           $('#country').focus();
           $('#country').val(res.ciudad);
           $('#position').focus();
@@ -982,7 +989,46 @@ $(document).on('click', '.editar_empresa', function(){
           $('#company').val(res.nombre);
           $('#sector').focus();
           $('#sector').val(res.sector);
+          $('#identificador').val(res.identificador);
         }
+    }
+  });
+});
+
+
+
+// Limpiar texto en editar perfil: Experiencia
+$('#limpiar').click(function(){
+  limpiar();
+});
+
+
+// Boton de guardar experiencia
+$('#guardar_experiencia').click(function(){
+
+  $.ajax({
+    method: 'POST',
+    url: 'controller/wit/setExperiencia.php',
+    data: $('#form_dd_empresa').serialize(),
+    beforeSend: function(){
+      $('#load').show();
+    },
+    success: function(res){
+      $('#load').hide();
+      if(res == 'error_1'){
+        // El id que se envio no es del usuario
+        console.log('El id no te pertenece');
+      }else if(res == 'error_2'){
+        console.log('Error de inserción');
+      }else{
+
+        limpiar();
+
+        // Cualquier otra respuesta error o lista actualizada con los cambios
+        $('#lista_de_experiencia').html(res);
+
+      }
+
     }
   });
 });

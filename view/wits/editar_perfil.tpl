@@ -11,13 +11,17 @@
     </div>
   </div>
 
-
+  <!-- <div class="row">
+    <div class="col s12 center-align">
+      <h5 class="red-text">Esta página esta en la fase de desarrollo por lo tanto, no funcionan todas las opciones.</h5>
+    </div>
+  </div> -->
 
   <div class="row">
     <div class="col s12 m10 offset-m1">
       <ul class="collapsible popout" data-collapsible="accordion">
        <li>
-         <div class="collapsible-header active"><i class="fa fa-briefcase" aria-hidden="true"></i> Experiencia</div>
+         <div class="collapsible-header"><i class="fa fa-briefcase" aria-hidden="true"></i> Experiencia</div>
          <div class="collapsible-body padding-edit">
            <!-- Descripción de la fase -->
            <span class="grey-text">
@@ -29,7 +33,8 @@
             <!-- Formulario -->
             <form id="form_dd_empresa">
               <div class="row">
-                <input type="text" id="identificador" hidden="hidden">
+
+                <input type="text" id="identificador" value="0" name="identificador" hidden="hidden">
 
                 <!-- company name -->
                 <div class="input-field col s12 m6">
@@ -68,8 +73,11 @@
               </div>
 
               <div class="row">
-                <div class="col s12 black-text">
-                  <i class="fa fa-floppy-o" aria-hidden="true"></i> <span class="underline"> Guardar experiencia </span>
+                <div class="col s6 m5 l3 black-text">
+                  <i class="fa fa-floppy-o text-grey text-grey" aria-hidden="true"></i> <span id="guardar_experiencia" class="underline text-grey"> Guardar experiencia </span>
+                </div>
+                <div class="col s6 m5 l3 black-text" id="limpiar" hidden="hidden">
+                  <i class="fa fa-eraser text-grey text-grey" aria-hidden="true"></i> <span  class="underline text-grey"> Limpiar </span>
                 </div>
               </div>
             </form>
@@ -82,12 +90,12 @@
                 </tr>
               </thead>
 
-              <tbody>
+              <tbody id="lista_de_experiencia">
                 {for $i = 0 to count($experiencia) -1}
                 <tr>
-                  <td>{$experiencia[$i][1]}</td>
-                  <td><i class="fa fa-pencil" aria-hidden="true"></i> <span class="underline editar_empresa" id="{$experiencia[$i][0]}">Editar</span></td>
-                  <td><i class="fa fa-trash" aria-hidden="true"></i> <span class="underline eliminar_empresa" id="{$experiencia[$i][0]}">Eliminar</span></td>
+                  <td>{ucfirst($experiencia[$i][1])}</td>
+                  <td><i class="fa fa-pencil text-grey" aria-hidden="true"></i> <span class="underline text-grey editar_empresa" id="{$experiencia[$i][0]}">Editar</span></td>
+                  <td><i class="fa fa-trash text-grey" aria-hidden="true"></i> <span class="underline text-grey eliminar_empresa" id="{$experiencia[$i][0]}">Eliminar</span></td>
                 </tr>
                 {/for}
               </tbody>

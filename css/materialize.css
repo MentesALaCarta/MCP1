@@ -15,6 +15,10 @@
 }
 
 
+.text-grey{
+  color: #767676;
+}
+
 .alert{
   margin-top: 3em;
   color: black;

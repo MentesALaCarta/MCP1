@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-21 19:05:16
+/* Smarty version 3.1.30, created on 2016-11-23 16:26:35
   from "/opt/lampp/htdocs/mentes/view/user/register.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5833375c96e976_16529025',
+  'unifunc' => 'content_5835b52b4ca953_71058186',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '782548a49d4349996f140c0db56343a0a82cbc38' => 
     array (
       0 => '/opt/lampp/htdocs/mentes/view/user/register.tpl',
-      1 => 1479751515,
+      1 => 1479838054,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:view/principal/script.tpl' => 1,
   ),
 ),false)) {
-function content_5833375c96e976_16529025 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5835b52b4ca953_71058186 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 

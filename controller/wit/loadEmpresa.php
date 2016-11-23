@@ -9,7 +9,7 @@
 
   $persona = new Wit();
 
-  $persona -> loadEmpresa($id);
+  $persona -> loadEmpresa($id); 
 
 
 

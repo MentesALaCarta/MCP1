@@ -8,12 +8,12 @@
             <div id="elemento1" class="elemento s_visible">
               <img id="imagen1" src="images/banner/bg01.jpg" alt="banner innovafacil" width="125%" class=""/>
             </div>
-            <div id="elemento2" class="elemento">
+            <!-- <div id="elemento2" class="elemento">
               <img id="imagen2" src="images/banner/bg02.jpg" alt="banner innovafacil" width="125%" class=""/>
             </div>
             <div id="elemento3" class="elemento">
               <img id="imagen3" src="images/banner/bg03.jpg" alt="banner innovafacil" width="125%" class=""/>
-            </div>
+            </div> -->
           </div>
 
 
