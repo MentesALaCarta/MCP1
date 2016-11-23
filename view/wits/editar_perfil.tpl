@@ -104,12 +104,50 @@
          </div>
        </li>
        <li>
-         <div class="collapsible-header"><i class="fa fa-child" aria-hidden="true"></i> Aptitudes</div>
+         <div class="collapsible-header active"><i class="fa fa-child" aria-hidden="true"></i> Aptitudes</div>
          <div class="collapsible-body padding-edit">
            <!-- Descripción de la fase -->
            <span class="grey-text">
-             Hablenos de sus aptitudes para resaltar lo mejor de usted.
+             Hablanos de sus aptitudes para resaltar lo mejor de usted.
            </span>
+
+           <!-- Formulario -->
+           <div class="row">
+             <div class="input-field col s6 m7">
+                 <input id="aptitud" value="" type="text" class="validate">
+                 <label for="aptitud">Aptitud</label>
+             </div>
+             <div class="col s6 m3">
+               <div class="spacing-1"></div>
+               <button type="button" class="btn waves-effect waves-light" name="button" style="background-color: #242424;" id="add_new_aptitud">Agregar</button>
+             </div>
+           </div>
+
+           <!-- Lista -->
+             <div class="row">
+               <div class="col s12 m7">
+                 <table>
+                  <thead>
+                    <tr>
+                        <th data-field="id">Aptitudes</th>
+                        <th data-field="name"></th>
+                    </tr>
+                  </thead>
+
+                  <tbody id="getAptitudes">
+                    {if $aptitud != 0}
+                      {for $i = 0 to count($aptitud) - 1}
+                      <tr id="habilidad{$aptitud[$i][0]}">
+                        <td>{$aptitud[$i][1]}</td>
+                        <td class="hover eliminar_habilidad" id="{$aptitud[$i][0]}"><i class="fa fa-close red-text "></i> <span class="red-text">Eliminar</span></td>
+                      </tr>
+                      {/for}
+                    {/if}
+                  </tbody>
+                </table>
+               </div>
+             </div>
+
          </div>
        </li>
        <li>
@@ -144,6 +182,15 @@
   </div><!-- End row-->
 </div><!-- End container -->
 
+<script>
+$(document).ready(function(){
+
+  $("#aptitud").autocomplete({
+    source: "controller/user/traerAptitud.php"
+  });
+
+});
+</script>
 
 {include file="view/principal/cerrarSesion.tpl"}
 {include file="view/principal/script.tpl"}

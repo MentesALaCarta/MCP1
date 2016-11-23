@@ -48,7 +48,7 @@
     <div class="spacing-1"></div>
     <button type="button" class="btn waves-effect waves-light" name="button" style="background-color: #EBA820;" id="add_new_aptitud">Agregar</button>
   </div>
-</div> 
+</div>  
 
 <div class="container">
   <div class="row">

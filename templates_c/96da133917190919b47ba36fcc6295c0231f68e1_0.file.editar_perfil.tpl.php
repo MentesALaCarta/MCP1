@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-23 20:12:58
+/* Smarty version 3.1.30, created on 2016-11-23 20:33:32
   from "/opt/lampp/htdocs/mentes/view/wits/editar_perfil.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5835ea3a3f30f4_07216814',
+  'unifunc' => 'content_5835ef0cc207a3_27923730',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '96da133917190919b47ba36fcc6295c0231f68e1' => 
     array (
       0 => '/opt/lampp/htdocs/mentes/view/wits/editar_perfil.tpl',
-      1 => 1479928371,
+      1 => 1479929610,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:view/principal/script.tpl' => 1,
   ),
 ),false)) {
-function content_5835ea3a3f30f4_07216814 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5835ef0cc207a3_27923730 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -142,12 +142,60 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
          </div>
        </li>
        <li>
-         <div class="collapsible-header"><i class="fa fa-child" aria-hidden="true"></i> Aptitudes</div>
+         <div class="collapsible-header active"><i class="fa fa-child" aria-hidden="true"></i> Aptitudes</div>
          <div class="collapsible-body padding-edit">
            <!-- Descripción de la fase -->
            <span class="grey-text">
-             Hablenos de sus aptitudes para resaltar lo mejor de usted.
+             Hablanos de sus aptitudes para resaltar lo mejor de usted.
            </span>
+
+           <!-- Formulario -->
+           <div class="row">
+             <div class="input-field col s6 m7">
+                 <input id="aptitud" value="" type="text" class="validate">
+                 <label for="aptitud">Aptitud</label>
+             </div>
+             <div class="col s6 m3">
+               <div class="spacing-1"></div>
+               <button type="button" class="btn waves-effect waves-light" name="button" style="background-color: #242424;" id="add_new_aptitud">Agregar</button>
+             </div>
+           </div>
+
+           <!-- Lista -->
+             <div class="row">
+               <div class="col s12 m7">
+                 <table>
+                  <thead>
+                    <tr>
+                        <th data-field="id">Aptitudes</th>
+                        <th data-field="name"></th>
+                    </tr>
+                  </thead>
+
+                  <tbody id="getAptitudes">
+                    <?php if ($_smarty_tpl->tpl_vars['aptitud']->value != 0) {?>
+                      <?php
+$_smarty_tpl->tpl_vars['i'] = new Smarty_Variable(null, $_smarty_tpl->isRenderingCache);$_smarty_tpl->tpl_vars['i']->step = 1;$_smarty_tpl->tpl_vars['i']->total = (int) ceil(($_smarty_tpl->tpl_vars['i']->step > 0 ? count($_smarty_tpl->tpl_vars['aptitud']->value)-1+1 - (0) : 0-(count($_smarty_tpl->tpl_vars['aptitud']->value)-1)+1)/abs($_smarty_tpl->tpl_vars['i']->step));
+if ($_smarty_tpl->tpl_vars['i']->total > 0) {
+for ($_smarty_tpl->tpl_vars['i']->value = 0, $_smarty_tpl->tpl_vars['i']->iteration = 1;$_smarty_tpl->tpl_vars['i']->iteration <= $_smarty_tpl->tpl_vars['i']->total;$_smarty_tpl->tpl_vars['i']->value += $_smarty_tpl->tpl_vars['i']->step, $_smarty_tpl->tpl_vars['i']->iteration++) {
+$_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1;$_smarty_tpl->tpl_vars['i']->last = $_smarty_tpl->tpl_vars['i']->iteration == $_smarty_tpl->tpl_vars['i']->total;?>
+                      <tr id="habilidad<?php echo $_smarty_tpl->tpl_vars['aptitud']->value[$_smarty_tpl->tpl_vars['i']->value][0];?>
+">
+                        <td><?php echo $_smarty_tpl->tpl_vars['aptitud']->value[$_smarty_tpl->tpl_vars['i']->value][1];?>
+</td>
+                        <td class="hover eliminar_habilidad" id="<?php echo $_smarty_tpl->tpl_vars['aptitud']->value[$_smarty_tpl->tpl_vars['i']->value][0];?>
+"><i class="fa fa-close red-text "></i> <span class="red-text">Eliminar</span></td>
+                      </tr>
+                      <?php }
+}
+?>
+
+                    <?php }?>
+                  </tbody>
+                </table>
+               </div>
+             </div>
+
          </div>
        </li>
        <li>
@@ -182,6 +230,17 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
   </div><!-- End row-->
 </div><!-- End container -->
 
+<?php echo '<script'; ?>
+>
+$(document).ready(function(){
+
+  $("#aptitud").autocomplete({
+    source: "controller/user/traerAptitud.php"
+  });
+
+});
+<?php echo '</script'; ?>
+>
 
 <?php $_smarty_tpl->_subTemplateRender("file:view/principal/cerrarSesion.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
