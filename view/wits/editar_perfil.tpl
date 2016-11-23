@@ -20,6 +20,19 @@
   <div class="row">
     <div class="col s12 m10 offset-m1">
       <ul class="collapsible popout" data-collapsible="accordion">
+
+        <!-- Datos generales -->
+        <li>
+          <div class="collapsible-header"><i class="fa fa-book" aria-hidden="true"></i> Datos generales</div>
+          <div class="collapsible-body padding-edit">
+            <!-- Descripción de la fase -->
+            <span class="grey-text">
+              Los siguientes datos nos ayudan a identificar en que proyectos te podemos asignar
+            </span>
+          </div>
+        </li>
+
+       <!-- Experiencia -->
        <li>
          <div class="collapsible-header"><i class="fa fa-briefcase" aria-hidden="true"></i> Experiencia</div>
          <div class="collapsible-body padding-edit">
@@ -103,8 +116,10 @@
 
          </div>
        </li>
+
+       <!-- Aptitudes -->
        <li>
-         <div class="collapsible-header active"><i class="fa fa-child" aria-hidden="true"></i> Aptitudes</div>
+         <div class="collapsible-header"><i class="fa fa-child" aria-hidden="true"></i> Aptitudes</div>
          <div class="collapsible-body padding-edit">
            <!-- Descripción de la fase -->
            <span class="grey-text">
@@ -149,16 +164,85 @@
              </div>
 
          </div>
+
        </li>
+
+       <!-- Actividades -->
        <li>
-         <div class="collapsible-header"><i class="fa fa-fire" aria-hidden="true"></i> Actividades</div>
+         <div class="collapsible-header active"><i class="fa fa-fire" aria-hidden="true"></i> Actividades</div>
          <div class="collapsible-body padding-edit">
            <!-- Descripción de la fase -->
            <span class="grey-text">
              Indícanos en que actividades le gustaría participar
            </span>
+
+           <!-- Indicadores -->
+           <div class="spacing-2"></div>
+
+           <div class="row">
+             <div class="col s12">
+               <i class="fa fa-square" aria-hidden="true" style="color: #EBA820;"></i>
+               <span class="grey-text text-darken-1">Estas participando</span>
+             </div>
+             <div class="col s12">
+               <i class="fa fa-square grey-text" aria-hidden="true"></i>
+                <span class="grey-text text-darken-1">No estas participando</span>
+             </div>
+           </div>
+
+           <div class="row">
+             <div class="col s12">
+
+               <ul class="collection" id="lista_actividades_edit">
+
+                 <li class="hover grey-hover collection-item avatar actividad_activo" id="actividad1">
+                   <i class="fa fa-microphone activo circle"></i>
+                   <span>
+                     Proyectos innovadores <br>
+                     <small class="grey-text text-darken-2">Participar en proyectos innovadores</small>
+                   </span>
+                 </li>
+
+                 <li class="hover grey-hover collection-item avatar actividad_activo" id="actividad2">
+                   <i class="fa fa-users activo circle"></i>
+                   <span>
+                     Mentoring<br>
+                     <small class="grey-text text-darken-2">Ser mentor de emprendimientos y proyectos innovadores</small>
+                   </span>
+                 </li>
+
+                 <li class="hover grey-hover collection-item avatar actividad_inactivo" id="actividad3">
+                   <i class="fa fa-pencil circle grey"></i>
+                   <span>
+                     Asesoramiento<br>
+                     <small class="grey-text text-darken-2">Brindar asesoría a empresas y emprendedores</small>
+                   </span>
+                 </li>
+
+                 <li class="hover grey-hover collection-item avatar actividad_inactivo" id="actividad4">
+                   <i class="fa fa-bullhorn circle grey"></i>
+                   <span>
+                     Formación<br>
+                     <small class="grey-text text-darken-2">Impartir charlas y formación</small>
+                   </span>
+                 </li>
+
+                 <li class="hover grey-hover collection-item avatar actividad_inactivo" id="actividad5">
+                   <i class="fa fa-check circle grey"></i>
+                   <span>
+                     Contenidos<br>
+                     <small class="grey-text text-darken-2">Generar contenido escrito o audiovisual</small>
+                   </span>
+                 </li>
+
+               </ul>
+
+             </div>
+           </div>
          </div>
        </li>
+
+       <!-- Descripción -->
        <li>
          <div class="collapsible-header"><i class="fa fa-exclamation" aria-hidden="true"></i> Descripción</div>
          <div class="collapsible-body padding-edit">
@@ -168,6 +252,8 @@
            </span>
          </div>
        </li>
+
+       <!-- Frase o pensamiento -->
        <li>
          <div class="collapsible-header"><i class="fa fa-paper-plane" aria-hidden="true"></i> Frase o pensamiento propio</div>
          <div class="collapsible-body padding-edit">
@@ -177,6 +263,7 @@
            </span>
          </div>
        </li>
+
      </ul>
     </div>
   </div><!-- End row-->

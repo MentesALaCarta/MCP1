@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-23 20:33:32
+/* Smarty version 3.1.30, created on 2016-11-23 22:02:22
   from "/opt/lampp/htdocs/mentes/view/wits/editar_perfil.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5835ef0cc207a3_27923730',
+  'unifunc' => 'content_583603de4882f9_87194717',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '96da133917190919b47ba36fcc6295c0231f68e1' => 
     array (
       0 => '/opt/lampp/htdocs/mentes/view/wits/editar_perfil.tpl',
-      1 => 1479929610,
+      1 => 1479934939,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:view/principal/script.tpl' => 1,
   ),
 ),false)) {
-function content_5835ef0cc207a3_27923730 (Smarty_Internal_Template $_smarty_tpl) {
+function content_583603de4882f9_87194717 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -48,6 +48,19 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
   <div class="row">
     <div class="col s12 m10 offset-m1">
       <ul class="collapsible popout" data-collapsible="accordion">
+
+        <!-- Datos generales -->
+        <li>
+          <div class="collapsible-header"><i class="fa fa-book" aria-hidden="true"></i> Datos generales</div>
+          <div class="collapsible-body padding-edit">
+            <!-- Descripción de la fase -->
+            <span class="grey-text">
+              Los siguientes datos nos ayudan a identificar en que proyectos te podemos asignar
+            </span>
+          </div>
+        </li>
+
+       <!-- Experiencia -->
        <li>
          <div class="collapsible-header"><i class="fa fa-briefcase" aria-hidden="true"></i> Experiencia</div>
          <div class="collapsible-body padding-edit">
@@ -141,8 +154,10 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
 
          </div>
        </li>
+
+       <!-- Aptitudes -->
        <li>
-         <div class="collapsible-header active"><i class="fa fa-child" aria-hidden="true"></i> Aptitudes</div>
+         <div class="collapsible-header"><i class="fa fa-child" aria-hidden="true"></i> Aptitudes</div>
          <div class="collapsible-body padding-edit">
            <!-- Descripción de la fase -->
            <span class="grey-text">
@@ -197,16 +212,85 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
              </div>
 
          </div>
+
        </li>
+
+       <!-- Actividades -->
        <li>
-         <div class="collapsible-header"><i class="fa fa-fire" aria-hidden="true"></i> Actividades</div>
+         <div class="collapsible-header active"><i class="fa fa-fire" aria-hidden="true"></i> Actividades</div>
          <div class="collapsible-body padding-edit">
            <!-- Descripción de la fase -->
            <span class="grey-text">
              Indícanos en que actividades le gustaría participar
            </span>
+
+           <!-- Indicadores -->
+           <div class="spacing-2"></div>
+
+           <div class="row">
+             <div class="col s12">
+               <i class="fa fa-square" aria-hidden="true" style="color: #EBA820;"></i>
+               <span class="grey-text text-darken-1">Estas participando</span>
+             </div>
+             <div class="col s12">
+               <i class="fa fa-square grey-text" aria-hidden="true"></i>
+                <span class="grey-text text-darken-1">No estas participando</span>
+             </div>
+           </div>
+
+           <div class="row">
+             <div class="col s12">
+
+               <ul class="collection" id="lista_actividades_edit">
+
+                 <li class="hover grey-hover collection-item avatar actividad_activo" id="actividad1">
+                   <i class="fa fa-microphone activo circle"></i>
+                   <span>
+                     Proyectos innovadores <br>
+                     <small class="grey-text text-darken-2">Participar en proyectos innovadores</small>
+                   </span>
+                 </li>
+
+                 <li class="hover grey-hover collection-item avatar actividad_activo" id="actividad2">
+                   <i class="fa fa-users activo circle"></i>
+                   <span>
+                     Mentoring<br>
+                     <small class="grey-text text-darken-2">Ser mentor de emprendimientos y proyectos innovadores</small>
+                   </span>
+                 </li>
+
+                 <li class="hover grey-hover collection-item avatar actividad_inactivo" id="actividad3">
+                   <i class="fa fa-pencil circle grey"></i>
+                   <span>
+                     Asesoramiento<br>
+                     <small class="grey-text text-darken-2">Brindar asesoría a empresas y emprendedores</small>
+                   </span>
+                 </li>
+
+                 <li class="hover grey-hover collection-item avatar actividad_inactivo" id="actividad4">
+                   <i class="fa fa-bullhorn circle grey"></i>
+                   <span>
+                     Formación<br>
+                     <small class="grey-text text-darken-2">Impartir charlas y formación</small>
+                   </span>
+                 </li>
+
+                 <li class="hover grey-hover collection-item avatar actividad_inactivo" id="actividad5">
+                   <i class="fa fa-check circle grey"></i>
+                   <span>
+                     Contenidos<br>
+                     <small class="grey-text text-darken-2">Generar contenido escrito o audiovisual</small>
+                   </span>
+                 </li>
+
+               </ul>
+
+             </div>
+           </div>
          </div>
        </li>
+
+       <!-- Descripción -->
        <li>
          <div class="collapsible-header"><i class="fa fa-exclamation" aria-hidden="true"></i> Descripción</div>
          <div class="collapsible-body padding-edit">
@@ -216,6 +300,8 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
            </span>
          </div>
        </li>
+
+       <!-- Frase o pensamiento -->
        <li>
          <div class="collapsible-header"><i class="fa fa-paper-plane" aria-hidden="true"></i> Frase o pensamiento propio</div>
          <div class="collapsible-body padding-edit">
@@ -225,6 +311,7 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
            </span>
          </div>
        </li>
+
      </ul>
     </div>
   </div><!-- End row-->

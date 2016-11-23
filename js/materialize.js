@@ -1032,3 +1032,54 @@ $('#guardar_experiencia').click(function(){
     }
   });
 });
+
+
+// Dejar de seguir una actividad
+$(document).on('click', '.actividad_activo', function(){
+  swal({
+    title: "Dejar actividad",
+    text: "¿Estas seguro que quieres dejar esta actividad?",
+    showCancelButton: true,
+    confirmButtonColor: "#767676",
+    confirmButtonText: "Si, Dejar actividad",
+    closeOnConfirm: false
+  },
+  function(){
+
+    swal("Lista actualizada", "Has dejado satisfactoriamente la actividad", "success");
+  });
+});
+
+
+// COmenzar a seguir una actividad
+$(document).on('click', '.actividad_inactivo', function(){
+  var actividad = $(this).attr('id');
+  swal({
+    title: "Seleccionar actividad",
+    text: "¿Quieres participar en esta actividad?",
+    showCancelButton: true,
+    confirmButtonColor: "#767676",
+    confirmButtonText: "Si, Quiero participar",
+    closeOnConfirm: false
+  },
+  function(){
+
+    swal({
+      title: "Lista actualizada",
+      text: "Has seleccionado satisfactoriamente la actividad",
+      type: "success"
+    }, function(){
+
+      $.ajax({
+        method: 'POST',
+        url: 'controller/wit/seguirActividad.php',
+        data: {id: actividad},
+        success: function(res){
+          $('#lista_actividades_edit').html(res);
+        }
+      });
+
+    });
+
+  });
+});

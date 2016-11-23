@@ -322,6 +322,148 @@
       parent::cerrar();
     }
 
+    # Permite marcar una actividad
+    public function seguirActividad($actividad)
+    {
+      parent::conectar();
+      // Verificamos que no sea un hack
+      $actividad = parent::salvar($actividad);
+
+
+      switch ($actividad) {
+        case 'actividad1':
+          $actividad = 'Proyectos innovadores';
+          $verificar = parent::verificarRegistros('select id from brain where descripcion="'.$actividad.'"');
+          if($verificar > 0){
+            echo 'error_1';
+          }else{
+            parent::query('insert into brain(descripcion, usuario_id) values("'.$actividad.'", "'.$_SESSION['id'].'")');
+            $this->getBrains();
+          }
+          break;
+
+        case 'actividad2':
+          $actividad = 'Mentoring';
+          $verificar = parent::verificarRegistros('select id from brain where descripcion="'.$actividad.'"');
+          if($verificar > 0){
+            echo 'error_1';
+          }else{
+            parent::query('insert into brain(descripcion, usuario_id) values("'.$actividad.'", "'.$_SESSION['id'].'")');
+            $this->getBrains();
+          }
+          break;
+
+        case 'actividad3':
+          $actividad = 'Asesoramiento';
+          $verificar = parent::verificarRegistros('select id from brain where descripcion="'.$actividad.'"');
+          if($verificar > 0){
+            echo 'error_1';
+          }else{
+            parent::query('insert into brain(descripcion, usuario_id) values("'.$actividad.'", "'.$_SESSION['id'].'")');
+            $this->getBrains();
+          }
+          break;
+
+        case 'actividad4':
+          $actividad = 'Formaci&oacuten';
+          $verificar = parent::verificarRegistros('select id from brain where descripcion="'.$actividad.'"');
+          if($verificar > 0){
+            echo 'error_1';
+          }else{
+            parent::query('insert into brain(descripcion, usuario_id) values("'.$actividad.'", "'.$_SESSION['id'].'")');
+            $this->getBrains();
+          }
+          break;
+
+        case 'actividad5':
+          $actividad = 'Contenidos';
+          $verificar = parent::verificarRegistros('select id from brain where descripcion="'.$actividad.'"');
+          if($verificar > 0){
+            echo 'error_1';
+          }else{
+            parent::query('insert into brain(descripcion, usuario_id) values("'.$actividad.'", "'.$_SESSION['id'].'")');
+            $this->getBrains();
+          }
+          break;
+
+        default:
+          # code...
+          break;
+      }
+
+      parent::cerrar();
+    }
+
+    # Lista actualizada de brains
+    public function getBrains()
+    {
+      $sql = parent::query('select descripcion from brain where usuario_id="'.$_SESSION['id'].'"');
+      $actividad = 1;
+      $actividad1 = 'Proyectos innovadores';
+      $actividad2 = 'Mentoring';
+      $actividad3 = 'Asesoramiento';
+      $actividad4 = 'Formaci&oacuten';
+      $actividad5 = 'Contenidos';
+
+      // Lista que existe
+      while($row = mysqli_fetch_array($sql)){
+
+        if($actividad1 == $row['descripcion']){
+          echo '
+          <li class="hover grey-hover collection-item avatar actividad_activo" id="actividad1">
+            <i class="fa fa-microphone activo circle"></i>
+            <span>
+              Proyectos innovadores <br>
+              <small class="grey-text text-darken-2">Participar en proyectos innovadores</small>
+            </span>
+          </li>
+          ';
+        }else if($actividad2 == $row['descripcion']){
+          echo '
+          <li class="hover grey-hover collection-item avatar actividad_activo" id="actividad2">
+            <i class="fa fa-users activo circle"></i>
+            <span>
+              Mentoring<br>
+              <small class="grey-text text-darken-2">Ser mentor de emprendimientos y proyectos innovadores</small>
+            </span>
+          </li>
+          ';
+        }else if($actividad3 == $row['descripcion']) {
+          echo '
+          <li class="hover grey-hover collection-item avatar actividad_activo" id="actividad3">
+            <i class="fa fa-pencil activo circle grey"></i>
+            <span>
+              Asesoramiento<br>
+              <small class="grey-text text-darken-2">Brindar asesoría a empresas y emprendedores</small>
+            </span>
+          </li>
+          ';
+        }else if($actividad4 == $row['descripcion']) {
+          echo '
+          <li class="hover grey-hover collection-item avatar actividad_activo" id="actividad4">
+            <i class="fa fa-bullhorn activo circle grey"></i>
+            <span>
+              Formación<br>
+              <small class="grey-text text-darken-2">Impartir charlas y formación</small>
+            </span>
+          </li>
+          ';
+        }else if($actividad5 == $row['descripcion']) {
+          echo '
+          <li class="hover grey-hover collection-item avatar actividad_activo" id="actividad5">
+            <i class="fa fa-check activo circle grey"></i>
+            <span>
+              Contenidos<br>
+              <small class="grey-text text-darken-2">Generar contenido escrito o audiovisual</small>
+            </span>
+          </li>
+          ';
+        }
+
+      }
+
+    }
+
   } // End class
 
 
