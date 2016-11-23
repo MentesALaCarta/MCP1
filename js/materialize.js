@@ -1020,13 +1020,13 @@ $('#guardar_experiencia').click(function(){
         console.log('El id no te pertenece');
       }else if(res == 'error_2'){
         console.log('Error de inserción');
-      }else{
+      }else if(res == 'error_3'){
 
+      }else{
         limpiar();
 
         // Cualquier otra respuesta error o lista actualizada con los cambios
         $('#lista_de_experiencia').html(res);
-
       }
 
     }
