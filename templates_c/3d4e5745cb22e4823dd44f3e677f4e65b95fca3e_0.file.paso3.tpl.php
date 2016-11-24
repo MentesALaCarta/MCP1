@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-20 21:03:31
+/* Smarty version 3.1.30, created on 2016-11-24 16:52:03
   from "/opt/lampp/htdocs/mentes/view/wits/paso3.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5832019303aca6_67782070',
+  'unifunc' => 'content_58370ca3d01095_96466627',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '3d4e5745cb22e4823dd44f3e677f4e65b95fca3e' => 
     array (
       0 => '/opt/lampp/htdocs/mentes/view/wits/paso3.tpl',
-      1 => 1479672209,
+      1 => 1479931453,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:view/principal/script.tpl' => 1,
   ),
 ),false)) {
-function content_5832019303aca6_67782070 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58370ca3d01095_96466627 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -60,7 +60,7 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
 <form action="" id="form_services">
 
   <div class="row">
-
+ 
     <!-- Proyectos innovadores -->
     <div class="col s8 offset-s2 m4 l2 offset-l1 center-align" >
       <div class="spacing-1"></div>

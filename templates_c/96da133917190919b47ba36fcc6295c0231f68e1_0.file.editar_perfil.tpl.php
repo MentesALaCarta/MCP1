@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-24 15:44:50
+/* Smarty version 3.1.30, created on 2016-11-24 16:31:31
   from "/opt/lampp/htdocs/mentes/view/wits/editar_perfil.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5836fce2e7ffe1_52758773',
+  'unifunc' => 'content_583707d327b558_38595197',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '96da133917190919b47ba36fcc6295c0231f68e1' => 
     array (
       0 => '/opt/lampp/htdocs/mentes/view/wits/editar_perfil.tpl',
-      1 => 1479998689,
+      1 => 1480001489,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:view/principal/script.tpl' => 1,
   ),
 ),false)) {
-function content_5836fce2e7ffe1_52758773 (Smarty_Internal_Template $_smarty_tpl) {
+function content_583707d327b558_38595197 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -217,7 +217,7 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
 
        <!-- Actividades -->
        <li>
-         <div class="collapsible-header active"><i class="fa fa-fire" aria-hidden="true"></i> Actividades</div>
+         <div class="collapsible-header"><i class="fa fa-fire" aria-hidden="true"></i> Actividades</div>
          <div class="collapsible-body padding-edit">
            <!-- Descripción de la fase -->
            <span class="grey-text">
@@ -247,7 +247,7 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
 ?>
               <?php $_smarty_tpl->_assignInScope('actividad3', 'Asesoramiento');
 ?>
-              <?php $_smarty_tpl->_assignInScope('actividad4', 'Formaci&oacuten');
+              <?php $_smarty_tpl->_assignInScope('actividad4', 'Formación');
 ?>
               <?php $_smarty_tpl->_assignInScope('actividad5', 'Contenidos');
 ?>
@@ -357,28 +357,6 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
 
              </div>
            </div>
-         </div>
-       </li>
-
-       <!-- Descripción -->
-       <li>
-         <div class="collapsible-header"><i class="fa fa-exclamation" aria-hidden="true"></i> Descripción</div>
-         <div class="collapsible-body padding-edit">
-           <!-- Descripción de la fase -->
-           <span class="grey-text">
-             Describe tus habilidades, ha que te dedicas, cuales son tus pasiones o metas.
-           </span>
-         </div>
-       </li>
-
-       <!-- Frase o pensamiento -->
-       <li>
-         <div class="collapsible-header"><i class="fa fa-paper-plane" aria-hidden="true"></i> Frase o pensamiento propio</div>
-         <div class="collapsible-body padding-edit">
-           <!-- Descripción de la fase -->
-           <span class="grey-text">
-             Déjanos una frase o pensamiento propio, cuéntanos si hay algo más que debemos saber de ti
-           </span>
          </div>
        </li>
 

@@ -45,7 +45,7 @@
         }else if($row['descripcion'] == 'Asesoramiento'){
           $datos[2] = true;
         }else if($row['descripcion'] == 'Formaci&oacuten'){
-          $datos[4] = true;
+          $datos[3] = true;
         }else if($row['descripcion'] == 'Contenidos'){
           $datos[4] = true;
         }
@@ -612,11 +612,16 @@
     public function misBrains($id)
     {
       parent::conectar();
+
+      $buscar = array('&aacute','&eacute', '&iacute', '&oacute', '&uacute', '&Aacute', '&Eacute', '&Iacute', '&Oacute', '&Uacute', '&ntilde', '&Ntilde');
+      $reemplazar = array('á', 'é', 'í', 'ó', 'ú', 'Á', 'É', 'Í', 'Ó', 'Ú', 'ñ', 'Ñ');
+
       $id = parent::salvar($id);
       $datos = '';
       $consulta =  parent::query('select descripcion from brain where usuario_id="'.$id.'"');
       while($row = mysqli_fetch_array($consulta)){
-        $datos .= $row['descripcion'] . ' ';
+        $res = str_replace($buscar, $reemplazar, $row['descripcion']);
+        $datos .= $res . ' ';
       }
       return $datos;
       parent::cerrar();

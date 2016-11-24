@@ -169,7 +169,7 @@
 
        <!-- Actividades -->
        <li>
-         <div class="collapsible-header active"><i class="fa fa-fire" aria-hidden="true"></i> Actividades</div>
+         <div class="collapsible-header"><i class="fa fa-fire" aria-hidden="true"></i> Actividades</div>
          <div class="collapsible-body padding-edit">
            <!-- Descripción de la fase -->
            <span class="grey-text">
@@ -196,7 +196,7 @@
               {$actividad1 = 'Proyectos innovadores'}
               {$actividad2 = 'Mentoring'}
               {$actividad3 = 'Asesoramiento'}
-              {$actividad4 = 'Formaci&oacuten'}
+              {$actividad4 = 'Formación'}
               {$actividad5 = 'Contenidos'}
 
 
@@ -304,28 +304,6 @@
 
              </div>
            </div>
-         </div>
-       </li>
-
-       <!-- Descripción -->
-       <li>
-         <div class="collapsible-header"><i class="fa fa-exclamation" aria-hidden="true"></i> Descripción</div>
-         <div class="collapsible-body padding-edit">
-           <!-- Descripción de la fase -->
-           <span class="grey-text">
-             Describe tus habilidades, ha que te dedicas, cuales son tus pasiones o metas.
-           </span>
-         </div>
-       </li>
-
-       <!-- Frase o pensamiento -->
-       <li>
-         <div class="collapsible-header"><i class="fa fa-paper-plane" aria-hidden="true"></i> Frase o pensamiento propio</div>
-         <div class="collapsible-body padding-edit">
-           <!-- Descripción de la fase -->
-           <span class="grey-text">
-             Déjanos una frase o pensamiento propio, cuéntanos si hay algo más que debemos saber de ti
-           </span>
          </div>
        </li>
 

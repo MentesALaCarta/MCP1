@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-21 02:11:47
+/* Smarty version 3.1.30, created on 2016-11-24 16:51:48
   from "/opt/lampp/htdocs/mentes/view/wits/paso2.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_583249d3b2cc74_03872689',
+  'unifunc' => 'content_58370c944574f0_93728603',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b89aa94612ac6932086a752a8ee517bbf856df5a' => 
     array (
       0 => '/opt/lampp/htdocs/mentes/view/wits/paso2.tpl',
-      1 => 1479683681,
+      1 => 1479929279,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:view/principal/script.tpl' => 1,
   ),
 ),false)) {
-function content_583249d3b2cc74_03872689 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58370c944574f0_93728603 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -76,7 +76,7 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
     <div class="spacing-1"></div>
     <button type="button" class="btn waves-effect waves-light" name="button" style="background-color: #EBA820;" id="add_new_aptitud">Agregar</button>
   </div>
-</div> 
+</div>  
 
 <div class="container">
   <div class="row">

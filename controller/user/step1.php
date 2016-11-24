@@ -35,12 +35,12 @@
         # Evitamos inyecciones sql
         $company_name[$i] = mysqli_real_escape_string($link, $company_name[$i]);
         $sector[$i] = mysqli_real_escape_string($link, $sector[$i]);
-        $position[$i] = mysqli_real_escape_string($link, $sector[$i]);
+        $position[$i] = mysqli_real_escape_string($link, $position[$i]);
         $country[$i] = mysqli_real_escape_string($link, $country[$i]);
 
         $datos .= '("'.$company_name[$i].'", "'.$sector[$i].'", "'.$position[$i].'", "'.$country[$i].'", "'.$_SESSION['id'].'"),';
       }
-      
+
     }
     $persona -> cerrardb();
 
