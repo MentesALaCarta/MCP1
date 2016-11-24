@@ -1,9 +1,6 @@
 <?php
 
-    session_start([
-      'cookie_lifetime' => 86400,
-      'read_and_close'  => true
-    ]);
+    session_start(); 
 
     if(!isset($_SESSION['id'])){
       header('location: ?view=registrar');
