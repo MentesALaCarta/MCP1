@@ -1107,3 +1107,31 @@ $(document).on('click', '.actividad_inactivo', function(){
 
   });
 });
+
+
+// Actualizar imagen de perfil
+$('#actualizar_imagen').click(function(){
+
+  var formData = new FormData(document.getElementById("imagen_perfil"));
+
+  if($('#seleccion_imagen').val() == ''){
+    swal('error', 'Por favor seleciona una imagen de perfil', 'error');
+  }else{
+    $.ajax({
+      method: 'POST',
+      url: 'controller/wit/actualizarImagen.php',
+      data: formData,
+      dataType: "html",
+      contentType: false,
+      processData: false,
+      beforeSend: function(){
+        $('#perfil').attr('src', 'images/perfiles/load.gif');
+      },
+      success: function(answer){
+          $('#perfil').attr('src', 'images/perfiles/'+answer);
+          console.log(answer);
+          $('#seleccion_imagen').val('');
+      }
+    });
+  }
+});

@@ -40,6 +40,7 @@
 </div>
 
 <div class="spacing-2"></div>
+
 <div class="row">
   <form class="col s12 m6 offset-m3" enctype="multipart/form-data" id="form4">
     <div class="row">

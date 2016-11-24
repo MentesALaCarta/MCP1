@@ -23,12 +23,114 @@
 
         <!-- Datos generales -->
         <li>
-          <div class="collapsible-header"><i class="fa fa-book" aria-hidden="true"></i> Datos generales</div>
+          <div class="collapsible-header active"><i class="fa fa-book" aria-hidden="true"></i> Datos generales</div>
           <div class="collapsible-body padding-edit">
             <!-- Descripción de la fase -->
             <span class="grey-text">
               Los siguientes datos nos ayudan a identificar en que proyectos te podemos asignar
             </span>
+
+            <div class="row">
+              <div class="col s3 m2">
+                <div class="spacing-1"></div>
+                <img id="perfil" src="images/{$contacto.imagen}?{time()}" class="circle" alt="Imagen de perfil wit michael" width="100%">
+              </div>
+            </div>
+
+            <form id="imagen_perfil">
+              <div class="row">
+                <div class="col s12">
+                  <!-- Imagen de perfil -->
+                  <div class="row">
+                    <div class="col s12">
+                        <label class="grey-text text-darken-2">Foto de perfil</label>
+                        <div class="file-field input-field">
+                          <div class="btn" style="background-color: #EBA820;">
+                            <span><i class="fa fa-user" style="font-size: 2rem; color: white;"></i></span>
+                            <input type="file" name="imagen_perfil">
+                          </div>
+                          <div class="file-path-wrapper">
+                            <input class="file-path validate" type="text" id="seleccion_imagen">
+                          </div>
+                        </div>
+                    </div>
+
+                      <div class="col s12 grey-text text-darken-2">
+                        <i class="fa fa-save"></i> <span class="underline" id="actualizar_imagen">Actualizar imagen</span>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+
+            <div class="row">
+              <form class="col s12" enctype="multipart/form-data" id="form4">
+
+
+                <div class="row">
+
+                  <div class="input-field col s12 m6">
+                    <input class="grey-text text-darken-1" type="text" id="ciudad" name="ciudad" value="{$contacto.ciudad}">
+                    <label for="ciudad" class="black-text">¿En qué ciudad vives?</label>
+                  </div>
+
+                  <div class="input-field col s12 m6">
+                    <input class="grey-text text-darken-1" type="text" id="Telefono" name="tel" value="{$contacto.tel}">
+                    <label class="black-text" for="Telefono">Teléfono móvil</label>
+                  </div>
+
+                  <div class="input-field col s12">
+                    <input class="grey-text text-darken-1" type="text" id="pais" name="pais" value="{$contacto.pais}">
+                    <label class="black-text" for="pais">¿En que país vives?</label>
+                  </div>
+
+                  <div class="input-field col s12">
+                    <textarea maxlength="144" id="tweets" class="materialize-textarea grey-text text-darken-1" name="tweets">{$contacto.tweets}</textarea>
+                    <label class="black-text" for="tweets">Describete en <span class="text-accent">(<span id="pre-des">144</span>)</span> caracteres</label>
+                  </div>
+
+                  <div class="input-field col s12">
+                    <textarea id="textarea" class="materialize-textarea grey-text text-darken-1" name="area">{$contacto.des}</textarea>
+                    <label class="black-text" for="textarea">Déjanos una frase o pensamiento propio o cuéntanos si hay algo más que debemos saber de ti</label>
+                  </div>
+
+                  <!-- Idiomas -->
+                  <div class="input-field col s6 m6">
+                    <input id="idiomas" value="" type="text" class="validate">
+                    <label for="idiomas" class="black-text">¿Qué idiomas hablas?</label>
+                  </div>
+                  <div class="col s6 m3">
+                    <div class="spacing-1"></div>
+                    <button type="button" class="btn waves-effect waves-light" name="button" style="background-color: #EBA820;" id="add_new_idioma">Agregar</button>
+                  </div>
+
+                  <div class="col s12 m8">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>Idiomas</th>
+                          <th></th>
+                        </tr>
+                      </thead>
+
+                      <tbody id="getIdiomas">
+                        {if $idiomas != 0}
+                          {for $i = 0 to count($idiomas) - 1}
+                          <tr id="habilidad{$idiomas[$i][0]}">
+                            <td>{$idiomas[$i][1]}</td>
+                            <td class="hover eliminar_idioma" id="{$idiomas[$i][0]}"><i class="fa fa-close red-text "></i> <span class="red-text">Eliminar</span></td>
+                          </tr>
+                          {/for}
+                        {/if}
+                      </tbody>
+                    </table>
+                  </div>
+
+
+                </div>
+              </form>
+            </div>
+
           </div>
         </li>
 

@@ -11,7 +11,7 @@
       <div class="row">
         <div class="col s3 offset-s8" style="margin-top: 5em;">
           <div class="spacing-2"></div>
-          <img src="images/{$usuario['imagen']}" class="circle" alt="Imagen de perfil wit michael" width="100%">
+          <img src="images/{$usuario['imagen']}?{time()}" class="circle" alt="Imagen de perfil wit michael" width="100%">
         </div>
       </div>
 

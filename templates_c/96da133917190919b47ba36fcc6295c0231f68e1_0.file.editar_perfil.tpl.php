@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-24 16:31:31
+/* Smarty version 3.1.30, created on 2016-11-24 21:21:31
   from "/opt/lampp/htdocs/mentes/view/wits/editar_perfil.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_583707d327b558_38595197',
+  'unifunc' => 'content_58374bcbb9b1d0_42841431',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '96da133917190919b47ba36fcc6295c0231f68e1' => 
     array (
       0 => '/opt/lampp/htdocs/mentes/view/wits/editar_perfil.tpl',
-      1 => 1480001489,
+      1 => 1480018884,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:view/principal/script.tpl' => 1,
   ),
 ),false)) {
-function content_583707d327b558_38595197 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58374bcbb9b1d0_42841431 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -51,12 +51,131 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
 
         <!-- Datos generales -->
         <li>
-          <div class="collapsible-header"><i class="fa fa-book" aria-hidden="true"></i> Datos generales</div>
+          <div class="collapsible-header active"><i class="fa fa-book" aria-hidden="true"></i> Datos generales</div>
           <div class="collapsible-body padding-edit">
             <!-- Descripción de la fase -->
             <span class="grey-text">
               Los siguientes datos nos ayudan a identificar en que proyectos te podemos asignar
             </span>
+
+            <div class="row">
+              <div class="col s3 m2">
+                <div class="spacing-1"></div>
+                <img id="perfil" src="images/<?php echo $_smarty_tpl->tpl_vars['contacto']->value['imagen'];?>
+?<?php echo time();?>
+" class="circle" alt="Imagen de perfil wit michael" width="100%">
+              </div>
+            </div>
+
+            <form id="imagen_perfil">
+              <div class="row">
+                <div class="col s12">
+                  <!-- Imagen de perfil -->
+                  <div class="row">
+                    <div class="col s12">
+                        <label class="grey-text text-darken-2">Foto de perfil</label>
+                        <div class="file-field input-field">
+                          <div class="btn" style="background-color: #EBA820;">
+                            <span><i class="fa fa-user" style="font-size: 2rem; color: white;"></i></span>
+                            <input type="file" name="imagen_perfil">
+                          </div>
+                          <div class="file-path-wrapper">
+                            <input class="file-path validate" type="text" id="seleccion_imagen">
+                          </div>
+                        </div>
+                    </div>
+
+                      <div class="col s12 grey-text text-darken-2">
+                        <i class="fa fa-save"></i> <span class="underline" id="actualizar_imagen">Actualizar imagen</span>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+
+            <div class="row">
+              <form class="col s12" enctype="multipart/form-data" id="form4">
+
+
+                <div class="row">
+
+                  <div class="input-field col s12 m6">
+                    <input class="grey-text text-darken-1" type="text" id="ciudad" name="ciudad" value="<?php echo $_smarty_tpl->tpl_vars['contacto']->value['ciudad'];?>
+">
+                    <label for="ciudad" class="black-text">¿En qué ciudad vives?</label>
+                  </div>
+
+                  <div class="input-field col s12 m6">
+                    <input class="grey-text text-darken-1" type="text" id="Telefono" name="tel" value="<?php echo $_smarty_tpl->tpl_vars['contacto']->value['tel'];?>
+">
+                    <label class="black-text" for="Telefono">Teléfono móvil</label>
+                  </div>
+
+                  <div class="input-field col s12">
+                    <input class="grey-text text-darken-1" type="text" id="pais" name="pais" value="<?php echo $_smarty_tpl->tpl_vars['contacto']->value['pais'];?>
+">
+                    <label class="black-text" for="pais">¿En que país vives?</label>
+                  </div>
+
+                  <div class="input-field col s12">
+                    <textarea maxlength="144" id="tweets" class="materialize-textarea grey-text text-darken-1" name="tweets"><?php echo $_smarty_tpl->tpl_vars['contacto']->value['tweets'];?>
+</textarea>
+                    <label class="black-text" for="tweets">Describete en <span class="text-accent">(<span id="pre-des">144</span>)</span> caracteres</label>
+                  </div>
+
+                  <div class="input-field col s12">
+                    <textarea id="textarea" class="materialize-textarea grey-text text-darken-1" name="area"><?php echo $_smarty_tpl->tpl_vars['contacto']->value['des'];?>
+</textarea>
+                    <label class="black-text" for="textarea">Déjanos una frase o pensamiento propio o cuéntanos si hay algo más que debemos saber de ti</label>
+                  </div>
+
+                  <!-- Idiomas -->
+                  <div class="input-field col s6 m6">
+                    <input id="idiomas" value="" type="text" class="validate">
+                    <label for="idiomas" class="black-text">¿Qué idiomas hablas?</label>
+                  </div>
+                  <div class="col s6 m3">
+                    <div class="spacing-1"></div>
+                    <button type="button" class="btn waves-effect waves-light" name="button" style="background-color: #EBA820;" id="add_new_idioma">Agregar</button>
+                  </div>
+
+                  <div class="col s12 m8">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>Idiomas</th>
+                          <th></th>
+                        </tr>
+                      </thead>
+
+                      <tbody id="getIdiomas">
+                        <?php if ($_smarty_tpl->tpl_vars['idiomas']->value != 0) {?>
+                          <?php
+$_smarty_tpl->tpl_vars['i'] = new Smarty_Variable(null, $_smarty_tpl->isRenderingCache);$_smarty_tpl->tpl_vars['i']->step = 1;$_smarty_tpl->tpl_vars['i']->total = (int) ceil(($_smarty_tpl->tpl_vars['i']->step > 0 ? count($_smarty_tpl->tpl_vars['idiomas']->value)-1+1 - (0) : 0-(count($_smarty_tpl->tpl_vars['idiomas']->value)-1)+1)/abs($_smarty_tpl->tpl_vars['i']->step));
+if ($_smarty_tpl->tpl_vars['i']->total > 0) {
+for ($_smarty_tpl->tpl_vars['i']->value = 0, $_smarty_tpl->tpl_vars['i']->iteration = 1;$_smarty_tpl->tpl_vars['i']->iteration <= $_smarty_tpl->tpl_vars['i']->total;$_smarty_tpl->tpl_vars['i']->value += $_smarty_tpl->tpl_vars['i']->step, $_smarty_tpl->tpl_vars['i']->iteration++) {
+$_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1;$_smarty_tpl->tpl_vars['i']->last = $_smarty_tpl->tpl_vars['i']->iteration == $_smarty_tpl->tpl_vars['i']->total;?>
+                          <tr id="habilidad<?php echo $_smarty_tpl->tpl_vars['idiomas']->value[$_smarty_tpl->tpl_vars['i']->value][0];?>
+">
+                            <td><?php echo $_smarty_tpl->tpl_vars['idiomas']->value[$_smarty_tpl->tpl_vars['i']->value][1];?>
+</td>
+                            <td class="hover eliminar_idioma" id="<?php echo $_smarty_tpl->tpl_vars['idiomas']->value[$_smarty_tpl->tpl_vars['i']->value][0];?>
+"><i class="fa fa-close red-text "></i> <span class="red-text">Eliminar</span></td>
+                          </tr>
+                          <?php }
+}
+?>
+
+                        <?php }?>
+                      </tbody>
+                    </table>
+                  </div>
+
+
+                </div>
+              </form>
+            </div>
+
           </div>
         </li>
 

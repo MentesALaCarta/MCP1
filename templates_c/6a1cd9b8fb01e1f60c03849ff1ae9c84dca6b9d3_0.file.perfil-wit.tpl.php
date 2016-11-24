@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-24 17:04:46
+/* Smarty version 3.1.30, created on 2016-11-24 21:22:27
   from "/opt/lampp/htdocs/mentes/view/wits/perfil-wit.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58370f9e7674b8_74817706',
+  'unifunc' => 'content_58374c032cf959_12510025',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6a1cd9b8fb01e1f60c03849ff1ae9c84dca6b9d3' => 
     array (
       0 => '/opt/lampp/htdocs/mentes/view/wits/perfil-wit.tpl',
-      1 => 1480003438,
+      1 => 1480018938,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:view/principal/script.tpl' => 1,
   ),
 ),false)) {
-function content_58370f9e7674b8_74817706 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58374c032cf959_12510025 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -40,6 +40,7 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
         <div class="col s3 offset-s8" style="margin-top: 5em;">
           <div class="spacing-2"></div>
           <img src="images/<?php echo $_smarty_tpl->tpl_vars['usuario']->value['imagen'];?>
+?<?php echo time();?>
 " class="circle" alt="Imagen de perfil wit michael" width="100%">
         </div>
       </div>

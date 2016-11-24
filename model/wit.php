@@ -627,6 +627,32 @@
       parent::cerrar();
     }
 
+    public function infoContacto($id)
+    {
+      parent::conectar();
+      $id = parent::salvar($id);
+      $contacto = parent::consultaArreglo('select imagen, ciudad, tel, des, tweets, pais from contacto where usuario_id="'.$id.'"');
+
+      $datos = array(
+          'imagen' => $contacto['imagen'],
+          'ciudad' => $contacto['ciudad'],
+          'tel'    => $contacto['tel'],
+          'des'    => $contacto['des'],
+          'tweets' => $contacto['tweets'],
+          'pais'   => $contacto['pais']
+        );
+      return $datos;
+      parent::cerrar();
+    }
+
+
+    public function updateImage($imagen)
+    {
+      parent::conectar();
+      parent::query('update contacto set imagen = "'.$imagen.'" where usuario_id="'.$_SESSION['id'].'"');
+      parent::cerrar();
+    }
+
   } // End class
 
 
