@@ -405,11 +405,25 @@
       $actividad4 = 'Formaci&oacuten';
       $actividad5 = 'Contenidos';
 
+      $myList = '';
       // Lista que existe
       while($row = mysqli_fetch_array($sql)){
+        $myList .= $row['descripcion'] . ' ';
+      }
 
-        if($actividad1 == $row['descripcion']){
-          echo '
+      # Actividad 1
+      if(strpos($myList, $actividad1) === false){
+        echo '
+        <li class="hover grey-hover collection-item avatar actividad_inactivo" id="actividad1">
+          <i class="fa fa-microphone circle"></i>
+          <span>
+            Proyectos innovadores <br>
+            <small class="grey-text text-darken-2">Participar en proyectos innovadores</small>
+          </span>
+        </li>
+        ';
+      }else{
+        echo '
           <li class="hover grey-hover collection-item avatar actividad_activo" id="actividad1">
             <i class="fa fa-microphone activo circle"></i>
             <span>
@@ -418,8 +432,22 @@
             </span>
           </li>
           ';
-        }else if($actividad2 == $row['descripcion']){
-          echo '
+      }
+
+
+      # Actividad 2
+      if(strpos($myList, $actividad2) === false){
+        echo '
+          <li class="hover grey-hover collection-item avatar actividad_inactivo" id="actividad2">
+            <i class="fa fa-users circle"></i>
+            <span>
+              Mentoring<br>
+              <small class="grey-text text-darken-2">Ser mentor de emprendimientos y proyectos innovadores</small>
+            </span>
+          </li>
+          ';
+      }else{
+        echo '
           <li class="hover grey-hover collection-item avatar actividad_activo" id="actividad2">
             <i class="fa fa-users activo circle"></i>
             <span>
@@ -428,7 +456,20 @@
             </span>
           </li>
           ';
-        }else if($actividad3 == $row['descripcion']) {
+      }
+
+      # Actividad 3
+      if(strpos($myList, $actividad3) === false){
+        echo '
+        <li class="hover grey-hover collection-item avatar actividad_inactivo" id="actividad3">
+          <i class="fa fa-pencil circle grey"></i>
+          <span>
+            Asesoramiento<br>
+            <small class="grey-text text-darken-2">Brindar asesoría a empresas y emprendedores</small>
+          </span>
+        </li>
+        ';
+      }else{
           echo '
           <li class="hover grey-hover collection-item avatar actividad_activo" id="actividad3">
             <i class="fa fa-pencil activo circle grey"></i>
@@ -438,7 +479,20 @@
             </span>
           </li>
           ';
-        }else if($actividad4 == $row['descripcion']) {
+      }
+
+      # Actividad 4
+      if(strpos($myList, $actividad4) === false){
+        echo '
+        <li class="hover grey-hover collection-item avatar actividad_inactivo" id="actividad4">
+          <i class="fa fa-bullhorn circle grey"></i>
+          <span>
+            Formación<br>
+            <small class="grey-text text-darken-2">Impartir charlas y formación</small>
+          </span>
+        </li>
+        ';
+      }else{
           echo '
           <li class="hover grey-hover collection-item avatar actividad_activo" id="actividad4">
             <i class="fa fa-bullhorn activo circle grey"></i>
@@ -448,8 +502,21 @@
             </span>
           </li>
           ';
-        }else if($actividad5 == $row['descripcion']) {
-          echo '
+      }
+
+      # Actividad 5
+      if(strpos($myList, $actividad5) === false){
+        echo '
+          <li class="hover grey-hover collection-item avatar actividad_inactivo" id="actividad5">
+            <i class="fa fa-check circle grey"></i>
+            <span>
+              Contenidos<br>
+              <small class="grey-text text-darken-2">Generar contenido escrito o audiovisual</small>
+            </span>
+          </li>
+          ';
+      }else{
+        echo '
           <li class="hover grey-hover collection-item avatar actividad_activo" id="actividad5">
             <i class="fa fa-check activo circle grey"></i>
             <span>
@@ -458,8 +525,6 @@
             </span>
           </li>
           ';
-        }
-
       }
 
     }
