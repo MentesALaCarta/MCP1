@@ -538,6 +538,10 @@
       // Verificamos que no sea un hack
       $actividad = parent::salvar($actividad);
 
+      $cuantosBrains = parent::verificarRegistros('select id from brain where usuario_id="'.$_SESSION['id'].'"');
+      if($cuantosBrains > 1){
+
+
       switch ($actividad) {
         case 'actividad1':
           $actividad = 'Proyectos innovadores';
@@ -594,10 +598,11 @@
           }
           break;
 
-        default:
-          # code...
-          break;
       }
+
+    }else{
+      echo 'error_5';
+    }
 
       parent::cerrar();
     }

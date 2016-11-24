@@ -1054,7 +1054,11 @@ $(document).on('click', '.actividad_activo', function(){
       url: 'controller/wit/dejarActividad.php',
       data: {id: actividad},
       success: function(res){
-        $('#lista_actividades_edit').html(res);
+        if(res == 'error_5'){
+          swal('Error', 'Debes tener por lo menos una actividad seleccionada', 'error');
+        }else{
+          $('#lista_actividades_edit').html(res);
+        }
       }
     });
 
