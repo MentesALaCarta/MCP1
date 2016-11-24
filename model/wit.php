@@ -653,6 +653,21 @@
       parent::cerrar();
     }
 
+    # Actualiza los datos
+    public function actualizarDatos($ciudad, $tel, $pais, $tweets, $area)
+    {
+      parent::conectar();
+      $ciudad = parent::filtrar($ciudad);
+      $tel = parent::filtrar($tel);
+      $pais = parent::filtrar($pais);
+      $tweets = parent::filtrar($tweets);
+      $area  = parent::filtrar($area);
+      session_start();
+      $sql = parent::query('update contacto set ciudad = "'.$ciudad.'", tel="'.$tel.'", pais = "'.$pais.'", des="'.$area.'", tweets = "'.$tweets.'" where usuario_id="'.$_SESSION['id'].'"');
+
+      parent::cerrar();
+    }
+
   } // End class
 
 

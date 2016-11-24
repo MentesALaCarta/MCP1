@@ -1135,3 +1135,19 @@ $('#actualizar_imagen').click(function(){
     });
   }
 });
+
+$('#actualizar_datos').click(function(){
+  $.ajax({
+    method: 'POST',
+    url: 'controller/wit/actualizarDatos.php',
+    data: $('#datos_contacto').serialize(),
+    beforeSend: function(){
+      $('#load3').show();
+    },
+    success: function(res){
+      $('#load3').hide();
+      swal('Datos guardados', 'Se guardo la información correctamente', 'success');
+      console.log(res);
+    }
+  });
+});

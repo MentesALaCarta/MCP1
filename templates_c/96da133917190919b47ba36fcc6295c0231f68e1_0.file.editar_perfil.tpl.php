@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-24 21:21:31
+/* Smarty version 3.1.30, created on 2016-11-24 22:10:43
   from "/opt/lampp/htdocs/mentes/view/wits/editar_perfil.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58374bcbb9b1d0_42841431',
+  'unifunc' => 'content_58375753dabad2_83475683',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '96da133917190919b47ba36fcc6295c0231f68e1' => 
     array (
       0 => '/opt/lampp/htdocs/mentes/view/wits/editar_perfil.tpl',
-      1 => 1480018884,
+      1 => 1480021841,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:view/principal/script.tpl' => 1,
   ),
 ),false)) {
-function content_58374bcbb9b1d0_42841431 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58375753dabad2_83475683 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -51,7 +51,7 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
 
         <!-- Datos generales -->
         <li>
-          <div class="collapsible-header active"><i class="fa fa-book" aria-hidden="true"></i> Datos generales</div>
+          <div class="collapsible-header"><i class="fa fa-book" aria-hidden="true"></i> Datos generales</div>
           <div class="collapsible-body padding-edit">
             <!-- Descripción de la fase -->
             <span class="grey-text">
@@ -67,7 +67,7 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
               </div>
             </div>
 
-            <form id="imagen_perfil">
+            <form id="imagen_perfil" enctype="multipart/form-data">
               <div class="row">
                 <div class="col s12">
                   <!-- Imagen de perfil -->
@@ -86,47 +86,67 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
                     </div>
 
                       <div class="col s12 grey-text text-darken-2">
-                        <i class="fa fa-save"></i> <span class="underline" id="actualizar_imagen">Actualizar imagen</span>
+                        <i class="fa fa-picture-o" aria-hidden="true"></i> <span class="underline" id="actualizar_imagen">Actualizar imagen</span>
                       </div>
                   </div>
                 </div>
               </div>
             </form>
 
-            <div class="row">
-              <form class="col s12" enctype="multipart/form-data" id="form4">
+            <div class="divider"></div>
 
+            <div class="row">
+              <div class="spacing-1"></div>
+              <form class="col s12" id="datos_contacto">
 
                 <div class="row">
 
                   <div class="input-field col s12 m6">
-                    <input class="grey-text text-darken-1" type="text" id="ciudad" name="ciudad" value="<?php echo $_smarty_tpl->tpl_vars['contacto']->value['ciudad'];?>
+                    <input class="black-text" type="text" id="ciudad" name="ciudad" value="<?php echo ucwords($_smarty_tpl->tpl_vars['contacto']->value['ciudad']);?>
 ">
-                    <label for="ciudad" class="black-text">¿En qué ciudad vives?</label>
+                    <label for="ciudad" class="grey-text text-darken-1">¿En qué ciudad vives?</label>
                   </div>
 
                   <div class="input-field col s12 m6">
-                    <input class="grey-text text-darken-1" type="text" id="Telefono" name="tel" value="<?php echo $_smarty_tpl->tpl_vars['contacto']->value['tel'];?>
+                    <input class="black-text" type="text" id="Telefono" name="tel" value="<?php echo ucwords($_smarty_tpl->tpl_vars['contacto']->value['tel']);?>
 ">
-                    <label class="black-text" for="Telefono">Teléfono móvil</label>
+                    <label class="grey-text text-darken-1" for="Telefono">Teléfono móvil</label>
                   </div>
 
                   <div class="input-field col s12">
-                    <input class="grey-text text-darken-1" type="text" id="pais" name="pais" value="<?php echo $_smarty_tpl->tpl_vars['contacto']->value['pais'];?>
+                    <input class="black-text" type="text" id="pais" name="pais" value="<?php echo ucwords($_smarty_tpl->tpl_vars['contacto']->value['pais']);?>
 ">
-                    <label class="black-text" for="pais">¿En que país vives?</label>
+                    <label class="grey-text text-darken-1" for="pais">¿En que país vives?</label>
                   </div>
 
                   <div class="input-field col s12">
-                    <textarea maxlength="144" id="tweets" class="materialize-textarea grey-text text-darken-1" name="tweets"><?php echo $_smarty_tpl->tpl_vars['contacto']->value['tweets'];?>
+                    <textarea maxlength="144" id="tweets" class="materialize-textarea black-text" name="tweets"><?php echo ucfirst($_smarty_tpl->tpl_vars['contacto']->value['tweets']);?>
 </textarea>
-                    <label class="black-text" for="tweets">Describete en <span class="text-accent">(<span id="pre-des">144</span>)</span> caracteres</label>
+                    <label class="grey-text text-darken-1" for="tweets">Describete en <span class="text-accent">(<span id="pre-des">144</span>)</span> caracteres</label>
                   </div>
 
                   <div class="input-field col s12">
-                    <textarea id="textarea" class="materialize-textarea grey-text text-darken-1" name="area"><?php echo $_smarty_tpl->tpl_vars['contacto']->value['des'];?>
+                    <textarea id="textarea" class="materialize-textarea black-text" name="area"><?php echo ucfirst($_smarty_tpl->tpl_vars['contacto']->value['des']);?>
 </textarea>
-                    <label class="black-text" for="textarea">Déjanos una frase o pensamiento propio o cuéntanos si hay algo más que debemos saber de ti</label>
+                    <label class=" grey-text text-darken-1" for="textarea">Déjanos una frase o pensamiento propio o cuéntanos si hay algo más que debemos saber de ti</label>
+                  </div>
+
+                  <div class="container" id="load3" hidden="hidden">
+                    <div class="row">
+                      <div class="col s2 offset-s5 m1 offset-m5">
+                        <img src="images/perfiles/load.gif" alt="load aptitud" width="100%;">
+                      </div>
+                    </div>
+                  </div>
+
+                    <div class="col s12 grey-text text-darken-2">
+                      <i class="fa fa-save"></i> <span class="underline" id="actualizar_datos">Actualizar datos</span>
+                      <div class="spacing-1"></div>
+                    </div>
+
+                  <div class="col s12">
+                    <div class="divider"></div>
+                    <div class="spacing-1"></div>
                   </div>
 
                   <!-- Idiomas -->
@@ -175,6 +195,8 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
                 </div>
               </form>
             </div>
+
+
 
           </div>
         </li>

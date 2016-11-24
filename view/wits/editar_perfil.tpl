@@ -23,7 +23,7 @@
 
         <!-- Datos generales -->
         <li>
-          <div class="collapsible-header active"><i class="fa fa-book" aria-hidden="true"></i> Datos generales</div>
+          <div class="collapsible-header"><i class="fa fa-book" aria-hidden="true"></i> Datos generales</div>
           <div class="collapsible-body padding-edit">
             <!-- Descripción de la fase -->
             <span class="grey-text">
@@ -37,7 +37,7 @@
               </div>
             </div>
 
-            <form id="imagen_perfil">
+            <form id="imagen_perfil" enctype="multipart/form-data">
               <div class="row">
                 <div class="col s12">
                   <!-- Imagen de perfil -->
@@ -56,42 +56,62 @@
                     </div>
 
                       <div class="col s12 grey-text text-darken-2">
-                        <i class="fa fa-save"></i> <span class="underline" id="actualizar_imagen">Actualizar imagen</span>
+                        <i class="fa fa-picture-o" aria-hidden="true"></i> <span class="underline" id="actualizar_imagen">Actualizar imagen</span>
                       </div>
                   </div>
                 </div>
               </div>
             </form>
 
-            <div class="row">
-              <form class="col s12" enctype="multipart/form-data" id="form4">
+            <div class="divider"></div>
 
+            <div class="row">
+              <div class="spacing-1"></div>
+              <form class="col s12" id="datos_contacto">
 
                 <div class="row">
 
                   <div class="input-field col s12 m6">
-                    <input class="grey-text text-darken-1" type="text" id="ciudad" name="ciudad" value="{$contacto.ciudad}">
-                    <label for="ciudad" class="black-text">¿En qué ciudad vives?</label>
+                    <input class="black-text" type="text" id="ciudad" name="ciudad" value="{ucwords($contacto.ciudad)}">
+                    <label for="ciudad" class="grey-text text-darken-1">¿En qué ciudad vives?</label>
                   </div>
 
                   <div class="input-field col s12 m6">
-                    <input class="grey-text text-darken-1" type="text" id="Telefono" name="tel" value="{$contacto.tel}">
-                    <label class="black-text" for="Telefono">Teléfono móvil</label>
+                    <input class="black-text" type="text" id="Telefono" name="tel" value="{ucwords($contacto.tel)}">
+                    <label class="grey-text text-darken-1" for="Telefono">Teléfono móvil</label>
                   </div>
 
                   <div class="input-field col s12">
-                    <input class="grey-text text-darken-1" type="text" id="pais" name="pais" value="{$contacto.pais}">
-                    <label class="black-text" for="pais">¿En que país vives?</label>
+                    <input class="black-text" type="text" id="pais" name="pais" value="{ucwords($contacto.pais)}">
+                    <label class="grey-text text-darken-1" for="pais">¿En que país vives?</label>
                   </div>
 
                   <div class="input-field col s12">
-                    <textarea maxlength="144" id="tweets" class="materialize-textarea grey-text text-darken-1" name="tweets">{$contacto.tweets}</textarea>
-                    <label class="black-text" for="tweets">Describete en <span class="text-accent">(<span id="pre-des">144</span>)</span> caracteres</label>
+                    <textarea maxlength="144" id="tweets" class="materialize-textarea black-text" name="tweets">{ucfirst($contacto.tweets)}</textarea>
+                    <label class="grey-text text-darken-1" for="tweets">Describete en <span class="text-accent">(<span id="pre-des">144</span>)</span> caracteres</label>
                   </div>
 
                   <div class="input-field col s12">
-                    <textarea id="textarea" class="materialize-textarea grey-text text-darken-1" name="area">{$contacto.des}</textarea>
-                    <label class="black-text" for="textarea">Déjanos una frase o pensamiento propio o cuéntanos si hay algo más que debemos saber de ti</label>
+                    <textarea id="textarea" class="materialize-textarea black-text" name="area">{ucfirst($contacto.des)}</textarea>
+                    <label class=" grey-text text-darken-1" for="textarea">Déjanos una frase o pensamiento propio o cuéntanos si hay algo más que debemos saber de ti</label>
+                  </div>
+
+                  <div class="container" id="load3" hidden="hidden">
+                    <div class="row">
+                      <div class="col s2 offset-s5 m1 offset-m5">
+                        <img src="images/perfiles/load.gif" alt="load aptitud" width="100%;">
+                      </div>
+                    </div>
+                  </div>
+
+                    <div class="col s12 grey-text text-darken-2">
+                      <i class="fa fa-save"></i> <span class="underline" id="actualizar_datos">Actualizar datos</span>
+                      <div class="spacing-1"></div>
+                    </div>
+
+                  <div class="col s12">
+                    <div class="divider"></div>
+                    <div class="spacing-1"></div>
                   </div>
 
                   <!-- Idiomas -->
@@ -130,6 +150,8 @@
                 </div>
               </form>
             </div>
+
+
 
           </div>
         </li>
