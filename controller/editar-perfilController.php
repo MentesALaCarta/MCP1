@@ -22,6 +22,9 @@
   $datos = $persona2 -> getHabilidades($_SESSION['id']);
   $template -> assign('aptitud', $datos);
 
+  $datos = $persona -> misBrains($_SESSION['id']);
+  $template -> assign('brains', $datos);
+
   $template -> display('view/wits/editar_perfil.tpl');
 
 ?>

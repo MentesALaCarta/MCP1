@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-23 22:02:22
+/* Smarty version 3.1.30, created on 2016-11-24 15:44:50
   from "/opt/lampp/htdocs/mentes/view/wits/editar_perfil.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_583603de4882f9_87194717',
+  'unifunc' => 'content_5836fce2e7ffe1_52758773',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '96da133917190919b47ba36fcc6295c0231f68e1' => 
     array (
       0 => '/opt/lampp/htdocs/mentes/view/wits/editar_perfil.tpl',
-      1 => 1479934939,
+      1 => 1479998689,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:view/principal/script.tpl' => 1,
   ),
 ),false)) {
-function content_583603de4882f9_87194717 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5836fce2e7ffe1_52758773 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -240,48 +240,118 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
 
            <div class="row">
              <div class="col s12">
+              <!-- Declaracion de variables -->
+              <?php $_smarty_tpl->_assignInScope('actividad1', 'Proyectos innovadores');
+?>
+              <?php $_smarty_tpl->_assignInScope('actividad2', 'Mentoring');
+?>
+              <?php $_smarty_tpl->_assignInScope('actividad3', 'Asesoramiento');
+?>
+              <?php $_smarty_tpl->_assignInScope('actividad4', 'Formaci&oacuten');
+?>
+              <?php $_smarty_tpl->_assignInScope('actividad5', 'Contenidos');
+?>
+
 
                <ul class="collection" id="lista_actividades_edit">
+                 <!-- Actividad 1-->
+                 <?php if (strpos($_smarty_tpl->tpl_vars['brains']->value,$_smarty_tpl->tpl_vars['actividad1']->value) === false) {?>
+                   <li class="hover grey-hover collection-item avatar actividad_inactivo" id="actividad1">
+                     <i class="fa fa-microphone circle"></i>
+                     <span>
+                       Proyectos innovadores <br>
+                       <small class="grey-text text-darken-2">Participar en proyectos innovadores</small>
+                     </span>
+                   </li>
+                 <?php } else { ?>
+                     <li class="hover grey-hover collection-item avatar actividad_activo" id="actividad1">
+                       <i class="fa fa-microphone activo circle"></i>
+                       <span>
+                         Proyectos innovadores <br>
+                         <small class="grey-text text-darken-2">Participar en proyectos innovadores</small>
+                       </span>
+                     </li>
+                 <?php }?>
 
-                 <li class="hover grey-hover collection-item avatar actividad_activo" id="actividad1">
-                   <i class="fa fa-microphone activo circle"></i>
-                   <span>
-                     Proyectos innovadores <br>
-                     <small class="grey-text text-darken-2">Participar en proyectos innovadores</small>
-                   </span>
-                 </li>
 
-                 <li class="hover grey-hover collection-item avatar actividad_activo" id="actividad2">
-                   <i class="fa fa-users activo circle"></i>
-                   <span>
-                     Mentoring<br>
-                     <small class="grey-text text-darken-2">Ser mentor de emprendimientos y proyectos innovadores</small>
-                   </span>
-                 </li>
+                 <!-- Actividad 2-->
+                 <?php if (strpos($_smarty_tpl->tpl_vars['brains']->value,$_smarty_tpl->tpl_vars['actividad2']->value) === false) {?>
+                     <li class="hover grey-hover collection-item avatar actividad_inactivo" id="actividad2">
+                       <i class="fa fa-users circle"></i>
+                       <span>
+                         Mentoring<br>
+                         <small class="grey-text text-darken-2">Ser mentor de emprendimientos y proyectos innovadores</small>
+                       </span>
+                     </li>
 
-                 <li class="hover grey-hover collection-item avatar actividad_inactivo" id="actividad3">
-                   <i class="fa fa-pencil circle grey"></i>
-                   <span>
-                     Asesoramiento<br>
-                     <small class="grey-text text-darken-2">Brindar asesoría a empresas y emprendedores</small>
-                   </span>
-                 </li>
+                 <?php } else { ?>
+                     <li class="hover grey-hover collection-item avatar actividad_activo" id="actividad2">
+                       <i class="fa fa-users activo circle"></i>
+                       <span>
+                         Mentoring<br>
+                         <small class="grey-text text-darken-2">Ser mentor de emprendimientos y proyectos innovadores</small>
+                       </span>
+                     </li>
+                 <?php }?>
 
-                 <li class="hover grey-hover collection-item avatar actividad_inactivo" id="actividad4">
-                   <i class="fa fa-bullhorn circle grey"></i>
-                   <span>
-                     Formación<br>
-                     <small class="grey-text text-darken-2">Impartir charlas y formación</small>
-                   </span>
-                 </li>
+                 <!-- Actividad 3-->
+                 <?php if (strpos($_smarty_tpl->tpl_vars['brains']->value,$_smarty_tpl->tpl_vars['actividad3']->value) === false) {?>
+                   <li class="hover grey-hover collection-item avatar actividad_inactivo" id="actividad3">
+                     <i class="fa fa-pencil circle grey"></i>
+                     <span>
+                       Asesoramiento<br>
+                       <small class="grey-text text-darken-2">Brindar asesoría a empresas y emprendedores</small>
+                     </span>
+                   </li>
+                 <?php } else { ?>
+                     <li class="hover grey-hover collection-item avatar actividad_activo" id="actividad3">
+                       <i class="fa fa-pencil activo circle grey"></i>
+                       <span>
+                         Asesoramiento<br>
+                         <small class="grey-text text-darken-2">Brindar asesoría a empresas y emprendedores</small>
+                       </span>
+                     </li>
+                 <?php }?>
 
-                 <li class="hover grey-hover collection-item avatar actividad_inactivo" id="actividad5">
-                   <i class="fa fa-check circle grey"></i>
-                   <span>
-                     Contenidos<br>
-                     <small class="grey-text text-darken-2">Generar contenido escrito o audiovisual</small>
-                   </span>
-                 </li>
+                 <!-- Actividad 4-->
+                 <?php if (strpos($_smarty_tpl->tpl_vars['brains']->value,$_smarty_tpl->tpl_vars['actividad4']->value) === false) {?>
+                   <li class="hover grey-hover collection-item avatar actividad_inactivo" id="actividad4">
+                     <i class="fa fa-bullhorn circle grey"></i>
+                     <span>
+                       Formación<br>
+                       <small class="grey-text text-darken-2">Impartir charlas y formación</small>
+                     </span>
+                   </li>
+                 <?php } else { ?>
+                     <li class="hover grey-hover collection-item avatar actividad_activo" id="actividad4">
+                       <i class="fa fa-bullhorn activo circle grey"></i>
+                       <span>
+                         Formación<br>
+                         <small class="grey-text text-darken-2">Impartir charlas y formación</small>
+                       </span>
+                     </li>
+                 <?php }?>
+
+                 <!-- Actividad 5-->
+                 <?php if (strpos($_smarty_tpl->tpl_vars['brains']->value,$_smarty_tpl->tpl_vars['actividad5']->value) === false) {?>
+                     <li class="hover grey-hover collection-item avatar actividad_inactivo" id="actividad5">
+                       <i class="fa fa-check circle grey"></i>
+                       <span>
+                         Contenidos<br>
+                         <small class="grey-text text-darken-2">Generar contenido escrito o audiovisual</small>
+                       </span>
+                     </li>
+
+                 <?php } else { ?>
+                     <li class="hover grey-hover collection-item avatar actividad_activo" id="actividad5">
+                       <i class="fa fa-check activo circle grey"></i>
+                       <span>
+                         Contenidos<br>
+                         <small class="grey-text text-darken-2">Generar contenido escrito o audiovisual</small>
+                       </span>
+                     </li>
+                 <?php }?>
+
 
                </ul>
 

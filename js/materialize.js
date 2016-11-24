@@ -1048,21 +1048,23 @@ $(document).on('click', '.actividad_activo', function(){
     closeOnConfirm: false
   },
   function(){
+    // Enviamos a dejar de seguir
+    $.ajax({
+      method: 'POST',
+      url: 'controller/wit/dejarActividad.php',
+      data: {id: actividad},
+      success: function(res){
+        $('#lista_actividades_edit').html(res);
+      }
+    });
 
+    // Mostramos alerta
     swal({
       title: "Lista actualizada",
       text : "Has dejado satisfactoriamente la actividad",
       type : "success"
     }, function(){
-      // Enviamos a dejar de seguir
-      $.ajax({
-        method: 'POST',
-        url: 'controller/wit/dejarActividad.php',
-        data: {id: actividad},
-        success: function(res){
-          $('#lista_actividades_edit').html(res);
-        }
-      });
+
     });
 
   });
@@ -1082,20 +1084,20 @@ $(document).on('click', '.actividad_inactivo', function(){
   },
   function(){
 
+    $.ajax({
+      method: 'POST',
+      url: 'controller/wit/seguirActividad.php',
+      data: {id: actividad},
+      success: function(res){
+        $('#lista_actividades_edit').html(res);
+      }
+    });
+
     swal({
       title: "Lista actualizada",
       text: "Has seleccionado satisfactoriamente la actividad",
       type: "success"
     }, function(){
-
-      $.ajax({
-        method: 'POST',
-        url: 'controller/wit/seguirActividad.php',
-        data: {id: actividad},
-        success: function(res){
-          $('#lista_actividades_edit').html(res);
-        }
-      });
 
     });
 

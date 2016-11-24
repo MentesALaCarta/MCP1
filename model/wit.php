@@ -602,6 +602,21 @@
       parent::cerrar();
     }
 
+
+    # Encapsula en un string las actividades del usuario
+    public function misBrains($id)
+    {
+      parent::conectar();
+      $id = parent::salvar($id);
+      $datos = '';
+      $consulta =  parent::query('select descripcion from brain where usuario_id="'.$id.'"');
+      while($row = mysqli_fetch_array($consulta)){
+        $datos .= $row['descripcion'] . ' ';
+      }
+      return $datos;
+      parent::cerrar();
+    }
+
   } // End class
 
 
