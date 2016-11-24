@@ -333,7 +333,7 @@
       switch ($actividad) {
         case 'actividad1':
           $actividad = 'Proyectos innovadores';
-          $verificar = parent::verificarRegistros('select id from brain where descripcion="'.$actividad.'"');
+          $verificar = parent::verificarRegistros('select id from brain where descripcion="'.$actividad.'" and usuario_id="'.$_SESSION['id'].'"');
           if($verificar > 0){
             echo 'error_1';
           }else{
@@ -344,7 +344,7 @@
 
         case 'actividad2':
           $actividad = 'Mentoring';
-          $verificar = parent::verificarRegistros('select id from brain where descripcion="'.$actividad.'"');
+          $verificar = parent::verificarRegistros('select id from brain where descripcion="'.$actividad.'" and usuario_id="'.$_SESSION['id'].'"');
           if($verificar > 0){
             echo 'error_1';
           }else{
@@ -355,7 +355,7 @@
 
         case 'actividad3':
           $actividad = 'Asesoramiento';
-          $verificar = parent::verificarRegistros('select id from brain where descripcion="'.$actividad.'"');
+          $verificar = parent::verificarRegistros('select id from brain where descripcion="'.$actividad.'" and usuario_id="'.$_SESSION['id'].'"');
           if($verificar > 0){
             echo 'error_1';
           }else{
@@ -366,7 +366,7 @@
 
         case 'actividad4':
           $actividad = 'Formaci&oacuten';
-          $verificar = parent::verificarRegistros('select id from brain where descripcion="'.$actividad.'"');
+          $verificar = parent::verificarRegistros('select id from brain where descripcion="'.$actividad.'" and usuario_id="'.$_SESSION['id'].'"');
           if($verificar > 0){
             echo 'error_1';
           }else{
@@ -377,7 +377,7 @@
 
         case 'actividad5':
           $actividad = 'Contenidos';
-          $verificar = parent::verificarRegistros('select id from brain where descripcion="'.$actividad.'"');
+          $verificar = parent::verificarRegistros('select id from brain where descripcion="'.$actividad.'" and usuario_id="'.$_SESSION['id'].'"');
           if($verificar > 0){
             echo 'error_1';
           }else{
@@ -527,6 +527,79 @@
           ';
       }
 
+    }
+
+
+    # Permite dejar una actividad
+    public function dejarActividad($actividad)
+    {
+      parent::conectar();
+
+      // Verificamos que no sea un hack
+      $actividad = parent::salvar($actividad);
+
+      switch ($actividad) {
+        case 'actividad1':
+          $actividad = 'Proyectos innovadores';
+          $verificar = parent::verificarRegistros('select id from brain where descripcion="'.$actividad.'" and usuario_id="'.$_SESSION['id'].'"');
+          if($verificar > 0){
+            parent::query('delete from brain where descripcion="'.$actividad.'" and usuario_id="'.$_SESSION['id'].'"');
+            $this->getBrains();
+          }else{
+            echo 'error_1';
+          }
+          break;
+
+        case 'actividad2':
+          $actividad = 'Mentoring';
+          $verificar = parent::verificarRegistros('select id from brain where descripcion="'.$actividad.'" and usuario_id="'.$_SESSION['id'].'"');
+          if($verificar > 0){
+            parent::query('delete from brain where descripcion="'.$actividad.'" and usuario_id="'.$_SESSION['id'].'"');
+            $this->getBrains();
+          }else{
+            echo 'error_1';
+          }
+          break;
+
+        case 'actividad3':
+          $actividad = 'Asesoramiento';
+          $verificar = parent::verificarRegistros('select id from brain where descripcion="'.$actividad.'" and usuario_id="'.$_SESSION['id'].'"');
+          if($verificar > 0){
+            parent::query('delete from brain where descripcion="'.$actividad.'" and usuario_id="'.$_SESSION['id'].'"');
+            $this->getBrains();
+          }else{
+            echo 'error_1';
+          }
+          break;
+
+        case 'actividad4':
+          $actividad = 'Formaci&oacuten';
+          $verificar = parent::verificarRegistros('select id from brain where descripcion="'.$actividad.'" and usuario_id="'.$_SESSION['id'].'"');
+          if($verificar > 0){
+            parent::query('delete from brain where descripcion="'.$actividad.'" and usuario_id="'.$_SESSION['id'].'"');
+            $this->getBrains();
+          }else{
+            echo 'error_1';
+          }
+          break;
+
+        case 'actividad5':
+          $actividad = 'Contenidos';
+          $verificar = parent::verificarRegistros('select id from brain where descripcion="'.$actividad.'" and usuario_id="'.$_SESSION['id'].'"');
+          if($verificar > 0){
+            parent::query('delete from brain where descripcion="'.$actividad.'" and usuario_id="'.$_SESSION['id'].'"');
+            $this->getBrains();
+          }else{
+            echo 'error_1';
+          }
+          break;
+
+        default:
+          # code...
+          break;
+      }
+
+      parent::cerrar();
     }
 
   } // End class

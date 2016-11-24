@@ -1036,6 +1036,9 @@ $('#guardar_experiencia').click(function(){
 
 // Dejar de seguir una actividad
 $(document).on('click', '.actividad_activo', function(){
+
+  var actividad = $(this).attr('id');
+
   swal({
     title: "Dejar actividad",
     text: "¿Estas seguro que quieres dejar esta actividad?",
@@ -1046,7 +1049,22 @@ $(document).on('click', '.actividad_activo', function(){
   },
   function(){
 
-    swal("Lista actualizada", "Has dejado satisfactoriamente la actividad", "success");
+    swal({
+      title: "Lista actualizada",
+      text : "Has dejado satisfactoriamente la actividad",
+      type : "success"
+    }, function(){
+      // Enviamos a dejar de seguir
+      $.ajax({
+        method: 'POST',
+        url: 'controller/wit/dejarActividad.php',
+        data: {id: actividad},
+        success: function(res){
+          $('#lista_actividades_edit').html(res);
+        }
+      });
+    });
+
   });
 });
 
