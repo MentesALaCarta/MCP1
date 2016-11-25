@@ -668,6 +668,15 @@
       parent::cerrar();
     }
 
+    public function consultarEstado($id)
+    {
+      parent::conectar();
+      $id = parent::salvar($id);
+      $user = parent::consultaArreglo('select estado from usuario where id="'.$id.'"');
+      return $user['estado'];
+      parent::cerrar();
+    }
+
   } // End class
 
 

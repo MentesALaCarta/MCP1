@@ -1,28 +1,29 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-21 19:09:31
+/* Smarty version 3.1.30, created on 2016-11-25 20:36:26
   from "/opt/lampp/htdocs/mentes/view/admin/wits-pendientes.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5833385bebc059_46118056',
+  'unifunc' => 'content_583892ba825746_66014729',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '09e80b082571141bb1887f335b0a41a0578e3c2c' => 
     array (
       0 => '/opt/lampp/htdocs/mentes/view/admin/wits-pendientes.tpl',
-      1 => 1479751768,
+      1 => 1480102583,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
     'file:view/principal/header.tpl' => 1,
+    'file:view/principal/cerrarSesion.tpl' => 1,
     'file:view/principal/script.tpl' => 1,
   ),
 ),false)) {
-function content_5833385bebc059_46118056 (Smarty_Internal_Template $_smarty_tpl) {
+function content_583892ba825746_66014729 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -54,7 +55,7 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
                   Mentes a la carta pendientes
                 </li>
               </a>
-              <a href="?view=acceder" class="accent-li1">
+              <a href="?view=index" class="accent-li1">
                 <li class="item-nav-right1" id="asesores-pro">
                   <i class="fa fa-sign-out left resize"></i>
                   Cerrar sesión
@@ -102,7 +103,7 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
 </td>
             <td><?php echo $_smarty_tpl->tpl_vars['wit']->value[$_smarty_tpl->tpl_vars['i']->value][4];?>
 </td>
-            <td><a href="?view=perfil-wit&id=<?php echo $_smarty_tpl->tpl_vars['wit']->value[$_smarty_tpl->tpl_vars['i']->value][0];?>
+            <td><a href="?view=perfil-wit&#38;id=<?php echo $_smarty_tpl->tpl_vars['wit']->value[$_smarty_tpl->tpl_vars['i']->value][0];?>
 ">Ver perfil</a></td>
             <td><button width="100%" id="<?php echo $_smarty_tpl->tpl_vars['wit']->value[$_smarty_tpl->tpl_vars['i']->value][0];?>
 " type="button" class="btn waves-effect waves-light green aprobar" name="button">Aprobar</button>
@@ -121,6 +122,8 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
   </div>
 
 </div><!-- / End .Panel-->
+<?php $_smarty_tpl->_subTemplateRender("file:view/principal/cerrarSesion.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
 
 <?php $_smarty_tpl->_subTemplateRender("file:view/principal/script.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>

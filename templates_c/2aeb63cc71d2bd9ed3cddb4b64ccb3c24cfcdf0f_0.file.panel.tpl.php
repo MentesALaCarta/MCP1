@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-21 20:04:46
+/* Smarty version 3.1.30, created on 2016-11-25 20:34:52
   from "/opt/lampp/htdocs/mentes/view/admin/panel.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5833454e107e53_89766292',
+  'unifunc' => 'content_5838925c672b22_79538106',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2aeb63cc71d2bd9ed3cddb4b64ccb3c24cfcdf0f' => 
     array (
       0 => '/opt/lampp/htdocs/mentes/view/admin/panel.tpl',
-      1 => 1479755043,
+      1 => 1479914370,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:view/principal/script.tpl' => 1,
   ),
 ),false)) {
-function content_5833454e107e53_89766292 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5838925c672b22_79538106 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -55,7 +55,7 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
                   Mentes a la carta pendientes
                 </li>
               </a>
-              <a href="?view=acceder" class="accent-li1">
+              <a href="?view=index" class="accent-li1">
                 <li class="item-nav-right1" id="asesores-pro">
                   <i class="fa fa-sign-out left resize"></i>
                   Cerrar sesión

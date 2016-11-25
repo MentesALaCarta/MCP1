@@ -33,6 +33,9 @@
   $datos = $wit -> contacto($id);
   $template -> assign('contacto', $datos);
 
+  $datos = $wit -> consultarEstado($id);
+  $template -> assign('estado', $datos);
+
   $datos = $wit -> idiomas($id);
   $template -> assign('idiomas', $datos);
 

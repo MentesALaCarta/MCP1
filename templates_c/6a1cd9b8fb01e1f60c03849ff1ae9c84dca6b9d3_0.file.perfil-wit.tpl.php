@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-24 21:22:27
+/* Smarty version 3.1.30, created on 2016-11-25 22:52:36
   from "/opt/lampp/htdocs/mentes/view/wits/perfil-wit.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58374c032cf959_12510025',
+  'unifunc' => 'content_5838b2a4c75448_15239093',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6a1cd9b8fb01e1f60c03849ff1ae9c84dca6b9d3' => 
     array (
       0 => '/opt/lampp/htdocs/mentes/view/wits/perfil-wit.tpl',
-      1 => 1480018938,
+      1 => 1480110755,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:view/principal/script.tpl' => 1,
   ),
 ),false)) {
-function content_58374c032cf959_12510025 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5838b2a4c75448_15239093 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -112,16 +112,17 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
   </div>
   <div class="col s8 offset-s4">
 
-    <?php if (isset($_SESSION['id']) && $_SESSION['id'] == $_GET['id']) {?>
-    <!-- Si no esta aprobado -->
-    <div class="row">
-      <div class="col s12">
-        <div class="alert">
-          Estamos validando tu información para que hagas parte de las mentes a la carta.
+    <?php if (isset($_SESSION['id']) && $_SESSION['id'] == $_GET['id'] && $_smarty_tpl->tpl_vars['estado']->value == 'I') {?>
+      <!-- Si no esta aprobado -->
+      <div class="row">
+        <div class="col s12">
+          <div class="alert">
+            Estamos validando tu información para que hagas parte de las mentes a la carta.
+          </div>
         </div>
       </div>
-    </div>
     <?php }?>
+
     <div class="row">
       <div class="col s11">
         <h4 class="accent-text1">Experiencia</h4>

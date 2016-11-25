@@ -75,16 +75,17 @@
   </div>
   <div class="col s8 offset-s4">
 
-    {if isset($smarty.session.id) && $smarty.session.id == $smarty.get['id'] }
-    <!-- Si no esta aprobado -->
-    <div class="row">
-      <div class="col s12">
-        <div class="alert">
-          Estamos validando tu información para que hagas parte de las mentes a la carta.
+    {if isset($smarty.session.id) && $smarty.session.id == $smarty.get['id'] && $estado == 'I'}
+      <!-- Si no esta aprobado -->
+      <div class="row">
+        <div class="col s12">
+          <div class="alert">
+            Estamos validando tu información para que hagas parte de las mentes a la carta.
+          </div>
         </div>
       </div>
-    </div>
     {/if}
+
     <div class="row">
       <div class="col s11">
         <h4 class="accent-text1">Experiencia</h4>

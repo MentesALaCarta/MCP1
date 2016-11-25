@@ -66,7 +66,7 @@
             <td>{$wit[$i][1]} {$wit[$i][2]}</td>
             <td>{$wit[$i][3]}</td>
             <td>{$wit[$i][4]}</td>
-            <td><a href="?view=perfil-wit&id={$wit[$i][0]}">Ver perfil</a></td>
+            <td><a href="?view=perfil-wit&#38;id={$wit[$i][0]}">Ver perfil</a></td>
             <td><button width="100%" id="{$wit[$i][0]}" type="button" class="btn waves-effect waves-light green aprobar" name="button">Aprobar</button>
             </td>
             <td><button width="100%" id="{$wit[$i][0]}" type="button" class="btn waves-effect waves-light red denegar" name="button">Denegar</button></td>
