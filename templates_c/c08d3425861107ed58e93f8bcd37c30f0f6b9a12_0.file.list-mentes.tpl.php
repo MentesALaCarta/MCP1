@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-21 21:29:04
+/* Smarty version 3.1.30, created on 2016-11-25 17:41:19
   from "/opt/lampp/htdocs/mentes/view/list-mentes.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58335910c8d892_84034858',
+  'unifunc' => 'content_583869af265798_76769952',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c08d3425861107ed58e93f8bcd37c30f0f6b9a12' => 
     array (
       0 => '/opt/lampp/htdocs/mentes/view/list-mentes.tpl',
-      1 => 1479760142,
+      1 => 1480092078,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:view/principal/script.tpl' => 1,
   ),
 ),false)) {
-function content_58335910c8d892_84034858 (Smarty_Internal_Template $_smarty_tpl) {
+function content_583869af265798_76769952 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -34,7 +34,6 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
     <article class="col s12 center">
         <h3 class="grey-text text-darken-3 title-home">Algunas mentes a la carta</h3>
     </article>
-
 
     <!--Mentes a la carta -->
     <article class="col s12 m6 l3">
@@ -47,13 +46,13 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
                   <span class="nombre grey-text text-darken-3 font-400">Carlos Cruz</span>
                   <i class="fa fa-info-circle hover-icon right accent-orange" style="font-size: 1.5em;" aria-hidden="true"></i>
                   <br class="hide-on-med-up">
-                  <span class="grey-text">Digital Marketing <br>España-Madrid</span>
+                  <span class="grey-text">Digital Marketing <span style="visibility: hidden;">lorem ipsum</span><br>España-Madrid</span>
               </span>
 
             </div>
             <div class="card-reveal">
               <span class="card-title grey-text text-darken-4">Carlos<i class="fa fa-times right red-text" aria-hidden="true"></i></span>
-              <p class="text-accent">Las cosas complejas no tienen porque explicarse de forma compleja. La economía colaborativa supone una innovación organizacional radical, tú eliges si quieres aprovecharla.</p>
+              <p class="text-accent">Director de la empresa Creativos Prácticos</p>
             </div>
         </div>
     </article>
@@ -69,13 +68,13 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
                   <span class="nombre grey-text text-darken-3 font-400">Carolina Lopez</span>
                   <i class="fa fa-info-circle hover-icon right accent-orange" style="font-size: 1.5em;" aria-hidden="true"></i>
                   <br class="hide-on-med-up">
-                  <span class="grey-text">Nautico <br>Venezuela-Caracas</span>
+                  <span class="grey-text">Nautico <br><span style="visibility: hidden;">lorem ipsum</span><br>Venezuela-Caracas</span>
               </span>
 
             </div>
             <div class="card-reveal">
               <span class="card-title grey-text text-darken-4">Carolina<i class="fa fa-times right red-text" aria-hidden="true"></i></span>
-              <p class="text-accent">Strong believer in #meritocracy #talent #SocialGood. Bibliophile & efficiency freak with a skeptical mind. Comms Strategist in constant state of improvement. Life motto: Empathy is the key.</p>
+              <p class="text-accent">Gerente de Mercadeo de las empresa Vetolan, C.A.</p>
             </div>
         </div>
     </article>
@@ -91,18 +90,13 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
                   <span class="nombre grey-text text-darken-3 font-400">Carlos Palmero</span>
                   <i class="fa fa-info-circle hover-icon right accent-orange" style="font-size: 1.5em;" aria-hidden="true"></i>
                   <br class="hide-on-med-up">
-                  <span class="grey-text">Educación <br>España-Madrid</span>
+                  <span class="grey-text">Educación <br> <span style="visibility: hidden;">lorem ipsum</span><br>España-Madrid</span>
               </span>
 
             </div>
             <div class="card-reveal">
               <span class="card-title grey-text text-darken-4">Carlos<i class="fa fa-times right red-text" aria-hidden="true"></i></span>
-              <p class="text-accent">Estrategia Mercadeo y Ventas
-Negociacion Internacional
-marketing y trade marketing
-Desarrollo de Negocios
-Merchandising
-Talent</p>
+              <p class="text-accent">Jefe de Admisiones en la empresa ESADE Business School</p>
             </div>
         </div>
     </article>
@@ -118,13 +112,13 @@ Talent</p>
                   <span class="nombre grey-text text-darken-3 font-400">Carmen Carrasco</span>
                   <i class="fa fa-info-circle hover-icon right accent-orange" style="font-size: 1.5em;" aria-hidden="true"></i>
                   <br class="hide-on-med-up">
-                  <span class="grey-text">Gerente <br>España-Madrid</span>
+                  <span class="grey-text">Consultoría estratégica<br>España-Madrid</span>
               </span>
 
             </div>
             <div class="card-reveal">
               <span class="card-title grey-text text-darken-4">Carmen<i class="fa fa-times right red-text" aria-hidden="true"></i></span>
-              <p class="text-accent">Metodologías ágiles; Cocreación; Metodologías de creación de nuevos modelos de negocio</p>
+              <p class="text-accent">Gerente de la empresa Clientia</p>
             </div>
         </div>
     </article>
@@ -140,13 +134,13 @@ Talent</p>
                   <span class="nombre grey-text text-darken-3 font-400">Camila Salas</span>
                   <i class="fa fa-info-circle hover-icon right accent-orange" style="font-size: 1.5em;" aria-hidden="true"></i>
                   <br class="hide-on-med-up">
-                  <span class="grey-text">Directora <br>Colombia-Cartagena</span>
+                  <span class="grey-text">Directora <br><span style="visibility: hidden;">lorem ipsum</span><br>Colombia-Cartagena</span>
               </span>
 
             </div>
             <div class="card-reveal">
               <span class="card-title grey-text text-darken-4">Camila<i class="fa fa-times right red-text" aria-hidden="true"></i></span>
-              <p class="text-accent">Networking</p>
+              <p class="text-accent">Directora de la empresa Invest in Cartagena</p>
             </div>
         </div>
     </article>
@@ -162,13 +156,13 @@ Talent</p>
                   <span class="nombre grey-text text-darken-3 font-400">Belkis Olarte</span>
                   <i class="fa fa-info-circle hover-icon right accent-orange" style="font-size: 1.5em;" aria-hidden="true"></i>
                   <br class="hide-on-med-up">
-                  <span class="grey-text">Consultora <br>Colombia-Bogotá</span>
+                  <span class="grey-text">Consultoria <br><span style="visibility: hidden;">lorem ipsum</span><br>Colombia-Bogotá</span>
               </span>
 
             </div>
             <div class="card-reveal">
               <span class="card-title grey-text text-darken-4">Belkis<i class="fa fa-times right red-text" aria-hidden="true"></i></span>
-              <p class="text-accent">Profesora Asistente Clase Gerencia de Marca, Universidad de Los Andes. </p>
+              <p class="text-accent">Consultora Independiente</p>
             </div>
         </div>
     </article>
@@ -184,13 +178,13 @@ Talent</p>
                   <span class="nombre grey-text text-darken-3 font-400">Antonio Vicente</span>
                   <i class="fa fa-info-circle hover-icon right accent-orange" style="font-size: 1.5em;" aria-hidden="true"></i>
                   <br class="hide-on-med-up">
-                  <span class="grey-text">Software <br>España-Murcia</span>
+                  <span class="grey-text">Apps Móviles y Software<br>España-Murcia</span>
               </span>
 
             </div>
             <div class="card-reveal">
               <span class="card-title grey-text text-darken-4">Antonio<i class="fa fa-times right red-text" aria-hidden="true"></i></span>
-              <p></p>
+              <p>CEO en la empresa miLeyenda</p>
             </div>
         </div>
     </article>
@@ -206,13 +200,13 @@ Talent</p>
                   <span class="nombre grey-text text-darken-3 font-400">Andrea Garcia</span>
                   <i class="fa fa-info-circle hover-icon right accent-orange" style="font-size: 1.5em;" aria-hidden="true"></i>
                   <br class="hide-on-med-up">
-                  <span class="grey-text">Comercio<br>EE. UU.-Washington</span>
+                  <span class="grey-text">Comercio al por menor / Retail<br>EE. UU.-Washington</span>
               </span>
 
             </div>
             <div class="card-reveal">
               <span class="card-title grey-text text-darken-4">Andrea<i class="fa fa-times right red-text" aria-hidden="true"></i></span>
-              <p class="text-accent">Co-Founder SimplyGenie.com: Online service that designs, handcrafts and curates designer birthday parties in box and personalized party decor. <a href="http://www.simplygenie.com/about-us" target="_blank" >http://www.simplygenie.com/about-us</a></p>
+              <p class="text-accent">Co-fundador y Socio Director de la empresa SimplyGenie.com</p>
             </div>
         </div>
     </article>
@@ -228,13 +222,13 @@ Talent</p>
                   <span class="nombre grey-text text-darken-3 font-400">Carlos Jimenez</span>
                   <i class="fa fa-info-circle hover-icon right accent-orange" style="font-size: 1.5em;" aria-hidden="true"></i>
                   <br class="hide-on-med-up">
-                  <span class="grey-text">Director <br>España</span>
+                  <span class="grey-text">Marketing online <br>España</span>
               </span>
 
             </div>
             <div class="card-reveal">
               <span class="card-title grey-text text-darken-4">Carlos<i class="fa fa-times right red-text" aria-hidden="true"></i></span>
-              <p></p>
+              <p>Director de la empresa Creativos Prácticos</p>
             </div>
         </div>
     </article>
@@ -256,7 +250,7 @@ Talent</p>
             </div>
             <div class="card-reveal">
               <span class="card-title grey-text text-darken-4">Alexis<i class="fa fa-times right red-text" aria-hidden="true"></i></span>
-              <p class="text-accent">Director of Human Resources, Europe & Middle East</p>
+              <p class="text-accent">Director de Recursos Humanos, Europa y Oriente Medio en la empresa STARZ Play Arabia</p>
             </div>
         </div>
     </article>
@@ -272,13 +266,13 @@ Talent</p>
                   <span class="nombre grey-text text-darken-3 font-400">Alejandro Lega</span>
                   <i class="fa fa-info-circle hover-icon right accent-orange" style="font-size: 1.5em;" aria-hidden="true"></i>
                   <br class="hide-on-med-up">
-                  <span class="grey-text">Gerente General <br>Colombia-Bogotá</span>
+                  <span class="grey-text">Construcción<br>Colombia-Bogotá</span>
               </span>
 
             </div>
             <div class="card-reveal">
               <span class="card-title grey-text text-darken-4">Alejandro<i class="fa fa-times right red-text" aria-hidden="true"></i></span>
-              <p></p>
+              <p>Gerente General de la empresa SmartBrix Espacios Modulares</p>
             </div>
         </div>
     </article>
@@ -294,13 +288,13 @@ Talent</p>
                   <span class="nombre grey-text text-darken-3 font-400">Antonio Pacho</span>
                   <i class="fa fa-info-circle hover-icon right accent-orange" style="font-size: 1.5em;" aria-hidden="true"></i>
                   <br class="hide-on-med-up">
-                  <span class="grey-text">Gestor Comercial<br>España-Barcelona</span></span>
+                  <span class="grey-text">Consultoría estratégica<br>España-Barcelona</span></span>
               </span>
 
             </div>
             <div class="card-reveal">
               <span class="card-title grey-text text-darken-4">Antonio <i class="fa fa-times right red-text" aria-hidden="true"></i></span>
-              <p class="text-accent">Fiabilidad y Mejora contínua para aportar más y mejor. Actitud basada en observar, escuchar, preguntar para ver desde distintos puntos de vista y actuar. </p>
+              <p class="text-accent">Fundador y Consultor de la empresa Negociacion y Estrategia</p>
             </div>
         </div>
     </article>
@@ -316,38 +310,17 @@ Talent</p>
                   <span class="nombre grey-text text-darken-3 font-400">Eduardo Anton</span>
                   <i class="fa fa-info-circle hover-icon right accent-orange" style="font-size: 1.5em;" aria-hidden="true"></i>
                   <br class="hide-on-med-up">
-                  <span class="grey-text">Portfolio Manager <br>Florida-Miami</span>
+                  <span class="grey-text">Banca<br>Florida-Miami</span>
               </span>
 
             </div>
             <div class="card-reveal">
               <span class="card-title grey-text text-darken-4">Eduardo<i class="fa fa-times right red-text" aria-hidden="true"></i></span>
-              <p></p>
+              <p>Administrador de portafolio de la empresa Andbank Wealth Management</p>
             </div>
         </div>
     </article>
 
-    <!--Mentes a la carta -->
-    <!-- <article class="col s12 m6 l3">
-        <div class="card">
-            <div class="card-image waves-effect waves-block waves-light bordes-imagen">
-              <img class="activator " width="150" src="images/list/claudia.jpg" alt="mentes a la carta andres">
-            </div>
-            <div class="card-content descripcion" style="padding-bottom: 5px;">
-              <span class="activator grey-text text-darken-4">
-                  <span class="nombre grey-text text-darken-3 font-400">Claudia</span>
-                  <i class="fa fa-info-circle hover-icon right accent-orange" style="font-size: 1.5em;" aria-hidden="true"></i>
-                  <br class="hide-on-med-up">
-                  <span class="grey-text">Finanzas <br>Colombia-Cali</span>
-              </span>
-
-            </div>
-            <div class="card-reveal">
-              <span class="card-title grey-text text-darken-4">Andrés <i class="fa fa-times right red-text" aria-hidden="true"></i></span>
-              <p>Director - Profesional en Estrategia Financiero en Accesa</p>
-            </div>
-        </div>
-    </article> -->
 
     <!--Mentes a la carta -->
     <article class="col s12 m6 l3">
@@ -357,16 +330,16 @@ Talent</p>
             </div>
             <div class="card-content descripcion" style="padding-bottom: 2px;">
               <span class="activator grey-text text-darken-4">
-                  <span class="nombre grey-text text-darken-3 font-400">Christian Bataller</span>
+                  <span class="nombre grey-text text-darken-3 font-400">Cristian Bataller</span>
                   <i class="fa fa-info-circle hover-icon right accent-orange" style="font-size: 1.5em;" aria-hidden="true"></i>
                   <br class="hide-on-med-up">
-                  <span class="grey-text">Marketing<br>España-Madrid</span>
+                  <span class="grey-text">Moda<br>España-Madrid</span>
               </span>
 
             </div>
             <div class="card-reveal">
               <span class="card-title grey-text text-darken-4">Christian<i class="fa fa-times right red-text" aria-hidden="true"></i></span>
-              <p></p>
+              <p>Director de Marketing de la empresa Santa Marta</p>
             </div>
         </div>
     </article>
@@ -382,13 +355,13 @@ Talent</p>
                   <span class="nombre grey-text text-darken-3 font-400">Cesar Echeverri</span>
                   <i class="fa fa-info-circle hover-icon right accent-orange" style="font-size: 1.5em;" aria-hidden="true"></i>
                   <br class="hide-on-med-up">
-                  <span class="grey-text">Gerente <br>Colombia-Popayán</span>
+                  <span class="grey-text">Cafetero<br>Colombia-Popayán</span>
               </span>
 
             </div>
             <div class="card-reveal">
               <span class="card-title grey-text text-darken-4">Cesar<i class="fa fa-times right red-text" aria-hidden="true"></i></span>
-              <p></p>
+              <p>Gerente de la empresa Supracafé</p>
             </div>
         </div>
     </article>
@@ -404,13 +377,13 @@ Talent</p>
                   <span class="nombre grey-text text-darken-3 font-400">Carlos Silva</span>
                   <i class="fa fa-info-circle hover-icon right accent-orange" style="font-size: 1.5em;" aria-hidden="true"></i>
                   <br class="hide-on-med-up">
-                  <span class="grey-text">Jefe de Innovación<br>Colombia-Cali</span>
+                  <span class="grey-text">Gobierno<br>Colombia-Cali</span>
               </span>
 
             </div>
             <div class="card-reveal">
               <span class="card-title grey-text text-darken-4">Carlos<i class="fa fa-times right red-text" aria-hidden="true"></i></span>
-              <p class="text-accent">Se combina el arte, la cultura, la comunicación y las políticas públicas, </p>
+              <p class="text-accent">Jefe de Innovación Educativa del Ministerio de Educación</p>
             </div>
         </div>
     </article>
@@ -430,64 +403,16 @@ Talent</p>
                   <span class="nombre grey-text text-darken-3 font-400">Andrea Puerto</span>
                   <i class="fa fa-info-circle hover-icon right accent-orange" style="font-size: 1.5em;" aria-hidden="true"></i>
                   <br class="hide-on-med-up">
-                  <span class="grey-text">Servicios <br>Colombia-Bogotá</span>
+                  <span class="grey-text">Servicios <br><span style="visibility: hidden;">lorem ipsum</span><br>Colombia-Bogotá</span>
               </span>
 
             </div>
             <div class="card-reveal">
               <span class="card-title grey-text text-darken-4">Andrea <i class="fa fa-times right red-text" aria-hidden="true"></i></span>
-              <p class="text-accent">Ingeniera y Asesora Financiera, con experiencia en Gestión de Proyectos; Procesos de Tesorería, Facturación y Cartera; Operaciones Financieras e Investigación de Contenidos. Bilingüe, Habilidades de Negociación; Creatividad; Adaptación al Cambio; Aprendizaje Rápido y Orientación al Servicio. Interés en procesos y áreas de Administración de Inversiones; Mercado de Capitales; Innovación; Desarrollo de Producto; Gestión de Riesgos Financieros; Investigación Económica y Consultoría. </p>
+              <p class="text-accent">Jefe de Cartera y Facturacion de la empresa QWS</p>
             </div>
         </div>
     </article>
-
-
-
-
-    <!--Mentes a la carta -->
-    <!-- <article class="col s12 m6 l3">
-        <div class="card">
-            <div class="card-image waves-effect waves-block waves-light bordes-imagen">
-              <img class="activator " width="150" src="images/list/Andres_Correa.png" alt="mentes a la carta andres">
-            </div>
-            <div class="card-content descripcion" style="padding-bottom: 12px;">
-              <span class="activator grey-text text-darken-4">
-                  <span class="nombre grey-text text-darken-3 font-400">Andres Correa</span>
-                  <i class="fa fa-info-circle hover-icon right accent-orange" style="font-size: 1.5em;" aria-hidden="true"></i>
-                  <br class="hide-on-med-up">
-                  <span class="grey-text">Finanzas <br>Colombia-Cali</span>
-              </span>
-
-            </div>
-            <div class="card-reveal">
-              <span class="card-title grey-text text-darken-4">Andrés <i class="fa fa-times right red-text" aria-hidden="true"></i></span>
-              <p>Director - Profesional en Estrategia Financiero en Accesa</p>
-            </div>
-        </div>
-    </article> -->
-
-    <!-- <article class="col s12 m6 l3">
-        <div class="card">
-            <div class="card-image waves-effect waves-block waves-light bordes-imagen">
-              <img class="activator " width="150" src="images/list/Andrea_Dopazo.jpg" alt="mentes a la carta andres">
-            </div>
-            <div class="card-content descripcion" style="padding-bottom: 12px;">
-              <span class="activator grey-text text-darken-4">
-                  <span class="nombre grey-text text-darken-3 font-400">Andrea Dopazo</span>
-                  <i class="fa fa-info-circle hover-icon right accent-orange" style="font-size: 1.5em;" aria-hidden="true"></i>
-                  <br class="hide-on-med-up">
-                  <span class="grey-text">Finanzas <br>Colombia-Cali</span>
-              </span>
-
-            </div>
-            <div class="card-reveal">
-              <span class="card-title grey-text text-darken-4">Andrés <i class="fa fa-times right red-text" aria-hidden="true"></i></span>
-              <p>Director - Profesional en Estrategia Financiero en Accesa</p>
-            </div>
-        </div>
-    </article> -->
-
-
 
     <!--Mentes a la carta -->
     <article class="col s12 m6 l3">
@@ -500,13 +425,13 @@ Talent</p>
                   <span class="nombre grey-text text-darken-3 font-400">Alejandro Sánchez</span>
                   <i class="fa fa-info-circle hover-icon right accent-orange" style="font-size: 1.5em;" aria-hidden="true"></i>
                   <br class="hide-on-med-up">
-                  <span class="grey-text">Gerente Comercial <br>Colombia-Bogotá</span>
+                  <span class="grey-text">Servicios financieros<br>Colombia-Bogotá</span>
               </span>
 
             </div>
             <div class="card-reveal">
               <span class="card-title grey-text text-darken-4">Alejandro <i class="fa fa-times right red-text" aria-hidden="true"></i></span>
-              <p class="text-accent">Ademas me interesa impartir conocimientos en Mentes a la carta</p>
+              <p class="text-accent">Gerente Comercial de la empresa Credicorp Capital</p>
             </div>
         </div>
     </article>
@@ -524,13 +449,13 @@ Talent</p>
                   <span class="nombre grey-text text-darken-3 font-400">Adriano Motta</span>
                   <i class="fa fa-info-circle hover-icon right accent-orange" style="font-size: 1.5em;" aria-hidden="true"></i>
                   <br class="hide-on-med-up">
-                  <span class="grey-text">Socio <br>Italia-Roma</span>
+                  <span class="grey-text">Innovación <br><span style="visibility: hidden;">lorem ipsum</span><br>Italia-Roma</span>
               </span>
 
             </div>
             <div class="card-reveal">
               <span class="card-title grey-text text-darken-4">Adriano<i class="fa fa-times right red-text" aria-hidden="true"></i></span>
-              <p></p>
+              <p>Socio de la empresa iStarter</p>
             </div>
         </div>
     </article>
@@ -547,13 +472,13 @@ Talent</p>
                   <span class="nombre grey-text text-darken-3 font-400">Adalberto Cordero</span>
                   <i class="fa fa-info-circle hover-icon right accent-orange" style="font-size: 1.5em;" aria-hidden="true"></i>
                   <br class="hide-on-med-up">
-                  <span class="grey-text">Service Manager <br>España-Madrid</span>
+                  <span class="grey-text">Bebidas<br><span style="visibility: hidden;">lorem ipsum</span><br>España-Madrid</span>
               </span>
 
             </div>
             <div class="card-reveal">
               <span class="card-title grey-text text-darken-4">Adalberto<i class="fa fa-times right red-text" aria-hidden="true"></i></span>
-              <p></p>
+              <p>Gerente de Servicio al Cliente de Front Office en la empresa Coca-Cola Iberian Partners</p>
             </div>
         </div>
     </article>
@@ -569,42 +494,16 @@ Talent</p>
                   <span class="nombre grey-text text-darken-3 font-400">Andrés Ruiz</span>
                   <i class="fa fa-info-circle hover-icon right accent-orange" style="font-size: 1.5em;" aria-hidden="true"></i>
                   <br class="hide-on-med-up">
-                  <span class="grey-text">Director <br>Colombia-Cali</span>
+                  <span class="grey-text">Servicios financieros<br>Colombia-Cali</span>
               </span>
 
             </div>
             <div class="card-reveal">
               <span class="card-title grey-text text-darken-4">Andrés <i class="fa fa-times right red-text" aria-hidden="true"></i></span>
-              <p class="text-accent">Convencido por apoyar a emprendedores y empresarios a alcanzar sus objetivos estratégicos. Me motiva el emprendimiento como motor de desarrollo y estoy comprometido con la creación de valor para el empresario y todos sus grupos de interés. Actualmente consolidando un ecosistema de emprendimiento que integre desarrolladores de ideas, ejecutores, expertos e inversionistas. Creo vehemente que el trabajo colectivo y colaborativo logra resultados sostenibles y de gran impacto. </p>
+              <p class="text-accent">Director - Profesional en Estrategia Financiero de la empresa Accesa - Gestión | Valor | Estrategia</p>
             </div>
         </div>
     </article>
-
-
-
-    <!-- / End Mentes  2-->
-
-    <!-- Mente 3 -->
-    <!-- <article class="col s12 m6 l3">
-        <div class="card">
-            <div class="card-image waves-effect waves-block waves-light bordes-imagen">
-              <img class="activator " width="150" src="images/list/cristian.jpg">
-            </div>
-            <div class="card-content descripcion">
-              <span class="activator grey-text text-darken-4">
-                  <span class="nombre grey-text text-darken-3 font-400">Maria Duque</span>
-                  <i class="fa fa-info-circle hover-icon right accent-orange" style="font-size: 1.5em;" aria-hidden="true"></i>
-                  <span class="grey-text">Sector: Salud <br>Colombia-Bogotá</span>
-              </span>
-
-            </div>
-            <div class="card-reveal">
-              <span class="card-title grey-text text-darken-4">Maria Duque <i class="fa fa-times right red-text" aria-hidden="true"></i></span>
-              <p>Coordinadora de investigaciones clínicas Instituto Nacional de Cancerología</p>
-            </div>
-        </div>
-    </article> -->
-    <!-- / End Mentes 3 -->
 
     <!-- Mente 4 -->
     <article class="col s12 m6 l3">
@@ -647,34 +546,11 @@ Talent</p>
             </div>
             <div class="card-reveal">
               <span class="card-title grey-text text-darken-4">Emmanuel<i class="fa fa-times right red-text" aria-hidden="true"></i></span>
-              <p class="text-accent">CEO Bocalista.com</p>
+              <p class="text-accent">CEO en Bocalista.com</p>
             </div>
         </div>
     </article>
     <!-- / End Mentes 7 -->
-
-    <!-- Mente 8 -->
-    <article class="col s12 m6 l3">
-        <div class="card">
-            <div class="card-image waves-effect waves-block waves-light bordes-imagen">
-              <img class="activator " width="150" src="images/list/estefani.jpg">
-            </div>
-            <div class="card-content descripcion">
-              <span class="activator grey-text text-darken-4">
-                  <span class="nombre grey-text text-darken-3 font-400">Stefanie Dager</span>
-                  <i class="fa fa-info-circle hover-icon right accent-orange" style="font-size: 1.5em;" aria-hidden="true"></i>
-                  <br class="hide-on-med-up">
-                  <span class="grey-text">Inmobiliaria<br>Colombia-Bogotá</span>
-              </span>
-
-            </div>
-            <div class="card-reveal">
-              <span class="card-title grey-text text-darken-4">Stefanie<i class="fa fa-times right red-text" aria-hidden="true"></i></span>
-              <p class="text-accent">Gerente General en Sferika S.A.S</p>
-            </div>
-        </div>
-    </article>
-    <!-- / End Mentes 8 -->
 
     <!-- Mente 9 -->
     <article class="col s12 m6 l3">
@@ -682,12 +558,12 @@ Talent</p>
             <div class="card-image waves-effect waves-block waves-light bordes-imagen">
               <img class="activator " width="150" src="images/list/gustavo.jpg">
             </div>
-            <div class="card-content descripcion" style="padding-bottom: 15px;">
+            <div class="card-content descripcion" style="padding-bottom: 19px;">
               <span class="activator grey-text text-darken-4">
                   <span class="nombre grey-text text-darken-3 font-400">Gustavo Rodriguez</span>
                   <i class="fa fa-info-circle hover-icon right accent-orange" style="font-size: 1.5em;" aria-hidden="true"></i>
                   <br class="hide-on-med-up">
-                  <span class="grey-text">Gremial<br>Colombia-Cali</span>
+                  <span class="grey-text">Multisectorial<br>Colombia-Cali</span>
               </span>
 
             </div>
@@ -710,13 +586,13 @@ Talent</p>
                   <span class="nombre grey-text text-darken-3 font-400">Joan Cardona</span>
                   <i class="fa fa-info-circle hover-icon right accent-orange" style="font-size: 1.5em;" aria-hidden="true"></i>
                   <br class="hide-on-med-up">
-                  <span class="grey-text">Logística <br>Colombia-Bogotá</span>
+                  <span class="grey-text">Servicios <br><span style="visibility: hidden;">lorem ipsum</span><br>Colombia-Bogotá</span>
               </span>
 
             </div>
             <div class="card-reveal">
               <span class="card-title grey-text text-darken-4">Joan <i class="fa fa-times right red-text" aria-hidden="true"></i></span>
-              <p class="text-accent">Especialista en Logísitca y Servicio</p>
+              <p class="text-accent">Jefe Nacional de Logística en Aramark Colombia SAS</p>
             </div>
         </div>
     </article>
@@ -733,13 +609,13 @@ Talent</p>
                   <span class="nombre grey-text text-darken-3 font-400">Johan Martinez</span>
                   <i class="fa fa-info-circle hover-icon right accent-orange" style="font-size: 1.5em;" aria-hidden="true"></i>
                   <br class="hide-on-med-up">
-                  <span class="grey-text">Azucar <br>Colombia-Cali</span>
+                  <span class="grey-text">Azucar <br><span style="visibility: hidden;">lorem ipsum</span><br>Colombia-Cali</span>
               </span>
 
             </div>
             <div class="card-reveal">
               <span class="card-title grey-text text-darken-4">Johan <i class="fa fa-times right red-text" aria-hidden="true"></i></span>
-              <p class="text-accent">Director Energía Renovable y Nuevos Negocios de Asocaña</p>
+              <p class="text-accent">Director Energía Renovable y Nuevos Negocios en Asocaña</p>
             </div>
         </div>
     </article>
@@ -756,13 +632,13 @@ Talent</p>
                   <span class="nombre grey-text text-darken-3 font-400">Jonathan Vasquez</span>
                   <i class="fa fa-info-circle hover-icon right accent-orange" style="font-size: 1.5em;" aria-hidden="true"></i>
                   <br class="hide-on-med-up">
-                  <span class="grey-text">Gráfico<br>Colombia-Bogotá</span>
+                  <span class="grey-text">Agencias de publicidad<br>Colombia-Bogotá</span>
               </span>
 
             </div>
             <div class="card-reveal">
               <span class="card-title grey-text text-darken-4">Jonathan <i class="fa fa-times right red-text" aria-hidden="true"></i></span>
-              <p class="text-accent">Diseñador Gráfico Ocho Nodos Estudio Creativo</p>
+              <p class="text-accent">Diseñador Gráfico en Ocho Nodos Estudio Creativo</p>
             </div>
         </div>
     </article>
@@ -774,18 +650,18 @@ Talent</p>
             <div class="card-image waves-effect waves-block waves-light bordes-imagen">
               <img class="activator " width="150" src="images/list/jose_luis.jpg">
             </div>
-            <div class="card-content descripcion">
+            <div class="card-content descripcion" style="padding-bottom: 22px;">
               <span class="activator grey-text text-darken-4">
                   <span class="nombre grey-text text-darken-3 font-400">Jose Luis Polo</span>
                   <i class="fa fa-info-circle hover-icon right accent-orange" style="font-size: 1.5em;" aria-hidden="true"></i>
                   <br class="hide-on-med-up">
-                  <span class="grey-text">Innovación<br>Colombia-Barranquilla</span>
+                  <span class="grey-text">Innovación estratégica<br><span style="visibility: hidden;">lorem ipsum</span><br>Colombia-Barranquilla</span>
               </span>
 
             </div>
             <div class="card-reveal">
               <span class="card-title grey-text text-darken-4">Jose <i class="fa fa-times right red-text" aria-hidden="true"></i></span>
-              <p class="text-accent">Director del CESI</p>
+              <p class="text-accent">Director de CESI</p>
             </div>
         </div>
     </article>
@@ -802,7 +678,7 @@ Talent</p>
                   <span class="nombre grey-text text-darken-3 font-400">Leandro Orjuela</span>
                   <i class="fa fa-info-circle hover-icon right accent-orange" style="font-size: 1.5em;" aria-hidden="true"></i>
                   <br class="hide-on-med-up">
-                  <span class="grey-text">Logística <br>Colombia-Bogotá</span>
+                  <span class="grey-text">Logística <br><span style="visibility: hidden;">lorem ipsum</span><br>Colombia-Bogotá</span>
               </span>
 
             </div>
@@ -825,7 +701,7 @@ Talent</p>
                   <span class="nombre grey-text text-darken-3 font-400">Liliana Balaguera</span>
                   <i class="fa fa-info-circle hover-icon right accent-orange" style="font-size: 1.5em;" aria-hidden="true"></i>
                   <br class="hide-on-med-up">
-                  <span class="grey-text">RRHH<br>Colombia-Bogotá</span>
+                  <span class="grey-text">Consultoría en recursos humanos<br>Colombia-Bogotá</span>
               </span>
 
             </div>
@@ -848,7 +724,7 @@ Talent</p>
                   <span class="nombre grey-text text-darken-3 font-400">María Grueso</span>
                   <i class="fa fa-info-circle hover-icon right accent-orange" style="font-size: 1.5em;" aria-hidden="true"></i>
                   <br class="hide-on-med-up">
-                  <span class="grey-text">Gremios<br>Colombia-Cali</span>
+                  <span class="grey-text">Gremios <br><span style="visibility: hidden;">lorem ipsum</span><br>Colombia-Cali</span>
               </span>
 
             </div>
@@ -871,13 +747,13 @@ Talent</p>
                   <span class="nombre grey-text text-darken-3 font-400">María Sahmkow</span>
                   <i class="fa fa-info-circle hover-icon right accent-orange" style="font-size: 1.5em;" aria-hidden="true"></i>
                   <br class="hide-on-med-up">
-                  <span class="grey-text">Mercadeo <span class="hide-on-med-and-down">y Publicidad</span> <br>Colombia-Bogotá</span>
+                  <span class="grey-text">Branding <br><span style="visibility: hidden;">lorem ipsum</span><span class="hide-on-med-and-down">y Publicidad</span> <br>Colombia-Bogotá</span>
               </span>
 
             </div>
             <div class="card-reveal">
               <span class="card-title grey-text text-darken-4">María <i class="fa fa-times right red-text" aria-hidden="true"></i></span>
-              <p class="text-accent">Directora en The BrandBean</p>
+              <p class="text-accent">Director en The BrandBean</p>
             </div>
         </div>
     </article>
@@ -894,13 +770,13 @@ Talent</p>
                   <span class="nombre grey-text text-darken-3 font-400">Maria Duque</span>
                   <i class="fa fa-info-circle hover-icon right accent-orange" style="font-size: 1.5em;" aria-hidden="true"></i>
                   <br class="hide-on-med-up">
-                  <span class="grey-text">Sector: Salud <br>Colombia-Bogotá</span>
+                  <span class="grey-text">Salud <br><span style="visibility: hidden;">lorem ipsum</span><br>Colombia-Bogotá</span>
               </span>
 
             </div>
             <div class="card-reveal">
               <span class="card-title grey-text text-darken-4">Maria<i class="fa fa-times right red-text" aria-hidden="true"></i></span>
-              <p class="text-accent">Coordinadora de investigaciones clínicas Instituto Nacional de Cancerología</p>
+              <p class="text-accent">Coordinadora de investigaciones clínicas en el Instituto Nacional de Cancerología</p>
             </div>
         </div>
     </article>
@@ -917,13 +793,13 @@ Talent</p>
                   <span class="nombre grey-text text-darken-3 font-400">Maribel Diaz </span>
                   <i class="fa fa-info-circle hover-icon right accent-orange" style="font-size: 1.5em;" aria-hidden="true"></i>
                   <br class="hide-on-med-up">
-                  <span class="grey-text">TIC<br>Colombia-Cali</span>
+                  <span class="grey-text">Apps Móviles y Software<br>Colombia-Cali</span>
               </span>
 
             </div>
             <div class="card-reveal">
               <span class="card-title grey-text text-darken-4">Maribel <i class="fa fa-times right red-text" aria-hidden="true"></i></span>
-              <p class="text-accent">Líder Línea de Tecnologías SENA</p>
+              <p class="text-accent">Líder Línea Tecnologías Virtuales en Tecnoparque Sena Nodo Cali</p>
             </div>
         </div>
     </article>
@@ -940,7 +816,7 @@ Talent</p>
                   <span class="nombre grey-text text-darken-3 font-400">Nicolás Restrepo</span>
                   <i class="fa fa-info-circle hover-icon right accent-orange" style="font-size: 1.5em;" aria-hidden="true"></i>
                   <br class="hide-on-med-up">
-                  <span class="grey-text">Legal<br>Colombia-Bogotá</span>
+                  <span class="grey-text">Consultoria Juridica<br>Colombia-Bogotá</span>
               </span>
 
             </div>
@@ -952,31 +828,50 @@ Talent</p>
     </article>
     <!-- / End Mentes 19 -->
 
+    <!--Mentes a la carta -->
+    <article class="col s12 m6 l3">
+        <div class="card">
+            <div class="card-image waves-effect waves-block waves-light bordes-imagen">
+              <img class="activator " width="150" src="images/list/new/Enrique_Fenollosa.jpg" alt="mentes a la carta andres">
+            </div>
+            <div class="card-content descripcion" style="padding-bottom: 24px;">
+              <span class="activator grey-text text-darken-4">
+                  <span class="nombre grey-text text-darken-3 font-400">Enrique Fenollosa</span>
+                  <i class="fa fa-info-circle hover-icon right accent-orange" style="font-size: 1.5em;" aria-hidden="true"></i>
+                  <br class="hide-on-med-up">
+                  <span class="grey-text">Ciberseguridad y ciberdefensa<br>Colombia-Bogotá</span>
+              </span>
+
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">Enrique<i class="fa fa-times right red-text" aria-hidden="true"></i></span>
+              <p class="text-accent">Gerente General en S2 Grupo Colombia</p>
+            </div>
+        </div>
+    </article>
+
     <!-- Mente 20 -->
     <article class="col s12 m6 l3">
         <div class="card">
             <div class="card-image waves-effect waves-block waves-light bordes-imagen">
               <img class="activator " src="images/list/raul.jpg">
             </div>
-            <div class="card-content descripcion">
+            <div class="card-content descripcion" style="padding-bottom: 22px;">
               <span class="activator grey-text text-darken-4">
-                  <span class="nombre grey-text text-darken-3 font-400">Raúl Campo </span>
+                  <span class="nombre grey-text text-darken-3 font-400">Raúl Franco</span>
                   <i class="fa fa-info-circle hover-icon right accent-orange" style="font-size: 1.5em;" aria-hidden="true"></i>
                   <br class="hide-on-med-up">
-                  <span class="grey-text">Consultoría<br>Colombia-Cali</span>
+                  <span class="grey-text">Servicios consultoría <br><span style="visibility: hidden;">lorem ipsum</span><br>Colombia-Cali</span>
               </span>
 
             </div>
             <div class="card-reveal">
               <span class="card-title grey-text text-darken-4">Raúl <i class="fa fa-times right red-text" aria-hidden="true"></i></span>
-              <p class="text-accent">Director R Uribe Asociados</p>
+              <p class="text-accent">Director en R Uribe Asociados</p>
             </div>
         </div>
     </article>
     <!-- / End Mentes 20 -->
-
-
-        <!-- Ultima lista -->
 
         <!--Mentes a la carta -->
 
@@ -985,18 +880,18 @@ Talent</p>
                 <div class="card-image waves-effect waves-block waves-light bordes-imagen">
                   <img class="activator " width="150" src="images/list/new/Patricia_Jurado.jpg" alt="mentes a la carta andres">
                 </div>
-                <div class="card-content descripcion" style="padding-bottom: 23px;">
+                <div class="card-content descripcion" style="padding-bottom: 25px;">
                   <span class="activator grey-text text-darken-4">
                       <span class="nombre grey-text text-darken-3 font-400">Patricia Jurado</span>
                       <i class="fa fa-info-circle hover-icon right accent-orange" style="font-size: 1.5em;" aria-hidden="true"></i>
                       <br class="hide-on-med-up">
-                      <span class="grey-text">Ingeniero de Proyectos  <br>Colombia-Bogotá</span>
+                      <span class="grey-text">Tecnología<br><span style="visibility: hidden;">lorem ipsum</span><br>Colombia-Bogotá</span>
                   </span>
 
                 </div>
                 <div class="card-reveal">
                   <span class="card-title grey-text text-darken-4">Patricia<i class="fa fa-times right red-text" aria-hidden="true"></i></span>
-                  <p></p>
+                  <p>Ingeniero de Proyectos en ST&#38;T LTDA</p>
                 </div>
             </div>
         </article>
@@ -1007,18 +902,18 @@ Talent</p>
                 <div class="card-image waves-effect waves-block waves-light bordes-imagen">
                   <img class="activator " width="150" src="images/list/new/Paloma_Barrientos.jpg" alt="mentes a la carta andres">
                 </div>
-                <div class="card-content descripcion" style="padding-bottom: 22px;">
+                <div class="card-content descripcion" style="padding-bottom: 25px;">
                   <span class="activator grey-text text-darken-4">
                       <span class="nombre grey-text text-darken-3 font-400">Paloma Barrientos</span>
                       <i class="fa fa-info-circle hover-icon right accent-orange" style="font-size: 1.5em;" aria-hidden="true"></i>
                       <br class="hide-on-med-up">
-                      <span class="grey-text">Directora <br>España-Madrid</span>
+                      <span class="grey-text">Periodico <br><span style="visibility: hidden;">lorem ipsum</span><br>España-Madrid</span>
                   </span>
 
                 </div>
                 <div class="card-reveal">
                   <span class="card-title grey-text text-darken-4">Paloma <i class="fa fa-times right red-text" aria-hidden="true"></i></span>
-                  <p></p>
+                  <p>Directora en El Confidencial</p>
                 </div>
             </div>
         </article>
@@ -1029,43 +924,21 @@ Talent</p>
                 <div class="card-image waves-effect waves-block waves-light bordes-imagen">
                   <img class="activator " width="150" src="images/list/new/Pablo_Turriago.jpg" alt="mentes a la carta andres">
                 </div>
-                <div class="card-content descripcion" style="padding-bottom: 22px;">
+                <div class="card-content descripcion" style="padding-bottom: 25px;">
                   <span class="activator grey-text text-darken-4">
                       <span class="nombre grey-text text-darken-3 font-400">Pablo Turriago</span>
                       <i class="fa fa-info-circle hover-icon right accent-orange" style="font-size: 1.5em;" aria-hidden="true"></i>
                       <br class="hide-on-med-up">
-                      <span class="grey-text">Gerente <br>Colombia-Bogotá</span>
+                      <span class="grey-text">Construcción<br><span style="visibility: hidden;">lorem ipsum</span><br>Colombia-Bogotá</span>
                   </span>
 
                 </div>
                 <div class="card-reveal">
                   <span class="card-title grey-text text-darken-4">Pablo<i class="fa fa-times right red-text" aria-hidden="true"></i></span>
-                  <p></p>
+                  <p>Gerente en Adapta SAS</p>
                 </div>
             </div>
         </article>
-
-        <!--Mentes a la carta -->
-        <!-- <article class="col s12 m6 l3">
-            <div class="card">
-                <div class="card-image waves-effect waves-block waves-light bordes-imagen">
-                  <img class="activator " width="150" src="images/list/new/otto.jpg" alt="mentes a la carta andres">
-                </div>
-                <div class="card-content descripcion" style="padding-bottom: 10px;">
-                  <span class="activator grey-text text-darken-4">
-                      <span class="nombre grey-text text-darken-3 font-400">otto</span>
-                      <i class="fa fa-info-circle hover-icon right accent-orange" style="font-size: 1.5em;" aria-hidden="true"></i>
-                      <br class="hide-on-med-up">
-                      <span class="grey-text">Finanzas <br>Colombia-Cali</span>
-                  </span>
-
-                </div>
-                <div class="card-reveal">
-                  <span class="card-title grey-text text-darken-4">Andrés <i class="fa fa-times right red-text" aria-hidden="true"></i></span>
-                  <p>Director - Profesional en Estrategia Financiero en Accesa</p>
-                </div>
-            </div>
-        </article> -->
 
         <!--Mentes a la carta -->
         <article class="col s12 m6 l3">
@@ -1078,13 +951,13 @@ Talent</p>
                       <span class="nombre grey-text text-darken-3 font-400">Oscar Hernandez</span>
                       <i class="fa fa-info-circle hover-icon right accent-orange" style="font-size: 1.5em;" aria-hidden="true"></i>
                       <br class="hide-on-med-up">
-                      <span class="grey-text">Programador <br>Colombia-Cartagena</span>
+                      <span class="grey-text">Servicios petroleros <br>Colombia-Cartagena</span>
                   </span>
 
                 </div>
                 <div class="card-reveal">
                   <span class="card-title grey-text text-darken-4">Oscar<i class="fa fa-times right red-text" aria-hidden="true"></i></span>
-                  <p></p>
+                  <p>Programador en Oiltanking</p>
                 </div>
             </div>
         </article>
@@ -1098,41 +971,20 @@ Talent</p>
                 </div>
                 <div class="card-content descripcion" style="padding-bottom: 9px;">
                   <span class="activator grey-text text-darken-4">
-                      <span class="nombre grey-text text-darken-3 font-400">Mauricio Weisner</span>
+                      <span class="nombre grey-text text-darken-3 font-400">Mauricio Wiesner</span>
                       <i class="fa fa-info-circle hover-icon right accent-orange" style="font-size: 1.5em;" aria-hidden="true"></i>
                       <br class="hide-on-med-up">
-                      <span class="grey-text">Arquitecto y socio<br>Colombia-Bogotá</span>
+                      <span class="grey-text">Diseño arquitectonico<br>Colombia-Bogotá</span>
                   </span>
 
                 </div>
                 <div class="card-reveal">
                   <span class="card-title grey-text text-darken-4">Mauricio<i class="fa fa-times right red-text" aria-hidden="true"></i></span>
-                  <p class="text-accent">Arquitecto y diseñador gráfico con experiencia en talleres de diseño arquitectónico nacionales e internacionales desarrollando proyectos constructivos para edificios educacionales, habitacionales, comerciales, deportivos y culturales. Al igual que su mobiliario y espacio público. Ha formado parte de los equipos de diseño para edificios singulares como la cafetería del Colegio Los Nogales y la sede de Compensar Suba, ambas en Bogotá; también en notables espacios públicos como el Intercambiador Vial Neomundo en Bucaramanga. En el 2010 fue premiado con el primer puesto en la X Anual de Estudiantes de Arquitectura organizada por la SCA Bogotá, en la categoría proyecto arquitectónico por su trabajo de grado titulado Biblioteca Pública Mandela. En el 2006 hizo parte de un equipo conformado por MWarq y Region Landscape, el cual recibió una mención honorífica por sus diseños de mobiliario urbano para la Villa Olímpica de Beijing 2008. Su trabajo ha sido expuesto en la sede de la SCA Bogotá y en Massachusetts Institute of Technology. Igualmente ha sido publicado por la SCA, Archiprix International y la Universidad Jorge Tadeo Lozano.</p>
+                  <p class="text-accent">Arquitecto proyectista y socio en Mendez Wiesner Arquitectos</p>
                 </div>
             </div>
         </article>
 
-        <!--Mentes a la carta -->
-        <!-- <article class="col s12 m6 l3">
-            <div class="card">
-                <div class="card-image waves-effect waves-block waves-light bordes-imagen">
-                  <img class="activator " width="150" src="images/list/new/Mauricio_Morales.jpg" alt="mentes a la carta andres">
-                </div>
-                <div class="card-content descripcion" style="padding-bottom: 10px;">
-                  <span class="activator grey-text text-darken-4">
-                      <span class="nombre grey-text text-darken-3 font-400">Mauricio Morales</span>
-                      <i class="fa fa-info-circle hover-icon right accent-orange" style="font-size: 1.5em;" aria-hidden="true"></i>
-                      <br class="hide-on-med-up">
-                      <span class="grey-text">Finanzas <br>Colombia-Cali</span>
-                  </span>
-
-                </div>
-                <div class="card-reveal">
-                  <span class="card-title grey-text text-darken-4">Andrés <i class="fa fa-times right red-text" aria-hidden="true"></i></span>
-                  <p>Director - Profesional en Estrategia Financiero en Accesa</p>
-                </div>
-            </div>
-        </article> -->
 
         <!--Mentes a la carta -->
         <article class="col s12 m6 l3">
@@ -1145,13 +997,13 @@ Talent</p>
                       <span class="nombre grey-text text-darken-3 font-400">Martin Giusepponi</span>
                       <i class="fa fa-info-circle hover-icon right accent-orange" style="font-size: 1.5em;" aria-hidden="true"></i>
                       <br class="hide-on-med-up">
-                      <span class="grey-text">Coordinador<br>Santa Fe-Rosario</span>
+                      <span class="grey-text">Marketing online<br><span style="visibility: hidden;">lorem ipsum</span><br>Santa Fe-Rosario</span>
                   </span>
 
                 </div>
                 <div class="card-reveal">
                   <span class="card-title grey-text text-darken-4">Martin<i class="fa fa-times right red-text" aria-hidden="true"></i></span>
-                  <p></p>
+                  <p>Coordinador general en la fundación LEO MESSI</p>
                 </div>
             </div>
         </article>
@@ -1167,39 +1019,17 @@ Talent</p>
                       <span class="nombre grey-text text-darken-3 font-400">Marisol Nieto</span>
                       <i class="fa fa-info-circle hover-icon right accent-orange" style="font-size: 1.5em;" aria-hidden="true"></i>
                       <br class="hide-on-med-up">
-                      <span class="grey-text">Subdirectora Formación<br>España-Madrid</span>
+                      <span class="grey-text">Formación<br><span style="visibility: hidden;">lorem ipsum</span><br>España-Madrid</span>
                   </span>
 
                 </div>
                 <div class="card-reveal">
                   <span class="card-title grey-text text-darken-4">Marisol<i class="fa fa-times right red-text" aria-hidden="true"></i></span>
-                  <p></p>
+                  <p>Subdirectora formación en formación fundación confemetal</p>
                 </div>
             </div>
         </article>
 
-
-        <!--Mentes a la carta -->
-        <!-- <article class="col s12 m6 l3">
-            <div class="card">
-                <div class="card-image waves-effect waves-block waves-light bordes-imagen">
-                  <img class="activator " width="150" src="images/list/new/Mario_Carabano.jpg" alt="mentes a la carta andres">
-                </div>
-                <div class="card-content descripcion" style="padding-bottom: 10px;">
-                  <span class="activator grey-text text-darken-4">
-                      <span class="nombre grey-text text-darken-3 font-400">Mario Carabano</span>
-                      <i class="fa fa-info-circle hover-icon right accent-orange" style="font-size: 1.5em;" aria-hidden="true"></i>
-                      <br class="hide-on-med-up">
-                      <span class="grey-text">Finanzas <br>Colombia-Cali</span>
-                  </span>
-
-                </div>
-                <div class="card-reveal">
-                  <span class="card-title grey-text text-darken-4">Andrés <i class="fa fa-times right red-text" aria-hidden="true"></i></span>
-                  <p>Director - Profesional en Estrategia Financiero en Accesa</p>
-                </div>
-            </div>
-        </article> -->
 
         <!--Mentes a la carta -->
         <article class="col s12 m6 l3">
@@ -1212,13 +1042,13 @@ Talent</p>
                       <span class="nombre grey-text text-darken-3 font-400">Maria Roa</span>
                       <i class="fa fa-info-circle hover-icon right accent-orange" style="font-size: 1.5em;" aria-hidden="true"></i>
                       <br class="hide-on-med-up">
-                      <span class="grey-text">Directora de mercadeo <br>Colombia-Bogotá</span>
+                      <span class="grey-text">Turismo<br><span style="visibility: hidden;">lorem ipsum</span><br>Colombia-Bogotá</span>
                   </span>
 
                 </div>
                 <div class="card-reveal">
                   <span class="card-title grey-text text-darken-4">Maria<i class="fa fa-times right red-text" aria-hidden="true"></i></span>
-                  <p class="text-accent">Publicista y Máster en Dirección de Marketing, Comunicación y Publicidad. Bilingüe, Líder, Sociable, y de un perfil muy comercial. Amplia Experiencia en Mercadeo-Comercial en varios sectores de servicios como el financiero, entretenimiento y medios; abierta al cambio; con perspectiva multicultural, comprometida con el constante aprendizaje y con el logro de metas en pro del crecimiento personal y de la compañía.</p>
+                  <p class="text-accent">Directora de mercadeo en Panaca</p>
                 </div>
             </div>
         </article>
@@ -1234,61 +1064,17 @@ Talent</p>
                       <span class="nombre grey-text text-darken-3 font-400">Maria Janeth</span>
                       <i class="fa fa-info-circle hover-icon right accent-orange" style="font-size: 1.5em;" aria-hidden="true"></i>
                       <br class="hide-on-med-up">
-                      <span class="grey-text">Gerente y Directora <br>Colombia-Cali</span>
+                      <span class="grey-text">Consultoría contable / Revisoría fiscal<br>Colombia-Cali</span>
                   </span>
 
                 </div>
                 <div class="card-reveal">
                   <span class="card-title grey-text text-darken-4">Maria<i class="fa fa-times right red-text" aria-hidden="true"></i></span>
-                  <p class="text-accent">Mi fuerte la relaciones públicas</p>
+                  <p class="text-accent">Gerente y Directora en GENIIFT CONSULTING GROUP S.A.S.</p>
                 </div>
             </div>
         </article>
 
-
-        <!--Mentes a la carta -->
-        <!-- <article class="col s12 m6 l3">
-            <div class="card">
-                <div class="card-image waves-effect waves-block waves-light bordes-imagen">
-                  <img class="activator " width="150" src="images/list/new/Luly_Parra.jpg" alt="mentes a la carta andres">
-                </div>
-                <div class="card-content descripcion" style="padding-bottom: 10px;">
-                  <span class="activator grey-text text-darken-4">
-                      <span class="nombre grey-text text-darken-3 font-400">Luly Parra</span>
-                      <i class="fa fa-info-circle hover-icon right accent-orange" style="font-size: 1.5em;" aria-hidden="true"></i>
-                      <br class="hide-on-med-up">
-                      <span class="grey-text">Finanzas <br>Colombia-Cali</span>
-                  </span>
-
-                </div>
-                <div class="card-reveal">
-                  <span class="card-title grey-text text-darken-4">Andrés <i class="fa fa-times right red-text" aria-hidden="true"></i></span>
-                  <p>Director - Profesional en Estrategia Financiero en Accesa</p>
-                </div>
-            </div>
-        </article> -->
-
-        <!--Mentes a la carta -->
-        <!-- <article class="col s12 m6 l3">
-            <div class="card">
-                <div class="card-image waves-effect waves-block waves-light bordes-imagen">
-                  <img class="activator " width="150" src="images/list/new/Luis_Guillermo.jpg" alt="mentes a la carta andres">
-                </div>
-                <div class="card-content descripcion" style="padding-bottom: 10px;">
-                  <span class="activator grey-text text-darken-4">
-                      <span class="nombre grey-text text-darken-3 font-400">Luis Guillermo</span>
-                      <i class="fa fa-info-circle hover-icon right accent-orange" style="font-size: 1.5em;" aria-hidden="true"></i>
-                      <br class="hide-on-med-up">
-                      <span class="grey-text">Finanzas <br>Colombia-Cali</span>
-                  </span>
-
-                </div>
-                <div class="card-reveal">
-                  <span class="card-title grey-text text-darken-4">Andrés <i class="fa fa-times right red-text" aria-hidden="true"></i></span>
-                  <p>Director - Profesional en Estrategia Financiero en Accesa</p>
-                </div>
-            </div>
-        </article> -->
 
         <!--Mentes a la carta -->
         <article class="col s12 m6 l3">
@@ -1301,13 +1087,13 @@ Talent</p>
                       <span class="nombre grey-text text-darken-3 font-400">Luis Delgado</span>
                       <i class="fa fa-info-circle hover-icon right accent-orange" style="font-size: 1.5em;" aria-hidden="true"></i>
                       <br class="hide-on-med-up">
-                      <span class="grey-text">Gerente<br>Colombia-Cali</span>
+                      <span class="grey-text">Capacitacion en innovacion<br>Colombia-Cali</span>
                   </span>
 
                 </div>
                 <div class="card-reveal">
                   <span class="card-title grey-text text-darken-4">Luis<i class="fa fa-times right red-text" aria-hidden="true"></i></span>
-                  <p class="text-accent">Nada puede estar estático por mucho tiempo si desea generar que otras cosas tengan movimiento.</p>
+                  <p class="text-accent">Gerente en Empresa Regional de Innovacion Sas.</p>
                 </div>
             </div>
         </article>
@@ -1323,13 +1109,13 @@ Talent</p>
                       <span class="nombre grey-text text-darken-3 font-400">Katherine Kupitrac</span>
                       <i class="fa fa-info-circle hover-icon right accent-orange" style="font-size: 1.5em;" aria-hidden="true"></i>
                       <br class="hide-on-med-up">
-                      <span class="grey-text">Director de ventas <br>Nueva York-NY</span>
+                      <span class="grey-text">Textiles<br><span style="visibility: hidden;">lorem ipsum</span><br>Nueva York-NY</span>
                   </span>
 
                 </div>
                 <div class="card-reveal">
                   <span class="card-title grey-text text-darken-4">Katherine<i class="fa fa-times right red-text" aria-hidden="true"></i></span>
-                  <p></p>
+                  <p>Director de ventas en Finotex</p>
                 </div>
             </div>
         </article>
@@ -1351,98 +1137,32 @@ Talent</p>
                 </div>
                 <div class="card-reveal">
                   <span class="card-title grey-text text-darken-4">Juliana<i class="fa fa-times right red-text" aria-hidden="true"></i></span>
-                  <p></p>
+                  <p>Coordinador de Proyectos en Mentes a la carta</p>
                 </div>
             </div>
         </article>
 
         <!--Mentes a la carta -->
-        <!-- <article class="col s12 m6 l3">
-            <div class="card">
-                <div class="card-image waves-effect waves-block waves-light bordes-imagen">
-                  <img class="activator " width="150" src="images/list/new/Juan_Diaz.jpg" alt="mentes a la carta andres">
-                </div>
-                <div class="card-content descripcion" style="padding-bottom: 10px;">
-                  <span class="activator grey-text text-darken-4">
-                      <span class="nombre grey-text text-darken-3 font-400">Juan Diaz</span>
-                      <i class="fa fa-info-circle hover-icon right accent-orange" style="font-size: 1.5em;" aria-hidden="true"></i>
-                      <br class="hide-on-med-up">
-                      <span class="grey-text">Finanzas <br>Colombia-Cali</span>
-                  </span>
-
-                </div>
-                <div class="card-reveal">
-                  <span class="card-title grey-text text-darken-4">Andrés <i class="fa fa-times right red-text" aria-hidden="true"></i></span>
-                  <p>Director - Profesional en Estrategia Financiero en Accesa</p>
-                </div>
+        <article class="col s12 m6 l3">
+          <div class="card">
+            <div class="card-image waves-effect waves-block waves-light bordes-imagen">
+              <img class="activator " width="150" src="images/list/new/JOSE_ESCOBAR.jpg" alt="mentes a la carta andres">
             </div>
-        </article> -->
+            <div class="card-content descripcion" style="padding-bottom: 15px;">
+              <span class="activator grey-text text-darken-4">
+                <span class="nombre grey-text text-darken-3 font-400">Jose Escobar</span>
+                <i class="fa fa-info-circle hover-icon right accent-orange" style="font-size: 1.5em;" aria-hidden="true"></i>
+                <br class="hide-on-med-up">
+                <span class="grey-text">Productos de plástico<br>Colombia-Cartagena</span>
+              </span>
 
-        <!--Mentes a la carta -->
-        <!-- <article class="col s12 m6 l3">
-            <div class="card">
-                <div class="card-image waves-effect waves-block waves-light bordes-imagen">
-                  <img class="activator " width="150" src="images/list/new/Juan_Cubillos.jpg" alt="mentes a la carta andres">
-                </div>
-                <div class="card-content descripcion" style="padding-bottom: 10px;">
-                  <span class="activator grey-text text-darken-4">
-                      <span class="nombre grey-text text-darken-3 font-400">Juan Cubillos</span>
-                      <i class="fa fa-info-circle hover-icon right accent-orange" style="font-size: 1.5em;" aria-hidden="true"></i>
-                      <br class="hide-on-med-up">
-                      <span class="grey-text">Finanzas <br>Colombia-Cali</span>
-                  </span>
-
-                </div>
-                <div class="card-reveal">
-                  <span class="card-title grey-text text-darken-4">Andrés <i class="fa fa-times right red-text" aria-hidden="true"></i></span>
-                  <p>Director - Profesional en Estrategia Financiero en Accesa</p>
-                </div>
             </div>
-        </article> -->
-
-        <!--Mentes a la carta -->
-        <!-- <article class="col s12 m6 l3">
-            <div class="card">
-                <div class="card-image waves-effect waves-block waves-light bordes-imagen">
-                  <img class="activator " width="150" src="images/list/new/Juan_Arano.jpg" alt="mentes a la carta andres">
-                </div>
-                <div class="card-content descripcion" style="padding-bottom: 10px;">
-                  <span class="activator grey-text text-darken-4">
-                      <span class="nombre grey-text text-darken-3 font-400">Juan Arano</span>
-                      <i class="fa fa-info-circle hover-icon right accent-orange" style="font-size: 1.5em;" aria-hidden="true"></i>
-                      <br class="hide-on-med-up">
-                      <span class="grey-text">Finanzas <br>Colombia-Cali</span>
-                  </span>
-
-                </div>
-                <div class="card-reveal">
-                  <span class="card-title grey-text text-darken-4">Andrés <i class="fa fa-times right red-text" aria-hidden="true"></i></span>
-                  <p>Director - Profesional en Estrategia Financiero en Accesa</p>
-                </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">Jose<i class="fa fa-times right red-text" aria-hidden="true"></i></span>
+              <p class="text-accent">Jefe de Transformación Organizacional / Líder de Gestión de la Innovación en ESENTTIA (Polipropileno del Caribe S.A)</p>
             </div>
-        </article> -->
-
-          <!--Mentes a la carta -->
-          <article class="col s12 m6 l3">
-              <div class="card">
-                  <div class="card-image waves-effect waves-block waves-light bordes-imagen">
-                    <img class="activator " width="150" src="images/list/new/JOSE_ESCOBAR.jpg" alt="mentes a la carta andres">
-                  </div>
-                  <div class="card-content descripcion" style="padding-bottom: 15px;">
-                    <span class="activator grey-text text-darken-4">
-                        <span class="nombre grey-text text-darken-3 font-400">Jose Escobar</span>
-                        <i class="fa fa-info-circle hover-icon right accent-orange" style="font-size: 1.5em;" aria-hidden="true"></i>
-                        <br class="hide-on-med-up">
-                        <span class="grey-text">Productos de plástico<br>Colombia-Cartagena</span>
-                    </span>
-
-                  </div>
-                  <div class="card-reveal">
-                    <span class="card-title grey-text text-darken-4">Jose<i class="fa fa-times right red-text" aria-hidden="true"></i></span>
-                    <p class="text-accent">Consultor, Conferencista y coach. Siempre hay maneras para ser mejores personas, para ser un gran equipo, para alcanzar lo que nos hemos propuesto.</p>
-                  </div>
-              </div>
-          </article>
+          </div>
+        </article>
 
         <!--Mentes a la carta -->
         <article class="col s12 m6 l3">
@@ -1461,54 +1181,10 @@ Talent</p>
                 </div>
                 <div class="card-reveal">
                   <span class="card-title grey-text text-darken-4">Johan<i class="fa fa-times right red-text" aria-hidden="true"></i></span>
-                  <p></p>
+                  <p>CEO en RSK Consulting</p>
                 </div>
             </div>
         </article>
-
-        <!--Mentes a la carta -->
-        <!-- <article class="col s12 m6 l3">
-            <div class="card">
-                <div class="card-image waves-effect waves-block waves-light bordes-imagen">
-                  <img class="activator " width="150" src="images/list/new/Javier_Tomas.jpg" alt="mentes a la carta andres">
-                </div>
-                <div class="card-content descripcion" style="padding-bottom: 10px;">
-                  <span class="activator grey-text text-darken-4">
-                      <span class="nombre grey-text text-darken-3 font-400">Javier Tomas</span>
-                      <i class="fa fa-info-circle hover-icon right accent-orange" style="font-size: 1.5em;" aria-hidden="true"></i>
-                      <br class="hide-on-med-up">
-                      <span class="grey-text">Finanzas <br>Colombia-Cali</span>
-                  </span>
-
-                </div>
-                <div class="card-reveal">
-                  <span class="card-title grey-text text-darken-4">Andrés <i class="fa fa-times right red-text" aria-hidden="true"></i></span>
-                  <p>Director - Profesional en Estrategia Financiero en Accesa</p>
-                </div>
-            </div>
-        </article> -->
-
-        <!--Mentes a la carta -->
-        <!-- <article class="col s12 m6 l3">
-            <div class="card">
-                <div class="card-image waves-effect waves-block waves-light bordes-imagen">
-                  <img class="activator " width="150" src="images/list/new/Javier_Reinosa.jpg" alt="mentes a la carta andres">
-                </div>
-                <div class="card-content descripcion" style="padding-bottom: 10px;">
-                  <span class="activator grey-text text-darken-4">
-                      <span class="nombre grey-text text-darken-3 font-400">Javier Reinosa</span>
-                      <i class="fa fa-info-circle hover-icon right accent-orange" style="font-size: 1.5em;" aria-hidden="true"></i>
-                      <br class="hide-on-med-up">
-                      <span class="grey-text">Finanzas <br>Colombia-Cali</span>
-                  </span>
-
-                </div>
-                <div class="card-reveal">
-                  <span class="card-title grey-text text-darken-4">Andrés <i class="fa fa-times right red-text" aria-hidden="true"></i></span>
-                  <p>Director - Profesional en Estrategia Financiero en Accesa</p>
-                </div>
-            </div>
-        </article> -->
 
         <!--Mentes a la carta -->
         <article class="col s12 m6 l3">
@@ -1527,7 +1203,7 @@ Talent</p>
                 </div>
                 <div class="card-reveal">
                   <span class="card-title grey-text text-darken-4">Ignacio<i class="fa fa-times right red-text" aria-hidden="true"></i></span>
-                  <p class="text-accent">Logistics and Customs Specialist Executive with international experience in general management and supervision of project developments, in compliance with the highest quality standards, professional ethics and in consideration of security as main priority. Key strengths include: - In-depth knowledge of custom procedures, policies, and logistics - Familiar with logistics operations, staffing and cost control - Excellent relationship with customs authorities, ports, and vendors - Extensive project logistics experience. (Energy / Oil & Gass / others) - Knowledge of planning and budgetary analysis - Ability to identify problems quickly and generate sound solutions - Good negotiation skills and ability to manage multiple projects - Flexible and ability to work under pressure - Goal oriented and reliable</p>
+                  <p class="text-accent">Gerente de operaciones en Agencia de Aduanas Imex S.A. Nivel 1</p>
                 </div>
             </div>
         </article>
@@ -1543,13 +1219,13 @@ Talent</p>
                       <span class="nombre grey-text text-darken-3 font-400">Ignacio Ferrari</span>
                       <i class="fa fa-info-circle hover-icon right accent-orange" style="font-size: 1.5em;" aria-hidden="true"></i>
                       <br class="hide-on-med-up">
-                      <span class="grey-text">Educación <br>México</span>
+                      <span class="grey-text">Educación <br><span style="visibility: hidden;">lorem ipsum</span><br>México</span>
                   </span>
 
                 </div>
                 <div class="card-reveal">
                   <span class="card-title grey-text text-darken-4">Ignacio<i class="fa fa-times right red-text" aria-hidden="true"></i></span>
-                  <p></p>
+                  <p>CEO en Edilar, S.A. de C.V.</p>
                 </div>
             </div>
         </article>
@@ -1565,13 +1241,13 @@ Talent</p>
                       <span class="nombre grey-text text-darken-3 font-400">Guillermo Ortega</span>
                       <i class="fa fa-info-circle hover-icon right accent-orange" style="font-size: 1.5em;" aria-hidden="true"></i>
                       <br class="hide-on-med-up">
-                      <span class="grey-text">Finanzas <br>México-D.F.</span>
+                      <span class="grey-text">Consultoría / Asesoría <br><span style="visibility: hidden;">lorem ipsum</span><br>México-D.F.</span>
                   </span>
 
                 </div>
                 <div class="card-reveal">
                   <span class="card-title grey-text text-darken-4">Guillermo<i class="fa fa-times right red-text" aria-hidden="true"></i></span>
-                  <p></p>
+                  <p>COO en Mexico Media Lab</p>
                 </div>
             </div>
         </article>
@@ -1587,13 +1263,13 @@ Talent</p>
                       <span class="nombre grey-text text-darken-3 font-400">Francisco Javier</span>
                       <i class="fa fa-info-circle hover-icon right accent-orange" style="font-size: 1.5em;" aria-hidden="true"></i>
                       <br class="hide-on-med-up">
-                      <span class="grey-text">soluciones digitales <br>Colombia-Medellín</span>
+                      <span class="grey-text">Servicios y soluciones digitales<br>Colombia-Medellín</span>
                   </span>
 
                 </div>
                 <div class="card-reveal">
                   <span class="card-title grey-text text-darken-4">Francisco<i class="fa fa-times right red-text" aria-hidden="true"></i></span>
-                  <p class="text-accent">Me gusta colabora, crear ideas, proyectos y diseñar en equipo.</p>
+                  <p class="text-accent">Creador en DelcaVideography</p>
                 </div>
             </div>
         </article>
@@ -1609,13 +1285,13 @@ Talent</p>
                       <span class="nombre grey-text text-darken-3 font-400">Fernando Araújo</span>
                       <i class="fa fa-info-circle hover-icon right accent-orange" style="font-size: 1.5em;" aria-hidden="true"></i>
                       <br class="hide-on-med-up">
-                      <span class="grey-text">Gobierno <br>Colombia-Cartagena</span>
+                      <span class="grey-text">Gobierno <br><span style="visibility: hidden;">lorem ipsum</span><br>Colombia-Cartagena</span>
                   </span>
 
                 </div>
                 <div class="card-reveal">
                   <span class="card-title grey-text text-darken-4">Fernando<i class="fa fa-times right red-text" aria-hidden="true"></i></span>
-                  <p></p>
+                  <p>Senador en el Senado de la Republica</p>
                 </div>
             </div>
         </article>
@@ -1631,13 +1307,13 @@ Talent</p>
                       <span class="nombre grey-text text-darken-3 font-400">Eugenio Miralles</span>
                       <i class="fa fa-info-circle hover-icon right accent-orange" style="font-size: 1.5em;" aria-hidden="true"></i>
                       <br class="hide-on-med-up">
-                      <span class="grey-text">Consultoría contable <br>España-Murcia</span>
+                      <span class="grey-text">Consultoría contable / Revisoría fiscal<br>España-Murcia</span>
                   </span>
 
                 </div>
                 <div class="card-reveal">
                   <span class="card-title grey-text text-darken-4">Eugenio<i class="fa fa-times right red-text" aria-hidden="true"></i></span>
-                  <p></p>
+                  <p>Analista en Deloitte</p>
                 </div>
             </div>
         </article>
@@ -1653,38 +1329,16 @@ Talent</p>
                       <span class="nombre grey-text text-darken-3 font-400">Esteban Mancuso</span>
                       <i class="fa fa-info-circle hover-icon right accent-orange" style="font-size: 1.5em;" aria-hidden="true"></i>
                       <br class="hide-on-med-up">
-                      <span class="grey-text">Estrategia<br>Colombia-Medellín</span>
+                      <span class="grey-text">Innovación estratégica<br>Colombia-Medellín</span>
                   </span>
 
                 </div>
                 <div class="card-reveal">
                   <span class="card-title grey-text text-darken-4">Esteban <i class="fa fa-times right red-text" aria-hidden="true"></i></span>
-                  <p class="text-accent">Desarrolle la exitosa metodología #LeanStartegy</p>
+                  <p class="text-accent">Socio director en Velum Ventures SAS</p>
                 </div>
             </div>
         </article>
-
-        <!--Mentes a la carta -->
-        <!-- <article class="col s12 m6 l3">
-            <div class="card">
-                <div class="card-image waves-effect waves-block waves-light bordes-imagen">
-                  <img class="activator " width="150" src="images/list/new/Elvira_Serra.jpg" alt="mentes a la carta andres">
-                </div>
-                <div class="card-content descripcion" style="padding-bottom: 3px;">
-                  <span class="activator grey-text text-darken-4">
-                      <span class="nombre grey-text text-darken-3 font-400">Elvira Serra</span>
-                      <i class="fa fa-info-circle hover-icon right accent-orange" style="font-size: 1.5em;" aria-hidden="true"></i>
-                      <br class="hide-on-med-up">
-                      <span class="grey-text">Finanzas <br>Colombia-Cali</span>
-                  </span>
-
-                </div>
-                <div class="card-reveal">
-                  <span class="card-title grey-text text-darken-4">Andrés <i class="fa fa-times right red-text" aria-hidden="true"></i></span>
-                  <p>Director - Profesional en Estrategia Financiero en Accesa</p>
-                </div>
-            </div>
-        </article> -->
 
         <!--Mentes a la carta -->
         <article class="col s12 m6 l3">
@@ -1697,7 +1351,7 @@ Talent</p>
                       <span class="nombre grey-text text-darken-3 font-400">Ernesto Garcia</span>
                       <i class="fa fa-info-circle hover-icon right accent-orange" style="font-size: 1.5em;" aria-hidden="true"></i>
                       <br class="hide-on-med-up">
-                      <span class="grey-text"><span style="visibility: hidden;">Lorem ipsum</span><br>España-Madrid</span>
+                      <span class="grey-text"><span style="visibility: hidden;">Lorem ipsum</span><br><span style="visibility: hidden;">lorem ipsum</span><br>España-Madrid</span>
                   </span>
 
                 </div>
@@ -1708,27 +1362,7 @@ Talent</p>
             </div>
         </article>
 
-        <!--Mentes a la carta -->
-        <article class="col s12 m6 l3">
-            <div class="card">
-                <div class="card-image waves-effect waves-block waves-light bordes-imagen">
-                  <img class="activator " width="150" src="images/list/new/Enrique_Fenollosa.jpg" alt="mentes a la carta andres">
-                </div>
-                <div class="card-content descripcion" style="padding-bottom: 3px;">
-                  <span class="activator grey-text text-darken-4">
-                      <span class="nombre grey-text text-darken-3 font-400">Enrique Fenollosa</span>
-                      <i class="fa fa-info-circle hover-icon right accent-orange" style="font-size: 1.5em;" aria-hidden="true"></i>
-                      <br class="hide-on-med-up">
-                      <span class="grey-text">Ciberseguridad <br>Colombia-Bogotá</span>
-                  </span>
 
-                </div>
-                <div class="card-reveal">
-                  <span class="card-title grey-text text-darken-4">Enrique<i class="fa fa-times right red-text" aria-hidden="true"></i></span>
-                  <p class="text-accent">Además de mi profesión tecnológico soy experto en navegación oceánica, durante 4 años y 1 mes di la vuelta mundo abordo de un velero, más info en www.aventuraoceanica.es</p>
-                </div>
-            </div>
-        </article>
 
         <!--Mentes a la carta -->
         <article class="col s12 m6 l3">
@@ -1736,18 +1370,18 @@ Talent</p>
                 <div class="card-image waves-effect waves-block waves-light bordes-imagen">
                   <img class="activator " width="150" src="images/list/new/Enrique_de_Mora.jpeg" alt="mentes a la carta andres">
                 </div>
-                <div class="card-content descripcion" style="padding-bottom: 4px;">
+                <div class="card-content descripcion" style="padding-bottom: 25px;">
                   <span class="activator grey-text text-darken-4">
                       <span class="nombre grey-text text-darken-3 font-400">Enrique de Mora</span>
                       <i class="fa fa-info-circle hover-icon right accent-orange" style="font-size: 1.5em;" aria-hidden="true"></i>
                       <br class="hide-on-med-up">
-                      <span class="grey-text">Consultoría estratégica <br>España-Madrid</span>
+                      <span class="grey-text">Consultoría estratégica<br>España-Madrid</span>
                   </span>
 
                 </div>
                 <div class="card-reveal">
                   <span class="card-title grey-text text-darken-4">Enrique<i class="fa fa-times right red-text" aria-hidden="true"></i></span>
-                  <p class="text-accent">Apasionado del Management y de su divulgación. Conferenciante y escritor. 4 libros publicados: "Funny-Pop", "ZigZag", "Animaladas", "La empresa de la A a la Z con H de humor". 2 libros publicados como co-autor: "En clave de talento", "2021 Odisea Management". Más de 100 artículos publicados en revistas de Management.</p>
+                  <p class="text-accent">Director General en Funny-Pop Consulting</p>
                 </div>
             </div>
         </article>
@@ -1769,7 +1403,7 @@ Talent</p>
                 </div>
                 <div class="card-reveal">
                   <span class="card-title grey-text text-darken-4">Daniela<i class="fa fa-times right red-text" aria-hidden="true"></i></span>
-                  <p></p>
+                  <p>Directora de operaciones en OFI.com.co</p>
                 </div>
             </div>
         </article>
@@ -1791,32 +1425,11 @@ Talent</p>
                 </div>
                 <div class="card-reveal">
                   <span class="card-title grey-text text-darken-4">Elías<i class="fa fa-times right red-text" aria-hidden="true"></i></span>
-                  <p></p>
+                  <p>Socio - Fundador en Jacobson, Steinberg & Goldman</p>
                 </div>
             </div>
         </article>
 
-        <!--Mentes a la carta -->
-        <!-- <article class="col s12 m6 l3">
-            <div class="card">
-                <div class="card-image waves-effect waves-block waves-light bordes-imagen">
-                  <img class="activator " width="150" src="images/list/new/Diana_Navarro.jpg" alt="mentes a la carta andres">
-                </div>
-                <div class="card-content descripcion" style="padding-bottom: 3px;">
-                  <span class="activator grey-text text-darken-4">
-                      <span class="nombre grey-text text-darken-3 font-400">Diana Navarro</span>
-                      <i class="fa fa-info-circle hover-icon right accent-orange" style="font-size: 1.5em;" aria-hidden="true"></i>
-                      <br class="hide-on-med-up">
-                      <span class="grey-text">Finanzas <br>Colombia-Cali</span>
-                  </span>
-
-                </div>
-                <div class="card-reveal">
-                  <span class="card-title grey-text text-darken-4">Andrés <i class="fa fa-times right red-text" aria-hidden="true"></i></span>
-                  <p>Director - Profesional en Estrategia Financiero en Accesa</p>
-                </div>
-            </div>
-        </article> -->
 
         <!--Mentes a la carta -->
         <article class="col s12 m6 l3">
@@ -1835,7 +1448,7 @@ Talent</p>
                 </div>
                 <div class="card-reveal">
                   <span class="card-title grey-text text-darken-4">Diego<i class="fa fa-times right red-text" aria-hidden="true"></i></span>
-                  <p></p>
+                  <p>Digital Consultant en Capgemini Consulting</p>
                 </div>
             </div>
         </article>

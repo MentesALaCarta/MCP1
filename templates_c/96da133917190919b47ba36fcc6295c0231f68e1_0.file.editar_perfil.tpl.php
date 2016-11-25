@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-24 22:10:43
+/* Smarty version 3.1.30, created on 2016-11-25 17:54:15
   from "/opt/lampp/htdocs/mentes/view/wits/editar_perfil.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58375753dabad2_83475683',
+  'unifunc' => 'content_58386cb77957a6_23511132',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '96da133917190919b47ba36fcc6295c0231f68e1' => 
     array (
       0 => '/opt/lampp/htdocs/mentes/view/wits/editar_perfil.tpl',
-      1 => 1480021841,
+      1 => 1480022413,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:view/principal/script.tpl' => 1,
   ),
 ),false)) {
-function content_58375753dabad2_83475683 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58386cb77957a6_23511132 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -38,12 +38,6 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
       <h4>Editar perfil</h4>
     </div>
   </div>
-
-  <!-- <div class="row">
-    <div class="col s12 center-align">
-      <h5 class="red-text">Esta página esta en la fase de desarrollo por lo tanto, no funcionan todas las opciones.</h5>
-    </div>
-  </div> -->
 
   <div class="row">
     <div class="col s12 m10 offset-m1">
