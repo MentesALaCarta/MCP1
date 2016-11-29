@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-20 05:55:11
+/* Smarty version 3.1.30, created on 2016-11-27 00:20:27
   from "/opt/lampp/htdocs/mentes/view/user/acceder.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58312cafe7bb97_28622943',
+  'unifunc' => 'content_583a18bb50eca8_27870528',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f0212dd80475ce5ef9efee1db0213c636691336f' => 
     array (
       0 => '/opt/lampp/htdocs/mentes/view/user/acceder.tpl',
-      1 => 1479478056,
+      1 => 1480201768,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:view/principal/script.tpl' => 1,
   ),
 ),false)) {
-function content_58312cafe7bb97_28622943 (Smarty_Internal_Template $_smarty_tpl) {
+function content_583a18bb50eca8_27870528 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -33,7 +33,7 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
   <div class="row">
     <div class="col s12">
 
-      <!-- Logo Mentes a la Carta --> 
+      <!-- Logo Mentes a la Carta -->
       <div class="row">
         <div class="col s12 center-align">
           <div class="spacing-2"></div>
@@ -53,7 +53,7 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
       <!-- Contraseña -->
       <div class="row">
         <div class="input-field col s12 m6 offset-m3 l4 offset-l4">
-          <input id="pass" type="password" class="validate">
+          <input id="pass" type="password" class="validate" autocomplete="off">
           <label for="pass">Contraseña</label>
         </div>
       </div>

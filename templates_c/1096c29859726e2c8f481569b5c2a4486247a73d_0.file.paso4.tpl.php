@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-21 19:07:14
+/* Smarty version 3.1.30, created on 2016-11-27 00:09:58
   from "/opt/lampp/htdocs/mentes/view/wits/paso4.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_583337d2d3a774_75349209',
+  'unifunc' => 'content_583a16469b0464_90926137',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1096c29859726e2c8f481569b5c2a4486247a73d' => 
     array (
       0 => '/opt/lampp/htdocs/mentes/view/wits/paso4.tpl',
-      1 => 1479751633,
+      1 => 1480201796,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:view/principal/script.tpl' => 1,
   ),
 ),false)) {
-function content_583337d2d3a774_75349209 (Smarty_Internal_Template $_smarty_tpl) {
+function content_583a16469b0464_90926137 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -68,6 +68,7 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
 </div>
 
 <div class="spacing-2"></div>
+
 <div class="row">
   <form class="col s12 m6 offset-m3" enctype="multipart/form-data" id="form4">
     <div class="row">
@@ -175,6 +176,15 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
   </div>
 </div>
 
+<?php echo '<script'; ?>
+ type="text/javascript">
+$(document).ready(function(){
+  $('body, html').animate({
+    scrollTop: '0px'
+  }, 0);
+});
+<?php echo '</script'; ?>
+>
 <?php $_smarty_tpl->_subTemplateRender("file:view/principal/cerrarSesion.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 

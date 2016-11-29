@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-20 20:58:49
+/* Smarty version 3.1.30, created on 2016-11-26 23:54:00
   from "/opt/lampp/htdocs/mentes/view/wits/index.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58320079e29ae2_59544079',
+  'unifunc' => 'content_583a128820ca75_02798836',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'bf8182cab1152901b9e183013320f3b1e627e2cb' => 
     array (
       0 => '/opt/lampp/htdocs/mentes/view/wits/index.tpl',
-      1 => 1479671917,
+      1 => 1480200839,
       2 => 'file',
     ),
   ),
@@ -23,13 +23,13 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:view/principal/script.tpl' => 1,
   ),
 ),false)) {
-function content_58320079e29ae2_59544079 (Smarty_Internal_Template $_smarty_tpl) {
+function content_583a128820ca75_02798836 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
 
 <!-- Imagen del logo -->
-<div class="row">
+<div class="row" style="margin-bottom: 0px;">
   <div class="col s8 offset-s2 m2 offset-m1">
     <img src="images/bradlogo.png" alt="logo mentes a la carta" width="100%">
   </div>
@@ -38,8 +38,7 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
 
 <!-- Titulo dinamico -->
 <div class="row col s8 offset-s2 center-align">
-  <div class="spacing-2"></div>
-  <h3 class="title-orange">¿En donde esta tu mente?</h3>
+  <h3 class="title-orange" style="margin-top: 0px;">¿En dónde está tu mente?</h3>
 </div>
 
 
@@ -239,7 +238,7 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
       </div>
       <div class="col s5 right-align">
         <div class="spacing-1"></div>
-        
+
         <button id="step1" class="btn waves-effect waves-light orange" type="button"  name="button">Siguiente</button>
       </div>
     </div>

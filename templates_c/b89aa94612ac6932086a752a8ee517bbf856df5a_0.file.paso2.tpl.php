@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-24 16:51:48
+/* Smarty version 3.1.30, created on 2016-11-27 00:21:44
   from "/opt/lampp/htdocs/mentes/view/wits/paso2.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58370c944574f0_93728603',
+  'unifunc' => 'content_583a190849c580_81210427',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b89aa94612ac6932086a752a8ee517bbf856df5a' => 
     array (
       0 => '/opt/lampp/htdocs/mentes/view/wits/paso2.tpl',
-      1 => 1479929279,
+      1 => 1480202503,
       2 => 'file',
     ),
   ),
@@ -23,13 +23,13 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:view/principal/script.tpl' => 1,
   ),
 ),false)) {
-function content_58370c944574f0_93728603 (Smarty_Internal_Template $_smarty_tpl) {
+function content_583a190849c580_81210427 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
 
 <!-- Imagen del logo -->
-<div class="row">
+<div class="row" style="margin-bottom: 0px;">
   <div class="col s8 offset-s2 m2 offset-m1">
     <img src="images/bradlogo.png" alt="logo mentes a la carta" width="100%">
   </div>
@@ -37,8 +37,7 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
 
 <!-- Titulo dinamico -->
 <div class="row col s8 offset-s2 center-align">
-  <div class="spacing-2"></div>
-  <h3 class="title-orange">¿Qué otras aptitudes tiene tu mente?</h3>
+  <h3 class="title-orange" style="margin-top: 0px;">¿Qué otras aptitudes tiene tu mente?</h3>
 
 </div>
 
@@ -76,7 +75,7 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
     <div class="spacing-1"></div>
     <button type="button" class="btn waves-effect waves-light" name="button" style="background-color: #EBA820;" id="add_new_aptitud">Agregar</button>
   </div>
-</div>  
+</div>
 
 <div class="container">
   <div class="row">

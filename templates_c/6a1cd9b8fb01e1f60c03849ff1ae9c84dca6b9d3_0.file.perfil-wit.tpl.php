@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-25 22:52:36
+/* Smarty version 3.1.30, created on 2016-11-29 15:14:46
   from "/opt/lampp/htdocs/mentes/view/wits/perfil-wit.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5838b2a4c75448_15239093',
+  'unifunc' => 'content_583d8d561d4ba5_89187374',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6a1cd9b8fb01e1f60c03849ff1ae9c84dca6b9d3' => 
     array (
       0 => '/opt/lampp/htdocs/mentes/view/wits/perfil-wit.tpl',
-      1 => 1480110755,
+      1 => 1480428882,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:view/principal/script.tpl' => 1,
   ),
 ),false)) {
-function content_5838b2a4c75448_15239093 (Smarty_Internal_Template $_smarty_tpl) {
+function content_583d8d561d4ba5_89187374 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -41,7 +41,9 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
           <div class="spacing-2"></div>
           <img src="images/<?php echo $_smarty_tpl->tpl_vars['usuario']->value['imagen'];?>
 ?<?php echo time();?>
-" class="circle" alt="Imagen de perfil wit michael" width="100%">
+" class="circle" alt="Imagen de perfil wit <?php echo $_smarty_tpl->tpl_vars['usuario']->value['nombres'];?>
+ <?php echo $_smarty_tpl->tpl_vars['usuario']->value['apellidos'];?>
+" width="100%">
         </div>
       </div>
 
@@ -117,7 +119,7 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
       <div class="row">
         <div class="col s12">
           <div class="alert">
-            Estamos validando tu información para que hagas parte de las mentes a la carta.
+            Estamos validando tu información para que hagas parte de las Mentes a la Carta.
           </div>
         </div>
       </div>
@@ -125,7 +127,7 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
 
     <div class="row">
       <div class="col s11">
-        <h4 class="accent-text1">Experiencia</h4>
+        <h5 class="accent-text1">Experiencia</h5>
       </div>
     </div>
 
@@ -173,7 +175,7 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
     <!-- *Aptitudes -->
     <div class="row">
       <div class="col s11">
-        <h4 class="accent-text1">Aptitudes</h4>
+        <h5 class="accent-text1">Aptitudes</h5>
       </div>
     </div>
 
@@ -208,7 +210,7 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
     <!-- Actividades -->
     <div class="row">
       <div class="col s12">
-        <h4 class="accent-text1">Actividades</h4>
+        <h5 class="accent-text1">Actividades</h5>
       </div>
     </div>
 
@@ -219,7 +221,7 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
       <div class="col s8 offset-s2 m4 l3 center-align" >
         <div class="spacing-1"></div>
         <div class="area-wit center-align circle hover" id="item1">
-          <i class="fa fa-microphone" aria-hidden="true" style=" font-size: 4rem;"></i>
+          <i class="fa fa-microphone" aria-hidden="true" style=" font-size: 3rem;"></i>
         </div>
         <div class="spacing-1"></div>
         <span style="color: #EBA820; font-size: 18px;">Proyectos innovadores</span>
@@ -236,7 +238,7 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
       <div class="col s8 offset-s2 m4 l3 center-align">
         <div class="spacing-1"></div>
         <div class="area-wit center-align circle hover" id="item2">
-          <i class="fa fa-users" style=" font-size: 4rem;"></i>
+          <i class="fa fa-users" style=" font-size: 3rem;"></i>
         </div>
         <div class="spacing-1"></div>
         <span style="color: #EBA820; font-size: 18px;">Mentoring</span>
@@ -253,7 +255,7 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
       <div class="col s8 offset-s2 m4 l3 center-align">
         <div class="spacing-1"></div>
         <div class="area-wit center-align circle hover" id="item3">
-          <i class="fa fa-pencil" style=" font-size: 4rem;"></i>
+          <i class="fa fa-pencil" style=" font-size: 3rem;"></i>
         </div>
         <div class="spacing-1"></div>
         <span style="color: #EBA820; font-size: 18px;">Asesoramiento</span>
@@ -271,7 +273,7 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
       <div class="col s8 offset-s2 m4 l3 center-align">
         <div class="spacing-1"></div>
         <div class="area-wit center-align circle hover" id="item4">
-          <i class="fa fa-bullhorn" style=" font-size: 4rem;"></i>
+          <i class="fa fa-bullhorn" style=" font-size: 3rem;"></i>
         </div>
         <div class="spacing-1"></div>
         <span style="color: #EBA820; font-size: 18px;">Formación</span>
@@ -288,7 +290,7 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
       <div class="col s8 offset-s2 m4 l3 center-align">
         <div class="spacing-1"></div>
         <div class="area-wit center-align circle hover" id="item5">
-          <i class="fa fa-check" style=" font-size: 4rem;"></i>
+          <i class="fa fa-check" style=" font-size: 3rem;"></i>
         </div>
         <div class="spacing-1"></div>
         <span style="color: #EBA820; font-size: 18px;">Contenidos</span>
@@ -307,7 +309,7 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
     <!-- Descripcion del wit -->
     <div class="row">
       <div class="col s11">
-        <h4 class="accent-text1">Descripción de la mente a la carta</h4>
+        <h5 class="accent-text1">Descripción de la mente a la carta</h5>
       </div>
     </div>
 
@@ -323,7 +325,7 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
     <!-- Frase o pensamiento propio -->
     <div class="row">
       <div class="col s11">
-        <h4 class="accent-text1">Frase o pensamiento propio</h4>
+        <h5 class="accent-text1">Frase o pensamiento propio</h5>
       </div>
     </div>
 

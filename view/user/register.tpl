@@ -11,31 +11,31 @@
   <div class="row">
     <div class="spacing-2"></div>
     <div class="col s12 center-align">
-      <h3 class="grey-text text-darken-4">Regístrate como Mente a la carta</h3>
+      <h3 class="grey-text text-darken-4">Regístrate como Mente a la Carta</h3>
     </div>
 
 
     <!-- Nombre -->
     <div class="input-field col s12 m4 offset-m2">
-      <input id="nombres" type="text" class="validate">
+      <input id="nombres" type="text" class="validate" autocomplete="off">
       <label for="nombres">Nombres</label>
     </div>
 
     <!-- Apellidos -->
     <div class="input-field col s12 m4 ">
-      <input id="apellidos" type="text" class="validate">
+      <input id="apellidos" type="text" class="validate" autocomplete="off">
       <label for="apellidos">Apellidos</label>
     </div>
 
     <!-- Email -->
     <div class="input-field col s12 m4 offset-m2">
-      <input id="email" type="text" class="validate">
+      <input id="email" type="text" class="validate" autocomplete="off">
       <label for="email">Dirección de correo electrónico</label>
     </div>
 
     <!-- Contraseña -->
     <div class="input-field col s12 m4">
-      <input id="clave" type="password" class="validate">
+      <input id="clave" type="password" class="validate" autocomplete="off">
       <label for="clave">Contraseña</label>
     </div>
 

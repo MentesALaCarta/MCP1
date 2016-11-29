@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-24 16:52:03
+/* Smarty version 3.1.30, created on 2016-11-27 00:07:43
   from "/opt/lampp/htdocs/mentes/view/wits/paso3.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58370ca3d01095_96466627',
+  'unifunc' => 'content_583a15bff01b05_95637733',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '3d4e5745cb22e4823dd44f3e677f4e65b95fca3e' => 
     array (
       0 => '/opt/lampp/htdocs/mentes/view/wits/paso3.tpl',
-      1 => 1479931453,
+      1 => 1480201662,
       2 => 'file',
     ),
   ),
@@ -23,13 +23,13 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:view/principal/script.tpl' => 1,
   ),
 ),false)) {
-function content_58370ca3d01095_96466627 (Smarty_Internal_Template $_smarty_tpl) {
+function content_583a15bff01b05_95637733 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
 
 <!-- Imagen del logo -->
-<div class="row">
+<div class="row" style="margin-bottom: 0px;">
   <div class="col s8 offset-s2 m2 offset-m1">
     <img src="images/bradlogo.png" alt="logo mentes a la carta" width="100%">
   </div>
@@ -37,8 +37,7 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
 
 <!-- Titulo dinamico -->
 <div class="row col s8 offset-s2 center-align">
-  <div class="spacing-2"></div>
-  <h4 class="title-orange">Elige en qué actividades quisieras participar</h4>
+  <h4 class="title-orange" style="margin-top: 0px;">Elige en qué actividades quisieras participar</h4>
 </div>
 
 <div class="row">
@@ -60,10 +59,9 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
 <form action="" id="form_services">
 
   <div class="row">
- 
+
     <!-- Proyectos innovadores -->
     <div class="col s8 offset-s2 m4 l2 offset-l1 center-align" >
-      <div class="spacing-1"></div>
       <div class="area center-align circle hover" id="item1">
         <i class="fa fa-microphone" aria-hidden="true" style=" font-size: 4rem;"></i>
       </div>
@@ -78,7 +76,6 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
 
     <!-- Mentoring -->
     <div class="col s8 offset-s2 m4 l2 center-align">
-      <div class="spacing-1"></div>
       <div class="area center-align circle hover" id="item2">
         <i class="fa fa-users" style=" font-size: 4rem;"></i>
       </div>
@@ -94,7 +91,6 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
 
     <!-- Asesoramiento -->
     <div class="col s8 offset-s2 m4 l2 center-align">
-      <div class="spacing-1"></div>
       <div class="area center-align circle hover" id="item3">
         <i class="fa fa-pencil" style=" font-size: 4rem;"></i>
       </div>
@@ -110,7 +106,6 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
 
     <!-- Formación -->
     <div class="col s8 offset-s2 m4 l2 center-align">
-      <div class="spacing-1"></div>
       <div class="area center-align circle hover" id="item4">
         <i class="fa fa-bullhorn" style=" font-size: 4rem;"></i>
       </div>
@@ -125,7 +120,6 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
 
     <!-- Contenidos -->
     <div class="col s8 offset-s2 m4 l2 center-align">
-      <div class="spacing-1"></div>
       <div class="area center-align circle hover" id="item5">
         <i class="fa fa-check" style=" font-size: 4rem;"></i>
       </div>
@@ -159,6 +153,15 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
   </div>
 </div>
 
+<?php echo '<script'; ?>
+ type="text/javascript">
+$(document).ready(function(){
+  $('body, html').animate({
+    scrollTop: '0px'
+  }, 0);
+});
+<?php echo '</script'; ?>
+>
 
 <?php $_smarty_tpl->_subTemplateRender("file:view/principal/cerrarSesion.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>

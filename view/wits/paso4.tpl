@@ -138,5 +138,12 @@
   </div>
 </div>
 
+<script type="text/javascript">
+$(document).ready(function(){
+  $('body, html').animate({
+    scrollTop: '0px'
+  }, 0);
+});
+</script>
 {include file="view/principal/cerrarSesion.tpl"}
 {include file="view/principal/script.tpl"}

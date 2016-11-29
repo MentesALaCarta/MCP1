@@ -1,7 +1,7 @@
 {include file="view/principal/header.tpl"}
 
 <!-- Imagen del logo -->
-<div class="row">
+<div class="row" style="margin-bottom: 0px;">
   <div class="col s8 offset-s2 m2 offset-m1">
     <img src="images/bradlogo.png" alt="logo mentes a la carta" width="100%">
   </div>
@@ -10,8 +10,7 @@
 
 <!-- Titulo dinamico -->
 <div class="row col s8 offset-s2 center-align">
-  <div class="spacing-2"></div>
-  <h3 class="title-orange">¿En donde esta tu mente?</h3>
+  <h3 class="title-orange" style="margin-top: 0px;">¿En dónde está tu mente?</h3>
 </div>
 
 
@@ -190,7 +189,7 @@
       </div>
       <div class="col s5 right-align">
         <div class="spacing-1"></div>
-        
+
         <button id="step1" class="btn waves-effect waves-light orange" type="button"  name="button">Siguiente</button>
       </div>
     </div>

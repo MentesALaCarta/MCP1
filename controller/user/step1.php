@@ -15,8 +15,6 @@
 
     for($i = 0 ; $i < count($company_name); $i++){
 
-      if(!empty($company_name[$i]) && !empty($sector[$i]) && !empty($position[$i]) && !empty($country[$i])){
-
         # Reemplazamos los acentos
         $buscar = array('á', 'é', 'í', 'ó', 'ú', 'Á', 'É', 'Í', 'Ó', 'Ú', 'ñ', 'Ñ');
         $reemplazar = array('&aacute','&eacute', '&iacute', '&oacute', '&uacute', '&Aacute', '&Eacute', '&Iacute', '&Oacute', '&Uacute', '&ntilde', '&Ntilde');
@@ -39,13 +37,12 @@
         $country[$i] = mysqli_real_escape_string($link, $country[$i]);
 
         $datos .= '("'.$company_name[$i].'", "'.$sector[$i].'", "'.$position[$i].'", "'.$country[$i].'", "'.$_SESSION['id'].'"),';
-      }
+
 
     }
     $persona -> cerrardb();
 
     $datos = substr($datos, 0, -1);
-
 
     $persona -> setExperiencia($datos);
 

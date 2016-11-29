@@ -6,7 +6,7 @@
   <div class="row">
     <div class="col s12">
 
-      <!-- Logo Mentes a la Carta --> 
+      <!-- Logo Mentes a la Carta -->
       <div class="row">
         <div class="col s12 center-align">
           <div class="spacing-2"></div>
@@ -26,7 +26,7 @@
       <!-- Contraseña -->
       <div class="row">
         <div class="input-field col s12 m6 offset-m3 l4 offset-l4">
-          <input id="pass" type="password" class="validate">
+          <input id="pass" type="password" class="validate" autocomplete="off">
           <label for="pass">Contraseña</label>
         </div>
       </div>

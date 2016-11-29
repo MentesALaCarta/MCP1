@@ -1,7 +1,7 @@
 {include file="view/principal/header.tpl"}
 
 <!-- Imagen del logo -->
-<div class="row">
+<div class="row" style="margin-bottom: 0px;">
   <div class="col s8 offset-s2 m2 offset-m1">
     <img src="images/bradlogo.png" alt="logo mentes a la carta" width="100%">
   </div>
@@ -9,8 +9,7 @@
 
 <!-- Titulo dinamico -->
 <div class="row col s8 offset-s2 center-align">
-  <div class="spacing-2"></div>
-  <h3 class="title-orange">¿Qué otras aptitudes tiene tu mente?</h3>
+  <h3 class="title-orange" style="margin-top: 0px;">¿Qué otras aptitudes tiene tu mente?</h3>
 
 </div>
 
@@ -48,11 +47,11 @@
     <div class="spacing-1"></div>
     <button type="button" class="btn waves-effect waves-light" name="button" style="background-color: #EBA820;" id="add_new_aptitud">Agregar</button>
   </div>
-</div>  
+</div>
 
 <div class="container">
   <div class="row">
-    <div class="col s12 m8 offset-m2">
+    <div class="col s12 m8 offset-m2" style="padding-left: 0px;">
       <table>
        <thead>
          <tr>

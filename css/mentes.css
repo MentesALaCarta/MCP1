@@ -125,19 +125,19 @@
 }
 
 .area-wit{
-  width: 80%;
+  width: 48%;
   margin: 0px auto;
-  height: 150px;
-  padding-top: 3em;
+  height: 90px;
+  padding-top: 1.5em;
   border: 1px solid #EBA820;
   color: #D1D2D3;
 }
 
 .area{
-  width: 80%;
+  width: 50%;
   margin: 0px auto;
-  height: 150px;
-  padding-top: 3em;
+  height: 100px;
+  padding-top: 1.5em;
   border: 1px solid #EBA820;
   color: #D1D2D3;
   transition: 0.5s;

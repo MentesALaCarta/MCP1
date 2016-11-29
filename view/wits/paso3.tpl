@@ -1,7 +1,7 @@
 {include file="view/principal/header.tpl"}
 
 <!-- Imagen del logo -->
-<div class="row">
+<div class="row" style="margin-bottom: 0px;">
   <div class="col s8 offset-s2 m2 offset-m1">
     <img src="images/bradlogo.png" alt="logo mentes a la carta" width="100%">
   </div>
@@ -9,8 +9,7 @@
 
 <!-- Titulo dinamico -->
 <div class="row col s8 offset-s2 center-align">
-  <div class="spacing-2"></div>
-  <h4 class="title-orange">Elige en qué actividades quisieras participar</h4>
+  <h4 class="title-orange" style="margin-top: 0px;">Elige en qué actividades quisieras participar</h4>
 </div>
 
 <div class="row">
@@ -32,10 +31,9 @@
 <form action="" id="form_services">
 
   <div class="row">
- 
+
     <!-- Proyectos innovadores -->
     <div class="col s8 offset-s2 m4 l2 offset-l1 center-align" >
-      <div class="spacing-1"></div>
       <div class="area center-align circle hover" id="item1">
         <i class="fa fa-microphone" aria-hidden="true" style=" font-size: 4rem;"></i>
       </div>
@@ -50,7 +48,6 @@
 
     <!-- Mentoring -->
     <div class="col s8 offset-s2 m4 l2 center-align">
-      <div class="spacing-1"></div>
       <div class="area center-align circle hover" id="item2">
         <i class="fa fa-users" style=" font-size: 4rem;"></i>
       </div>
@@ -66,7 +63,6 @@
 
     <!-- Asesoramiento -->
     <div class="col s8 offset-s2 m4 l2 center-align">
-      <div class="spacing-1"></div>
       <div class="area center-align circle hover" id="item3">
         <i class="fa fa-pencil" style=" font-size: 4rem;"></i>
       </div>
@@ -82,7 +78,6 @@
 
     <!-- Formación -->
     <div class="col s8 offset-s2 m4 l2 center-align">
-      <div class="spacing-1"></div>
       <div class="area center-align circle hover" id="item4">
         <i class="fa fa-bullhorn" style=" font-size: 4rem;"></i>
       </div>
@@ -97,7 +92,6 @@
 
     <!-- Contenidos -->
     <div class="col s8 offset-s2 m4 l2 center-align">
-      <div class="spacing-1"></div>
       <div class="area center-align circle hover" id="item5">
         <i class="fa fa-check" style=" font-size: 4rem;"></i>
       </div>
@@ -131,6 +125,13 @@
   </div>
 </div>
 
+<script type="text/javascript">
+$(document).ready(function(){
+  $('body, html').animate({
+    scrollTop: '0px'
+  }, 0);
+});
+</script>
 
 {include file="view/principal/cerrarSesion.tpl"}
 {include file="view/principal/script.tpl"}

@@ -11,7 +11,7 @@
       <div class="row">
         <div class="col s3 offset-s8" style="margin-top: 5em;">
           <div class="spacing-2"></div>
-          <img src="images/{$usuario['imagen']}?{time()}" class="circle" alt="Imagen de perfil wit michael" width="100%">
+          <img src="images/{$usuario['imagen']}?{time()}" class="circle" alt="Imagen de perfil wit {$usuario['nombres']} {$usuario['apellidos']}" width="100%">
         </div>
       </div>
 
@@ -80,7 +80,7 @@
       <div class="row">
         <div class="col s12">
           <div class="alert">
-            Estamos validando tu información para que hagas parte de las mentes a la carta.
+            Estamos validando tu información para que hagas parte de las Mentes a la Carta.
           </div>
         </div>
       </div>
@@ -88,7 +88,7 @@
 
     <div class="row">
       <div class="col s11">
-        <h4 class="accent-text1">Experiencia</h4>
+        <h5 class="accent-text1">Experiencia</h5>
       </div>
     </div>
 
@@ -125,7 +125,7 @@
     <!-- *Aptitudes -->
     <div class="row">
       <div class="col s11">
-        <h4 class="accent-text1">Aptitudes</h4>
+        <h5 class="accent-text1">Aptitudes</h5>
       </div>
     </div>
 
@@ -152,7 +152,7 @@
     <!-- Actividades -->
     <div class="row">
       <div class="col s12">
-        <h4 class="accent-text1">Actividades</h4>
+        <h5 class="accent-text1">Actividades</h5>
       </div>
     </div>
 
@@ -163,7 +163,7 @@
       <div class="col s8 offset-s2 m4 l3 center-align" >
         <div class="spacing-1"></div>
         <div class="area-wit center-align circle hover" id="item1">
-          <i class="fa fa-microphone" aria-hidden="true" style=" font-size: 4rem;"></i>
+          <i class="fa fa-microphone" aria-hidden="true" style=" font-size: 3rem;"></i>
         </div>
         <div class="spacing-1"></div>
         <span style="color: #EBA820; font-size: 18px;">Proyectos innovadores</span>
@@ -180,7 +180,7 @@
       <div class="col s8 offset-s2 m4 l3 center-align">
         <div class="spacing-1"></div>
         <div class="area-wit center-align circle hover" id="item2">
-          <i class="fa fa-users" style=" font-size: 4rem;"></i>
+          <i class="fa fa-users" style=" font-size: 3rem;"></i>
         </div>
         <div class="spacing-1"></div>
         <span style="color: #EBA820; font-size: 18px;">Mentoring</span>
@@ -197,7 +197,7 @@
       <div class="col s8 offset-s2 m4 l3 center-align">
         <div class="spacing-1"></div>
         <div class="area-wit center-align circle hover" id="item3">
-          <i class="fa fa-pencil" style=" font-size: 4rem;"></i>
+          <i class="fa fa-pencil" style=" font-size: 3rem;"></i>
         </div>
         <div class="spacing-1"></div>
         <span style="color: #EBA820; font-size: 18px;">Asesoramiento</span>
@@ -215,7 +215,7 @@
       <div class="col s8 offset-s2 m4 l3 center-align">
         <div class="spacing-1"></div>
         <div class="area-wit center-align circle hover" id="item4">
-          <i class="fa fa-bullhorn" style=" font-size: 4rem;"></i>
+          <i class="fa fa-bullhorn" style=" font-size: 3rem;"></i>
         </div>
         <div class="spacing-1"></div>
         <span style="color: #EBA820; font-size: 18px;">Formación</span>
@@ -232,7 +232,7 @@
       <div class="col s8 offset-s2 m4 l3 center-align">
         <div class="spacing-1"></div>
         <div class="area-wit center-align circle hover" id="item5">
-          <i class="fa fa-check" style=" font-size: 4rem;"></i>
+          <i class="fa fa-check" style=" font-size: 3rem;"></i>
         </div>
         <div class="spacing-1"></div>
         <span style="color: #EBA820; font-size: 18px;">Contenidos</span>
@@ -251,7 +251,7 @@
     <!-- Descripcion del wit -->
     <div class="row">
       <div class="col s11">
-        <h4 class="accent-text1">Descripción de la mente a la carta</h4>
+        <h5 class="accent-text1">Descripción de la mente a la carta</h5>
       </div>
     </div>
 
@@ -266,7 +266,7 @@
     <!-- Frase o pensamiento propio -->
     <div class="row">
       <div class="col s11">
-        <h4 class="accent-text1">Frase o pensamiento propio</h4>
+        <h5 class="accent-text1">Frase o pensamiento propio</h5>
       </div>
     </div>
 

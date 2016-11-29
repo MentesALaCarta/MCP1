@@ -544,7 +544,7 @@ $(document).on('click', '#step4', function(){
       }else{
         swal({
           title: 'Gracias',
-          text: 'Te has registrado satisfactoriamente en Mentes a la carta, pronto nos contactaremos contigo',
+          text: 'Te has registrado satisfactoriamente en Mentes a la carta, revizaremos tu datos para validar tu mente, seras notificado cuando se aprueba tu perfil.',
           type: 'success'
         }, function(){
           window.location.href= answer;
