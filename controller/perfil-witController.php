@@ -12,7 +12,7 @@
     header('Location: ?view=index');
   }
 
-  if($wit -> validarPerfil($id) == false)
+  if($wit -> validarPerfil($id) == false) 
   {
     header('location: ?view=error');
   }

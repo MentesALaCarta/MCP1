@@ -36,7 +36,7 @@
           if($user['cargo'] == 1){
             echo '?view=panel';
           }else{
-            echo '?view=perfil-wit&id='.$user['id'];
+            echo '?view=perfil';
           }
 
         }else{

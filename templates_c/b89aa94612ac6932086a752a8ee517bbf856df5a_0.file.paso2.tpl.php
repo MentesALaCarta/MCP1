@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-27 00:21:44
+/* Smarty version 3.1.30, created on 2016-11-29 15:33:35
   from "/opt/lampp/htdocs/mentes/view/wits/paso2.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_583a190849c580_81210427',
+  'unifunc' => 'content_583d91bfebbd54_85268143',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b89aa94612ac6932086a752a8ee517bbf856df5a' => 
     array (
       0 => '/opt/lampp/htdocs/mentes/view/wits/paso2.tpl',
-      1 => 1480202503,
+      1 => 1480202575,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:view/principal/script.tpl' => 1,
   ),
 ),false)) {
-function content_583a190849c580_81210427 (Smarty_Internal_Template $_smarty_tpl) {
+function content_583d91bfebbd54_85268143 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -79,7 +79,7 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
 
 <div class="container">
   <div class="row">
-    <div class="col s12 m8 offset-m2">
+    <div class="col s12 m8 offset-m2" style="padding-left: 0px;">
       <table>
        <thead>
          <tr>

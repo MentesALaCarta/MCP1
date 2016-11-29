@@ -1,6 +1,6 @@
 <?php
 
-    session_start(); 
+    session_start();
 
     if(!isset($_SESSION['id'])){
       header('location: ?view=registrar');
@@ -44,11 +44,11 @@
         break;
 
       case '5':
-          header('location: ?view=index');
+          header('location: ?view=perfil-wit&id='.$_SESSION['id']);
         break;
 
       default:
-          echo 'not you are a user';
+          header('Location: ?view=error');
         break;
     }
 

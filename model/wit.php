@@ -170,7 +170,7 @@
     {
       parent::conectar();
       $id = parent::salvar($id);
-      $validar = parent::verificarRegistros('select id from usuario where id ="'.$id.'" and cargo="2"');
+      $validar = parent::verificarRegistros('select u.id from usuario u inner join fire_step f on u.id = f.usuario_id where u.id ="'.$id.'" and u.cargo="2" and f.step="5"');
       if($validar > 0)
       {
         return true;

@@ -7,7 +7,7 @@
   }
 
   # Incluimos la clase wit
-  require_once('model/wit.php');
+  require_once('model/wit.php'); 
 
   # Incluimos la clase wit
   require_once('model/Admin.php');
