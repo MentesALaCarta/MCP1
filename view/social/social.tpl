@@ -14,6 +14,7 @@
 <!-- Mentes a la carta -->
 <div class="container">
 
+{if $mentes != 0}
     {for $i = 0 to count($mentes) -1}
     <div class="row no-margin-b">
       <div class="col s12 m8 offset-m2">
@@ -70,7 +71,9 @@
       </div>
     </div>
     {/for}
-
+{else}
+  <h3 class="grey-text text-darken-2 center-align">Lista vacía</h3>
+{/if}
 </div>
 
 

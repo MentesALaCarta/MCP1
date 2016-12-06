@@ -116,6 +116,12 @@
   padding: 0px !important;
 }
 
+.nav-wit-2{
+  justify-content: space-between;
+  background-color: #424242;
+  padding: 0px !important;
+}
+
 /* Menu */
 
 .item_experence{

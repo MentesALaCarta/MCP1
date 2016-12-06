@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-12-06 18:12:17
+/* Smarty version 3.1.30, created on 2016-12-06 22:50:21
   from "/opt/lampp/htdocs/mentes/view/wits/perfil-wit.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5846f171b8ac16_98575846',
+  'unifunc' => 'content_5847329da507f6_04363813',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6a1cd9b8fb01e1f60c03849ff1ae9c84dca6b9d3' => 
     array (
       0 => '/opt/lampp/htdocs/mentes/view/wits/perfil-wit.tpl',
-      1 => 1481044276,
+      1 => 1481061020,
       2 => 'file',
     ),
   ),
@@ -22,13 +22,14 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:view/principal/script.tpl' => 1,
   ),
 ),false)) {
-function content_5846f171b8ac16_98575846 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5847329da507f6_04363813 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
 
 <div class="row">
-  <div class="col s4 nav-wit z-depth-5">
+
+  <div class="col s4 nav-wit z-depth-5 hide-on-small-only">
 
     <div class="accent">
 
@@ -106,12 +107,89 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
 
         </div>
       </div>
+  </div>
+  <!-- Encabezado de la primera seccion -->
 
+  <!-- Inicio encabezado 2 -->
+  <div class="col s12 nav-wit-2">
 
+      <!-- Imagen de perfil -->
+      <div class="row">
+        <div class="col s6 offset-s3" style="margin-top: 3em;">
+          <img src="images/<?php echo $_smarty_tpl->tpl_vars['usuario']->value['imagen'];?>
+?<?php echo time();?>
+" class="circle" alt="Imagen de perfil wit <?php echo $_smarty_tpl->tpl_vars['usuario']->value['nombres'];?>
+ <?php echo $_smarty_tpl->tpl_vars['usuario']->value['apellidos'];?>
+" width="100%">
+        </div>
+      </div>
 
+      <div class="row">
+        <div class="col s12 center-align">
+          <h4 class="des-wit"><?php echo ucwords($_smarty_tpl->tpl_vars['usuario']->value['nombres']);?>
+ <br> <?php echo ucwords($_smarty_tpl->tpl_vars['usuario']->value['apellidos']);?>
+</h4>
+        </div>
+      </div>
+
+      <?php if (isset($_SESSION['id']) && $_SESSION['id'] == $_GET['id']) {?>
+      <!-- Editar perfil -->
+      <div class="row">
+        <div class="col s12">
+          <a href="?view=editar-perfil">
+            <i class="fa fa-pencil" aria-hidden="true" style="color: white; font-size: 2em;"></i> <span class="white-text" style="font-size: 1.2rem;">Editar perfil</span>
+          </a>
+        </div>
+      </div>
+      <?php }?>
+
+      <!-- Datos de contacto -->
+      <div class="row">
+        <div class="col s12">
+
+          <!-- Telefono-->
+          <div class="row">
+            <div class="col s6"><span class="des-wit">Telefono:</span></div>
+            <div class="col s6 "><span class="des-wit-2"><?php echo $_smarty_tpl->tpl_vars['contacto']->value[0][2];?>
+</span></div>
+          </div>
+
+          <!-- Ciudad -->
+          <div class="row">
+            <div class="col s6"><span class="des-wit">Ciudad:</span></div>
+            <div class="col s6 "><span class="des-wit-2"><?php echo $_smarty_tpl->tpl_vars['contacto']->value[0][1];?>
+</span></div>
+          </div>
+
+          <!-- Pais -->
+          <div class="row">
+            <div class="col s6"><span class="des-wit">Pais:</span></div>
+            <div class="col s6 "><span class="des-wit-2"><?php echo $_smarty_tpl->tpl_vars['usuario']->value['pais'];?>
+</span></div>
+          </div>
+
+          <!-- email -->
+          <div class="row">
+            <div class="col s6"><span class="des-wit">Correo electrónico:</span></div>
+            <div class="col s6 "><span class="des-wit-2"><?php echo $_smarty_tpl->tpl_vars['usuario']->value['email'];?>
+</span></div>
+          </div>
+
+          <!-- idiomas -->
+          <div class="row">
+            <div class="col s6"><span class="des-wit">Idiomas:</span></div>
+            <div class="col s6 "><span class="des-wit-2"><?php echo $_smarty_tpl->tpl_vars['idiomas']->value;?>
+</span></div>
+          </div>
+
+        </div>
+      </div>
 
   </div>
-  <div class="col s8 offset-s4">
+
+  <!-- Encabezado de la segunda seccion -->
+
+  <div class="col s12 m8 offset-m4">
 
     <?php if (isset($_SESSION['id']) && $_SESSION['id'] == $_GET['id'] && $_smarty_tpl->tpl_vars['estado']->value == 'I') {?>
       <!-- Si no esta aprobado -->
@@ -126,6 +204,7 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
 
     <div class="row">
       <div class="col s11">
+        <div class="spacing-2 hide-on-large-only" ></div>
         <h5 class="accent-text1">Experiencia</h5>
       </div>
     </div>
@@ -133,14 +212,14 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
     <div class="row">
       <div class="col s12">
         <div class="text-accent1">
-          <table>
+          <table class="responsive-table">
             <thead>
               <tr>
                 <th data-field="id">Empresa</th>
                 <th data-field="name">Sector</th>
                 <th data-field="price">Cargo</th>
                 <th data-field="price">Pais</th>
-                <th data-field="price">Actual trabajo</th>
+                <!-- <th data-field="price">Actual trabajo</th> -->
               </tr>
             </thead>
 
@@ -217,7 +296,7 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
 
       <?php if ($_smarty_tpl->tpl_vars['brain']->value[0] == true) {?>
       <!-- Proyectos innovadores -->
-      <div class="col s8 offset-s2 m4 l3 center-align" >
+      <div class="col s6 m4 l3 center-align" >
         <div class="spacing-1"></div>
         <div class="area-wit center-align circle hover" id="item1">
           <i class="fa fa-microphone" aria-hidden="true" style=" font-size: 3rem;"></i>
@@ -234,7 +313,7 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
 
       <?php if ($_smarty_tpl->tpl_vars['brain']->value[1] == true) {?>
       <!-- Mentoring -->
-      <div class="col s8 offset-s2 m4 l3 center-align">
+      <div class="col s6 m4 l3 center-align">
         <div class="spacing-1"></div>
         <div class="area-wit center-align circle hover" id="item2">
           <i class="fa fa-users" style=" font-size: 3rem;"></i>
@@ -251,7 +330,7 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
 
       <?php if ($_smarty_tpl->tpl_vars['brain']->value[2] == true) {?>
       <!-- Asesoramiento -->
-      <div class="col s8 offset-s2 m4 l3 center-align">
+      <div class="col s6 m4 l3 center-align">
         <div class="spacing-1"></div>
         <div class="area-wit center-align circle hover" id="item3">
           <i class="fa fa-pencil" style=" font-size: 3rem;"></i>
@@ -260,7 +339,7 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
         <span style="color: #EBA820; font-size: 18px;">Asesoramiento</span>
         <br>
         <span class="accent-grey">
-          Brindar asesoría a empresas y emprendedores <br><span style="visibility: hidden;">lorem ipsum</span>
+          Brindar asesoría a empresas y emprendedores <br><span style="visibility: hidden;">lorem ipsum <br>ses</span>
         </span>
         <input type="text" id="services3" name="services[2]"  hidden="hidden">
       </div>
@@ -269,7 +348,7 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
 
       <?php if ($_smarty_tpl->tpl_vars['brain']->value[3] == true) {?>
       <!-- Formación -->
-      <div class="col s8 offset-s2 m4 l3 center-align">
+      <div class="col s6 m4 l3 center-align">
         <div class="spacing-1"></div>
         <div class="area-wit center-align circle hover" id="item4">
           <i class="fa fa-bullhorn" style=" font-size: 3rem;"></i>
@@ -286,7 +365,7 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
 
       <?php if ($_smarty_tpl->tpl_vars['brain']->value[4] == true) {?>
       <!-- Contenidos -->
-      <div class="col s8 offset-s2 m4 l3 center-align">
+      <div class="col s6 m4 l3 center-align">
         <div class="spacing-1"></div>
         <div class="area-wit center-align circle hover" id="item5">
           <i class="fa fa-check" style=" font-size: 3rem;"></i>
@@ -307,7 +386,7 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
 
     <!-- Descripcion del wit -->
     <div class="row">
-      <div class="col s11">
+      <div class="col s12">
         <h5 class="accent-text1">Descripción de la mente a la carta</h5>
       </div>
     </div>
@@ -323,7 +402,7 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
 
     <!-- Frase o pensamiento propio -->
     <div class="row">
-      <div class="col s11">
+      <div class="col s12">
         <h5 class="accent-text1">Frase o pensamiento propio</h5>
       </div>
     </div>
@@ -338,6 +417,7 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
     </div>
 
   </div>
+
 </div>
 <?php if (isset($_SESSION['id'])) {?>
 

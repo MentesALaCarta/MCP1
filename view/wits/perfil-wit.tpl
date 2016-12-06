@@ -1,7 +1,8 @@
 {include file="view/principal/header.tpl"}
 
 <div class="row">
-  <div class="col s4 nav-wit z-depth-5">
+
+  <div class="col s4 nav-wit z-depth-5 hide-on-small-only">
 
     <div class="accent">
 
@@ -68,12 +69,78 @@
 
         </div>
       </div>
+  </div>
+  <!-- Encabezado de la primera seccion -->
 
+  <!-- Inicio encabezado 2 -->
+  <div class="col s12 nav-wit-2">
 
+      <!-- Imagen de perfil -->
+      <div class="row">
+        <div class="col s6 offset-s3" style="margin-top: 3em;">
+          <img src="images/{$usuario['imagen']}?{time()}" class="circle" alt="Imagen de perfil wit {$usuario['nombres']} {$usuario['apellidos']}" width="100%">
+        </div>
+      </div>
 
+      <div class="row">
+        <div class="col s12 center-align">
+          <h4 class="des-wit">{ucwords($usuario['nombres'])} <br> {ucwords($usuario['apellidos'])}</h4>
+        </div>
+      </div>
+
+      {if isset($smarty.session.id) && $smarty.session.id == $smarty.get['id'] }
+      <!-- Editar perfil -->
+      <div class="row">
+        <div class="col s12">
+          <a href="?view=editar-perfil">
+            <i class="fa fa-pencil" aria-hidden="true" style="color: white; font-size: 2em;"></i> <span class="white-text" style="font-size: 1.2rem;">Editar perfil</span>
+          </a>
+        </div>
+      </div>
+      {/if}
+
+      <!-- Datos de contacto -->
+      <div class="row">
+        <div class="col s12">
+
+          <!-- Telefono-->
+          <div class="row">
+            <div class="col s6"><span class="des-wit">Telefono:</span></div>
+            <div class="col s6 "><span class="des-wit-2">{$contacto[0][2]}</span></div>
+          </div>
+
+          <!-- Ciudad -->
+          <div class="row">
+            <div class="col s6"><span class="des-wit">Ciudad:</span></div>
+            <div class="col s6 "><span class="des-wit-2">{$contacto[0][1]}</span></div>
+          </div>
+
+          <!-- Pais -->
+          <div class="row">
+            <div class="col s6"><span class="des-wit">Pais:</span></div>
+            <div class="col s6 "><span class="des-wit-2">{$usuario['pais']}</span></div>
+          </div>
+
+          <!-- email -->
+          <div class="row">
+            <div class="col s6"><span class="des-wit">Correo electrónico:</span></div>
+            <div class="col s6 "><span class="des-wit-2">{$usuario['email']}</span></div>
+          </div>
+
+          <!-- idiomas -->
+          <div class="row">
+            <div class="col s6"><span class="des-wit">Idiomas:</span></div>
+            <div class="col s6 "><span class="des-wit-2">{$idiomas}</span></div>
+          </div>
+
+        </div>
+      </div>
 
   </div>
-  <div class="col s8 offset-s4">
+
+  <!-- Encabezado de la segunda seccion -->
+
+  <div class="col s12 m8 offset-m4">
 
     {if isset($smarty.session.id) && $smarty.session.id == $smarty.get['id'] && $estado == 'I'}
       <!-- Si no esta aprobado -->
@@ -88,6 +155,7 @@
 
     <div class="row">
       <div class="col s11">
+        <div class="spacing-2 hide-on-large-only" ></div>
         <h5 class="accent-text1">Experiencia</h5>
       </div>
     </div>
@@ -95,14 +163,14 @@
     <div class="row">
       <div class="col s12">
         <div class="text-accent1">
-          <table>
+          <table class="responsive-table">
             <thead>
               <tr>
                 <th data-field="id">Empresa</th>
                 <th data-field="name">Sector</th>
                 <th data-field="price">Cargo</th>
                 <th data-field="price">Pais</th>
-                <th data-field="price">Actual trabajo</th>
+                <!-- <th data-field="price">Actual trabajo</th> -->
               </tr>
             </thead>
 
@@ -160,7 +228,7 @@
 
       {if $brain[0] == true }
       <!-- Proyectos innovadores -->
-      <div class="col s8 offset-s2 m4 l3 center-align" >
+      <div class="col s6 m4 l3 center-align" >
         <div class="spacing-1"></div>
         <div class="area-wit center-align circle hover" id="item1">
           <i class="fa fa-microphone" aria-hidden="true" style=" font-size: 3rem;"></i>
@@ -177,7 +245,7 @@
 
       {if $brain[1] == true}
       <!-- Mentoring -->
-      <div class="col s8 offset-s2 m4 l3 center-align">
+      <div class="col s6 m4 l3 center-align">
         <div class="spacing-1"></div>
         <div class="area-wit center-align circle hover" id="item2">
           <i class="fa fa-users" style=" font-size: 3rem;"></i>
@@ -194,7 +262,7 @@
 
       {if $brain[2] == true}
       <!-- Asesoramiento -->
-      <div class="col s8 offset-s2 m4 l3 center-align">
+      <div class="col s6 m4 l3 center-align">
         <div class="spacing-1"></div>
         <div class="area-wit center-align circle hover" id="item3">
           <i class="fa fa-pencil" style=" font-size: 3rem;"></i>
@@ -203,7 +271,7 @@
         <span style="color: #EBA820; font-size: 18px;">Asesoramiento</span>
         <br>
         <span class="accent-grey">
-          Brindar asesoría a empresas y emprendedores <br><span style="visibility: hidden;">lorem ipsum</span>
+          Brindar asesoría a empresas y emprendedores <br><span style="visibility: hidden;">lorem ipsum <br>ses</span>
         </span>
         <input type="text" id="services3" name="services[2]"  hidden="hidden">
       </div>
@@ -212,7 +280,7 @@
 
       {if $brain[3] == true}
       <!-- Formación -->
-      <div class="col s8 offset-s2 m4 l3 center-align">
+      <div class="col s6 m4 l3 center-align">
         <div class="spacing-1"></div>
         <div class="area-wit center-align circle hover" id="item4">
           <i class="fa fa-bullhorn" style=" font-size: 3rem;"></i>
@@ -221,7 +289,7 @@
         <span style="color: #EBA820; font-size: 18px;">Formación</span>
         <br>
         <span class="accent-grey">
-          Impartir charlas y formación<br><span style="visibility: hidden;">lorem ipsum lorem ipsum lorem ipsum</span>
+          Impartir charlas y formación<br><span style="visibility: hidden;">lorem ipsum lorem <br>ipsum lorem <br>sipsum</span>
         </span>
         <input type="text" id="services4" name="services[3]"  hidden="hidden">
       </div>
@@ -229,7 +297,7 @@
 
       {if $brain[4] == true}
       <!-- Contenidos -->
-      <div class="col s8 offset-s2 m4 l3 center-align">
+      <div class="col s6 m4 l3 center-align">
         <div class="spacing-1"></div>
         <div class="area-wit center-align circle hover" id="item5">
           <i class="fa fa-check" style=" font-size: 3rem;"></i>
@@ -250,7 +318,7 @@
 
     <!-- Descripcion del wit -->
     <div class="row">
-      <div class="col s11">
+      <div class="col s12">
         <h5 class="accent-text1">Descripción de la mente a la carta</h5>
       </div>
     </div>
@@ -265,7 +333,7 @@
 
     <!-- Frase o pensamiento propio -->
     <div class="row">
-      <div class="col s11">
+      <div class="col s12">
         <h5 class="accent-text1">Frase o pensamiento propio</h5>
       </div>
     </div>
@@ -279,6 +347,7 @@
     </div>
 
   </div>
+
 </div>
 {if isset($smarty.session.id)}
 

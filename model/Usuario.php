@@ -74,9 +74,7 @@
 
          $apellidos[0]= str_replace($buscar, $reemplazar, $apellidos[0]);
          $apellidos[1]= str_replace($buscar, $reemplazar, $apellidos[1]);
-
-
-
+         //
         //  /* Notificar email */
          //
         //  //título
@@ -467,7 +465,7 @@
       if($verificar > 0)
       {
         $consulta = parent::query($sql);
-        
+
         $datos = '';
         while($row = mysqli_fetch_array($consulta)){
          $datos .= ' ' .$row['descripcion'] .' ';

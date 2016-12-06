@@ -582,8 +582,7 @@ $(document).on('click', '.aprobar', function(){
             url: 'controller/admin/aprobar.php',
             data: {id: id},
             success: function(res){
-              // location.reload();
-              console.log(res);
+              location.reload();
             }
           });
         });
