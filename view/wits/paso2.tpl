@@ -9,14 +9,14 @@
 
 <!-- Titulo dinamico -->
 <div class="row col s8 offset-s2 center-align">
-  <h3 class="title-orange" style="margin-top: 0px;">¿Qué otras aptitudes tiene tu mente?</h3>
+  <h3 class="title-orange" style="margin-top: 0px;">¿Qué aptitudes tiene tu mente?</h3>
 
 </div>
 
 <div class="row">
   <div class="col s12 m10 offset-m1 center-align">
     <span class="grey-text text-darken-2">
-      ¿Cuáles son las áreas de tu profesión en las que te sientes más fuerte?
+      Cuentanos tus habilidades y tus áreas de experticia a nivel profesional
     </span>
   </div>
 </div>

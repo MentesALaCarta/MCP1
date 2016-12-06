@@ -32,35 +32,74 @@
 
   <div class="row">
 
-    <!-- Proyectos innovadores -->
-    <div class="col s8 offset-s2 m4 l2 offset-l1 center-align" >
-      <div class="area center-align circle hover" id="item1">
-        <i class="fa fa-microphone" aria-hidden="true" style=" font-size: 4rem;"></i>
+    {$actividad1 = 'Proyectos innovadores'}
+    {$actividad2 = 'Mentoring'}
+    {$actividad3 = 'Asesoramiento'}
+    {$actividad4 = 'Formaci&oacute;n'}
+    {$actividad5 = 'Contenidos'}
+
+    {if strpos($actividad, $actividad1) === false}
+      <!-- Proyectos innovadores -->
+      <div class="col s8 offset-s2 m4 l2 offset-l1 center-align" >
+        <div class="area center-align circle hover" id="item1">
+          <i class="fa fa-microphone" aria-hidden="true" style=" font-size: 4rem;"></i>
+        </div>
+        <div class="spacing-1"></div>
+        <span style="color: #EBA820; font-size: 18px;">Proyectos innovadores</span>
+        <br>
+        <span class="accent-grey">
+          Participar en proyectos innovadores <br><span style="visibility: hidden;">lorem ipsum</span>
+        </span>
+        <input type="text" id="services1" name="services[0]"  hidden="hidden">
       </div>
-      <div class="spacing-1"></div>
-      <span style="color: #EBA820; font-size: 18px;">Proyectos innovadores</span>
-      <br>
-      <span class="accent-grey">
-        Participar en proyectos innovadores <br><span style="visibility: hidden;">lorem ipsum</span>
-      </span>
-      <input type="text" id="services1" name="services[0]"  hidden="hidden">
-    </div>
+    {else}
+        <!-- Proyectos innovadores -->
+        <div class="col s8 offset-s2 m4 l2 offset-l1 center-align" >
+          <div class="area center-align circle hover area_active" id="item1">
+            <i class="fa fa-microphone" aria-hidden="true" style=" font-size: 4rem;"></i>
+          </div>
+          <div class="spacing-1"></div>
+          <span style="color: #EBA820; font-size: 18px;">Proyectos innovadores</span>
+          <br>
+          <span class="accent-grey">
+            Participar en proyectos innovadores <br><span style="visibility: hidden;">lorem ipsum</span>
+          </span>
+          <input type="text" id="services1" name="services[0]"  hidden="hidden">
+        </div>
+    {/if}
 
-    <!-- Mentoring -->
-    <div class="col s8 offset-s2 m4 l2 center-align">
-      <div class="area center-align circle hover" id="item2">
-        <i class="fa fa-users" style=" font-size: 4rem;"></i>
+    {if strpos($actividad, $actividad2) === false}
+      <!-- Mentoring -->
+      <div class="col s8 offset-s2 m4 l2 center-align">
+        <div class="area center-align circle hover" id="item2">
+          <i class="fa fa-users" style=" font-size: 4rem;"></i>
+        </div>
+        <div class="spacing-1"></div>
+        <span style="color: #EBA820; font-size: 18px;">Mentoring</span>
+        <br>
+        <span class="accent-grey">
+          Ser mentor de emprendimientos y proyectos innovadores
+        </span>
+        <input type="text" id="services2" name="services[1]"  hidden="hidden">
       </div>
-      <div class="spacing-1"></div>
-      <span style="color: #EBA820; font-size: 18px;">Mentoring</span>
-      <br>
-      <span class="accent-grey">
-        Ser mentor de emprendimientos y proyectos innovadores
-      </span>
-      <input type="text" id="services2" name="services[1]"  hidden="hidden">
-    </div>
+    {else}
+      <!-- Mentoring -->
+      <div class="col s8 offset-s2 m4 l2 center-align">
+        <div class="area center-align circle hover area_active" id="item2">
+          <i class="fa fa-users" style=" font-size: 4rem;"></i>
+        </div>
+        <div class="spacing-1"></div>
+        <span style="color: #EBA820; font-size: 18px;">Mentoring</span>
+        <br>
+        <span class="accent-grey">
+          Ser mentor de emprendimientos y proyectos innovadores
+        </span>
+        <input type="text" id="services2" name="services[1]"  hidden="hidden">
+      </div>
+    {/if}
 
 
+    {if strpos($actividad, $actividad3) === false}
     <!-- Asesoramiento -->
     <div class="col s8 offset-s2 m4 l2 center-align">
       <div class="area center-align circle hover" id="item3">
@@ -74,22 +113,54 @@
       </span>
       <input type="text" id="services3" name="services[2]"  hidden="hidden">
     </div>
-
-
-    <!-- Formación -->
+    {else}
+    <!-- Asesoramiento -->
     <div class="col s8 offset-s2 m4 l2 center-align">
-      <div class="area center-align circle hover" id="item4">
-        <i class="fa fa-bullhorn" style=" font-size: 4rem;"></i>
+      <div class="area center-align circle hover area_active" id="item3">
+        <i class="fa fa-pencil" style=" font-size: 4rem;"></i>
       </div>
       <div class="spacing-1"></div>
-      <span style="color: #EBA820; font-size: 18px;">Formación</span>
+      <span style="color: #EBA820; font-size: 18px;">Asesoramiento</span>
       <br>
       <span class="accent-grey">
-        Impartir charlas y formación<br><span style="visibility: hidden;">lorem ipsum lorem ipsum lorem ipsum</span>
+        Brindar asesoría a empresas y emprendedores <br><span style="visibility: hidden;">lorem ipsum</span>
       </span>
-      <input type="text" id="services4" name="services[3]"  hidden="hidden">
+      <input type="text" id="services3" name="services[2]"  hidden="hidden">
     </div>
+    {/if}
 
+
+    {if strpos($actividad, $actividad4) === false}
+      <!-- Formación -->
+      <div class="col s8 offset-s2 m4 l2 center-align">
+        <div class="area center-align circle hover" id="item4">
+          <i class="fa fa-bullhorn" style=" font-size: 4rem;"></i>
+        </div>
+        <div class="spacing-1"></div>
+        <span style="color: #EBA820; font-size: 18px;">Formación</span>
+        <br>
+        <span class="accent-grey">
+          Impartir charlas y formación<br><span style="visibility: hidden;">lorem ipsum lorem ipsum lorem ipsum</span>
+        </span>
+        <input type="text" id="services4" name="services[3]"  hidden="hidden">
+      </div>
+    {else}
+      <!-- Formación -->
+      <div class="col s8 offset-s2 m4 l2 center-align">
+        <div class="area center-align circle hover area_active" id="item4">
+          <i class="fa fa-bullhorn" style=" font-size: 4rem;"></i>
+        </div>
+        <div class="spacing-1"></div>
+        <span style="color: #EBA820; font-size: 18px;">Formación</span>
+        <br>
+        <span class="accent-grey">
+          Impartir charlas y formación<br><span style="visibility: hidden;">lorem ipsum lorem ipsum lorem ipsum</span>
+        </span>
+        <input type="text" id="services4" name="services[3]"  hidden="hidden">
+      </div>
+    {/if}
+
+    {if strpos($actividad, $actividad5) === false}
     <!-- Contenidos -->
     <div class="col s8 offset-s2 m4 l2 center-align">
       <div class="area center-align circle hover" id="item5">
@@ -103,6 +174,21 @@
       </span>
       <input type="text" id="services5" name="services[4]"  hidden="hidden">
     </div>
+    {else}
+    <div class="col s8 offset-s2 m4 l2 center-align">
+      <div class="area center-align circle hover area_active" id="item5">
+        <i class="fa fa-check" style=" font-size: 4rem;"></i>
+      </div>
+      <div class="spacing-1"></div>
+      <span style="color: #EBA820; font-size: 18px;">Contenidos</span>
+      <br>
+      <span class="accent-grey">
+        Generar contenido escrito o audiovisual <br><span style="visibility: hidden;">lorem ipsum</span>
+      </span>
+      <input type="text" id="services5" name="services[4]"  hidden="hidden">
+    </div>
+    {/if}
+
 
   </div>
 

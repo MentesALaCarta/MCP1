@@ -1,9 +1,15 @@
 {include file="view/principal/header.tpl"}
 
-<div class="container">
-
-  <div class="spacing-3">
+<div class="row">
+  <div class="spacing-1"></div>
+  <div class="col s12">
+    <a href="?view=perfil-wit& id={$smarty.session.id}">
+    <button type="button" class="btn waves-effect waves-light grey darken-4" name="button"><i class="fa fa-arrow-left" aria-hidden="true"></i> Volver</button>
+    </a>
   </div>
+</div>
+
+<div class="container">
 
   <div class="row">
     <div class="col s12 center-align">
@@ -17,7 +23,7 @@
 
         <!-- Datos generales -->
         <li>
-          <div class="collapsible-header"><i class="fa fa-book" aria-hidden="true"></i> Datos generales</div>
+          <div class="collapsible-header active"><i class="fa fa-book" aria-hidden="true"></i> Datos generales</div>
           <div class="collapsible-body padding-edit">
             <!-- Descripción de la fase -->
             <span class="grey-text">
@@ -36,8 +42,9 @@
                 <div class="col s12">
                   <!-- Imagen de perfil -->
                   <div class="row">
+
                     <div class="col s12">
-                        <label class="grey-text text-darken-2">Foto de perfil</label>
+                        <label class="grey-text text-darken-2">Selecciona una imagen de perfil</label>
                         <div class="file-field input-field">
                           <div class="btn" style="background-color: #EBA820;">
                             <span><i class="fa fa-user" style="font-size: 2rem; color: white;"></i></span>
@@ -49,10 +56,12 @@
                         </div>
                     </div>
 
-                      <div class="col s12 grey-text text-darken-2">
-                        <i class="fa fa-picture-o" aria-hidden="true"></i> <span class="underline" id="actualizar_imagen">Actualizar imagen</span>
-                      </div>
+                    <div id="loadImagen" class="col s2 m1" hidden="hidden">
+                        <img src="images/perfiles/load.gif" alt="subiendo imagen de perfil" style="width: 100%;"/>
+                    </div>
+
                   </div>
+
                 </div>
               </div>
             </form>

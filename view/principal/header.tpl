@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/materialize.min.css">
     <!-- Importamos jquery -->
     <script  src="js/jquery3.js"></script>
+
     <!--Fuente de iconos-->
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <!--Fuentes personalizadas-->
@@ -26,7 +27,6 @@
     <script type="text/javascript" src="js/sweetalert.min.js"></script>
     <script src="js/jquery-ui.js"></script>
     <link rel="stylesheet" href="css/jquery-ui.css">
-
     <style>
         #video {
             width: 100%;

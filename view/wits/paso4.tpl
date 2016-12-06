@@ -6,13 +6,12 @@
     <img src="images/bradlogo.png" alt="logo mentes a la carta" width="100%">
   </div>
 </div>
-
+ 
 
 <!-- Titulo dinamico -->
 <div class="row col s8 offset-s2 center-align">
   <div class="spacing-2"></div>
   <h3 class="title-orange">¡Listo! ¡Estos son los últimos datos!</h3>
-
 </div>
 
 <div class="row">
@@ -46,7 +45,7 @@
     <div class="row">
 
       <div class="col s12">
-          <label for="" style="font-size: 1rem; color: #424242;">Foto de perfil</label>
+          <label for="" style="font-size: 1rem; color: #424242;">Seleccionar foto de perfil</label>
           <div class="file-field input-field">
             <div class="btn" style="background-color: #EBA820;">
               <span><i class="fa fa-user" style="font-size: 2rem; color: white;"></i></span>

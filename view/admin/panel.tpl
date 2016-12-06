@@ -53,43 +53,32 @@
         <label for="busqueda-text">Ingresa tu búsqueda</label>
       </div>
 
-      <!-- Tipo de busqueda / Test -->
-      <!-- <div class="input-field col s12 m4">
-        <select id="tipo_busqueda_dinamic">
-          <option value="" disabled selected></option>
-          <option value="name">Nombre o Apellido</option>
-          <option value="sector">Sector</option>
-          <option value="empresa">Empresa</option>
-          <option value="ciudad">Ciudad</option>
-          <option value="cargo">Cargo</option>
-          <option value="actividad">Actividades</option>
-          <option value="pais">País</option>
-          <option value="idiomas">Idiomas</option>
-          <option value="aptitud">Aptitud</option>
-
-        </select>
-        <label>Tipo de búsqueda</label>
-      </div> -->
-
-      <!-- Sectores y empresas -->
+      <!-- Sectores-->
       <div class="input-field col s12 m6">
-        <select multiple id="sectores_empresas">
-          <option value="" disabled selected>Sectores</option>
+        <select multiple id="sectores">
+          <option value="" disabled selected>Sector</option>
           {for $i = 0 to count($sectores) -1}
-            <option value="sector{$sectores[$i]}">{$sectores[$i]}</option>
+            <option value="{$sectores[$i]}">{$sectores[$i]}</option>
           {/for}
+        </select>
+        <label>Sectores</label>
+      </div>
+
+      <!-- Sectores-->
+      <div class="input-field col s12 m6">
+        <select multiple id="empresas">
           <option value="" disabled selected>Empresas</option>
           {for $i = 0 to count($empresas) -1}
-            <option value="empresa{$empresas[$i]}">{$empresas[$i]}</option>
+            <option value="{$empresas[$i]}">{$empresas[$i]}</option>
           {/for}
         </select>
-        <label>Sectores / Empresas </label>
+        <label>Empresas </label>
       </div>
 
       <!-- Ciudades -->
       <div class="input-field col s12 m6">
         <select multiple id="ciudad_dinamic">
-          <option value="" disabled selected></option>
+          <option value="" disabled selected>Ciudad</option>
           {for $i = 0 to count($ciudad) -1}
             <option value="{$ciudad[$i]}">{$ciudad[$i]}</option>
           {/for}
@@ -119,20 +108,31 @@
         <label>Actividades</label>
       </div>
 
-      <!-- Paises y empresas -->
+      <!-- Paises -->
       <div class="input-field col s12 m6">
-        <select multiple id="pais_idioma_dinamic">
-          <option value="" disabled selected>Paises</option>
+        <select multiple id="paises">
+          <option value="" disabled selected>Pais</option>
           {for $i = 0 to count($paises) -1}
-            <option value="pais{$paises[$i]}">{ucwords($paises[$i])}</option>
-          {/for}
-          <option value="" disabled selected>Idiomas</option>
-          {for $i = 0 to count($idiomas) -1}
-            <option value="idioma{$idiomas[$i]}">{ucwords($idiomas[$i])}</option>
+            <option value="{$paises[$i]}">{ucwords($paises[$i])}</option>
           {/for}
         </select>
-        <label>Paises / Idiomas </label>
+        <label>Paises </label>
       </div>
+
+      <!-- Idiomas -->
+      <div class="input-field col s12 m6">
+        <select multiple id="idiomas">
+          <option value="" disabled selected>Idioma</option>
+          {for $i = 0 to count($idiomas) -1}
+            <option value="{$idiomas[$i]}">{ucwords($idiomas[$i])}</option>
+          {/for}
+        </select>
+        <label> Idiomas </label>
+      </div>
+
+
+
+
 
       <!-- Aptitudes -->
       <div class="input-field col s12">

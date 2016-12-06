@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-21 15:00:40
+/* Smarty version 3.1.30, created on 2016-12-06 16:49:49
   from "/opt/lampp/htdocs/mentes/view/principal/header.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5832fe08b04ba1_71832053',
+  'unifunc' => 'content_5846de1d15c064_29201684',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0ee97dd1b475e14b68aa591d807d1352618fa87d' => 
     array (
       0 => '/opt/lampp/htdocs/mentes/view/principal/header.tpl',
-      1 => 1479736837,
+      1 => 1481039132,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5832fe08b04ba1_71832053 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5846de1d15c064_29201684 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -37,6 +37,7 @@ function content_5832fe08b04ba1_71832053 (Smarty_Internal_Template $_smarty_tpl)
     <?php echo '<script'; ?>
   src="js/jquery3.js"><?php echo '</script'; ?>
 >
+
     <!--Fuente de iconos-->
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <!--Fuentes personalizadas-->
@@ -56,7 +57,6 @@ function content_5832fe08b04ba1_71832053 (Smarty_Internal_Template $_smarty_tpl)
  src="js/jquery-ui.js"><?php echo '</script'; ?>
 >
     <link rel="stylesheet" href="css/jquery-ui.css">
-
     <style>
         #video {
             width: 100%;

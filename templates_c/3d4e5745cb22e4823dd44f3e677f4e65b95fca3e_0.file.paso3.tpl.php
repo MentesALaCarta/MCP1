@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-27 00:07:43
+/* Smarty version 3.1.30, created on 2016-12-06 16:07:19
   from "/opt/lampp/htdocs/mentes/view/wits/paso3.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_583a15bff01b05_95637733',
+  'unifunc' => 'content_5846d4270a22f5_09353741',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '3d4e5745cb22e4823dd44f3e677f4e65b95fca3e' => 
     array (
       0 => '/opt/lampp/htdocs/mentes/view/wits/paso3.tpl',
-      1 => 1480201662,
+      1 => 1481036838,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:view/principal/script.tpl' => 1,
   ),
 ),false)) {
-function content_583a15bff01b05_95637733 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5846d4270a22f5_09353741 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -60,35 +60,79 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
 
   <div class="row">
 
-    <!-- Proyectos innovadores -->
-    <div class="col s8 offset-s2 m4 l2 offset-l1 center-align" >
-      <div class="area center-align circle hover" id="item1">
-        <i class="fa fa-microphone" aria-hidden="true" style=" font-size: 4rem;"></i>
+    <?php $_smarty_tpl->_assignInScope('actividad1', 'Proyectos innovadores');
+?>
+    <?php $_smarty_tpl->_assignInScope('actividad2', 'Mentoring');
+?>
+    <?php $_smarty_tpl->_assignInScope('actividad3', 'Asesoramiento');
+?>
+    <?php $_smarty_tpl->_assignInScope('actividad4', 'Formaci&oacute;n');
+?>
+    <?php $_smarty_tpl->_assignInScope('actividad5', 'Contenidos');
+?>
+
+    <?php if (strpos($_smarty_tpl->tpl_vars['actividad']->value,$_smarty_tpl->tpl_vars['actividad1']->value) === false) {?>
+      <!-- Proyectos innovadores -->
+      <div class="col s8 offset-s2 m4 l2 offset-l1 center-align" >
+        <div class="area center-align circle hover" id="item1">
+          <i class="fa fa-microphone" aria-hidden="true" style=" font-size: 4rem;"></i>
+        </div>
+        <div class="spacing-1"></div>
+        <span style="color: #EBA820; font-size: 18px;">Proyectos innovadores</span>
+        <br>
+        <span class="accent-grey">
+          Participar en proyectos innovadores <br><span style="visibility: hidden;">lorem ipsum</span>
+        </span>
+        <input type="text" id="services1" name="services[0]"  hidden="hidden">
       </div>
-      <div class="spacing-1"></div>
-      <span style="color: #EBA820; font-size: 18px;">Proyectos innovadores</span>
-      <br>
-      <span class="accent-grey">
-        Participar en proyectos innovadores <br><span style="visibility: hidden;">lorem ipsum</span>
-      </span>
-      <input type="text" id="services1" name="services[0]"  hidden="hidden">
-    </div>
+    <?php } else { ?>
+        <!-- Proyectos innovadores -->
+        <div class="col s8 offset-s2 m4 l2 offset-l1 center-align" >
+          <div class="area center-align circle hover area_active" id="item1">
+            <i class="fa fa-microphone" aria-hidden="true" style=" font-size: 4rem;"></i>
+          </div>
+          <div class="spacing-1"></div>
+          <span style="color: #EBA820; font-size: 18px;">Proyectos innovadores</span>
+          <br>
+          <span class="accent-grey">
+            Participar en proyectos innovadores <br><span style="visibility: hidden;">lorem ipsum</span>
+          </span>
+          <input type="text" id="services1" name="services[0]"  hidden="hidden">
+        </div>
+    <?php }?>
 
-    <!-- Mentoring -->
-    <div class="col s8 offset-s2 m4 l2 center-align">
-      <div class="area center-align circle hover" id="item2">
-        <i class="fa fa-users" style=" font-size: 4rem;"></i>
+    <?php if (strpos($_smarty_tpl->tpl_vars['actividad']->value,$_smarty_tpl->tpl_vars['actividad2']->value) === false) {?>
+      <!-- Mentoring -->
+      <div class="col s8 offset-s2 m4 l2 center-align">
+        <div class="area center-align circle hover" id="item2">
+          <i class="fa fa-users" style=" font-size: 4rem;"></i>
+        </div>
+        <div class="spacing-1"></div>
+        <span style="color: #EBA820; font-size: 18px;">Mentoring</span>
+        <br>
+        <span class="accent-grey">
+          Ser mentor de emprendimientos y proyectos innovadores
+        </span>
+        <input type="text" id="services2" name="services[1]"  hidden="hidden">
       </div>
-      <div class="spacing-1"></div>
-      <span style="color: #EBA820; font-size: 18px;">Mentoring</span>
-      <br>
-      <span class="accent-grey">
-        Ser mentor de emprendimientos y proyectos innovadores
-      </span>
-      <input type="text" id="services2" name="services[1]"  hidden="hidden">
-    </div>
+    <?php } else { ?>
+      <!-- Mentoring -->
+      <div class="col s8 offset-s2 m4 l2 center-align">
+        <div class="area center-align circle hover area_active" id="item2">
+          <i class="fa fa-users" style=" font-size: 4rem;"></i>
+        </div>
+        <div class="spacing-1"></div>
+        <span style="color: #EBA820; font-size: 18px;">Mentoring</span>
+        <br>
+        <span class="accent-grey">
+          Ser mentor de emprendimientos y proyectos innovadores
+        </span>
+        <input type="text" id="services2" name="services[1]"  hidden="hidden">
+      </div>
+    <?php }?>
 
 
+    <?php if (strpos($_smarty_tpl->tpl_vars['actividad']->value,$_smarty_tpl->tpl_vars['actividad3']->value) === false) {?>
     <!-- Asesoramiento -->
     <div class="col s8 offset-s2 m4 l2 center-align">
       <div class="area center-align circle hover" id="item3">
@@ -102,22 +146,54 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
       </span>
       <input type="text" id="services3" name="services[2]"  hidden="hidden">
     </div>
-
-
-    <!-- Formación -->
+    <?php } else { ?>
+    <!-- Asesoramiento -->
     <div class="col s8 offset-s2 m4 l2 center-align">
-      <div class="area center-align circle hover" id="item4">
-        <i class="fa fa-bullhorn" style=" font-size: 4rem;"></i>
+      <div class="area center-align circle hover area_active" id="item3">
+        <i class="fa fa-pencil" style=" font-size: 4rem;"></i>
       </div>
       <div class="spacing-1"></div>
-      <span style="color: #EBA820; font-size: 18px;">Formación</span>
+      <span style="color: #EBA820; font-size: 18px;">Asesoramiento</span>
       <br>
       <span class="accent-grey">
-        Impartir charlas y formación<br><span style="visibility: hidden;">lorem ipsum lorem ipsum lorem ipsum</span>
+        Brindar asesoría a empresas y emprendedores <br><span style="visibility: hidden;">lorem ipsum</span>
       </span>
-      <input type="text" id="services4" name="services[3]"  hidden="hidden">
+      <input type="text" id="services3" name="services[2]"  hidden="hidden">
     </div>
+    <?php }?>
 
+
+    <?php if (strpos($_smarty_tpl->tpl_vars['actividad']->value,$_smarty_tpl->tpl_vars['actividad4']->value) === false) {?>
+      <!-- Formación -->
+      <div class="col s8 offset-s2 m4 l2 center-align">
+        <div class="area center-align circle hover" id="item4">
+          <i class="fa fa-bullhorn" style=" font-size: 4rem;"></i>
+        </div>
+        <div class="spacing-1"></div>
+        <span style="color: #EBA820; font-size: 18px;">Formación</span>
+        <br>
+        <span class="accent-grey">
+          Impartir charlas y formación<br><span style="visibility: hidden;">lorem ipsum lorem ipsum lorem ipsum</span>
+        </span>
+        <input type="text" id="services4" name="services[3]"  hidden="hidden">
+      </div>
+    <?php } else { ?>
+      <!-- Formación -->
+      <div class="col s8 offset-s2 m4 l2 center-align">
+        <div class="area center-align circle hover area_active" id="item4">
+          <i class="fa fa-bullhorn" style=" font-size: 4rem;"></i>
+        </div>
+        <div class="spacing-1"></div>
+        <span style="color: #EBA820; font-size: 18px;">Formación</span>
+        <br>
+        <span class="accent-grey">
+          Impartir charlas y formación<br><span style="visibility: hidden;">lorem ipsum lorem ipsum lorem ipsum</span>
+        </span>
+        <input type="text" id="services4" name="services[3]"  hidden="hidden">
+      </div>
+    <?php }?>
+
+    <?php if (strpos($_smarty_tpl->tpl_vars['actividad']->value,$_smarty_tpl->tpl_vars['actividad5']->value) === false) {?>
     <!-- Contenidos -->
     <div class="col s8 offset-s2 m4 l2 center-align">
       <div class="area center-align circle hover" id="item5">
@@ -131,6 +207,21 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
       </span>
       <input type="text" id="services5" name="services[4]"  hidden="hidden">
     </div>
+    <?php } else { ?>
+    <div class="col s8 offset-s2 m4 l2 center-align">
+      <div class="area center-align circle hover area_active" id="item5">
+        <i class="fa fa-check" style=" font-size: 4rem;"></i>
+      </div>
+      <div class="spacing-1"></div>
+      <span style="color: #EBA820; font-size: 18px;">Contenidos</span>
+      <br>
+      <span class="accent-grey">
+        Generar contenido escrito o audiovisual <br><span style="visibility: hidden;">lorem ipsum</span>
+      </span>
+      <input type="text" id="services5" name="services[4]"  hidden="hidden">
+    </div>
+    <?php }?>
+
 
   </div>
 

@@ -32,6 +32,11 @@
         break;
 
       case '3':
+
+          $datos = $persona -> getActividades($_SESSION['id']);
+          var_dump($datos);
+          $template -> assign('actividad', $datos);
+
           $template -> display('view/wits/paso3.tpl');
         break;
 

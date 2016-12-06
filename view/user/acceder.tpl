@@ -1,5 +1,14 @@
 {include file="view/principal/header.tpl"}
 
+<div class="row">
+  <div class="spacing-1"></div>
+  <div class="col s12">
+    <a href="?view=index">
+    <button type="button" class="btn waves-effect waves-light grey darken-4" name="button"><i style="letter-spacing: 5px;" class="fa fa-arrow-left" aria-hidden="true"></i> Página principal</button>
+    </a>
+  </div>
+</div>
+
 <!-- Login para acceder a mentes a la carta -->
 
 <div class="container">

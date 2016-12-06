@@ -111,40 +111,16 @@ $(document).ready(function(){
     setInterval(function(){
         $('.carousel').carousel('next',1); // Move next n times.
     }, 3000);
+
 });
 
 
-
-
-/*$('#col-slider-1').hover(function(){
-        clearInterval(pasar_slider);
-    }, function(){
-        pasar_slider = setInterval(pasar, 4000);
-    });*/
-
 $('#btn_siguiente').click(function(){
-        pasar();
-
-        clearInterval(pasar_slider);
-       /*if(next == 0){
-            clearInterval(pasar_slider);
-            setTimeout(function(){
-                pasar_slider = setInterval(pasar, 4000);
-                setTimeout(function(){
-                    console.log('Se inicio un intervalo pasar_slider con duracion de 4 segundos');
-                    next = 0;
-                    console.log('Se reestablecio el valor de next: ' + next);
-                },4000);
-            }, 3000);
-            next = 1;
-            console.log('Next es igual a ' + next);
-        }*/
-
-
-    }); //End Function btn_seiguiente Click
+  clearInterval(pasar_slider);
+  pasar();
+}); //End Function btn_seiguiente Click
 
 $('#btn_anterior').click(function(){
-
 
         $('#slider-1').find('div').each(
 
@@ -153,7 +129,6 @@ $('#btn_anterior').click(function(){
                 {
                     $(this).removeClass('animated fadeIn s_visible');
 
-                    console.log(index);
                     if(index == 0)
                         {
                             console.log('Slide equivale a ' + slides);
@@ -168,47 +143,16 @@ $('#btn_anterior').click(function(){
 
         clearInterval(pasar_slider);
 
-
-
     });
 
 
-/*End Slider*/
-
-
-
-
-
-
-/*$('#col-slider-1').hover(function(){
-        clearInterval(pasar_slider);
-    }, function(){
-        pasar_slider = setInterval(pasar, 4000);
-    });*/
-
 $('#btn_siguiente_2').click(function(){
-        pasar2();
+  pasar2();
+  clearInterval(pasar_slider2);
+}); //End Function btn_seiguiente Click
 
-        clearInterval(pasar_slider2);
-       /*if(next == 0){
-            clearInterval(pasar_slider);
-            setTimeout(function(){
-                pasar_slider = setInterval(pasar, 4000);
-                setTimeout(function(){
-                    console.log('Se inicio un intervalo pasar_slider con duracion de 4 segundos');
-                    next = 0;
-                    console.log('Se reestablecio el valor de next: ' + next);
-                },4000);
-            }, 3000);
-            next = 1;
-            console.log('Next es igual a ' + next);
-        }*/
-
-
-    }); //End Function btn_seiguiente Click
 
 $('#btn_anterior_2').click(function(){
-
 
         $('#slider-2').find('div').each(
 
@@ -217,7 +161,6 @@ $('#btn_anterior_2').click(function(){
                 {
                     $(this).removeClass('animated fadeIn s_visible');
 
-                    console.log(index);
                     if(index == 0)
                         {
                             $($('#slider-2').find('.s_element').get(slides2  - 1)).addClass('s_visible animated fadeIn');
@@ -228,11 +171,7 @@ $('#btn_anterior_2').click(function(){
                 }
 
         });
-
         clearInterval(pasar_slider2);
-
-
-
     });
 
 
@@ -242,53 +181,34 @@ $('#btn_anterior_2').click(function(){
 /*Slider 3 Boton Siguiente y Retroceso*/
 
 $('#btn_siguiente_3').click(function(){
-        pasar3();
-
-        clearInterval(pasar_slider3);
-       /*if(next == 0){
-            clearInterval(pasar_slider);
-            setTimeout(function(){
-                pasar_slider = setInterval(pasar, 4000);
-                setTimeout(function(){
-                    console.log('Se inicio un intervalo pasar_slider con duracion de 4 segundos');
-                    next = 0;
-                    console.log('Se reestablecio el valor de next: ' + next);
-                },4000);
-            }, 3000);
-            next = 1;
-            console.log('Next es igual a ' + next);
-        }*/
-
-
+  pasar3();
+  clearInterval(pasar_slider3);
 }); //End Function btn_seiguiente Click
 
 $('#btn_anterior_3').click(function(){
 
+  $('#slider-3').find('div').each(
 
-        $('#slider-3').find('div').each(
+    function(index, value){
+      if($(this).hasClass('s_visible'))
+      {
+        $(this).removeClass('animated fadeIn s_visible');
 
-            function(index, value){
-                if($(this).hasClass('s_visible'))
-                {
-                    $(this).removeClass('animated fadeIn s_visible');
-
-                    console.log(index);
-                    if(index == 0)
-                        {
-                            $($('#slider-3').find('.s_element').get(slides3 - 1)).addClass('s_visible animated fadeIn');
-                        }else{
-                             $($('#slider-3').find('.s_element').get(index - 1)).addClass('s_visible animated fadeIn');
-                        }
-                           return false;
-                }
-
-        });
-
-        clearInterval(pasar_slider3);
-
-
+        console.log(index);
+        if(index == 0)
+        {
+          $($('#slider-3').find('.s_element').get(slides3 - 1)).addClass('s_visible animated fadeIn');
+        }else{
+          $($('#slider-3').find('.s_element').get(index - 1)).addClass('s_visible animated fadeIn');
+        }
+        return false;
+      }
 
     });
+
+    clearInterval(pasar_slider3);
+
+});
 
 $(window).scroll(function(){
    var banner = $("#home").height();
@@ -490,7 +410,7 @@ $(document).on('click', '#step3', function(){
   }
 
   if($('#item4').hasClass('area_active')){
-    $('#services4').val('Formaci&oacuten');
+    $('#services4').val('Formaci&oacute;n');
   }
 
   if($('#item5').hasClass('area_active')){
@@ -544,7 +464,7 @@ $(document).on('click', '#step4', function(){
       }else{
         swal({
           title: 'Gracias',
-          text: 'Te has registrado satisfactoriamente en Mentes a la carta, revizaremos tu datos para validar tu mente, seras notificado cuando se apruebe tu perfil.',
+          text: 'Te has registrado satisfactoriamente en Mentes a la carta, revizaremos tu datos para validar tu mente, seras notificado cuando sea aprobado tu perfil.',
           type: 'success'
         }, function(){
           window.location.href= answer;
@@ -740,11 +660,22 @@ $(document).on('keyup', '#busqueda-text', function(){
 
 */
 
-$(document).on('change', '#sectores_empresas', function(){
+$(document).on('change', '#sectores', function(){
   $.ajax({
     method: 'POST',
-    url: 'controller/admin/select/sectores_empresas.php',
-    data: {sectores_empresas: $(this).val()},
+    url: 'controller/admin/select/sectores.php',
+    data: {sectores: $(this).val()},
+    success: function(res){
+      $('#wits-aprobados-panel').html(res);
+    }
+  });
+});
+
+$(document).on('change', '#empresas', function(){
+  $.ajax({
+    method: 'POST',
+    url: 'controller/admin/select/empresas.php',
+    data: {empresas: $(this).val()},
     success: function(res){
       $('#wits-aprobados-panel').html(res);
     }
@@ -798,12 +729,22 @@ $(document).on('change', '#aptitudes_dinamic', function(){
   });
 });
 
-$(document).on('change', '#pais_idioma_dinamic', function(){
-
+$(document).on('change', '#paises', function(){
   $.ajax({
     method: 'POST',
-    url: 'controller/admin/select/pais_idioma.php',
-    data: {pais_idioma: $(this).val()},
+    url: 'controller/admin/select/pais.php',
+    data: {pais: $(this).val()},
+    success: function(res){
+      $('#wits-aprobados-panel').html(res);
+    }
+  });
+});
+
+$(document).on('change', '#idiomas', function(){
+  $.ajax({
+    method: 'POST',
+    url: 'controller/admin/select/idioma.php',
+    data: {idioma: $(this).val()},
     success: function(res){
       $('#wits-aprobados-panel').html(res);
     }
@@ -1040,101 +981,67 @@ $(document).on('click', '.actividad_activo', function(){
 
   var actividad = $(this).attr('id');
 
-  swal({
-    title: "Dejar actividad",
-    text: "¿Estas seguro que quieres dejar esta actividad?",
-    showCancelButton: true,
-    confirmButtonColor: "#767676",
-    confirmButtonText: "Si, Dejar actividad",
-    closeOnConfirm: false
-  },
-  function(){
-    // Enviamos a dejar de seguir
-    $.ajax({
-      method: 'POST',
-      url: 'controller/wit/dejarActividad.php',
-      data: {id: actividad},
-      success: function(res){
-        if(res == 'error_5'){
-          swal('Error', 'Debes tener por lo menos una actividad seleccionada', 'error');
-        }else{
-          $('#lista_actividades_edit').html(res);
-        }
+  $.ajax({
+    method: 'POST',
+    url: 'controller/wit/dejarActividad.php',
+    data: {id: actividad},
+    success: function(res){
+      if(res == 'error_5'){
+        swal('Error', 'Debes tener por lo menos una actividad seleccionada', 'error');
+      }else{
+        $('#lista_actividades_edit').html(res);
       }
-    });
-
-    // Mostramos alerta
-    swal({
-      title: "Lista actualizada",
-      text : "Has dejado satisfactoriamente la actividad",
-      type : "success"
-    }, function(){
-
-    });
-
+    }
   });
+
 });
 
 
 // COmenzar a seguir una actividad
 $(document).on('click', '.actividad_inactivo', function(){
   var actividad = $(this).attr('id');
-  swal({
-    title: "Seleccionar actividad",
-    text: "¿Quieres participar en esta actividad?",
-    showCancelButton: true,
-    confirmButtonColor: "#767676",
-    confirmButtonText: "Si, Quiero participar",
-    closeOnConfirm: false
-  },
-  function(){
 
-    $.ajax({
-      method: 'POST',
-      url: 'controller/wit/seguirActividad.php',
-      data: {id: actividad},
-      success: function(res){
-        $('#lista_actividades_edit').html(res);
-      }
-    });
-
-    swal({
-      title: "Lista actualizada",
-      text: "Has seleccionado satisfactoriamente la actividad",
-      type: "success"
-    }, function(){
-
-    });
-
+  $.ajax({
+    method: 'POST',
+    url: 'controller/wit/seguirActividad.php',
+    data: {id: actividad},
+    success: function(res){
+      $('#lista_actividades_edit').html(res);
+    }
   });
+
 });
 
 
 // Actualizar imagen de perfil
-$('#actualizar_imagen').click(function(){
+$('#seleccion_imagen').change(function(){
 
   var formData = new FormData(document.getElementById("imagen_perfil"));
 
-  if($('#seleccion_imagen').val() == ''){
-    swal('error', 'Por favor seleciona una imagen de perfil', 'error');
-  }else{
-    $.ajax({
-      method: 'POST',
-      url: 'controller/wit/actualizarImagen.php',
-      data: formData,
-      dataType: "html",
-      contentType: false,
-      processData: false,
-      beforeSend: function(){
-        $('#perfil').attr('src', 'images/perfiles/load.gif');
-      },
-      success: function(answer){
-          $('#perfil').attr('src', 'images/perfiles/'+answer);
-          console.log(answer);
-          $('#seleccion_imagen').val('');
+  $.ajax({
+    method: 'POST',
+    url: 'controller/wit/actualizarImagen.php',
+    data: formData,
+    dataType: "html",
+    contentType: false,
+    processData: false,
+    beforeSend: function(){
+      $('#loadImagen').show();
+    },
+    success: function(answer){
+
+      if(answer == 'Formato no valido'){
+        swal('error', 'Por favor seleciona una imagen de perfil', 'error');
+      }else{
+        $('#perfil').attr('src', 'images/perfiles/'+answer);
       }
-    });
-  }
+      $('#loadImagen').hide();
+      $('#seleccion_imagen').val('');
+
+    }
+  });
+
+
 });
 
 $('#actualizar_datos').click(function(){

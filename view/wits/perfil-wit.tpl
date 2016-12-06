@@ -25,8 +25,8 @@
       <!-- Editar perfil -->
       <div class="row">
         <div class="col s11 right-align">
-          <a href="?view=editar-perfil" class="tooltipped" data-position="left" data-delay="50" data-tooltip="Editar perfil">
-            <i class="fa fa-cog hover" aria-hidden="true" style="color: white; font-size: 2em;"></i>
+          <a href="?view=editar-perfil">
+            <i class="fa fa-pencil" aria-hidden="true" style="color: white; font-size: 2em;"></i> <span class="white-text" style="font-size: 1.2rem;">Editar perfil</span>
           </a>
         </div>
       </div>

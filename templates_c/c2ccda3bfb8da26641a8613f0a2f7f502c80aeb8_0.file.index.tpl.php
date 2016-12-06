@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-29 15:09:13
+/* Smarty version 3.1.30, created on 2016-12-05 17:45:19
   from "/opt/lampp/htdocs/mentes/view/index.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_583d8c091e5206_51096734',
+  'unifunc' => 'content_5845999f3cdbd1_12152516',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c2ccda3bfb8da26641a8613f0a2f7f502c80aeb8' => 
     array (
       0 => '/opt/lampp/htdocs/mentes/view/index.tpl',
-      1 => 1480200530,
+      1 => 1480956317,
       2 => 'file',
     ),
   ),
@@ -24,7 +24,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:view/principal/script.tpl' => 1,
   ),
 ),false)) {
-function content_583d8c091e5206_51096734 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5845999f3cdbd1_12152516 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -79,7 +79,7 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
         <div class="row no-margin-bottom">
              <div class="col s12 center">
                  <h2 class="section-title titulo-primario">Nuestras mentes a la carta</h2>
-                <span  class="accent-orange sub-title">Un metodo efectivo y económico</span>
+                <!-- <span  class="accent-orange sub-title">Un metodo efectivo y económico</span> -->
                  <section class="row">
                      <article class="col s8 offset-s2 align-justify">
                          <span style="color: gray; margin-top: 10px;  display: block; font-size: 1.1rem; font-weight: 300;">
@@ -311,40 +311,25 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
     </article>
 
     <!-- Botones -->
-    <div class="row hide-on-small-only">
+    <div class="row">
       <!-- Ver más -->
-      <div class="col s12 m2 offset-m3">
+      <div class="col s12 m6 offset-m3">
         <div class="spacing-1"></div>
         <a href="?view=mentes-a-la-carta">
-          <button type="button" name="button" class="btn grey waves-effect waves-light">Ver más</button>
-        </a>
-      </div>
-      <!-- Quiero ser una mente -->
-      <div class="col s12 m7">
-        <div class="spacing-1"></div>
-        <a href="?view=registrar">
-          <button type="button" name="button" class="btn grey waves-effect waves-light">Quiero ser una mente a la carta</button>
+          <button type="button" name="button" class="btn grey waves-effect waves-light" style="width: 100%;">Ver más</button>
         </a>
       </div>
     </div>
 
-    <!-- Botones -->
-    <div class="row hide-on-large-only">
-      <!-- Ver más -->
-      <div class="col s12 center-align">
-        <div class="spacing-1"></div>
-        <a href="?view=mentes-a-la-carta">
-          <button type="button" name="button" class="btn grey waves-effect waves-light">Ver más</button>
-        </a>
-      </div>
+    <div class="row">
       <!-- Quiero ser una mente -->
-      <div class="col s12 center-align">
-        <div class="spacing-1"></div>
+      <div class="col s12 m6 offset-m3">
         <a href="?view=registrar">
-          <button type="button" name="button" class="btn grey waves-effect waves-light">Quiero ser una mente a la carta</button>
+          <button type="button" name="button" class="btn grey waves-effect waves-light" style="width: 100%;">Quiero ser una mente a la carta</button>
         </a>
       </div>
     </div>
+
 
     <!-- Especiadores -->
     <div class="spacing-3"></div>

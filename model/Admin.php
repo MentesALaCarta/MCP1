@@ -48,7 +48,7 @@
     {
       parent::conectar();
       $id = parent::salvar($id);
-      // parent::query('update usuario set estado ="A" where id="'.$id.'"');
+      parent::query('update usuario set estado ="A" where id="'.$id.'"');
 
       $user = parent::consultaArreglo('select primer_nombre, email from usuario where id="'.$id.'"');
       $myList = '';
@@ -62,7 +62,7 @@
       $actividad1 = 'Proyectos innovadores';
       $actividad2 = 'Mentoring';
       $actividad3 = 'Asesoramiento';
-      $actividad4 = 'Formaci&oacuten';
+      $actividad4 = 'Formaci&oacute;n';
       $actividad5 = 'Contenidos';
 
        /* Notificar email */
@@ -333,38 +333,6 @@
       parent::cerrar();
     }
 
-
-    # Funcion que consulta  wits aprobados por nombre de empresa y sector
-    public function consultBySectorAndEmpresa($sectores, $empresas)
-    {
-      parent::conectar();
-
-      $consulta = 'select DISTINCT(u.id), u.primer_nombre, u.segundo_nombre, u.primer_apellido, u.segundo_apellido, c.ciudad, c.pais from usuario u inner join experiencia e on e.usuario_id = u.id inner join contacto c on u.id = c.usuario_id where u.estado = "A" and ('.$sectores.') and ('.$empresas.')';
-
-      $verificar = parent::verificarRegistros($consulta);
-
-      if($verificar > 0){
-        $sql = parent::query($consulta);
-        while($row = mysqli_fetch_array($sql)){
-          echo '
-          <tr class="verPerfil" id="'.$row['id'].'">
-            <td>'.$row['primer_nombre'] .' ' .$row['segundo_nombre'].'</td>
-            <td>'.$row['primer_apellido']. ' '.$row['segundo_apellido'].'</td>
-            <td>'.$row['ciudad'].'</td>
-            <td>'.$row['pais'].'</td>
-          </tr>
-
-        ';
-        }
-
-      }else{
-        echo ' No hay registros';
-      }
-
-      parent::cerrar();
-    }
-
-
     public function consultBySector($sectores)
     {
       parent::conectar();
@@ -558,38 +526,6 @@
       parent::cerrar();
     }
 
-
-    # Funcion que consulta  wits aprobados por nombre de empresa y sector
-    public function consultByPaisAndIdioma($sectores, $empresas)
-    {
-      parent::conectar();
-
-      $consulta = 'select DISTINCT(u.id), u.primer_nombre, u.segundo_nombre, u.primer_apellido, u.segundo_apellido, c.ciudad, c.pais from usuario u inner join idiomas i on i.usuario_id = u.id inner join contacto c on c.usuario_id = u.id where u.estado = "A" and ('.$sectores.') and ('.$empresas.')';
-
-      $verificar = parent::verificarRegistros($consulta);
-
-      if($verificar > 0){
-        $sql = parent::query($consulta);
-        while($row = mysqli_fetch_array($sql)){
-          echo '
-          <tr class="verPerfil" id="'.$row['id'].'">
-            <td>'.$row['primer_nombre'] .' ' .$row['segundo_nombre'].'</td>
-            <td>'.$row['primer_apellido']. ' '.$row['segundo_apellido'].'</td>
-            <td>'.$row['ciudad'].'</td>
-            <td>'.$row['pais'].'</td>
-          </tr>
-
-        ';
-        }
-
-      }else{
-        echo ' No hay registros';
-      }
-
-      parent::cerrar();
-    }
-
-
     public function consultByPais($sectores)
     {
       parent::conectar();
@@ -619,11 +555,11 @@
       parent::cerrar();
     }
 
-    public function consultByIdioma($empresas)
+    public function consultByIdioma($idiomas)
     {
       parent::conectar();
 
-      $consulta = 'select DISTINCT(u.id), u.primer_nombre, u.segundo_nombre, u.primer_apellido, u.segundo_apellido, c.ciudad, c.pais from usuario u inner join idiomas i on i.usuario_id = u.id where u.estado = "A" and ('.$empresas.') ';
+      $consulta = 'select DISTINCT(u.id), u.primer_nombre, u.segundo_nombre, u.primer_apellido, u.segundo_apellido, c.ciudad, c.pais from usuario u inner join idiomas i on i.usuario_id = u.id inner join contacto c on c.usuario_id = u.id where u.estado = "A" and ('.$idiomas.') ';
 
       $verificar = parent::verificarRegistros($consulta);
 

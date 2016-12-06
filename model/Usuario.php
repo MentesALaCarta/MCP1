@@ -456,6 +456,33 @@
     }
 
 
+    # Extrae las actividades seleccionadas de un usuario en los pasos de registro (step 3)
+    public function getActividades($id)
+    {
+      parent::conectar();
+      $id = parent::salvar($id);
+      $sql = 'select descripcion from brain where usuario_id="'.$id.'"';
+      $verificar = parent::verificarRegistros($sql);
+
+      if($verificar > 0)
+      {
+        $consulta = parent::query($sql);
+        
+        $datos = '';
+        while($row = mysqli_fetch_array($consulta)){
+         $datos .= ' ' .$row['descripcion'] .' ';
+        }
+
+        return $datos;
+
+      }else{
+        return 0;
+      }
+
+      parent::cerrar();
+    }
+
+
   }
 
 ?>

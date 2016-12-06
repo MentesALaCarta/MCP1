@@ -44,7 +44,7 @@
           $datos[1] = true;
         }else if($row['descripcion'] == 'Asesoramiento'){
           $datos[2] = true;
-        }else if($row['descripcion'] == 'Formaci&oacuten'){
+        }else if($row['descripcion'] == 'Formaci&oacute;n'){
           $datos[3] = true;
         }else if($row['descripcion'] == 'Contenidos'){
           $datos[4] = true;
@@ -402,7 +402,7 @@
       $actividad1 = 'Proyectos innovadores';
       $actividad2 = 'Mentoring';
       $actividad3 = 'Asesoramiento';
-      $actividad4 = 'Formaci&oacuten';
+      $actividad4 = 'Formaci&oacute;n';
       $actividad5 = 'Contenidos';
 
       $myList = '';

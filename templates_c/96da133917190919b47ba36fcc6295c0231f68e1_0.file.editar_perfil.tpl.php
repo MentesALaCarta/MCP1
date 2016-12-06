@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-25 17:54:15
+/* Smarty version 3.1.30, created on 2016-12-05 18:21:10
   from "/opt/lampp/htdocs/mentes/view/wits/editar_perfil.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58386cb77957a6_23511132',
+  'unifunc' => 'content_5845a206885a20_21984276',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '96da133917190919b47ba36fcc6295c0231f68e1' => 
     array (
       0 => '/opt/lampp/htdocs/mentes/view/wits/editar_perfil.tpl',
-      1 => 1480022413,
+      1 => 1480958444,
       2 => 'file',
     ),
   ),
@@ -23,15 +23,22 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:view/principal/script.tpl' => 1,
   ),
 ),false)) {
-function content_58386cb77957a6_23511132 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5845a206885a20_21984276 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
 
-<div class="container">
-
-  <div class="spacing-3">
+<div class="row">
+  <div class="spacing-1"></div>
+  <div class="col s12">
+    <a href="?view=perfil-wit& id=<?php echo $_SESSION['id'];?>
+">
+    <button type="button" class="btn waves-effect waves-light grey darken-4" name="button"><i class="fa fa-arrow-left" aria-hidden="true"></i> Volver</button>
+    </a>
   </div>
+</div>
+
+<div class="container">
 
   <div class="row">
     <div class="col s12 center-align">
@@ -45,7 +52,7 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
 
         <!-- Datos generales -->
         <li>
-          <div class="collapsible-header"><i class="fa fa-book" aria-hidden="true"></i> Datos generales</div>
+          <div class="collapsible-header active"><i class="fa fa-book" aria-hidden="true"></i> Datos generales</div>
           <div class="collapsible-body padding-edit">
             <!-- Descripción de la fase -->
             <span class="grey-text">
@@ -66,8 +73,9 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
                 <div class="col s12">
                   <!-- Imagen de perfil -->
                   <div class="row">
+
                     <div class="col s12">
-                        <label class="grey-text text-darken-2">Foto de perfil</label>
+                        <label class="grey-text text-darken-2">Selecciona una imagen de perfil</label>
                         <div class="file-field input-field">
                           <div class="btn" style="background-color: #EBA820;">
                             <span><i class="fa fa-user" style="font-size: 2rem; color: white;"></i></span>
@@ -79,10 +87,12 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
                         </div>
                     </div>
 
-                      <div class="col s12 grey-text text-darken-2">
-                        <i class="fa fa-picture-o" aria-hidden="true"></i> <span class="underline" id="actualizar_imagen">Actualizar imagen</span>
-                      </div>
+                    <div id="loadImagen" class="col s2 m1" hidden="hidden">
+                        <img src="images/perfiles/load.gif" alt="subiendo imagen de perfil" style="width: 100%;"/>
+                    </div>
+
                   </div>
+
                 </div>
               </div>
             </form>

@@ -48,7 +48,7 @@
         <div class="row no-margin-bottom">
              <div class="col s12 center">
                  <h2 class="section-title titulo-primario">Nuestras mentes a la carta</h2>
-                <span  class="accent-orange sub-title">Un metodo efectivo y económico</span>
+                <!-- <span  class="accent-orange sub-title">Un metodo efectivo y económico</span> -->
                  <section class="row">
                      <article class="col s8 offset-s2 align-justify">
                          <span style="color: gray; margin-top: 10px;  display: block; font-size: 1.1rem; font-weight: 300;">
@@ -280,40 +280,25 @@
     </article>
 
     <!-- Botones -->
-    <div class="row hide-on-small-only">
+    <div class="row">
       <!-- Ver más -->
-      <div class="col s12 m2 offset-m3">
+      <div class="col s12 m6 offset-m3">
         <div class="spacing-1"></div>
         <a href="?view=mentes-a-la-carta">
-          <button type="button" name="button" class="btn grey waves-effect waves-light">Ver más</button>
-        </a>
-      </div>
-      <!-- Quiero ser una mente -->
-      <div class="col s12 m7">
-        <div class="spacing-1"></div>
-        <a href="?view=registrar">
-          <button type="button" name="button" class="btn grey waves-effect waves-light">Quiero ser una mente a la carta</button>
+          <button type="button" name="button" class="btn grey waves-effect waves-light" style="width: 100%;">Ver más</button>
         </a>
       </div>
     </div>
 
-    <!-- Botones -->
-    <div class="row hide-on-large-only">
-      <!-- Ver más -->
-      <div class="col s12 center-align">
-        <div class="spacing-1"></div>
-        <a href="?view=mentes-a-la-carta">
-          <button type="button" name="button" class="btn grey waves-effect waves-light">Ver más</button>
-        </a>
-      </div>
+    <div class="row">
       <!-- Quiero ser una mente -->
-      <div class="col s12 center-align">
-        <div class="spacing-1"></div>
+      <div class="col s12 m6 offset-m3">
         <a href="?view=registrar">
-          <button type="button" name="button" class="btn grey waves-effect waves-light">Quiero ser una mente a la carta</button>
+          <button type="button" name="button" class="btn grey waves-effect waves-light" style="width: 100%;">Quiero ser una mente a la carta</button>
         </a>
       </div>
     </div>
+
 
     <!-- Especiadores -->
     <div class="spacing-3"></div>

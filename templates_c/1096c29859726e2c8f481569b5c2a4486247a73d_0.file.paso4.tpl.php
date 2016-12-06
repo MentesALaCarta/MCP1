@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-27 00:09:58
+/* Smarty version 3.1.30, created on 2016-12-06 16:07:23
   from "/opt/lampp/htdocs/mentes/view/wits/paso4.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_583a16469b0464_90926137',
+  'unifunc' => 'content_5846d42b749de5_00847665',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1096c29859726e2c8f481569b5c2a4486247a73d' => 
     array (
       0 => '/opt/lampp/htdocs/mentes/view/wits/paso4.tpl',
-      1 => 1480201796,
+      1 => 1481034110,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:view/principal/script.tpl' => 1,
   ),
 ),false)) {
-function content_583a16469b0464_90926137 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5846d42b749de5_00847665 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -34,13 +34,12 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
     <img src="images/bradlogo.png" alt="logo mentes a la carta" width="100%">
   </div>
 </div>
-
+ 
 
 <!-- Titulo dinamico -->
 <div class="row col s8 offset-s2 center-align">
   <div class="spacing-2"></div>
   <h3 class="title-orange">¡Listo! ¡Estos son los últimos datos!</h3>
-
 </div>
 
 <div class="row">
@@ -74,7 +73,7 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
     <div class="row">
 
       <div class="col s12">
-          <label for="" style="font-size: 1rem; color: #424242;">Foto de perfil</label>
+          <label for="" style="font-size: 1rem; color: #424242;">Seleccionar foto de perfil</label>
           <div class="file-field input-field">
             <div class="btn" style="background-color: #EBA820;">
               <span><i class="fa fa-user" style="font-size: 2rem; color: white;"></i></span>

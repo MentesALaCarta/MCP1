@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-25 17:41:19
+/* Smarty version 3.1.30, created on 2016-12-05 17:45:50
   from "/opt/lampp/htdocs/mentes/view/list-mentes.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_583869af265798_76769952',
+  'unifunc' => 'content_584599be8e5991_96345760',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c08d3425861107ed58e93f8bcd37c30f0f6b9a12' => 
     array (
       0 => '/opt/lampp/htdocs/mentes/view/list-mentes.tpl',
-      1 => 1480092078,
+      1 => 1480092582,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:view/principal/script.tpl' => 1,
   ),
 ),false)) {
-function content_583869af265798_76769952 (Smarty_Internal_Template $_smarty_tpl) {
+function content_584599be8e5991_96345760 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -747,7 +747,7 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
                   <span class="nombre grey-text text-darken-3 font-400">María Sahmkow</span>
                   <i class="fa fa-info-circle hover-icon right accent-orange" style="font-size: 1.5em;" aria-hidden="true"></i>
                   <br class="hide-on-med-up">
-                  <span class="grey-text">Branding <br><span style="visibility: hidden;">lorem ipsum</span><span class="hide-on-med-and-down">y Publicidad</span> <br>Colombia-Bogotá</span>
+                  <span class="grey-text">Branding <span class="hide-on-med-and-down">y Publicidad <br><span style="visibility: hidden;">lorem ipsum</span></span> <br>Colombia-Bogotá</span>
               </span>
 
             </div>

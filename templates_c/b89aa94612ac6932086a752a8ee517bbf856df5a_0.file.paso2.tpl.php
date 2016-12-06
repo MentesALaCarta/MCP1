@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-29 15:33:35
+/* Smarty version 3.1.30, created on 2016-12-05 21:25:38
   from "/opt/lampp/htdocs/mentes/view/wits/paso2.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_583d91bfebbd54_85268143',
+  'unifunc' => 'content_5845cd429ceca7_20755591',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b89aa94612ac6932086a752a8ee517bbf856df5a' => 
     array (
       0 => '/opt/lampp/htdocs/mentes/view/wits/paso2.tpl',
-      1 => 1480202575,
+      1 => 1480955693,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:view/principal/script.tpl' => 1,
   ),
 ),false)) {
-function content_583d91bfebbd54_85268143 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5845cd429ceca7_20755591 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -37,14 +37,14 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
 
 <!-- Titulo dinamico -->
 <div class="row col s8 offset-s2 center-align">
-  <h3 class="title-orange" style="margin-top: 0px;">¿Qué otras aptitudes tiene tu mente?</h3>
+  <h3 class="title-orange" style="margin-top: 0px;">¿Qué aptitudes tiene tu mente?</h3>
 
 </div>
 
 <div class="row">
   <div class="col s12 m10 offset-m1 center-align">
     <span class="grey-text text-darken-2">
-      ¿Cuáles son las áreas de tu profesión en las que te sientes más fuerte?
+      Cuentanos tus habilidades y tus áreas de experticia a nivel profesional
     </span>
   </div>
 </div>
