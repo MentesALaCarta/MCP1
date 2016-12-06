@@ -1,7 +1,7 @@
 {include file="view/principal/header.tpl"}
 
 <div class="row">
-  <div class="col s4 nav-wit">
+  <div class="col s4 nav-wit z-depth-5">
 
     <div class="accent">
 
@@ -281,7 +281,26 @@
   </div>
 </div>
 {if isset($smarty.session.id)}
-  {include file="view/principal/cerrarSesion.tpl"}
+
+  <div class="fixed-action-btn vertical">
+    <a class="btn-floating btn-large grey darken-3">
+      <i class="large material-icons"><i class="fa fa-plus"></i></i>
+    </a>
+    <ul>
+      <li>
+        <a  href="?view=Mentes-a-la-Carta" class="btn-floating tooltipped white waves-effect" data-position="left" data-delay="50" data-tooltip="Mentes a la Carta">
+          <i style="font-size: 1.2em; color: #727272;" class="fa fa-search" aria-hidden="true"></i>
+        </a>
+      </li>
+
+      <li>
+        <a id="close-sesion" class="btn-floating tooltipped white waves-effect" data-position="left" data-delay="50" data-tooltip="Cerrar sesión">
+          <i style="font-size: 1.2em; color: #727272;" class="fa fa-sign-out" aria-hidden="true"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+
 {/if}
 
 {include file="view/principal/script.tpl"}

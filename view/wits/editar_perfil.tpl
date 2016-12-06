@@ -23,7 +23,7 @@
 
         <!-- Datos generales -->
         <li>
-          <div class="collapsible-header active"><i class="fa fa-book" aria-hidden="true"></i> Datos generales</div>
+          <div class="collapsible-header"><i class="fa fa-book" aria-hidden="true"></i> Datos generales</div>
           <div class="collapsible-body padding-edit">
             <!-- Descripción de la fase -->
             <span class="grey-text">
@@ -449,5 +449,31 @@ $(document).ready(function(){
 });
 </script>
 
-{include file="view/principal/cerrarSesion.tpl"}
+<div class="fixed-action-btn vertical">
+  <a class="btn-floating btn-large grey darken-3">
+    <i class="large material-icons"><i class="fa fa-plus"></i></i>
+  </a>
+  <ul>
+
+    <li>
+      <a href="?view=perfil-wit& id={$smarty.session.id}" class="btn-floating tooltipped white waves-effect" data-position="left" data-delay="50" data-tooltip="Mi perfil">
+        <i style="font-size: 1.2em; color: #727272;" class="fa fa-user" aria-hidden="true"></i>
+      </a>
+    </li>
+
+    <li>
+      <a  href="?view=Mentes-a-la-Carta" class="btn-floating tooltipped white waves-effect" data-position="left" data-delay="50" data-tooltip="Mentes a la Carta">
+        <i style="font-size: 1.2em; color: #727272;" class="fa fa-search" aria-hidden="true"></i>
+      </a>
+    </li>
+
+    <li>
+      <a id="close-sesion" class="btn-floating tooltipped white waves-effect" data-position="left" data-delay="50" data-tooltip="Cerrar sesión">
+        <i style="font-size: 1.2em; color: #727272;" class="fa fa-sign-out" aria-hidden="true"></i>
+      </a>
+    </li>
+
+  </ul>
+</div>
+
 {include file="view/principal/script.tpl"}

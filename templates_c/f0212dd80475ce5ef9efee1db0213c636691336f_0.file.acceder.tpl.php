@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-12-06 16:18:57
+/* Smarty version 3.1.30, created on 2016-12-06 17:27:59
   from "/opt/lampp/htdocs/mentes/view/user/acceder.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5846d6e1a7e852_56468729',
+  'unifunc' => 'content_5846e70fb8fc08_25155730',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f0212dd80475ce5ef9efee1db0213c636691336f' => 
     array (
       0 => '/opt/lampp/htdocs/mentes/view/user/acceder.tpl',
-      1 => 1481037536,
+      1 => 1481039038,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:view/principal/script.tpl' => 1,
   ),
 ),false)) {
-function content_5846d6e1a7e852_56468729 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5846e70fb8fc08_25155730 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -35,7 +35,6 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
     </a>
   </div>
 </div>
-
 
 <!-- Login para acceder a mentes a la carta -->
 

@@ -16,6 +16,13 @@
   $persona = new Wit();
   $persona2 = new Usuario();
 
+
+  if($persona -> validarPerfil($_SESSION['id']) == false)
+  {
+    header('location: ?view=error');
+  }
+
+
   $datos = $persona -> getNameEmpresas();
   $template -> assign('experiencia', $datos);
 

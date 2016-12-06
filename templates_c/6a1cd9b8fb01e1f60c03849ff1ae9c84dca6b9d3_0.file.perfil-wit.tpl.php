@@ -1,35 +1,34 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-12-06 16:12:41
+/* Smarty version 3.1.30, created on 2016-12-06 18:12:17
   from "/opt/lampp/htdocs/mentes/view/wits/perfil-wit.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5846d569031773_79347974',
+  'unifunc' => 'content_5846f171b8ac16_98575846',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6a1cd9b8fb01e1f60c03849ff1ae9c84dca6b9d3' => 
     array (
       0 => '/opt/lampp/htdocs/mentes/view/wits/perfil-wit.tpl',
-      1 => 1481036730,
+      1 => 1481044276,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
     'file:view/principal/header.tpl' => 1,
-    'file:view/principal/cerrarSesion.tpl' => 1,
     'file:view/principal/script.tpl' => 1,
   ),
 ),false)) {
-function content_5846d569031773_79347974 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5846f171b8ac16_98575846 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
 
 <div class="row">
-  <div class="col s4 nav-wit">
+  <div class="col s4 nav-wit z-depth-5">
 
     <div class="accent">
 
@@ -341,8 +340,25 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
   </div>
 </div>
 <?php if (isset($_SESSION['id'])) {?>
-  <?php $_smarty_tpl->_subTemplateRender("file:view/principal/cerrarSesion.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
-?>
+
+  <div class="fixed-action-btn vertical">
+    <a class="btn-floating btn-large grey darken-3">
+      <i class="large material-icons"><i class="fa fa-plus"></i></i>
+    </a>
+    <ul>
+      <li>
+        <a  href="?view=Mentes-a-la-Carta" class="btn-floating tooltipped white waves-effect" data-position="left" data-delay="50" data-tooltip="Mentes a la Carta">
+          <i style="font-size: 1.2em; color: #727272;" class="fa fa-search" aria-hidden="true"></i>
+        </a>
+      </li>
+
+      <li>
+        <a id="close-sesion" class="btn-floating tooltipped white waves-effect" data-position="left" data-delay="50" data-tooltip="Cerrar sesión">
+          <i style="font-size: 1.2em; color: #727272;" class="fa fa-sign-out" aria-hidden="true"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
 
 <?php }?>
 

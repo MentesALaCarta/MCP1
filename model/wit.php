@@ -677,6 +677,51 @@
       parent::cerrar();
     }
 
+    public function nuestrasMentes()
+    {
+      parent::conectar();
+      $verificar = parent::verificarRegistros('select id from usuario where estado = "A"');
+
+      if($verificar > 0){
+        $datos = array();
+
+        // Consulta que extraiga a las mentes a la carta aprobadas
+        // Nombre completos, sectores (limit 3), ciudad, pais
+        $mentes = parent::query('select u.id, u.primer_nombre, c.imagen, u.primer_apellido, c.ciudad, c.pais from usuario u inner join contacto c on u.id = c.usuario_id where u.estado ="A" ORDER BY RAND()');
+
+        while($row = mysqli_fetch_array($mentes)){
+          $sectores= '';
+
+          $sec = parent::query('select DISTINCT(sector) from experiencia where usuario_id="'.$row['id'].'" LIMIT 3');
+
+          while ($sector = mysqli_fetch_array($sec)) {
+            $sectores .= $sector['sector'] .', ';
+          }
+
+          $sectores = substr($sectores, 0, -2);
+          $datos[] = array(
+            'id'     => $row['id'],
+            'imagen' => $row['imagen'],
+            'nombre' => $row['primer_nombre'] . ' ' . $row['primer_apellido'],
+            'sector' => $sectores,
+            'ciudad' => $row['ciudad'],
+            'pais'   => $row['pais']
+          );
+
+        }
+
+        return $datos;
+
+      }else{
+        return 0;
+      }
+
+
+
+
+      parent::cerrar();
+    }
+
   } // End class
 
 
