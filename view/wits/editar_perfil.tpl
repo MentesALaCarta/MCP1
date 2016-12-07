@@ -161,7 +161,7 @@
 
        <!-- Experiencia -->
        <li>
-         <div class="collapsible-header"><i class="fa fa-briefcase" aria-hidden="true"></i> Experiencia</div>
+         <div class="collapsible-header active"><i class="fa fa-briefcase" aria-hidden="true"></i> Experiencia</div>
          <div class="collapsible-body padding-edit">
            <!-- Descripción de la fase -->
            <span class="grey-text">
@@ -170,8 +170,14 @@
 
             <div class="spacing-1"></div>
 
+            <div class="row">
+              <div class="col s12">
+                <button type="button" class="btn orange waves-effect waves-light" name="button" id="new_exp">Agregar nueva experiencia</button>
+              </div>
+            </div>
+
             <!-- Formulario -->
-            <form id="form_dd_empresa">
+            <form id="form_dd_empresa" hidden="hidden">
               <div class="row">
 
                 <input type="text" id="identificador" value="0" name="identificador" hidden="hidden">
@@ -222,11 +228,15 @@
               </div>
             </form>
 
+
             <!-- Table -->
             <table class="responsive-table">
               <thead>
                 <tr>
-                    <th data-field="id">Empresas</th>
+                    <th>Empresa</th>
+                    <th>Sector</th>
+                    <th>Cargo</th>
+                    <th>País</th>
                 </tr>
               </thead>
 
@@ -234,6 +244,9 @@
                 {for $i = 0 to count($experiencia) -1}
                 <tr>
                   <td>{ucfirst($experiencia[$i][1])}</td>
+                  <td>Software</td>
+                  <td>Desarrollador web</td>
+                  <td>Colombia</td>
                   <td><i class="fa fa-pencil text-grey" aria-hidden="true"></i> <span class="underline text-grey editar_empresa" id="{$experiencia[$i][0]}">Editar</span></td>
                   <td><i class="fa fa-trash text-grey" aria-hidden="true"></i> <span class="underline text-grey eliminar_empresa" id="{$experiencia[$i][0]}">Eliminar</span></td>
                 </tr>
@@ -319,6 +332,8 @@
 
            <div class="row">
              <div class="col s12">
+               {$brains}
+
               <!-- Declaracion de variables -->
               {$actividad1 = 'Proyectos innovadores'}
               {$actividad2 = 'Mentoring'}

@@ -73,7 +73,7 @@
   <!-- Encabezado de la primera seccion -->
 
   <!-- Inicio encabezado 2 -->
-  <div class="col s12 nav-wit-2">
+  <div class="col s12 nav-wit-2 hide-on-med-and-up">
 
       <!-- Imagen de perfil -->
       <div class="row">

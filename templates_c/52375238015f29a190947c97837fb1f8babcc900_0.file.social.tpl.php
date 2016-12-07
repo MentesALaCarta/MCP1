@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-12-06 21:31:08
+/* Smarty version 3.1.30, created on 2016-12-06 23:34:28
   from "/opt/lampp/htdocs/mentes/view/social/social.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5847200cb0eea6_23408942',
+  'unifunc' => 'content_58473cf44d3c60_26145514',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '52375238015f29a190947c97837fb1f8babcc900' => 
     array (
       0 => '/opt/lampp/htdocs/mentes/view/social/social.tpl',
-      1 => 1481056267,
+      1 => 1481058956,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:view/principal/script.tpl' => 1,
   ),
 ),false)) {
-function content_5847200cb0eea6_23408942 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58473cf44d3c60_26145514 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -41,6 +41,7 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
 <!-- Mentes a la carta -->
 <div class="container">
 
+<?php if ($_smarty_tpl->tpl_vars['mentes']->value != 0) {?>
     <?php
 $_smarty_tpl->tpl_vars['i'] = new Smarty_Variable(null, $_smarty_tpl->isRenderingCache);$_smarty_tpl->tpl_vars['i']->step = 1;$_smarty_tpl->tpl_vars['i']->total = (int) ceil(($_smarty_tpl->tpl_vars['i']->step > 0 ? count($_smarty_tpl->tpl_vars['mentes']->value)-1+1 - (0) : 0-(count($_smarty_tpl->tpl_vars['mentes']->value)-1)+1)/abs($_smarty_tpl->tpl_vars['i']->step));
 if ($_smarty_tpl->tpl_vars['i']->total > 0) {
@@ -110,7 +111,9 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
 }
 ?>
 
-
+<?php } else { ?>
+  <h3 class="grey-text text-darken-2 center-align">Lista vacía</h3>
+<?php }?>
 </div>
 
 

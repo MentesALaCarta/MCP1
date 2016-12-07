@@ -285,7 +285,7 @@
       <div class="col s12 m6 offset-m3">
         <div class="spacing-1"></div>
         <a href="?view=mentes-a-la-carta">
-          <button type="button" name="button" class="btn grey waves-effect waves-light" style="width: 100%;">Ver más</button>
+          <button type="button" name="button" class="btn grey waves-effect waves-light" style="width: 100%;">Ver más mentes</button>
         </a>
       </div>
     </div>

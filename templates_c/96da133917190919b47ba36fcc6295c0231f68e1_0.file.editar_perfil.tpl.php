@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-12-06 20:13:57
+/* Smarty version 3.1.30, created on 2016-12-07 15:40:08
   from "/opt/lampp/htdocs/mentes/view/wits/editar_perfil.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58470df5848ab4_25171334',
+  'unifunc' => 'content_58481f48df6b38_54712033',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '96da133917190919b47ba36fcc6295c0231f68e1' => 
     array (
       0 => '/opt/lampp/htdocs/mentes/view/wits/editar_perfil.tpl',
-      1 => 1481051634,
+      1 => 1481121607,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:view/principal/script.tpl' => 1,
   ),
 ),false)) {
-function content_58470df5848ab4_25171334 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58481f48df6b38_54712033 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -206,7 +206,7 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
 
        <!-- Experiencia -->
        <li>
-         <div class="collapsible-header"><i class="fa fa-briefcase" aria-hidden="true"></i> Experiencia</div>
+         <div class="collapsible-header active"><i class="fa fa-briefcase" aria-hidden="true"></i> Experiencia</div>
          <div class="collapsible-body padding-edit">
            <!-- Descripción de la fase -->
            <span class="grey-text">
@@ -215,8 +215,14 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
 
             <div class="spacing-1"></div>
 
+            <div class="row">
+              <div class="col s12">
+                <button type="button" class="btn orange waves-effect waves-light" name="button" id="new_exp">Agregar nueva experiencia</button>
+              </div>
+            </div>
+
             <!-- Formulario -->
-            <form id="form_dd_empresa">
+            <form id="form_dd_empresa" hidden="hidden">
               <div class="row">
 
                 <input type="text" id="identificador" value="0" name="identificador" hidden="hidden">
@@ -267,11 +273,15 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
               </div>
             </form>
 
+
             <!-- Table -->
             <table class="responsive-table">
               <thead>
                 <tr>
-                    <th data-field="id">Empresas</th>
+                    <th>Empresa</th>
+                    <th>Sector</th>
+                    <th>Cargo</th>
+                    <th>País</th>
                 </tr>
               </thead>
 
@@ -284,6 +294,9 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
                 <tr>
                   <td><?php echo ucfirst($_smarty_tpl->tpl_vars['experiencia']->value[$_smarty_tpl->tpl_vars['i']->value][1]);?>
 </td>
+                  <td>Software</td>
+                  <td>Desarrollador web</td>
+                  <td>Colombia</td>
                   <td><i class="fa fa-pencil text-grey" aria-hidden="true"></i> <span class="underline text-grey editar_empresa" id="<?php echo $_smarty_tpl->tpl_vars['experiencia']->value[$_smarty_tpl->tpl_vars['i']->value][0];?>
 ">Editar</span></td>
                   <td><i class="fa fa-trash text-grey" aria-hidden="true"></i> <span class="underline text-grey eliminar_empresa" id="<?php echo $_smarty_tpl->tpl_vars['experiencia']->value[$_smarty_tpl->tpl_vars['i']->value][0];?>
@@ -384,6 +397,9 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
 
            <div class="row">
              <div class="col s12">
+               <?php echo $_smarty_tpl->tpl_vars['brains']->value;?>
+
+
               <!-- Declaracion de variables -->
               <?php $_smarty_tpl->_assignInScope('actividad1', 'Proyectos innovadores');
 ?>

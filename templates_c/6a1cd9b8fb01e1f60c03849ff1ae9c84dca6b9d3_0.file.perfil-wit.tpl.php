@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-12-06 22:50:21
+/* Smarty version 3.1.30, created on 2016-12-07 00:42:10
   from "/opt/lampp/htdocs/mentes/view/wits/perfil-wit.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5847329da507f6_04363813',
+  'unifunc' => 'content_58474cd2ea7917_04269812',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6a1cd9b8fb01e1f60c03849ff1ae9c84dca6b9d3' => 
     array (
       0 => '/opt/lampp/htdocs/mentes/view/wits/perfil-wit.tpl',
-      1 => 1481061020,
+      1 => 1481067617,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:view/principal/script.tpl' => 1,
   ),
 ),false)) {
-function content_5847329da507f6_04363813 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58474cd2ea7917_04269812 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -111,7 +111,7 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
   <!-- Encabezado de la primera seccion -->
 
   <!-- Inicio encabezado 2 -->
-  <div class="col s12 nav-wit-2">
+  <div class="col s12 nav-wit-2 hide-on-med-and-up">
 
       <!-- Imagen de perfil -->
       <div class="row">
@@ -357,7 +357,7 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
         <span style="color: #EBA820; font-size: 18px;">Formación</span>
         <br>
         <span class="accent-grey">
-          Impartir charlas y formación<br><span style="visibility: hidden;">lorem ipsum lorem ipsum lorem ipsum</span>
+          Impartir charlas y formación<br><span style="visibility: hidden;">lorem ipsum lorem <br>ipsum lorem <br>sipsum</span>
         </span>
         <input type="text" id="services4" name="services[3]"  hidden="hidden">
       </div>

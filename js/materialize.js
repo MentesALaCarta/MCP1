@@ -864,6 +864,8 @@ function limpiar(){
 
   // Reiniciamos el id
   $('#identificador').val('0');
+
+  $('#form_dd_empresa').hide();
 }
 
 // Eliminar empresa
@@ -921,6 +923,7 @@ $(document).on('click', '.editar_empresa', function(){
         if(res.error == true){
           swal('error', 'Error inesperado');
         }else{
+          $('#form_dd_empresa').show();
           $('#limpiar').show();
           $('#country').focus();
           $('#country').val(res.ciudad);
@@ -962,7 +965,7 @@ $('#guardar_experiencia').click(function(){
       }else if(res == 'error_2'){
         console.log('Error de inserción');
       }else if(res == 'error_3'){
-
+        console.log('Error inesperado');
       }else{
         limpiar();
 
@@ -1058,3 +1061,12 @@ $('#actualizar_datos').click(function(){
     }
   });
 });
+
+
+/* Mejoras de editar experiencia */
+
+$('#new_exp').click(function(){
+  $('#form_dd_empresa').show();
+})
+
+/* End mejoras de editar experiencia*/

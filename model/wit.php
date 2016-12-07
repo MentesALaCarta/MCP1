@@ -288,11 +288,14 @@
 
     public function getExperiencia()
     {
-      $sql = parent::query('select id, name_business from experiencia where usuario_id="'.$_SESSION['id'].'" order by id desc');
+      $sql = parent::query('select id, name_business, sector, position, country from experiencia where usuario_id="'.$_SESSION['id'].'" order by id desc');
       while($row = mysqli_fetch_array($sql)){
         echo '
         <tr>
           <td>'.ucfirst($row['name_business']).'</td>
+          <td>'.ucfirst($row['sector']).'</td>
+          <td>'.ucfirst($row['position']).'</td>
+          <td>'.ucfirst($row['country']).'</td>
           <td><i class="fa fa-pencil text-grey" aria-hidden="true"></i> <span class="underline text-grey editar_empresa" id="'.$row['id'].'">Editar</span></td>
           <td><i class="fa fa-trash text-grey" aria-hidden="true"></i> <span class="underline text-grey eliminar_empresa" id="'.$row['id'].'">Eliminar</span></td>
         </tr>
@@ -365,7 +368,7 @@
           break;
 
         case 'actividad4':
-          $actividad = 'Formaci&oacuten';
+          $actividad = 'Formaci&oacute;n';
           $verificar = parent::verificarRegistros('select id from brain where descripcion="'.$actividad.'" and usuario_id="'.$_SESSION['id'].'"');
           if($verificar > 0){
             echo 'error_1';
