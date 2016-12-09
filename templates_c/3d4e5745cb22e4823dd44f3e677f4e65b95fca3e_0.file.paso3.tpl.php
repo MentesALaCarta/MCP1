@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-12-06 16:07:19
+/* Smarty version 3.1.30, created on 2016-12-07 19:54:07
   from "/opt/lampp/htdocs/mentes/view/wits/paso3.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5846d4270a22f5_09353741',
+  'unifunc' => 'content_58485acfd8b379_51839395',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '3d4e5745cb22e4823dd44f3e677f4e65b95fca3e' => 
     array (
       0 => '/opt/lampp/htdocs/mentes/view/wits/paso3.tpl',
-      1 => 1481036838,
+      1 => 1481125173,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:view/principal/script.tpl' => 1,
   ),
 ),false)) {
-function content_5846d4270a22f5_09353741 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58485acfd8b379_51839395 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -75,7 +75,7 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
       <!-- Proyectos innovadores -->
       <div class="col s8 offset-s2 m4 l2 offset-l1 center-align" >
         <div class="area center-align circle hover" id="item1">
-          <i class="fa fa-microphone" aria-hidden="true" style=" font-size: 4rem;"></i>
+          <i class="fa fa fa-briefcase" aria-hidden="true" style=" font-size: 3.5rem;"></i>
         </div>
         <div class="spacing-1"></div>
         <span style="color: #EBA820; font-size: 18px;">Proyectos innovadores</span>
@@ -89,7 +89,7 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
         <!-- Proyectos innovadores -->
         <div class="col s8 offset-s2 m4 l2 offset-l1 center-align" >
           <div class="area center-align circle hover area_active" id="item1">
-            <i class="fa fa-microphone" aria-hidden="true" style=" font-size: 4rem;"></i>
+            <i class="fa fa fa-briefcase" aria-hidden="true" style=" font-size: 3.5rem;"></i>
           </div>
           <div class="spacing-1"></div>
           <span style="color: #EBA820; font-size: 18px;">Proyectos innovadores</span>
@@ -105,7 +105,7 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
       <!-- Mentoring -->
       <div class="col s8 offset-s2 m4 l2 center-align">
         <div class="area center-align circle hover" id="item2">
-          <i class="fa fa-users" style=" font-size: 4rem;"></i>
+          <i class="fa fa-users" style=" font-size: 3.2rem;"></i>
         </div>
         <div class="spacing-1"></div>
         <span style="color: #EBA820; font-size: 18px;">Mentoring</span>
@@ -119,7 +119,7 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
       <!-- Mentoring -->
       <div class="col s8 offset-s2 m4 l2 center-align">
         <div class="area center-align circle hover area_active" id="item2">
-          <i class="fa fa-users" style=" font-size: 4rem;"></i>
+          <i class="fa fa-users" style=" font-size: 3.2rem;"></i>
         </div>
         <div class="spacing-1"></div>
         <span style="color: #EBA820; font-size: 18px;">Mentoring</span>
@@ -136,7 +136,7 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
     <!-- Asesoramiento -->
     <div class="col s8 offset-s2 m4 l2 center-align">
       <div class="area center-align circle hover" id="item3">
-        <i class="fa fa-pencil" style=" font-size: 4rem;"></i>
+        <i class="fa fa-comments-o" style=" font-size: 3.3rem;"></i>
       </div>
       <div class="spacing-1"></div>
       <span style="color: #EBA820; font-size: 18px;">Asesoramiento</span>
@@ -150,7 +150,7 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
     <!-- Asesoramiento -->
     <div class="col s8 offset-s2 m4 l2 center-align">
       <div class="area center-align circle hover area_active" id="item3">
-        <i class="fa fa-pencil" style=" font-size: 4rem;"></i>
+        <i class="fa fa-comments-o" style=" font-size: 3.3rem;"></i>
       </div>
       <div class="spacing-1"></div>
       <span style="color: #EBA820; font-size: 18px;">Asesoramiento</span>
@@ -167,7 +167,7 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
       <!-- Formación -->
       <div class="col s8 offset-s2 m4 l2 center-align">
         <div class="area center-align circle hover" id="item4">
-          <i class="fa fa-bullhorn" style=" font-size: 4rem;"></i>
+          <i class="fa fa-pencil-square-o" style=" font-size: 3.3rem;"></i>
         </div>
         <div class="spacing-1"></div>
         <span style="color: #EBA820; font-size: 18px;">Formación</span>
@@ -181,7 +181,7 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
       <!-- Formación -->
       <div class="col s8 offset-s2 m4 l2 center-align">
         <div class="area center-align circle hover area_active" id="item4">
-          <i class="fa fa-bullhorn" style=" font-size: 4rem;"></i>
+          <i class="fa fa-pencil-square-o" style=" font-size: 3.3rem;"></i>
         </div>
         <div class="spacing-1"></div>
         <span style="color: #EBA820; font-size: 18px;">Formación</span>
@@ -197,7 +197,7 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
     <!-- Contenidos -->
     <div class="col s8 offset-s2 m4 l2 center-align">
       <div class="area center-align circle hover" id="item5">
-        <i class="fa fa-check" style=" font-size: 4rem;"></i>
+        <i class="fa fa-file-text" style=" font-size: 3.2rem;"></i>
       </div>
       <div class="spacing-1"></div>
       <span style="color: #EBA820; font-size: 18px;">Contenidos</span>
@@ -210,7 +210,7 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
     <?php } else { ?>
     <div class="col s8 offset-s2 m4 l2 center-align">
       <div class="area center-align circle hover area_active" id="item5">
-        <i class="fa fa-check" style=" font-size: 4rem;"></i>
+        <i class="fa fa-file-text" style=" font-size: 3.2rem;"></i>
       </div>
       <div class="spacing-1"></div>
       <span style="color: #EBA820; font-size: 18px;">Contenidos</span>
@@ -243,6 +243,7 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
     <button id="step3" style="width: 100%;"class="btn waves-effect waves-light orange" type="button"  name="button">Continuar</button>
   </div>
 </div>
+
 
 <?php echo '<script'; ?>
  type="text/javascript">

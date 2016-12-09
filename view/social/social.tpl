@@ -76,30 +76,28 @@
 {/if}
 </div>
 
-
-
-
-<!-- Botón flotante en la parte derecha -->
-<div class="fixed-action-btn vertical">
-  <a class="btn-floating btn-large grey darken-3">
-    <i class="large material-icons"><i class="fa fa-plus"></i></i>
+<div class="fixed-action-btn vertical hide-on-small-only">
+  <a href="?view=perfil-wit& id={$smarty.session.id}" class="btn-floating tooltipped btn-large white waves-effect" data-position="left" data-delay="50" data-tooltip="Mi perfil">
+    <i style="font-size: 1.7em; color: #727272;" class="fa fa-user" aria-hidden="true"></i>
   </a>
-  <ul>
-
-    <li>
-      <a href="?view=perfil-wit& id={$smarty.session.id}" class="btn-floating tooltipped white waves-effect" data-position="left" data-delay="50" data-tooltip="Mi perfil">
-        <i style="font-size: 1.2em; color: #727272;" class="fa fa-user" aria-hidden="true"></i>
-      </a>
-    </li>
-
-    <li>
-      <a id="close-sesion" class="btn-floating tooltipped white waves-effect" data-position="left" data-delay="50" data-tooltip="Cerrar sesión">
-        <i style="font-size: 1.2em; color: #727272;" class="fa fa-sign-out" aria-hidden="true"></i>
-      </a>
-    </li>
-
-  </ul>
 </div>
-<!-- / End boton -->
+
+<!-- Menú -->
+<div class="barra hide-on-med-and-up" style="width: 100%;background-color: white; position: fixed; z-index: 100; bottom: 0px;">
+  <div class="row no-margin-b">
+    <div class="col s6 center-align waves-effect" style="padding-top: 10px;border-bottom: 3px solid black;">
+      <i class="fa fa-users" style="font-size: 1.6rem;"></i>
+      <br>
+      Más mentes a la Carta
+    </div>
+    <a href="?view=perfil-wit& id={$smarty.session.id}">
+      <div class="col s6 center-align grey-text waves-effect"  style="padding-top: 10px;">
+        <i class="fa fa-user" style="font-size: 1.6rem;"></i><br>
+        Mi perfil
+      </div>
+    </a>
+  </div>
+</div>
+<!-- / End menú -->
 
 {include file="view/principal/script.tpl"}

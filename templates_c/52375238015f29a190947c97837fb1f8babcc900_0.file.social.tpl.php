@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-12-06 23:34:28
+/* Smarty version 3.1.30, created on 2016-12-07 17:21:40
   from "/opt/lampp/htdocs/mentes/view/social/social.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58473cf44d3c60_26145514',
+  'unifunc' => 'content_58483714df31d9_82351727',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '52375238015f29a190947c97837fb1f8babcc900' => 
     array (
       0 => '/opt/lampp/htdocs/mentes/view/social/social.tpl',
-      1 => 1481058956,
+      1 => 1481127699,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:view/principal/script.tpl' => 1,
   ),
 ),false)) {
-function content_58473cf44d3c60_26145514 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58483714df31d9_82351727 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -116,32 +116,31 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
 <?php }?>
 </div>
 
-
-
-
-<!-- Botón flotante en la parte derecha -->
-<div class="fixed-action-btn vertical">
-  <a class="btn-floating btn-large grey darken-3">
-    <i class="large material-icons"><i class="fa fa-plus"></i></i>
+<div class="fixed-action-btn vertical hide-on-small-only">
+  <a href="?view=perfil-wit& id=<?php echo $_SESSION['id'];?>
+" class="btn-floating tooltipped btn-large white waves-effect" data-position="left" data-delay="50" data-tooltip="Mi perfil">
+    <i style="font-size: 1.7em; color: #727272;" class="fa fa-user" aria-hidden="true"></i>
   </a>
-  <ul>
-
-    <li>
-      <a href="?view=perfil-wit& id=<?php echo $_SESSION['id'];?>
-" class="btn-floating tooltipped white waves-effect" data-position="left" data-delay="50" data-tooltip="Mi perfil">
-        <i style="font-size: 1.2em; color: #727272;" class="fa fa-user" aria-hidden="true"></i>
-      </a>
-    </li>
-
-    <li>
-      <a id="close-sesion" class="btn-floating tooltipped white waves-effect" data-position="left" data-delay="50" data-tooltip="Cerrar sesión">
-        <i style="font-size: 1.2em; color: #727272;" class="fa fa-sign-out" aria-hidden="true"></i>
-      </a>
-    </li>
-
-  </ul>
 </div>
-<!-- / End boton -->
+
+<!-- Menú -->
+<div class="barra hide-on-med-and-up" style="width: 100%;background-color: white; position: fixed; z-index: 100; bottom: 0px;">
+  <div class="row no-margin-b">
+    <div class="col s6 center-align waves-effect" style="padding-top: 10px;border-bottom: 3px solid black;">
+      <i class="fa fa-users" style="font-size: 1.6rem;"></i>
+      <br>
+      Más mentes a la Carta
+    </div>
+    <a href="?view=perfil-wit& id=<?php echo $_SESSION['id'];?>
+">
+      <div class="col s6 center-align grey-text waves-effect"  style="padding-top: 10px;">
+        <i class="fa fa-user" style="font-size: 1.6rem;"></i><br>
+        Mi perfil
+      </div>
+    </a>
+  </div>
+</div>
+<!-- / End menú -->
 
 <?php $_smarty_tpl->_subTemplateRender("file:view/principal/script.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>

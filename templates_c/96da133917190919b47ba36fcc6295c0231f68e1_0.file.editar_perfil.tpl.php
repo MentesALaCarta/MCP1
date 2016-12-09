@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-12-07 15:40:08
+/* Smarty version 3.1.30, created on 2016-12-07 17:37:59
   from "/opt/lampp/htdocs/mentes/view/wits/editar_perfil.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58481f48df6b38_54712033',
+  'unifunc' => 'content_58483ae71c94e4_23332251',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '96da133917190919b47ba36fcc6295c0231f68e1' => 
     array (
       0 => '/opt/lampp/htdocs/mentes/view/wits/editar_perfil.tpl',
-      1 => 1481121607,
+      1 => 1481128677,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:view/principal/script.tpl' => 1,
   ),
 ),false)) {
-function content_58481f48df6b38_54712033 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58483ae71c94e4_23332251 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -206,7 +206,7 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
 
        <!-- Experiencia -->
        <li>
-         <div class="collapsible-header active"><i class="fa fa-briefcase" aria-hidden="true"></i> Experiencia</div>
+         <div class="collapsible-header "><i class="fa fa-briefcase" aria-hidden="true"></i> Experiencia</div>
          <div class="collapsible-body padding-edit">
            <!-- Descripción de la fase -->
            <span class="grey-text">
@@ -397,9 +397,6 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
 
            <div class="row">
              <div class="col s12">
-               <?php echo $_smarty_tpl->tpl_vars['brains']->value;?>
-
-
               <!-- Declaracion de variables -->
               <?php $_smarty_tpl->_assignInScope('actividad1', 'Proyectos innovadores');
 ?>
@@ -417,7 +414,7 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
                  <!-- Actividad 1-->
                  <?php if (strpos($_smarty_tpl->tpl_vars['brains']->value,$_smarty_tpl->tpl_vars['actividad1']->value) === false) {?>
                    <li class="hover grey-hover collection-item avatar actividad_inactivo" id="actividad1">
-                     <i class="fa fa-microphone circle"></i>
+                     <i class="fa fa-briefcase circle"></i>
                      <span>
                        Proyectos innovadores <br>
                        <small class="grey-text text-darken-2">Participar en proyectos innovadores</small>
@@ -425,7 +422,7 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
                    </li>
                  <?php } else { ?>
                      <li class="hover grey-hover collection-item avatar actividad_activo" id="actividad1">
-                       <i class="fa fa-microphone activo circle"></i>
+                       <i class="fa fa-briefcase activo circle"></i>
                        <span>
                          Proyectos innovadores <br>
                          <small class="grey-text text-darken-2">Participar en proyectos innovadores</small>
@@ -457,7 +454,7 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
                  <!-- Actividad 3-->
                  <?php if (strpos($_smarty_tpl->tpl_vars['brains']->value,$_smarty_tpl->tpl_vars['actividad3']->value) === false) {?>
                    <li class="hover grey-hover collection-item avatar actividad_inactivo" id="actividad3">
-                     <i class="fa fa-pencil circle grey"></i>
+                     <i class="fa fa-comments-o circle grey"></i>
                      <span>
                        Asesoramiento<br>
                        <small class="grey-text text-darken-2">Brindar asesoría a empresas y emprendedores</small>
@@ -465,7 +462,7 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
                    </li>
                  <?php } else { ?>
                      <li class="hover grey-hover collection-item avatar actividad_activo" id="actividad3">
-                       <i class="fa fa-pencil activo circle grey"></i>
+                       <i class="fa fa-comments-o activo circle grey"></i>
                        <span>
                          Asesoramiento<br>
                          <small class="grey-text text-darken-2">Brindar asesoría a empresas y emprendedores</small>
@@ -476,7 +473,7 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
                  <!-- Actividad 4-->
                  <?php if (strpos($_smarty_tpl->tpl_vars['brains']->value,$_smarty_tpl->tpl_vars['actividad4']->value) === false) {?>
                    <li class="hover grey-hover collection-item avatar actividad_inactivo" id="actividad4">
-                     <i class="fa fa-bullhorn circle grey"></i>
+                     <i class="fa fa-pencil-square-o circle grey"></i>
                      <span>
                        Formación<br>
                        <small class="grey-text text-darken-2">Impartir charlas y formación</small>
@@ -484,7 +481,7 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
                    </li>
                  <?php } else { ?>
                      <li class="hover grey-hover collection-item avatar actividad_activo" id="actividad4">
-                       <i class="fa fa-bullhorn activo circle grey"></i>
+                       <i class="fa fa-pencil-square-o activo circle grey"></i>
                        <span>
                          Formación<br>
                          <small class="grey-text text-darken-2">Impartir charlas y formación</small>
@@ -495,7 +492,7 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
                  <!-- Actividad 5-->
                  <?php if (strpos($_smarty_tpl->tpl_vars['brains']->value,$_smarty_tpl->tpl_vars['actividad5']->value) === false) {?>
                      <li class="hover grey-hover collection-item avatar actividad_inactivo" id="actividad5">
-                       <i class="fa fa-check circle grey"></i>
+                       <i class="fa fa-file-text circle grey"></i>
                        <span>
                          Contenidos<br>
                          <small class="grey-text text-darken-2">Generar contenido escrito o audiovisual</small>
@@ -504,7 +501,7 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
 
                  <?php } else { ?>
                      <li class="hover grey-hover collection-item avatar actividad_activo" id="actividad5">
-                       <i class="fa fa-check activo circle grey"></i>
+                       <i class="fa fa-file-text activo circle grey"></i>
                        <span>
                          Contenidos<br>
                          <small class="grey-text text-darken-2">Generar contenido escrito o audiovisual</small>
@@ -537,32 +534,31 @@ $(document).ready(function(){
 <?php echo '</script'; ?>
 >
 
-<div class="fixed-action-btn vertical">
-  <a class="btn-floating btn-large grey darken-3">
-    <i class="large material-icons"><i class="fa fa-plus"></i></i>
+<div class="fixed-action-btn vertical hide-on-small-only">
+  <a href="?view=perfil-wit& id=<?php echo $_SESSION['id'];?>
+" class="btn-floating btn-large white waves-effect tooltipped" data-position="left" data-delay="50" data-tooltip="Mi perfil">
+    <i style="font-size: 1.7em; color: #727272;" class="fa fa-user" aria-hidden="true"></i>
   </a>
-  <ul>
+</div>
 
-    <li>
-      <a href="?view=perfil-wit& id=<?php echo $_SESSION['id'];?>
-" class="btn-floating tooltipped white waves-effect" data-position="left" data-delay="50" data-tooltip="Mi perfil">
-        <i style="font-size: 1.2em; color: #727272;" class="fa fa-user" aria-hidden="true"></i>
-      </a>
-    </li>
+<div class="barra hide-on-med-and-up" style="width: 100%;background-color: white; position: fixed; z-index: 100; bottom: 0px;">
+  <div class="row no-margin-b">
+    <a href="?view=Mentes-a-la-Carta">
+      <div class="col s6 center-align grey-text waves-effect" style="padding-top: 10px;">
+        <i class="fa fa-users" style="font-size: 1.6rem;"></i>
+        <br>
+        Más mentes a la Carta
+      </div>
+    </a>
 
-    <li>
-      <a  href="?view=Mentes-a-la-Carta" class="btn-floating tooltipped white waves-effect" data-position="left" data-delay="50" data-tooltip="Mentes a la Carta">
-        <i style="font-size: 1.2em; color: #727272;" class="fa fa-search" aria-hidden="true"></i>
-      </a>
-    </li>
-
-    <li>
-      <a id="close-sesion" class="btn-floating tooltipped white waves-effect" data-position="left" data-delay="50" data-tooltip="Cerrar sesión">
-        <i style="font-size: 1.2em; color: #727272;" class="fa fa-sign-out" aria-hidden="true"></i>
-      </a>
-    </li>
-
-  </ul>
+    <a href="?view=perfil-wit& id=<?php echo $_SESSION['id'];?>
+">
+      <div class="col s6 center-align grey-text waves-effect"  style="padding-top: 10px;">
+        <i class="fa fa-user" style="font-size: 1.6rem;"></i><br>
+        Mi perfil
+      </div>
+    </a>
+  </div>
 </div>
 
 <?php $_smarty_tpl->_subTemplateRender("file:view/principal/script.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);

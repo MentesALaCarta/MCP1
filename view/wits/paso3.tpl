@@ -42,7 +42,7 @@
       <!-- Proyectos innovadores -->
       <div class="col s8 offset-s2 m4 l2 offset-l1 center-align" >
         <div class="area center-align circle hover" id="item1">
-          <i class="fa fa-microphone" aria-hidden="true" style=" font-size: 4rem;"></i>
+          <i class="fa fa fa-briefcase" aria-hidden="true" style=" font-size: 3.5rem;"></i>
         </div>
         <div class="spacing-1"></div>
         <span style="color: #EBA820; font-size: 18px;">Proyectos innovadores</span>
@@ -56,7 +56,7 @@
         <!-- Proyectos innovadores -->
         <div class="col s8 offset-s2 m4 l2 offset-l1 center-align" >
           <div class="area center-align circle hover area_active" id="item1">
-            <i class="fa fa-microphone" aria-hidden="true" style=" font-size: 4rem;"></i>
+            <i class="fa fa fa-briefcase" aria-hidden="true" style=" font-size: 3.5rem;"></i>
           </div>
           <div class="spacing-1"></div>
           <span style="color: #EBA820; font-size: 18px;">Proyectos innovadores</span>
@@ -72,7 +72,7 @@
       <!-- Mentoring -->
       <div class="col s8 offset-s2 m4 l2 center-align">
         <div class="area center-align circle hover" id="item2">
-          <i class="fa fa-users" style=" font-size: 4rem;"></i>
+          <i class="fa fa-users" style=" font-size: 3.2rem;"></i>
         </div>
         <div class="spacing-1"></div>
         <span style="color: #EBA820; font-size: 18px;">Mentoring</span>
@@ -86,7 +86,7 @@
       <!-- Mentoring -->
       <div class="col s8 offset-s2 m4 l2 center-align">
         <div class="area center-align circle hover area_active" id="item2">
-          <i class="fa fa-users" style=" font-size: 4rem;"></i>
+          <i class="fa fa-users" style=" font-size: 3.2rem;"></i>
         </div>
         <div class="spacing-1"></div>
         <span style="color: #EBA820; font-size: 18px;">Mentoring</span>
@@ -103,7 +103,7 @@
     <!-- Asesoramiento -->
     <div class="col s8 offset-s2 m4 l2 center-align">
       <div class="area center-align circle hover" id="item3">
-        <i class="fa fa-pencil" style=" font-size: 4rem;"></i>
+        <i class="fa fa-comments-o" style=" font-size: 3.3rem;"></i>
       </div>
       <div class="spacing-1"></div>
       <span style="color: #EBA820; font-size: 18px;">Asesoramiento</span>
@@ -117,7 +117,7 @@
     <!-- Asesoramiento -->
     <div class="col s8 offset-s2 m4 l2 center-align">
       <div class="area center-align circle hover area_active" id="item3">
-        <i class="fa fa-pencil" style=" font-size: 4rem;"></i>
+        <i class="fa fa-comments-o" style=" font-size: 3.3rem;"></i>
       </div>
       <div class="spacing-1"></div>
       <span style="color: #EBA820; font-size: 18px;">Asesoramiento</span>
@@ -134,7 +134,7 @@
       <!-- Formación -->
       <div class="col s8 offset-s2 m4 l2 center-align">
         <div class="area center-align circle hover" id="item4">
-          <i class="fa fa-bullhorn" style=" font-size: 4rem;"></i>
+          <i class="fa fa-pencil-square-o" style=" font-size: 3.3rem;"></i>
         </div>
         <div class="spacing-1"></div>
         <span style="color: #EBA820; font-size: 18px;">Formación</span>
@@ -148,7 +148,7 @@
       <!-- Formación -->
       <div class="col s8 offset-s2 m4 l2 center-align">
         <div class="area center-align circle hover area_active" id="item4">
-          <i class="fa fa-bullhorn" style=" font-size: 4rem;"></i>
+          <i class="fa fa-pencil-square-o" style=" font-size: 3.3rem;"></i>
         </div>
         <div class="spacing-1"></div>
         <span style="color: #EBA820; font-size: 18px;">Formación</span>
@@ -164,7 +164,7 @@
     <!-- Contenidos -->
     <div class="col s8 offset-s2 m4 l2 center-align">
       <div class="area center-align circle hover" id="item5">
-        <i class="fa fa-check" style=" font-size: 4rem;"></i>
+        <i class="fa fa-file-text" style=" font-size: 3.2rem;"></i>
       </div>
       <div class="spacing-1"></div>
       <span style="color: #EBA820; font-size: 18px;">Contenidos</span>
@@ -177,7 +177,7 @@
     {else}
     <div class="col s8 offset-s2 m4 l2 center-align">
       <div class="area center-align circle hover area_active" id="item5">
-        <i class="fa fa-check" style=" font-size: 4rem;"></i>
+        <i class="fa fa-file-text" style=" font-size: 3.2rem;"></i>
       </div>
       <div class="spacing-1"></div>
       <span style="color: #EBA820; font-size: 18px;">Contenidos</span>
@@ -210,6 +210,7 @@
     <button id="step3" style="width: 100%;"class="btn waves-effect waves-light orange" type="button"  name="button">Continuar</button>
   </div>
 </div>
+
 
 <script type="text/javascript">
 $(document).ready(function(){

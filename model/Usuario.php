@@ -437,7 +437,7 @@
         echo '
         <tr id="habilidad'.$row['id'].'">
           <td>'.ucwords($row['des']).'</td>
-          <td class="hover eliminar_habilidad" id="'.$row['id'].'"><i class="fa fa-close red-text "></i> <span class="red-text">Eliminar</span></td>
+          <td class="hover eliminar_idioma" id="'.$row['id'].'"><i class="fa fa-close red-text "></i> <span class="red-text">Eliminar</span></td>
         </tr>
         ';
       }
