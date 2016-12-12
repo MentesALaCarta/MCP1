@@ -14,7 +14,8 @@
 
   if($wit -> validarPerfil($id) == false)
   {
-    header('location: ?view=error');
+    // header('location: ?view=error');
+    echo 'no validado';
   }
 
   session_start();

@@ -15,6 +15,7 @@
 
       # Verificamos que no contengan caracteres especiales
       $email = parent::salvar($email);
+      $email = trim($email);
       $pass  = parent::salvar($pass);
 
       # Convertimos el texto a minusculas

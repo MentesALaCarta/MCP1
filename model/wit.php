@@ -137,11 +137,19 @@
       parent::cerrar();
     }
 
-    public function getWitsAprobados()
+    public function getWitsAprobados($page)
     {
       parent::conectar();
+
+      $page = parent::salvar($page);
+      $paginador = 20;
+      $inicializador = ($page -1) * $paginador;
+
       $datos = array();
-      $sql = parent::query('select id, primer_nombre, segundo_nombre, primer_apellido, segundo_apellido from usuario where estado ="A"');
+      $sql = parent::query('select id, primer_nombre, segundo_nombre, primer_apellido, segundo_apellido from usuario where estado ="A" ORDER BY id desc LIMIT '.$inicializador.','.$paginador.'');
+      $rows = parent::verificarRegistros('select id from usuario where estado ="A"');
+      $total_paginas = round($rows / $paginador);
+
       while($row = mysqli_fetch_array($sql)){
 
         # Extraemos la ciudad y el pais
@@ -149,7 +157,15 @@
         $nombres = $row['primer_nombre'] . ' ' . $row['segundo_nombre'];
         $apellidos = $row['primer_apellido'] . ' ' . $row['segundo_apellido'];
 
-        $datos[] = array($row['id'], $nombres, $apellidos, $contacto['ciudad'], $contacto['pais']);
+        if(empty($contacto['ciudad'])){
+          $contacto['ciudad'] = 'No especificado';
+        }
+
+        if(empty($contacto['pais'])){
+          $contacto['pais'] = 'No especificado';
+        }
+
+        $datos[] = array($row['id'], ucwords($nombres), ucwords($apellidos), ucwords($contacto['ciudad']), ucwords($contacto['pais']), $total_paginas);
       }
       return $datos;
       parent::cerrar();

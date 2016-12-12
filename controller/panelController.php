@@ -7,7 +7,13 @@
   }
 
   # Incluimos la clase wit
-  require_once('model/wit.php'); 
+  require_once('model/wit.php');
+
+  if(isset($_GET['page']) && !empty($_GET['page'])){
+    $page = $_GET['page'];
+  }else{
+    $page = 1;
+  }
 
   # Incluimos la clase wit
   require_once('model/Admin.php');
@@ -49,9 +55,15 @@
   $datos = $admin -> getHabilidades();
   $template -> assign('habilidades', $datos);
 
+  $datos = $admin -> totalAdmintidos();
+  $template -> assign('totalAdmintidos', $datos);
+
   # Lista de wits
-  $datos = $wit -> getWitsAprobados();
+  $datos = $wit -> getWitsAprobados($page);
   $template -> assign('wits', $datos);
+
+  # Página
+  $template -> assign('page', $page);
 
   $template -> display('view/admin/panel.tpl');
 

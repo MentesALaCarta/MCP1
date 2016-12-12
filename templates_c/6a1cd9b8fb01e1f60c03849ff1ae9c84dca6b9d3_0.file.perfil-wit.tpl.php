@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-12-07 20:21:55
+/* Smarty version 3.1.30, created on 2016-12-09 14:33:40
   from "/opt/lampp/htdocs/mentes/view/wits/perfil-wit.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58486153ebc4c2_96051364',
+  'unifunc' => 'content_584ab2b4bc0066_63345859',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6a1cd9b8fb01e1f60c03849ff1ae9c84dca6b9d3' => 
     array (
       0 => '/opt/lampp/htdocs/mentes/view/wits/perfil-wit.tpl',
-      1 => 1481138515,
+      1 => 1481290419,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:view/principal/script.tpl' => 1,
   ),
 ),false)) {
-function content_58486153ebc4c2_96051364 (Smarty_Internal_Template $_smarty_tpl) {
+function content_584ab2b4bc0066_63345859 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -80,36 +80,36 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
 
           <!-- Telefono-->
           <div class="row">
-            <div class="col s6"><span class="des-wit">Telefono:</span></div>
-            <div class="col s6 "><span class="des-wit-2"><?php echo $_smarty_tpl->tpl_vars['contacto']->value[0][2];?>
+            <div class="col s4"><span class="des-wit">Telefono:</span></div>
+            <div class="col s8 "><span class="des-wit-2"><?php echo $_smarty_tpl->tpl_vars['contacto']->value[0][2];?>
 </span></div>
           </div>
 
           <!-- Ciudad -->
           <div class="row">
-            <div class="col s6"><span class="des-wit">Ciudad:</span></div>
-            <div class="col s6 "><span class="des-wit-2"><?php echo $_smarty_tpl->tpl_vars['contacto']->value[0][1];?>
+            <div class="col s4"><span class="des-wit">Ciudad:</span></div>
+            <div class="col s8 "><span class="des-wit-2"><?php echo $_smarty_tpl->tpl_vars['contacto']->value[0][1];?>
 </span></div>
           </div>
 
           <!-- Pais -->
           <div class="row">
-            <div class="col s6"><span class="des-wit">Pais:</span></div>
-            <div class="col s6 "><span class="des-wit-2"><?php echo $_smarty_tpl->tpl_vars['usuario']->value['pais'];?>
+            <div class="col s4"><span class="des-wit">Pais:</span></div>
+            <div class="col s8 "><span class="des-wit-2"><?php echo $_smarty_tpl->tpl_vars['usuario']->value['pais'];?>
 </span></div>
           </div>
 
           <!-- email -->
           <div class="row">
-            <div class="col s6"><span class="des-wit">Correo electrónico:</span></div>
-            <div class="col s6 "><span class="des-wit-2"><?php echo $_smarty_tpl->tpl_vars['usuario']->value['email'];?>
+            <div class="col s4"><span class="des-wit">Correo electrónico:</span></div>
+            <div class="col s8 "><span class="des-wit-2"><?php echo $_smarty_tpl->tpl_vars['usuario']->value['email'];?>
 </span></div>
           </div>
 
           <!-- idiomas -->
           <div class="row">
-            <div class="col s6"><span class="des-wit">Idiomas:</span></div>
-            <div class="col s6 "><span class="des-wit-2"><?php echo $_smarty_tpl->tpl_vars['idiomas']->value;?>
+            <div class="col s4"><span class="des-wit">Idiomas:</span></div>
+            <div class="col s8 "><span class="des-wit-2"><?php echo $_smarty_tpl->tpl_vars['idiomas']->value;?>
 </span></div>
           </div>
 

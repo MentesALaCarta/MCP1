@@ -47,32 +47,32 @@
 
           <!-- Telefono-->
           <div class="row">
-            <div class="col s6"><span class="des-wit">Telefono:</span></div>
-            <div class="col s6 "><span class="des-wit-2">{$contacto[0][2]}</span></div>
+            <div class="col s4"><span class="des-wit">Telefono:</span></div>
+            <div class="col s8 "><span class="des-wit-2">{$contacto[0][2]}</span></div>
           </div>
 
           <!-- Ciudad -->
           <div class="row">
-            <div class="col s6"><span class="des-wit">Ciudad:</span></div>
-            <div class="col s6 "><span class="des-wit-2">{$contacto[0][1]}</span></div>
+            <div class="col s4"><span class="des-wit">Ciudad:</span></div>
+            <div class="col s8 "><span class="des-wit-2">{$contacto[0][1]}</span></div>
           </div>
 
           <!-- Pais -->
           <div class="row">
-            <div class="col s6"><span class="des-wit">Pais:</span></div>
-            <div class="col s6 "><span class="des-wit-2">{$usuario['pais']}</span></div>
+            <div class="col s4"><span class="des-wit">Pais:</span></div>
+            <div class="col s8 "><span class="des-wit-2">{$usuario['pais']}</span></div>
           </div>
 
           <!-- email -->
           <div class="row">
-            <div class="col s6"><span class="des-wit">Correo electrónico:</span></div>
-            <div class="col s6 "><span class="des-wit-2">{$usuario['email']}</span></div>
+            <div class="col s4"><span class="des-wit">Correo electrónico:</span></div>
+            <div class="col s8 "><span class="des-wit-2">{$usuario['email']}</span></div>
           </div>
 
           <!-- idiomas -->
           <div class="row">
-            <div class="col s6"><span class="des-wit">Idiomas:</span></div>
-            <div class="col s6 "><span class="des-wit-2">{$idiomas}</span></div>
+            <div class="col s4"><span class="des-wit">Idiomas:</span></div>
+            <div class="col s8 "><span class="des-wit-2">{$idiomas}</span></div>
           </div>
 
         </div>

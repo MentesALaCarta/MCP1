@@ -58,18 +58,18 @@
         <select multiple id="sectores">
           <option value="" disabled selected>Sector</option>
           {for $i = 0 to count($sectores) -1}
-            <option value="{$sectores[$i]}">{$sectores[$i]}</option>
+            <option value="{$sectores[$i]}">{ucwords($sectores[$i])}</option>
           {/for}
         </select>
         <label>Sectores</label>
       </div>
 
-      <!-- Sectores-->
+      <!-- Empresas -->
       <div class="input-field col s12 m6">
         <select multiple id="empresas">
-          <option value="" disabled selected>Empresas</option>
+          <option value="" disabled selected>Empresa</option>
           {for $i = 0 to count($empresas) -1}
-            <option value="{$empresas[$i]}">{$empresas[$i]}</option>
+            <option value="{$empresas[$i]}">{ucwords($empresas[$i])}</option>
           {/for}
         </select>
         <label>Empresas </label>
@@ -80,7 +80,7 @@
         <select multiple id="ciudad_dinamic">
           <option value="" disabled selected>Ciudad</option>
           {for $i = 0 to count($ciudad) -1}
-            <option value="{$ciudad[$i]}">{$ciudad[$i]}</option>
+            <option value="{$ciudad[$i]}">{ucwords($ciudad[$i])}</option>
           {/for}
         </select>
         <label>Ciudades</label>
@@ -147,6 +147,13 @@
 
     </div>
 
+
+    <div class="row">
+      <div class="col s12">
+        <span style="font-size: 1.3rem;" class="orange-text">Total de Mentes a la Carta - {$totalAdmintidos}</span>
+      </div>
+    </div>
+
     <div class="row">
       <div class="col s12">
         <table class="highlight hover">
@@ -163,15 +170,46 @@
 
           {for $i = 0 to count($wits) -1}
           <tr class="verPerfil" id="{$wits[$i][0]}">
-            <td>{$wits[$i][1]}</td>
-            <td>{$wits[$i][2]}</td>
-            <td>{$wits[$i][3]}</td>
-            <td>{$wits[$i][4]}</td>
+            <td>{ucwords($wits[$i][1])}</td>
+            <td>{ucwords($wits[$i][2])}</td>
+            <td>{ucwords($wits[$i][3])}</td>
+            <td>{ucwords($wits[$i][4])}</td>
           </tr>
           {/for}
 
         </tbody>
       </table>
+      </div>
+    </div>
+
+
+    <!-- End ultima lista -->
+    <div class="row">
+      <div class="col s12 center-align">
+        <div class="spacing-3"></div>
+        <ul class="pagination">
+
+          {if $page > 1}
+            <li><a href="?view=panel&page={$page - 1}"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></li>
+          {else}
+            <li class="disabled"><a><i class="fa fa-arrow-left" aria-hidden="true"></i></a></li>
+          {/if}
+
+          {for $i= 1 to $wits[0][5]}
+            {if $i == $page}
+              <li class="active grey darken-3"><a href="?view=panel&page={$i}">{$i}</a></li>
+            {else}
+              <li class="waves-effect"><a href="?view=panel&page={$i}">{$i}</a></li>
+            {/if}
+          {/for}
+
+          {if $page == $wits[0][5]}
+            <li class="waves-effect disabled"><a><i class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
+          {else}
+            <li class="waves-effect"><a href="?view=panel&page={$page + 1}"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
+          {/if}
+
+        </ul>
       </div>
     </div>
 

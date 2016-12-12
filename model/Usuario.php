@@ -28,6 +28,7 @@
       $nombres    = $this->filterName($nombres);
       $apellidos  = $this->filterName($apellidos);
       $email      = strtolower($email);
+      $email      = trim($email);
       $clave      = strtolower($clave);
 
       # Verificamos que el email no exista
@@ -341,7 +342,7 @@
       $reemplazar = array('á','Á','é','É','í','Í','ó','Ó','ú','Ú','ñ','Ñ');
 
 
-      $consulta = parent::query('select DISTINCT(descripcion) from habilidades where descripcion like "%'.$des.'%"');
+      $consulta = parent::query('select DISTINCT(descripcion) from habilidades where descripcion like "%'.$des.'%" LIMIT 5');
       while($row = mysqli_fetch_array($consulta)){
         $datos[] = str_replace($buscar, $reemplazar, $row['descripcion']);
       }
@@ -476,6 +477,60 @@
       }else{
         return 0;
       }
+
+      parent::cerrar();
+    }
+
+    public function nuestrasMentes($page)
+    {
+      parent::conectar();
+
+      $page = parent::salvar($page);
+      $paginador = 16;
+      $inicializador = ($page -1) * $paginador;
+
+      $verificar = parent::verificarRegistros('select id from usuario where estado = "A"');
+
+      if($verificar > 0){
+        $datos = array();
+
+        // Consulta que extraiga a las mentes a la carta aprobadas
+        // Nombre completos, sectores (limit 3), ciudad, pais
+        $mentes = parent::query('select u.id, u.primer_nombre, c.imagen, u.primer_apellido, c.ciudad, c.pais from usuario u inner join contacto c on u.id = c.usuario_id where (u.estado ="A" and c.imagen <> "perfiles/perfil.png") ORDER BY u.id desc LIMIT '.$inicializador.', '.$paginador.' ');
+        $rows = parent::verificarRegistros('select u.id from usuario u inner join contacto c on u.id = c.usuario_id where (u.estado ="A" and c.imagen <> "perfiles/perfil.png")');
+
+        $total_paginas = round($rows / $paginador);
+
+        while($row = mysqli_fetch_array($mentes)){
+          $sectores= '';
+
+          $sec = parent::query('select DISTINCT(sector) from experiencia where usuario_id="'.$row['id'].'" LIMIT 3');
+
+          while ($sector = mysqli_fetch_array($sec)) {
+            $sectores .= $sector['sector'] .', ';
+          }
+
+          $sectores = substr($sectores, 0, -2);
+          $datos[] = array(
+            'id'     => $row['id'],
+            'imagen' => $row['imagen'],
+            'nombre' => $row['primer_nombre'] . ' ' . $row['primer_apellido'],
+            'sector' => $sectores,
+            'ciudad' => $row['ciudad'],
+            'pais'   => $row['pais'],
+            'can'    => $total_paginas
+          );
+
+        }
+
+        return $datos;
+
+      }else{
+        return 0;
+      }
+
+
+
 
       parent::cerrar();
     }
