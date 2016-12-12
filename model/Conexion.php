@@ -12,7 +12,7 @@
         private $clave = '';
         private $server = 'localhost';
         private $db = 'mentes';
-
+        //
         // private $usuario = 'witpickc_mentes';
         // private $clave = 'Maicolyara11079?';
         // private $server = 'localhost';

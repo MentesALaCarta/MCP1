@@ -464,7 +464,7 @@ $(document).on('click', '#step4', function(){
       }else{
         swal({
           title: 'Gracias',
-          text: 'Te has registrado satisfactoriamente en Mentes a la carta, revizaremos tu datos para validar tu mente, seras notificado cuando sea aprobado tu perfil.',
+          text: 'Te has registrado satisfactoriamente en Mentes a la carta, revizaremos tu datos para validar tu mente, serás notificado cuando sea aprobado tu perfil.',
           type: 'success'
         }, function(){
           window.location.href= answer;
@@ -776,7 +776,7 @@ $(document).on('click', '#login', function(){
       }else if(res == 'error_2'){
         swal('Usuario no registrado', 'No hemos podido encontrar a un usuario con esa dirección de correo electrónica', 'error');
       }else if(res == 'error_3'){
-        swal('Usuario no registrado', 'La contraseña que ingresaste no es correcta', 'error');
+        swal('Contraseña incorrecta', 'La contraseña que ingresaste no es correcta', 'error');
       }else{
         window.location.href= res;
       }

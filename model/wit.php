@@ -434,7 +434,7 @@
       if(strpos($myList, $actividad1) === false){
         echo '
         <li class="hover grey-hover collection-item avatar actividad_inactivo" id="actividad1">
-          <i class="fa fa-microphone circle"></i>
+          <i class="fa fa-briefcase circle"></i>
           <span>
             Proyectos innovadores <br>
             <small class="grey-text text-darken-2">Participar en proyectos innovadores</small>
@@ -444,7 +444,7 @@
       }else{
         echo '
           <li class="hover grey-hover collection-item avatar actividad_activo" id="actividad1">
-            <i class="fa fa-microphone activo circle"></i>
+            <i class="fa fa-briefcase activo circle"></i>
             <span>
               Proyectos innovadores <br>
               <small class="grey-text text-darken-2">Participar en proyectos innovadores</small>
@@ -481,7 +481,7 @@
       if(strpos($myList, $actividad3) === false){
         echo '
         <li class="hover grey-hover collection-item avatar actividad_inactivo" id="actividad3">
-          <i class="fa fa-pencil circle grey"></i>
+          <i class="fa fa-comments-o circle grey"></i>
           <span>
             Asesoramiento<br>
             <small class="grey-text text-darken-2">Brindar asesoría a empresas y emprendedores</small>
@@ -491,7 +491,7 @@
       }else{
           echo '
           <li class="hover grey-hover collection-item avatar actividad_activo" id="actividad3">
-            <i class="fa fa-pencil activo circle grey"></i>
+            <i class="fa fa-comments-o activo circle grey"></i>
             <span>
               Asesoramiento<br>
               <small class="grey-text text-darken-2">Brindar asesoría a empresas y emprendedores</small>
@@ -504,7 +504,7 @@
       if(strpos($myList, $actividad4) === false){
         echo '
         <li class="hover grey-hover collection-item avatar actividad_inactivo" id="actividad4">
-          <i class="fa fa-bullhorn circle grey"></i>
+          <i class="fa fa-pencil-square-o circle grey"></i>
           <span>
             Formación<br>
             <small class="grey-text text-darken-2">Impartir charlas y formación</small>
@@ -514,7 +514,7 @@
       }else{
           echo '
           <li class="hover grey-hover collection-item avatar actividad_activo" id="actividad4">
-            <i class="fa fa-bullhorn activo circle grey"></i>
+            <i class="fa fa-pencil-square-o activo circle grey"></i>
             <span>
               Formación<br>
               <small class="grey-text text-darken-2">Impartir charlas y formación</small>
@@ -527,7 +527,7 @@
       if(strpos($myList, $actividad5) === false){
         echo '
           <li class="hover grey-hover collection-item avatar actividad_inactivo" id="actividad5">
-            <i class="fa fa-check circle grey"></i>
+            <i class="fa fa-file-text circle grey"></i>
             <span>
               Contenidos<br>
               <small class="grey-text text-darken-2">Generar contenido escrito o audiovisual</small>
@@ -537,7 +537,7 @@
       }else{
         echo '
           <li class="hover grey-hover collection-item avatar actividad_activo" id="actividad5">
-            <i class="fa fa-check activo circle grey"></i>
+            <i class="fa fa-file-text activo circle grey"></i>
             <span>
               Contenidos<br>
               <small class="grey-text text-darken-2">Generar contenido escrito o audiovisual</small>
@@ -596,7 +596,7 @@
           break;
 
         case 'actividad4':
-          $actividad = 'Formaci&oacuten';
+          $actividad = 'Formaci&oacute;n';
           $verificar = parent::verificarRegistros('select id from brain where descripcion="'.$actividad.'" and usuario_id="'.$_SESSION['id'].'"');
           if($verificar > 0){
             parent::query('delete from brain where descripcion="'.$actividad.'" and usuario_id="'.$_SESSION['id'].'"');
@@ -632,7 +632,7 @@
     {
       parent::conectar();
 
-      $buscar = array('&aacute','&eacute', '&iacute', '&oacute', '&uacute', '&Aacute', '&Eacute', '&Iacute', '&Oacute', '&Uacute', '&ntilde', '&Ntilde');
+      $buscar = array('&aacute','&eacute', '&iacute', '&oacute;', '&uacute', '&Aacute', '&Eacute', '&Iacute', '&Oacute', '&Uacute', '&ntilde', '&Ntilde');
       $reemplazar = array('á', 'é', 'í', 'ó', 'ú', 'Á', 'É', 'Í', 'Ó', 'Ú', 'ñ', 'Ñ');
 
       $id = parent::salvar($id);

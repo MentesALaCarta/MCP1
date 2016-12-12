@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-12-12 04:01:22
+/* Smarty version 3.1.30, created on 2016-12-12 16:32:49
   from "/opt/lampp/htdocs/mentes/view/list-mentes.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_584e13027ddc63_77930670',
+  'unifunc' => 'content_584ec321cd9473_98477580',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c08d3425861107ed58e93f8bcd37c30f0f6b9a12' => 
     array (
       0 => '/opt/lampp/htdocs/mentes/view/list-mentes.tpl',
-      1 => 1481511451,
+      1 => 1481556758,
       2 => 'file',
     ),
   ),
@@ -23,11 +23,19 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:view/principal/script.tpl' => 1,
   ),
 ),false)) {
-function content_584e13027ddc63_77930670 (Smarty_Internal_Template $_smarty_tpl) {
+function content_584ec321cd9473_98477580 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
 
+<div class="row">
+  <div class="spacing-1"></div>
+  <div class="col s12">
+    <a href="?view=index">
+    <button type="button" class="btn waves-effect waves-light grey darken-4" name="button"><i style="letter-spacing: 5px;" class="fa fa-arrow-left" aria-hidden="true"></i> Página principal</button>
+    </a>
+  </div>
+</div>
 
 <section class="row">
    <div class="container">
@@ -52,7 +60,7 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
          </div>
          <div class="card-content descripcion">
            <span class="activator grey-text text-darken-4">
-             <span class="nombre grey-text text-darken-3 font-400 truncate"><?php echo $_smarty_tpl->tpl_vars['mentes']->value[$_smarty_tpl->tpl_vars['i']->value]['nombre'];?>
+             <span class="nombre grey-text text-darken-3 font-400 truncate"><?php echo ucwords($_smarty_tpl->tpl_vars['mentes']->value[$_smarty_tpl->tpl_vars['i']->value]['nombre']);?>
 </span>
              <i class="fa fa-info-circle hover-icon right accent-orange" style="font-size: 1.5em;" aria-hidden="true"></i>
              <br class="hide-on-med-up">
@@ -63,7 +71,7 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
 
          </div>
          <div class="card-reveal">
-           <span class="card-title grey-text text-darken-4"><?php echo $_smarty_tpl->tpl_vars['mentes']->value[$_smarty_tpl->tpl_vars['i']->value]['nombre'];?>
+           <span class="card-title grey-text text-darken-4"><?php echo ucwords($_smarty_tpl->tpl_vars['mentes']->value[$_smarty_tpl->tpl_vars['i']->value]['nombre']);?>
 <i class="fa fa-times right red-text" aria-hidden="true"></i></span>
            <p class="text-accent">Sectores: <?php echo $_smarty_tpl->tpl_vars['mentes']->value[$_smarty_tpl->tpl_vars['i']->value]['sector'];?>
 </p>

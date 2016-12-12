@@ -75,9 +75,9 @@
 
          $apellidos[0]= str_replace($buscar, $reemplazar, $apellidos[0]);
          $apellidos[1]= str_replace($buscar, $reemplazar, $apellidos[1]);
-         //
-        //  /* Notificar email */
-         //
+
+         /* Notificar email */
+
         //  //título
         //  $titulo = 'Registro de un nuevo usuario';
          //
@@ -111,6 +111,8 @@
          //
         //  # Envio de mensaje
         //  mail('juliana@mentesalacarta.com', $titulo, $mensaje, $cabeceras);
+        //  mail('mjyara9@gmail.com', $titulo, $mensaje, $cabeceras);
+
 
       }
 

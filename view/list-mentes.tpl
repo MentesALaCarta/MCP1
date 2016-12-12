@@ -1,5 +1,13 @@
 {include file="view/principal/header.tpl"}
 
+<div class="row">
+  <div class="spacing-1"></div>
+  <div class="col s12">
+    <a href="?view=index">
+    <button type="button" class="btn waves-effect waves-light grey darken-4" name="button"><i style="letter-spacing: 5px;" class="fa fa-arrow-left" aria-hidden="true"></i> Página principal</button>
+    </a>
+  </div>
+</div>
 
 <section class="row">
    <div class="container">
@@ -18,7 +26,7 @@
          </div>
          <div class="card-content descripcion">
            <span class="activator grey-text text-darken-4">
-             <span class="nombre grey-text text-darken-3 font-400 truncate">{$mentes[$i].nombre}</span>
+             <span class="nombre grey-text text-darken-3 font-400 truncate">{ucwords($mentes[$i].nombre)}</span>
              <i class="fa fa-info-circle hover-icon right accent-orange" style="font-size: 1.5em;" aria-hidden="true"></i>
              <br class="hide-on-med-up">
              <span class="grey-text truncate">{ucwords($mentes[$i].pais)}-{ucwords($mentes[$i].ciudad)}</span>
@@ -26,7 +34,7 @@
 
          </div>
          <div class="card-reveal">
-           <span class="card-title grey-text text-darken-4">{$mentes[$i].nombre}<i class="fa fa-times right red-text" aria-hidden="true"></i></span>
+           <span class="card-title grey-text text-darken-4">{ucwords($mentes[$i].nombre)}<i class="fa fa-times right red-text" aria-hidden="true"></i></span>
            <p class="text-accent">Sectores: {$mentes[$i].sector}</p>
          </div>
        </div>
