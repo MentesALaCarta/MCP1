@@ -1070,3 +1070,39 @@ $('#new_exp').click(function(){
 })
 
 /* End mejoras de editar experiencia*/
+
+$('#actualizar_datos_generales').click(function(){
+
+
+  $.ajax({
+    method: 'POST',
+    url: 'controller/wit/actualizar_general.php',
+    data: $('#formulario_general').serialize(),
+    beforeSend: function(){
+      $('#load_general').show();
+    },
+    success: function(res){
+      $('#load_general').hide();
+      if(res == 'error_1'){
+        swal('Error', 'Por favor ingresa tu contraseña actual', 'warning');
+      }else if(res == 'error_2'){
+        swal('Error', 'La contraseña actual que ingresaste es incorrecta', 'error');
+      }else if(res == 'error_3'){
+        swal('Error', 'Los campos: Nombres, Apellidos y Correo electrónico son obligatorios', 'error');
+      }else{
+        swal({
+          title: 'Datos actualizados',
+          text: 'Se actualizaron los datos generales correctamente',
+          type: 'success'
+        }, function(){
+          $('#clave_actual').focus();
+
+          $('#clave_new').val('');
+          $('#clave_actual').val('');
+        });
+
+      }
+    }
+
+  });
+});

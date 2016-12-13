@@ -97,6 +97,8 @@
 
           $res = strtolower($res);
 
+          $res = trim($res);
+
           return $res;
         }
 

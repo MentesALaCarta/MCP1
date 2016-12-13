@@ -32,6 +32,9 @@
   $datos = $persona -> misBrains($_SESSION['id']);
   $template -> assign('brains', $datos);
 
+  $datos = $persona -> misDatos();
+  $template -> assign('misDatos', $datos);
+
   $datos = $persona2 -> getIdiomasList($_SESSION['id']);
   $template -> assign('idiomas', $datos);
 

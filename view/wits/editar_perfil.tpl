@@ -439,7 +439,6 @@
                      </li>
                  {/if}
 
-
                </ul>
 
              </div>
@@ -447,9 +446,62 @@
          </div>
        </li>
 
-     </ul>
-    </div>
-  </div><!-- End row-->
+       <li>
+         <div class="collapsible-header"><i class="fa fa-cog" aria-hidden="true"></i></i> Configuración de la cuenta</div>
+         <div class="collapsible-body padding-edit">
+          <div class="spacing-1"></div>
+          <form id="formulario_general">
+            <div class="row">
+
+              <!-- Nombres -->
+              <div class="input-field col s12 m6">
+                <input id="nombres_generales" type="text" class="validate grey-text text-darken-4" value="{ucwords($misDatos['nombres'])}" name="nombre">
+                <label for="nombres_generales">Nombres</label>
+              </div>
+
+              <!-- Apellidos -->
+              <div class="input-field col s12 m6">
+                <input id="apellido_general" type="text" class="validate grey-text text-darken-4" value="{ucwords($misDatos['apellidos'])}" name="apellido">
+                <label for="apellido_general">Apellidos</label>
+              </div>
+
+              <!-- Correo electrónico -->
+              <div class="input-field col s12 m6">
+                <input id="email_general" type="text" class="validate grey-text text-darken-4" value="{$misDatos['email']}" name="email">
+                <label for="email_general">Correo electrónico</label>
+              </div>
+
+              <div class="input-field col s12 m6">
+                <input id="clave_new" type="password" class="validate grey-text text-darken-4" value="" name="clave_new">
+                <label for="clave_new">Nueva contraseña</label>
+              </div>
+
+              <div class="input-field col s12">
+                <input id="clave_actual" type="password" class="validate grey-text text-darken-4" name="clave_actual">
+                <label for="clave_actual">Contraseña Actual</label>
+              </div>
+
+              <div id="load_general" class="col s2 m1" hidden="hidden">
+                  <img src="images/perfiles/load.gif" alt="subiendo imagen de perfil" style="width: 100%;"/>
+                  Cargando...
+              </div>
+
+              <div class="col s12 grey-text text-darken-2">
+                <div class="spacing-2"></div>
+                <i class="fa fa-save"></i> <span class="underline" id="actualizar_datos_generales">Actualizar datos</span>
+              </div>
+
+              <!-- Modal Trigger -->
+
+            </div>
+        </form>
+
+      </div>
+    </li>
+
+  </ul>
+</div>
+</div><!-- End row-->
 </div><!-- End container -->
 
 <script>

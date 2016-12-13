@@ -735,8 +735,71 @@
         return 0;
       }
 
+      parent::cerrar();
+    }
 
 
+    public function actulizarData($nombre, $apellido, $email, $clave_new, $clave_actual)
+    {
+      parent::conectar();
+
+      $nombre = parent::filtrar($nombre);
+      $apellido = parent::filtrar($apellido);
+      $email = parent::filtrar($email);
+      $clave_new = parent::filtrar($clave_new);
+      $clave_actual = parent::salvar($clave_actual);
+
+      $nombre = explode(' ' , $nombre);
+      $apellido = explode(' ', $apellido);
+
+      if(!isset($nombre[1])){
+        $nombre[1] = null;
+      }
+
+      if(!isset($apellido[1])){
+        $apellido[1] = null;
+      }
+
+      session_start();
+
+      # Verificamos si la clave es correcta
+      $verificar = parent::consultaArreglo('select clave from usuario where id = "'.$_SESSION['id'].'"');
+
+
+      if($verificar['clave'] == MD5($clave_actual)){
+
+        if(empty($clave_new)){
+          $validar = parent::query('update usuario set primer_nombre= "'.$nombre[0].'", segundo_nombre = "'.$nombre[1].'", primer_apellido = "'.$apellido[0].'", segundo_apellido="'.$apellido[1].'", email ="'.$email.'" where id = "'.$_SESSION['id'].'"');
+        }else{
+          $validar = parent::query('update usuario set primer_nombre= "'.$nombre[0].'", segundo_nombre = "'.$nombre[1].'", primer_apellido = "'.$apellido[0].'", segundo_apellido="'.$apellido[1].'", email ="'.$email.'", clave = MD5("'.$clave_new.'") where id = "'.$_SESSION['id'].'"');
+        }
+
+        if($validar){
+          echo 'Se actualizo';
+        }else{
+          echo 'No se actualizo';
+        }
+
+
+      }else{
+        echo 'error_2';
+      }
+
+      parent::cerrar();
+    }
+
+    public function misDatos()
+    {
+      parent::conectar();
+      $datos = array();
+      $user = parent::consultaArreglo('select primer_nombre, segundo_nombre, primer_apellido, segundo_apellido, email from usuario where id = "'.$_SESSION['id'].'"');
+
+      $datos = array(
+        'nombres' => $user['primer_nombre'] .' ' . $user['segundo_nombre'],
+        'apellidos' => $user['primer_apellido'] .' ' . $user['segundo_apellido'],
+        'email' => $user['email']
+      );
+      return $datos;
 
       parent::cerrar();
     }

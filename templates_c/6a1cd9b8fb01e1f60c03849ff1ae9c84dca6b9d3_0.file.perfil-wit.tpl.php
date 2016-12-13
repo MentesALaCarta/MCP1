@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-12-09 14:33:40
+/* Smarty version 3.1.30, created on 2016-12-13 15:35:37
   from "/opt/lampp/htdocs/mentes/view/wits/perfil-wit.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_584ab2b4bc0066_63345859',
+  'unifunc' => 'content_5850073965fbc2_23918991',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6a1cd9b8fb01e1f60c03849ff1ae9c84dca6b9d3' => 
     array (
       0 => '/opt/lampp/htdocs/mentes/view/wits/perfil-wit.tpl',
-      1 => 1481290419,
+      1 => 1481639732,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:view/principal/script.tpl' => 1,
   ),
 ),false)) {
-function content_584ab2b4bc0066_63345859 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5850073965fbc2_23918991 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -88,14 +88,14 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
           <!-- Ciudad -->
           <div class="row">
             <div class="col s4"><span class="des-wit">Ciudad:</span></div>
-            <div class="col s8 "><span class="des-wit-2"><?php echo $_smarty_tpl->tpl_vars['contacto']->value[0][1];?>
+            <div class="col s8 "><span class="des-wit-2"><?php echo ucwords($_smarty_tpl->tpl_vars['contacto']->value[0][1]);?>
 </span></div>
           </div>
 
           <!-- Pais -->
           <div class="row">
             <div class="col s4"><span class="des-wit">Pais:</span></div>
-            <div class="col s8 "><span class="des-wit-2"><?php echo $_smarty_tpl->tpl_vars['usuario']->value['pais'];?>
+            <div class="col s8 "><span class="des-wit-2"><?php echo ucwords($_smarty_tpl->tpl_vars['usuario']->value['pais']);?>
 </span></div>
           </div>
 
@@ -109,7 +109,7 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
           <!-- idiomas -->
           <div class="row">
             <div class="col s4"><span class="des-wit">Idiomas:</span></div>
-            <div class="col s8 "><span class="des-wit-2"><?php echo $_smarty_tpl->tpl_vars['idiomas']->value;?>
+            <div class="col s8 "><span class="des-wit-2"><?php echo ucwords($_smarty_tpl->tpl_vars['idiomas']->value);?>
 </span></div>
           </div>
 
@@ -399,11 +399,12 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
   </div>
 
 </div>
-<?php if (isset($_SESSION['id'])) {?>
+
+<?php if (isset($_SESSION['id']) && $_SESSION['cargo'] == 2) {?>
 
   <div class="fixed-action-btn vertical hide-on-small-only">
     <a id="close-sesion" class="btn-floating tooltipped btn-large white waves-effect" data-position="left" data-delay="50" data-tooltip="Cerrar sesión">
-      <i style="font-size: 1.7em; color: #727272;" class="fa fa-sign-out" aria-hidden="true"></i>
+      <i style="font-size: 1.7em; color: #727272;" class="fa fa-power-off" aria-hidden="true"></i>
     </a>
   </div>
 
@@ -424,6 +425,14 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
     </div>
   </div>
 
+<?php }?>
+
+<?php if (isset($_SESSION['id']) && $_SESSION['cargo'] == 1) {?>
+<div class="fixed-action-btn vertical hide-on-small-only">
+  <a href="?view=panel" class="btn-floating tooltipped btn-large white waves-effect" data-position="left" data-delay="50" data-tooltip="Volver al Panel">
+    <i style="font-size: 1.7em; color: #727272;" class="fa fa-sign-out" aria-hidden="true"></i>
+  </a>
+</div>
 <?php }?>
 
 <div class="spacing-3"></div>

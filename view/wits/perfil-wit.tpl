@@ -54,13 +54,13 @@
           <!-- Ciudad -->
           <div class="row">
             <div class="col s4"><span class="des-wit">Ciudad:</span></div>
-            <div class="col s8 "><span class="des-wit-2">{$contacto[0][1]}</span></div>
+            <div class="col s8 "><span class="des-wit-2">{ucwords($contacto[0][1])}</span></div>
           </div>
 
           <!-- Pais -->
           <div class="row">
             <div class="col s4"><span class="des-wit">Pais:</span></div>
-            <div class="col s8 "><span class="des-wit-2">{$usuario['pais']}</span></div>
+            <div class="col s8 "><span class="des-wit-2">{ucwords($usuario['pais'])}</span></div>
           </div>
 
           <!-- email -->
@@ -72,7 +72,7 @@
           <!-- idiomas -->
           <div class="row">
             <div class="col s4"><span class="des-wit">Idiomas:</span></div>
-            <div class="col s8 "><span class="des-wit-2">{$idiomas}</span></div>
+            <div class="col s8 "><span class="des-wit-2">{ucwords($idiomas)}</span></div>
           </div>
 
         </div>
@@ -329,11 +329,12 @@
   </div>
 
 </div>
-{if isset($smarty.session.id)}
+
+{if isset($smarty.session.id) && $smarty.session.cargo == 2}
 
   <div class="fixed-action-btn vertical hide-on-small-only">
     <a id="close-sesion" class="btn-floating tooltipped btn-large white waves-effect" data-position="left" data-delay="50" data-tooltip="Cerrar sesión">
-      <i style="font-size: 1.7em; color: #727272;" class="fa fa-sign-out" aria-hidden="true"></i>
+      <i style="font-size: 1.7em; color: #727272;" class="fa fa-power-off" aria-hidden="true"></i>
     </a>
   </div>
 
@@ -354,6 +355,14 @@
     </div>
   </div>
 
+{/if}
+
+{if isset($smarty.session.id) && $smarty.session.cargo == 1}
+<div class="fixed-action-btn vertical hide-on-small-only">
+  <a href="?view=panel" class="btn-floating tooltipped btn-large white waves-effect" data-position="left" data-delay="50" data-tooltip="Volver al Panel">
+    <i style="font-size: 1.7em; color: #727272;" class="fa fa-sign-out" aria-hidden="true"></i>
+  </a>
+</div>
 {/if}
 
 <div class="spacing-3"></div>

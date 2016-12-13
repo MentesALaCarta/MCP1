@@ -91,7 +91,7 @@
            </div>
 
            <span>
-             Tu perfil de <span style="font-weight: bold;">mentes a la carta</span> ha sido aprobado, ahora puedes participar en las siguientes <span style="font-weight: bold;">actividades:</span>
+             Tu perfil de <span style="font-weight: bold;">Mentes a la Carta</span> ha sido aprobado, ahora puedes participar en las siguientes <span style="font-weight: bold;">actividades:</span>
            </span>
 
            <div style="margin-top: 1.5em;">

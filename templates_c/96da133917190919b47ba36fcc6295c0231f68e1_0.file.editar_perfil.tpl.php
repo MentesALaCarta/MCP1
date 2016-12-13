@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-12-07 17:37:59
+/* Smarty version 3.1.30, created on 2016-12-13 16:02:52
   from "/opt/lampp/htdocs/mentes/view/wits/editar_perfil.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58483ae71c94e4_23332251',
+  'unifunc' => 'content_58500d9ca20ca6_79009186',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '96da133917190919b47ba36fcc6295c0231f68e1' => 
     array (
       0 => '/opt/lampp/htdocs/mentes/view/wits/editar_perfil.tpl',
-      1 => 1481128677,
+      1 => 1481641371,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:view/principal/script.tpl' => 1,
   ),
 ),false)) {
-function content_58483ae71c94e4_23332251 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58500d9ca20ca6_79009186 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -509,7 +509,6 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
                      </li>
                  <?php }?>
 
-
                </ul>
 
              </div>
@@ -517,9 +516,65 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
          </div>
        </li>
 
-     </ul>
-    </div>
-  </div><!-- End row-->
+       <li>
+         <div class="collapsible-header"><i class="fa fa-cog" aria-hidden="true"></i></i> Configuración de la cuenta</div>
+         <div class="collapsible-body padding-edit">
+          <div class="spacing-1"></div>
+          <form id="formulario_general">
+            <div class="row">
+
+              <!-- Nombres -->
+              <div class="input-field col s12 m6">
+                <input id="nombres_generales" type="text" class="validate grey-text text-darken-4" value="<?php echo ucwords($_smarty_tpl->tpl_vars['misDatos']->value['nombres']);?>
+" name="nombre">
+                <label for="nombres_generales">Nombres</label>
+              </div>
+
+              <!-- Apellidos -->
+              <div class="input-field col s12 m6">
+                <input id="apellido_general" type="text" class="validate grey-text text-darken-4" value="<?php echo ucwords($_smarty_tpl->tpl_vars['misDatos']->value['apellidos']);?>
+" name="apellido">
+                <label for="apellido_general">Apellidos</label>
+              </div>
+
+              <!-- Correo electrónico -->
+              <div class="input-field col s12 m6">
+                <input id="email_general" type="text" class="validate grey-text text-darken-4" value="<?php echo $_smarty_tpl->tpl_vars['misDatos']->value['email'];?>
+" name="email">
+                <label for="email_general">Correo electrónico</label>
+              </div>
+
+              <div class="input-field col s12 m6">
+                <input id="clave_new" type="password" class="validate grey-text text-darken-4" value="" name="clave_new">
+                <label for="clave_new">Nueva contraseña</label>
+              </div>
+
+              <div class="input-field col s12">
+                <input id="clave_actual" type="password" class="validate grey-text text-darken-4" name="clave_actual">
+                <label for="clave_actual">Contraseña Actual</label>
+              </div>
+
+              <div id="load_general" class="col s2 m1" hidden="hidden">
+                  <img src="images/perfiles/load.gif" alt="subiendo imagen de perfil" style="width: 100%;"/>
+                  Cargando...
+              </div>
+
+              <div class="col s12 grey-text text-darken-2">
+                <div class="spacing-2"></div>
+                <i class="fa fa-save"></i> <span class="underline" id="actualizar_datos_generales">Actualizar datos</span>
+              </div>
+
+              <!-- Modal Trigger -->
+
+            </div>
+        </form>
+
+      </div>
+    </li>
+
+  </ul>
+</div>
+</div><!-- End row-->
 </div><!-- End container -->
 
 <?php echo '<script'; ?>

@@ -23,6 +23,7 @@
 
       # Validar si existe un usuario con ese email
       $verificar = parent::verificarRegistros('select email from usuario where email="'.$email.'"');
+
       if($verificar > 0){
 
         $login = parent::verificarRegistros('select id from usuario where email="'.$email.'" and clave = MD5("'.$pass.'")');
