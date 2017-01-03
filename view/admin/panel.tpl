@@ -3,32 +3,36 @@
 <!-- Panel -->
 <div class="row">
 
-  <div class="col s3 no-padding-1 nav-right1 hide-on-med-and-down">
-
-        <section class="row">
-          <article class="col l8 offset-l2">
-            <div class="spacing-1"></div>
+  <div class="col s3 no-padding-1 nav-right1 hide-on-med-and-down z-depth-1">
+        <section class="row no-margin-b">
+          <article class="col l4 offset-l2" style="padding-top: 1em;">
             <img src="images/bradlogo.png" width="100%" class="" alt="logo mentes a la carta">
           </article>
         </section>
 
-        <section class="row" >
+        <section class="row">
           <article class="col l12 no-padding-1">
             <ul>
+              <a href="?view=principal" class="accent-li1">
+                <li class="item-nav-right1">
+                  <i class="fa fa-home left resize"></i>
+                  Página principal
+                </li>
+              </a>
               <a href="?view=panel" class="accent-li1">
-                <li class="item-nav-right1 active-item" id="project-pro">
+                <li class="item-nav-right1 active-item">
                   <i class="fa fa-users left resize"></i>
                   Mentes a la carta
                 </li>
               </a>
               <a href="?view=wits-pendientes" class="accent-li1">
-                <li class="item-nav-right1" id="asesores-pro">
+                <li class="item-nav-right1">
                   <i class="fa fa-user-secret left resize"></i>
                   Mentes a la carta pendientes
                 </li>
               </a>
               <a href="?view=index" class="accent-li1">
-                <li class="item-nav-right1" id="asesores-pro">
+                <li class="item-nav-right1">
                   <i class="fa fa-sign-out left resize"></i>
                   Cerrar sesión
                 </li>
@@ -40,17 +44,24 @@
 
   </div>
 
-  <div class="col s12 m9 offset-m3">
+  <div class="col s12 m9 offset-m3 seccion-panel ">
+
+    <div class="navbar-fixed">
+      <nav class="orange lighten-1">
+        <div class="nav-wrapper" style="padding-left: 15px;">
+          <a href="#" class="brand-logo" style="font-size: 1.4rem;">Buscar Mentes a la Carta</a>
+        </div>
+      </nav>
+    </div>
+
     <!-- Contenido -->
     <div class="spacing-2"></div>
-    <h3 class="accent-text">Lista de Mentes a la carta</h3>
-
-    <div class="row">
+    <div class="row" style="padding: 15px 20px;">
 
       <!-- Nombres o apellidos -->
       <div class="input-field col s12 m6">
         <input id="busqueda-text" type="text" class="validate">
-        <label for="busqueda-text">Ingresa tu búsqueda</label>
+        <label for="busqueda-text" class="grey-text">Ingresa tu búsqueda</label>
       </div>
 
       <!-- Sectores-->
@@ -61,7 +72,7 @@
             <option value="{$sectores[$i]}">{ucwords($sectores[$i])}</option>
           {/for}
         </select>
-        <label>Sectores</label>
+        <label class="grey-text">Sectores</label>
       </div>
 
       <!-- Empresas -->
@@ -72,7 +83,7 @@
             <option value="{$empresas[$i]}">{ucwords($empresas[$i])}</option>
           {/for}
         </select>
-        <label>Empresas </label>
+        <label class="grey-text">Empresas </label>
       </div>
 
       <!-- Ciudades -->
@@ -83,29 +94,29 @@
             <option value="{$ciudad[$i]}">{ucwords($ciudad[$i])}</option>
           {/for}
         </select>
-        <label>Ciudades</label>
+        <label class="grey-text">Ciudades</label>
       </div>
 
       <!-- Cargos -->
       <div class="input-field col s12 m6">
         <select multiple id="cargos_dinamic">
-          <option value="" disabled selected></option>
+          <option value="" disabled selected>Cargo</option>
           {for $i = 0 to count($cargos) -1}
             <option value="{$cargos[$i]}">{$cargos[$i]}</option>
           {/for}
         </select>
-        <label>Cargos</label>
+        <label class="grey-text">Cargos</label>
       </div>
 
       <!-- Actividades -->
       <div class="input-field col s12 m6">
         <select multiple id="actividad_dinamic">
-          <option value="" disabled selected></option>
+          <option value="" disabled selected>Actividad</option>
           {for $i = 0 to count($brains) -1}
             <option value="{$brains[$i]}">{$brains[$i]}</option>
           {/for}
         </select>
-        <label>Actividades</label>
+        <label class="grey-text">Actividades</label>
       </div>
 
       <!-- Paises -->
@@ -116,7 +127,7 @@
             <option value="{$paises[$i]}">{ucwords($paises[$i])}</option>
           {/for}
         </select>
-        <label>Paises </label>
+        <label class="grey-text">Paises </label>
       </div>
 
       <!-- Idiomas -->
@@ -127,22 +138,18 @@
             <option value="{$idiomas[$i]}">{ucwords($idiomas[$i])}</option>
           {/for}
         </select>
-        <label> Idiomas </label>
+        <label class="grey-text"> Idiomas </label>
       </div>
-
-
-
-
 
       <!-- Aptitudes -->
       <div class="input-field col s12">
         <select multiple id="aptitudes_dinamic">
-          <option value="" disabled selected></option>
+          <option value="" disabled selected>Aptitud</option>
           {for $i = 0 to count($habilidades) -1}
             <option value="{$habilidades[$i]}">{ucwords($habilidades[$i])}</option>
           {/for}
         </select>
-        <label>Aptitudes</label>
+        <label class="grey-text">Aptitudes</label>
       </div>
 
     </div>
@@ -150,15 +157,15 @@
 
     <div class="row">
       <div class="col s12">
-        <span style="font-size: 1.3rem;" class="orange-text">Total de Mentes a la Carta - {$totalAdmintidos}</span>
+        <span style="font-size: 1.4rem;" class="grey-text text-darken-2">Total de Mentes a la Carta - {$totalAdmintidos}</span>
       </div>
     </div>
 
-    <div class="row">
+    <div class="row white">
       <div class="col s12">
         <table class="highlight hover">
         <thead>
-          <tr>
+          <tr class="orange-text text-lighten-1">
               <th>Nombre</th>
               <th>Apellido</th>
               <th>Ciudad</th>
@@ -166,7 +173,7 @@
           </tr>
         </thead>
 
-        <tbody id="wits-aprobados-panel">
+        <tbody id="wits-aprobados-panel" class="grey-text">
 
           {for $i = 0 to count($wits) -1}
           <tr class="verPerfil" id="{$wits[$i][0]}">
