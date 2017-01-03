@@ -86,6 +86,8 @@
           return $this->mysqli;
         }
 
+        # Serie de filtros para almacenar en base de datos
+
         public function filtrar($string){
 
           $res = $this->salvar($string);

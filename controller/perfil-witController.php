@@ -2,7 +2,7 @@
 
   # Incluimos la clase de  wit
   require_once('model/wit.php');
-  $wit = new Wit();
+  $wit = new Wit(); 
   $template = new smarty();
 
   # Leemos la variable del wit
