@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-01-03 18:04:07
+/* Smarty version 3.1.30, created on 2017-01-04 21:51:52
   from "C:\xampp\htdocs\mentesCarta\view\admin\wits-pendientes.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_586bd987466e79_12536460',
+  'unifunc' => 'content_586d60685052a1_91288733',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5389b2e592f7abe03822dda91bc9f1c5dda1cc4c' => 
     array (
       0 => 'C:\\xampp\\htdocs\\mentesCarta\\view\\admin\\wits-pendientes.tpl',
-      1 => 1483463042,
+      1 => 1483562071,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:view/principal/script.tpl' => 1,
   ),
 ),false)) {
-function content_586bd987466e79_12536460 (Smarty_Internal_Template $_smarty_tpl) {
+function content_586d60685052a1_91288733 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -56,6 +56,18 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
                 <li class="item-nav-right1 active-item" id="asesores-pro">
                   <i class="fa fa-user-secret left resize"></i>
                   Mentes a la carta pendientes
+                </li>
+              </a>
+              <a href="?view=emailMasivo" class="accent-li1">
+                <li class="item-nav-right1">
+                  <i class="fa fa-envelope left resize" style="font-size: 1.4rem;"></i>
+                  Enviar correo
+                </li>
+              </a>
+              <a href="?view=newProyect" class="accent-li1">
+                <li class="item-nav-right1">
+                  <i class="fa fa-briefcase left resize"></i>
+                  Proyectos
                 </li>
               </a>
               <a href="?view=index">

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-01-03 15:40:49
+/* Smarty version 3.1.30, created on 2017-01-05 05:28:27
   from "C:\xampp\htdocs\mentesCarta\view\wits\perfil-wit.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_586bb7f1dd1407_85818714',
+  'unifunc' => 'content_586dcb6b3f6193_03391701',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a3e9060686a02404f7a9bb2c6f51964b60c3a6a4' => 
     array (
       0 => 'C:\\xampp\\htdocs\\mentesCarta\\view\\wits\\perfil-wit.tpl',
-      1 => 1483453826,
+      1 => 1483590505,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:view/principal/script.tpl' => 1,
   ),
 ),false)) {
-function content_586bb7f1dd1407_85818714 (Smarty_Internal_Template $_smarty_tpl) {
+function content_586dcb6b3f6193_03391701 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -306,10 +306,11 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
           <?php if ($_smarty_tpl->tpl_vars['brain']->value[0] == true) {?>
           <!-- Proyectos innovadores -->
           <li class="collection-item avatar">
+            <div style="margin-top: 0.5em;"></div>
             <i class="fa fa-briefcase activo circle"></i>
-            <span>
+            <span class="grey-text text-darken-1">
               Proyectos innovadores <br>
-              <small class="grey-text text-darken-2">Participar en proyectos innovadores</small>
+              <small class="grey-text">Participar en proyectos innovadores</small>
             </span>
           </li>
           <?php }?>
@@ -317,10 +318,11 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
           <?php if ($_smarty_tpl->tpl_vars['brain']->value[1] == true) {?>
           <!-- Mentoring -->
           <li class="collection-item avatar">
+            <div style="margin-top: 0.5em;"></div>
             <i class="fa fa-users activo circle"></i>
-            <span>
+            <span class="grey-text text-darken-1">
               Mentoring<br>
-              <small class="grey-text text-darken-2">Ser mentor de emprendimientos y proyectos innovadores</small>
+              <small class="grey-text">Ser mentor de emprendimientos y proyectos innovadores</small>
             </span>
           </li>
           <?php }?>
@@ -328,10 +330,11 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
           <?php if ($_smarty_tpl->tpl_vars['brain']->value[2] == true) {?>
           <!-- Asesoramiento -->
           <li class="collection-item avatar">
+            <div style="margin-top: 0.5em;"></div>
             <i class="fa fa-comments-o activo circle grey"></i>
-            <span>
+            <span class="grey-text text-darken-1">
               Asesoramiento<br>
-              <small class="grey-text text-darken-2">Brindar asesoría a empresas y emprendedores</small>
+              <small class="grey-text">Brindar asesoría a empresas y emprendedores</small>
             </span>
           </li>
           <?php }?>
@@ -340,10 +343,11 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
           <?php if ($_smarty_tpl->tpl_vars['brain']->value[3] == true) {?>
           <!-- Formación -->
           <li class="collection-item avatar">
+            <div style="margin-top: 0.5em;"></div>
             <i class="fa fa-pencil-square-o activo circle grey"></i>
-            <span>
+            <span class="grey-text text-darken-1">
               Formación<br>
-              <small class="grey-text text-darken-2">Impartir charlas y formación</small>
+              <small class="grey-text">Impartir charlas y formación</small>
             </span>
           </li>
           <?php }?>
@@ -351,10 +355,11 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
           <?php if ($_smarty_tpl->tpl_vars['brain']->value[4] == true) {?>
           <!-- Contenidos -->
           <li class="collection-item avatar">
+            <div style="margin-top: 0.5em;"></div>
             <i class="fa fa-file-text activo circle grey"></i>
-            <span>
+            <span class="grey-text text-darken-1">
               Contenidos<br>
-              <small class="grey-text text-darken-2">Generar contenido escrito o audiovisual</small>
+              <small class="grey-text">Generar contenido escrito o audiovisual</small>
             </span>
           </li>
           <?php }?>
@@ -368,11 +373,6 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
     <div class="row">
       <div class="col s12">
         <h5 class="accent-text1">Descripción de la mente a la carta</h5>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col s12">
         <span class="text-accent1">
           <?php echo $_smarty_tpl->tpl_vars['contacto']->value[0][4];?>
 
@@ -384,11 +384,6 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
     <div class="row">
       <div class="col s12">
         <h5 class="accent-text1">Frase o pensamiento propio</h5>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col s12">
         <span class="text-accent1">
           <?php echo $_smarty_tpl->tpl_vars['contacto']->value[0][3];?>
 
@@ -428,11 +423,16 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
 <?php }?>
 
 <?php if (isset($_SESSION['id']) && $_SESSION['cargo'] == 1) {?>
-<div class="fixed-action-btn vertical hide-on-small-only">
-  <a href="?view=panel" class="btn-floating tooltipped btn-large white waves-effect" data-position="left" data-delay="50" data-tooltip="Volver al Panel">
-    <i style="font-size: 1.7em; color: #727272;" class="fa fa-sign-out" aria-hidden="true"></i>
+<div class="fixed-action-btn click-to-toggle vertical hide-on-small-only">
+  <a class="btn-floating btn-large white waves-effect">
+    <i style="font-size: 1.7em; color: #727272;" class="fa fa-bars" aria-hidden="true"></i>
   </a>
+  <ul>
+    <li><a class="btn-floating tooltipped" data-position="left" data-delay="50" data-tooltip="Descargar perfil" style="background-color: #727272;"><i class="fa fa-file-pdf-o" aria-hidden="true" style="font-size: 1.2rem;"></i></a></li>
+    <li><a class="btn-floating tooltipped" data-position="left" data-delay="50" data-tooltip="Asignar proyecto" style="background-color: #727272;"><i class="fa fa-briefcase" aria-hidden="true" style="font-size: 1.2rem;"></i></a></li>
+  </ul>
 </div>
+
 <?php }?>
 
 <div class="spacing-3"></div>

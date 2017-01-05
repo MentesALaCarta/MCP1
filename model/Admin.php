@@ -767,10 +767,20 @@
     public function totalAdmintidos()
     {
       parent::conectar();
-      $datos = parent::verificarRegistros('select id from usuario where estado ="A"');
+      $datos = parent::verificarRegistros('select id from usuario where estado ="A" and cargo = 2');
       parent::cerrar();
       return $datos;
     }
+
+    public function totalNoAdmintidos()
+    {
+      parent::conectar();
+      $datos = parent::verificarRegistros('select id from usuario where estado ="I" and cargo = 2');
+      parent::cerrar();
+      return $datos;
+    }
+
+
 
   } // END Class
 

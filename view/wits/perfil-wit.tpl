@@ -238,10 +238,11 @@
           {if $brain[0] == true }
           <!-- Proyectos innovadores -->
           <li class="collection-item avatar">
+            <div style="margin-top: 0.5em;"></div>
             <i class="fa fa-briefcase activo circle"></i>
-            <span>
+            <span class="grey-text text-darken-1">
               Proyectos innovadores <br>
-              <small class="grey-text text-darken-2">Participar en proyectos innovadores</small>
+              <small class="grey-text">Participar en proyectos innovadores</small>
             </span>
           </li>
           {/if}
@@ -249,10 +250,11 @@
           {if $brain[1] == true}
           <!-- Mentoring -->
           <li class="collection-item avatar">
+            <div style="margin-top: 0.5em;"></div>
             <i class="fa fa-users activo circle"></i>
-            <span>
+            <span class="grey-text text-darken-1">
               Mentoring<br>
-              <small class="grey-text text-darken-2">Ser mentor de emprendimientos y proyectos innovadores</small>
+              <small class="grey-text">Ser mentor de emprendimientos y proyectos innovadores</small>
             </span>
           </li>
           {/if}
@@ -260,10 +262,11 @@
           {if $brain[2] == true}
           <!-- Asesoramiento -->
           <li class="collection-item avatar">
+            <div style="margin-top: 0.5em;"></div>
             <i class="fa fa-comments-o activo circle grey"></i>
-            <span>
+            <span class="grey-text text-darken-1">
               Asesoramiento<br>
-              <small class="grey-text text-darken-2">Brindar asesoría a empresas y emprendedores</small>
+              <small class="grey-text">Brindar asesoría a empresas y emprendedores</small>
             </span>
           </li>
           {/if}
@@ -272,10 +275,11 @@
           {if $brain[3] == true}
           <!-- Formación -->
           <li class="collection-item avatar">
+            <div style="margin-top: 0.5em;"></div>
             <i class="fa fa-pencil-square-o activo circle grey"></i>
-            <span>
+            <span class="grey-text text-darken-1">
               Formación<br>
-              <small class="grey-text text-darken-2">Impartir charlas y formación</small>
+              <small class="grey-text">Impartir charlas y formación</small>
             </span>
           </li>
           {/if}
@@ -283,10 +287,11 @@
           {if $brain[4] == true}
           <!-- Contenidos -->
           <li class="collection-item avatar">
+            <div style="margin-top: 0.5em;"></div>
             <i class="fa fa-file-text activo circle grey"></i>
-            <span>
+            <span class="grey-text text-darken-1">
               Contenidos<br>
-              <small class="grey-text text-darken-2">Generar contenido escrito o audiovisual</small>
+              <small class="grey-text">Generar contenido escrito o audiovisual</small>
             </span>
           </li>
           {/if}
@@ -300,11 +305,6 @@
     <div class="row">
       <div class="col s12">
         <h5 class="accent-text1">Descripción de la mente a la carta</h5>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col s12">
         <span class="text-accent1">
           {$contacto[0][4]}
         </span>
@@ -315,11 +315,6 @@
     <div class="row">
       <div class="col s12">
         <h5 class="accent-text1">Frase o pensamiento propio</h5>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col s12">
         <span class="text-accent1">
           {$contacto[0][3]}
         </span>
@@ -358,11 +353,16 @@
 {/if}
 
 {if isset($smarty.session.id) && $smarty.session.cargo == 1}
-<div class="fixed-action-btn vertical hide-on-small-only">
-  <a href="?view=panel" class="btn-floating tooltipped btn-large white waves-effect" data-position="left" data-delay="50" data-tooltip="Volver al Panel">
-    <i style="font-size: 1.7em; color: #727272;" class="fa fa-sign-out" aria-hidden="true"></i>
+<div class="fixed-action-btn click-to-toggle vertical hide-on-small-only">
+  <a class="btn-floating btn-large white waves-effect">
+    <i style="font-size: 1.7em; color: #727272;" class="fa fa-bars" aria-hidden="true"></i>
   </a>
+  <ul>
+    <li><a class="btn-floating tooltipped" data-position="left" data-delay="50" data-tooltip="Descargar perfil" style="background-color: #727272;"><i class="fa fa-file-pdf-o" aria-hidden="true" style="font-size: 1.2rem;"></i></a></li>
+    <li><a class="btn-floating tooltipped" data-position="left" data-delay="50" data-tooltip="Asignar proyecto" style="background-color: #727272;"><i class="fa fa-briefcase" aria-hidden="true" style="font-size: 1.2rem;"></i></a></li>
+  </ul>
 </div>
+
 {/if}
 
 <div class="spacing-3"></div>

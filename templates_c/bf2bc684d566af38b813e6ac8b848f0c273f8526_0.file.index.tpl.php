@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-01-03 15:33:36
+/* Smarty version 3.1.30, created on 2017-01-05 04:39:00
   from "C:\xampp\htdocs\mentesCarta\view\index.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_586bb640129a03_45787044',
+  'unifunc' => 'content_586dbfd46ed088_45726356',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'bf2bc684d566af38b813e6ac8b848f0c273f8526' => 
     array (
       0 => 'C:\\xampp\\htdocs\\mentesCarta\\view\\index.tpl',
-      1 => 1483453826,
+      1 => 1483587522,
       2 => 'file',
     ),
   ),
@@ -24,7 +24,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:view/principal/script.tpl' => 1,
   ),
 ),false)) {
-function content_586bb640129a03_45787044 (Smarty_Internal_Template $_smarty_tpl) {
+function content_586dbfd46ed088_45726356 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -354,7 +354,7 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
                     <button type="button" class="innovafacil btn-service bold size-descripcion-footer  service-1" >InnovaFácil</button>
                 </article>
                 <article class="col s12 l4 " style="margin-top: 0.5em;;">
-                    <button type="button" class="proyecto_innovacion bold size-descripcion-footer btn-service service-3">Proyecto de Innovación</button>
+                    <button type="button" class="proyecto_innovacion bold size-descripcion-footer btn-service service-3">Proyectos de Innovación</button>
                 </article>
                 <article class="col s12 l4" style="margin-top: 0.5em;">
                     <button type="button" class="conocimiento_carta bold size-descripcion-footer btn-service service-2">Conocimiento a la Carta</button>

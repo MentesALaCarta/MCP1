@@ -323,7 +323,7 @@
                     <button type="button" class="innovafacil btn-service bold size-descripcion-footer  service-1" >InnovaFácil</button>
                 </article>
                 <article class="col s12 l4 " style="margin-top: 0.5em;;">
-                    <button type="button" class="proyecto_innovacion bold size-descripcion-footer btn-service service-3">Proyecto de Innovación</button>
+                    <button type="button" class="proyecto_innovacion bold size-descripcion-footer btn-service service-3">Proyectos de Innovación</button>
                 </article>
                 <article class="col s12 l4" style="margin-top: 0.5em;">
                     <button type="button" class="conocimiento_carta bold size-descripcion-footer btn-service service-2">Conocimiento a la Carta</button>

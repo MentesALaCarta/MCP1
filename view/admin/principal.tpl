@@ -29,6 +29,18 @@
                   Mentes a la carta pendientes
                 </li>
               </a>
+              <a href="?view=emailMasivo" class="accent-li1">
+                <li class="item-nav-right1">
+                  <i class="fa fa-envelope left resize" style="font-size: 1.4rem;"></i>
+                  Enviar correo
+                </li>
+              </a>
+              <a href="?view=newProyect" class="accent-li1">
+                <li class="item-nav-right1">
+                  <i class="fa fa-briefcase left resize"></i>
+                  Proyectos
+                </li>
+              </a>
               <a href="?view=index" class="accent-li1">
                 <li class="item-nav-right1">
                   <i class="fa fa-sign-out left resize"></i>
@@ -66,7 +78,7 @@
               <div class="row">
                 <div class="col s4">
                   <span class="white-text numeros-admin">
-                    0
+                    {$total_wits}
                   </span>
                 </div>
               </div>
@@ -83,7 +95,7 @@
                 </span>
                 <br>
                 <span class="numeros-secundarios orange-text">
-                  0
+                  {$total_no_wits}
                 </span>
               </div>
             </a>
@@ -107,7 +119,9 @@
           <!-- Crear proyecto -->
           <div class="row">
             <div class="col s12">
-              <button type="button" style="font-size: 0.9rem;" class="btn grey darken-1 waves-effect waves-light" name="button">Crear proyecto</button>
+              <a href="?view=newProyect">
+                <button type="button" style="font-size: 0.9rem;" class="btn grey darken-1 waves-effect waves-light" name="button">Crear proyecto</button>
+              </a>
             </div>
           </div>
 
@@ -154,5 +168,7 @@
   </div>
 
 </div>
+
+
 {include file="view/principal/cerrarSesion.tpl"}
 {include file="view/principal/script.tpl"}

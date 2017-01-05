@@ -14,15 +14,7 @@
     $page = 1;
   }
 
-  # Incluimos el model de admin
-  include('model/Admin.php');
-
-  $admin = new admin();
-
-  $template -> assign('total_wits', $admin -> totalAdmintidos());
-  $template -> assign('total_no_wits', $admin -> totalNoAdmintidos()); 
-
-  $template -> display('view/admin/principal.tpl');
+  $template -> display('view/admin/emailMasivo.tpl');
 
 
 ?>

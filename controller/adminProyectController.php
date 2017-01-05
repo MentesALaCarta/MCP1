@@ -19,10 +19,7 @@
 
   $admin = new admin();
 
-  $template -> assign('total_wits', $admin -> totalAdmintidos());
-  $template -> assign('total_no_wits', $admin -> totalNoAdmintidos()); 
-
-  $template -> display('view/admin/principal.tpl');
+  $template -> display('view/admin/adminProyect.tpl');
 
 
 ?>

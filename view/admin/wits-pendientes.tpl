@@ -30,6 +30,18 @@
                   Mentes a la carta pendientes
                 </li>
               </a>
+              <a href="?view=emailMasivo" class="accent-li1">
+                <li class="item-nav-right1">
+                  <i class="fa fa-envelope left resize" style="font-size: 1.4rem;"></i>
+                  Enviar correo
+                </li>
+              </a>
+              <a href="?view=newProyect" class="accent-li1">
+                <li class="item-nav-right1">
+                  <i class="fa fa-briefcase left resize"></i>
+                  Proyectos
+                </li>
+              </a>
               <a href="?view=index">
                 <li class="item-nav-right1" id="asesores-pro">
                   <i class="fa fa-sign-out left resize"></i>
