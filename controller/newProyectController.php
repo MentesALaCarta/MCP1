@@ -14,6 +14,10 @@
     $page = 1;
   }
 
+  require_once('model/Admin.php');
+  $admin = new admin();
+  $template -> assign('proyectos', $admin->loadProyectos());
+
   $template -> display('view/admin/newProyect.tpl');
 
 

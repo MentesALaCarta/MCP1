@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-01-05 05:08:39
+/* Smarty version 3.1.30, created on 2017-01-05 06:35:16
   from "C:\xampp\htdocs\mentesCarta\view\admin\adminProyect.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_586dc6c73ca566_07471622',
+  'unifunc' => 'content_586ddb14337497_53949588',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '032cc449e4d1206e37aa5735b520938967a5fa1d' => 
     array (
       0 => 'C:\\xampp\\htdocs\\mentesCarta\\view\\admin\\adminProyect.tpl',
-      1 => 1483589318,
+      1 => 1483594513,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:view/principal/script.tpl' => 1,
   ),
 ),false)) {
-function content_586dc6c73ca566_07471622 (Smarty_Internal_Template $_smarty_tpl) {
+function content_586ddb14337497_53949588 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -104,7 +104,8 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
             </span>
             <br>
             <span class="grey-text">
-              Serviusos
+              <?php echo ucfirst($_smarty_tpl->tpl_vars['proyectos']->value[0]);?>
+
             </span>
           </div>
         </div>
@@ -117,7 +118,8 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
             </span>
             <br>
             <span class="grey-text">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, natus, ab a quisquam consequuntur, corrupti omnis reprehenderit ea aspernatur et quo alias ducimus, molestiae voluptatibus cum eligendi. Quo, doloribus voluptates.
+              <?php echo ucfirst($_smarty_tpl->tpl_vars['proyectos']->value[1]);?>
+
             </span>
           </div>
         </div>

@@ -1117,3 +1117,28 @@ $('#actualizar_datos_generales').click(function(){
 
   });
 });
+
+/* Funcionalidades para crear y asignar proyectos */
+
+$(document).on('click', '#crear_proyecto', function(){
+  var nombre = $('#nombre').val();
+  var descripcion = $('#textarea').val();
+
+  $.ajax({
+    method: 'POST',
+    url: 'controller/admin/proyecto/crear_proyecto.php',
+    data: {nombre: nombre, descripcion: descripcion},
+    beforeSend: function(){
+      // load
+    },
+    success: function(res){
+      if(res == 'error_1'){
+        swal('Campo obligatorio', 'Por favor ingresa el nombre del proyecto', 'warning');
+      }else if(res == 'error_2'){
+        swal('Proyecto existente', 'Error: ya existe un proyecto con ese nombre', 'error');
+      }else{
+        alert(res);
+      }
+    }
+  });
+});

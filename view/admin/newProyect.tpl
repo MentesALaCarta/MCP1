@@ -80,8 +80,8 @@
 
         <div class="row">
           <div class="input-field col s6">
-            <input id="first_name" type="text" class="validate grey-text">
-            <label for="first_name" class="grey-text text-darken-2">Nombre del proyecto</label>
+            <input id="nombre" type="text" class="validate grey-text">
+            <label for="nombre" class="grey-text text-darken-2">Nombre del proyecto</label>
           </div>
         </div>
 
@@ -94,7 +94,7 @@
 
         <div class="row">
           <div class="col s12">
-            <button type="button" name="button" class="btn orange lighten-1 waves-effect waves-light">Crear</button>
+            <button id="crear_proyecto" type="button" name="button" class="btn orange lighten-1 waves-effect waves-light">Crear</button>
           </div>
         </div>
 
@@ -109,23 +109,27 @@
           </div>
         </div>
 
-        <div class="row">
-          <div class="col s12 m10">
-              <div style="width: 100%;" class="card card-spacing hover">
-                <span class="grey-text text-darken-2">
-                  Mentes a la Carta pendientes
-                </span>
-                <br>
-                <span class="grey-text spacing-parrafo">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae facilis minus minima id ducimus, beatae asperiores quaerat deserunt vel. Perspiciatis quam assumenda quas quos quo, sapiente, dolore pariatur minima dolor.
-                </span>
-                <br>
-                <a href="?view=adminProyect">
-                  <button type="button" name="button" class="btn orange lighten-1 waves-effect waves-light">Administrar</button>
-                </a>
-              </div>
+        {if $proyectos != 0}
+          {for $i = 0 to count($proyectos) - 1 }
+          <div class="row">
+            <div class="col s12 m10">
+                <div style="width: 100%;" class="card card-spacing hover">
+                  <span class="grey-text text-darken-2" style="font-size: 1.4rem;">
+                    {ucfirst($proyectos[$i][1])}
+                  </span>
+                  <br>
+                  <span class="grey-text spacing-parrafo">
+                    {ucfirst($proyectos[$i][2])}
+                  </span>
+                  <br>
+                  <a href="?view=adminProyect&proyect={$proyectos[$i][0]}">
+                    <button type="button" name="button" class="btn orange lighten-1 waves-effect waves-light">Administrar</button>
+                  </a>
+                </div>
+            </div>
           </div>
-        </div>
+          {/for}
+        {/if}
 
       </div>
     </div>

@@ -780,7 +780,59 @@
       return $datos;
     }
 
+    # Crea un proyecto
+    public function crearProyecto($nombre, $descripcion)
+    {
+      parent::conectar();
+      $nombre = parent::filtrar($nombre);
+      $validar = parent::verificarRegistros('select nombre from proyecto where nombre = "'.$nombre.'"');
 
+      if($validar > 0)
+      {
+        echo 'error_2';
+      }else{
+        $descripcion = parent::filtrar($descripcion);
+        parent::query('insert into proyecto(nombre, descripcion) values("'.$nombre.'", "'.$descripcion.'")');
+        echo 'success';
+      }
+
+      parent::cerrar();
+    }
+
+    public function loadProyectos()
+    {
+      parent::conectar();
+      $sql = 'select id, nombre, descripcion from proyecto order by id desc';
+      $verificar = parent::verificarRegistros($sql);
+      if($verificar > 0){
+        $datos = array();
+        $proyectos = parent::query($sql);
+        while($row = mysqli_fetch_array($proyectos)){
+          $datos[] = array($row['id'], $row['nombre'], $row['descripcion']);
+        }
+        return $datos;
+      }else{
+        return 0;
+      }
+      parent::cerrar();
+    }
+
+
+    public function loadproyecto($id)
+    {
+      parent::conectar();
+      $id = parent::salvar($id);
+      $validar = parent::verificarRegistros('select nombre from proyecto where id="'.$id.'"');
+      if($validar > 0 ){
+        $datos = array();
+        $proyecto = parent::consultaArreglo('select nombre, descripcion from proyecto where id="'.$id.'" ');
+        $datos = array($proyecto['nombre'], $proyecto['descripcion']);
+        return $datos;
+      }else{
+        return false;
+      }
+      parent::cerrar();
+    }
 
   } // END Class
 

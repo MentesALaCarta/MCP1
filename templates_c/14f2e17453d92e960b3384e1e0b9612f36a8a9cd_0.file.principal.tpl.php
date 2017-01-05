@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-01-04 21:35:34
+/* Smarty version 3.1.30, created on 2017-01-05 06:40:17
   from "C:\xampp\htdocs\mentesCarta\view\admin\principal.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_586d5c9663be61_38129929',
+  'unifunc' => 'content_586ddc4120fc74_45475917',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '14f2e17453d92e960b3384e1e0b9612f36a8a9cd' => 
     array (
       0 => 'C:\\xampp\\htdocs\\mentesCarta\\view\\admin\\principal.tpl',
-      1 => 1483562079,
+      1 => 1483594814,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:view/principal/script.tpl' => 1,
   ),
 ),false)) {
-function content_586d5c9663be61_38129929 (Smarty_Internal_Template $_smarty_tpl) {
+function content_586ddc4120fc74_45475917 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -157,37 +157,37 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
 
           <div class="spacing-1"></div>
 
-          <div class="row">
-            <div class="col s12 m10">
-                <div style="width: 100%;" class="card card-spacing hover">
-                  <span class="grey-text text-darken-2">
-                    Mentes a la Carta pendientes
-                  </span>
-                  <br>
-                  <span class="grey-text spacing-parrafo">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae facilis minus minima id ducimus, beatae asperiores quaerat deserunt vel. Perspiciatis quam assumenda quas quos quo, sapiente, dolore pariatur minima dolor.
-                  </span>
-                  <br>
-                  <button type="button" name="button" class="btn orange lighten-1 waves-effect waves-light">Administrar</button>
-                </div>
-            </div>
-          </div>
+          <?php if ($_smarty_tpl->tpl_vars['proyectos']->value != 0) {?>
+            <?php
+$_smarty_tpl->tpl_vars['i'] = new Smarty_Variable(null, $_smarty_tpl->isRenderingCache);$_smarty_tpl->tpl_vars['i']->step = 1;$_smarty_tpl->tpl_vars['i']->total = (int) ceil(($_smarty_tpl->tpl_vars['i']->step > 0 ? count($_smarty_tpl->tpl_vars['proyectos']->value)-1+1 - (0) : 0-(count($_smarty_tpl->tpl_vars['proyectos']->value)-1)+1)/abs($_smarty_tpl->tpl_vars['i']->step));
+if ($_smarty_tpl->tpl_vars['i']->total > 0) {
+for ($_smarty_tpl->tpl_vars['i']->value = 0, $_smarty_tpl->tpl_vars['i']->iteration = 1;$_smarty_tpl->tpl_vars['i']->iteration <= $_smarty_tpl->tpl_vars['i']->total;$_smarty_tpl->tpl_vars['i']->value += $_smarty_tpl->tpl_vars['i']->step, $_smarty_tpl->tpl_vars['i']->iteration++) {
+$_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1;$_smarty_tpl->tpl_vars['i']->last = $_smarty_tpl->tpl_vars['i']->iteration == $_smarty_tpl->tpl_vars['i']->total;?>
+            <div class="row">
+              <div class="col s12 m10">
+                  <div style="width: 100%;" class="card card-spacing hover">
+                    <span class="grey-text text-darken-2" style="font-size: 1.4rem;">
+                      <?php echo ucfirst($_smarty_tpl->tpl_vars['proyectos']->value[$_smarty_tpl->tpl_vars['i']->value][1]);?>
 
-          <div class="row">
-            <div class="col s12 m10">
-                <div style="width: 100%;" class="card card-spacing hover">
-                  <span class="grey-text text-darken-2">
-                    Mentes a la Carta pendientes
-                  </span>
-                  <br>
-                  <span class="grey-text spacing-parrafo">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae facilis minus minima id ducimus, beatae asperiores quaerat deserunt vel. Perspiciatis quam assumenda quas quos quo, sapiente, dolore pariatur minima dolor.
-                  </span>
-                  <br>
-                  <button type="button" name="button" class="btn orange lighten-1 waves-effect waves-light">Administrar</button>
-                </div>
+                    </span>
+                    <br>
+                    <span class="grey-text spacing-parrafo">
+                      <?php echo ucfirst($_smarty_tpl->tpl_vars['proyectos']->value[$_smarty_tpl->tpl_vars['i']->value][2]);?>
+
+                    </span>
+                    <br>
+                    <a href="?view=adminProyect&proyect=<?php echo $_smarty_tpl->tpl_vars['proyectos']->value[$_smarty_tpl->tpl_vars['i']->value][0];?>
+">
+                      <button type="button" name="button" class="btn orange lighten-1 waves-effect waves-light">Administrar</button>
+                    </a>
+                  </div>
+              </div>
             </div>
-          </div>
+            <?php }
+}
+?>
+
+          <?php }?>
 
 
         </div>

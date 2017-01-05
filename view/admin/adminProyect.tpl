@@ -76,7 +76,7 @@
             </span>
             <br>
             <span class="grey-text">
-              Serviusos
+              {ucfirst($proyectos[0])}
             </span>
           </div>
         </div>
@@ -89,7 +89,7 @@
             </span>
             <br>
             <span class="grey-text">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, natus, ab a quisquam consequuntur, corrupti omnis reprehenderit ea aspernatur et quo alias ducimus, molestiae voluptatibus cum eligendi. Quo, doloribus voluptates.
+              {ucfirst($proyectos[1])}
             </span>
           </div>
         </div>

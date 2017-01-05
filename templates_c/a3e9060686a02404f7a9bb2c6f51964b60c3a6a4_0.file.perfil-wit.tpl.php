@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-01-05 05:28:27
+/* Smarty version 3.1.30, created on 2017-01-05 05:52:20
   from "C:\xampp\htdocs\mentesCarta\view\wits\perfil-wit.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_586dcb6b3f6193_03391701',
+  'unifunc' => 'content_586dd104bbf369_86255514',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a3e9060686a02404f7a9bb2c6f51964b60c3a6a4' => 
     array (
       0 => 'C:\\xampp\\htdocs\\mentesCarta\\view\\wits\\perfil-wit.tpl',
-      1 => 1483590505,
+      1 => 1483591939,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:view/principal/script.tpl' => 1,
   ),
 ),false)) {
-function content_586dcb6b3f6193_03391701 (Smarty_Internal_Template $_smarty_tpl) {
+function content_586dd104bbf369_86255514 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -428,8 +428,9 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
     <i style="font-size: 1.7em; color: #727272;" class="fa fa-bars" aria-hidden="true"></i>
   </a>
   <ul>
-    <li><a class="btn-floating tooltipped" data-position="left" data-delay="50" data-tooltip="Descargar perfil" style="background-color: #727272;"><i class="fa fa-file-pdf-o" aria-hidden="true" style="font-size: 1.2rem;"></i></a></li>
-    <li><a class="btn-floating tooltipped" data-position="left" data-delay="50" data-tooltip="Asignar proyecto" style="background-color: #727272;"><i class="fa fa-briefcase" aria-hidden="true" style="font-size: 1.2rem;"></i></a></li>
+    <li><a class="btn-floating tooltipped waves-effect waves-light" data-position="left" data-delay="50" data-tooltip="Descargar perfil" style="background-color: #727272;"><i class="fa fa-file-pdf-o" aria-hidden="true" style="font-size: 1.2rem;"></i></a></li>
+    <li><a class="btn-floating tooltipped waves-effect waves-light" data-position="left" data-delay="50" data-tooltip="Asignar proyecto" style="background-color: #727272;"><i class="fa fa-briefcase" aria-hidden="true" style="font-size: 1.2rem;"></i></a></li>
+    <li><a class="btn-floating tooltipped waves-effect waves-light" data-position="left" data-delay="50" data-tooltip="Enviar mensaje" style="background-color: #727272;"><i class="fa fa-envelope" aria-hidden="true" style="font-size: 1.2rem;"></i></a></li>
   </ul>
 </div>
 

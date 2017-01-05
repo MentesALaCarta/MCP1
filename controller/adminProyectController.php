@@ -16,8 +16,13 @@
 
   # Incluimos el model de admin
   include('model/Admin.php');
-
   $admin = new admin();
+
+  if(!isset($_GET['proyect']) || $admin->loadproyecto($_GET['proyect']) == false){
+    header('location: ?view=principal');
+  }
+
+  $template -> assign('proyectos', $admin->loadproyecto($_GET['proyect']));
 
   $template -> display('view/admin/adminProyect.tpl');
 

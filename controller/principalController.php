@@ -21,6 +21,7 @@
 
   $template -> assign('total_wits', $admin -> totalAdmintidos());
   $template -> assign('total_no_wits', $admin -> totalNoAdmintidos()); 
+  $template -> assign('proyectos', $admin->loadProyectos());
 
   $template -> display('view/admin/principal.tpl');
 
