@@ -92,6 +92,25 @@
           </div>
         </div>
 
+        <div class="row" id="loadProyect" hidden="hidden">
+          <div class="col s12">
+            <div class="preloader-wrapper small active">
+              <div class="spinner-layer spinner-blue-only">
+                <div class="circle-clipper left">
+                  <div class="circle"></div>
+                </div><div class="gap-patch">
+                  <div class="circle"></div>
+                </div><div class="circle-clipper right">
+                  <div class="circle"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col s12">
+            <span class="grey-text text-darken-1">Creando proyecto...</span>
+          </div>
+        </div>
+
         <div class="row">
           <div class="col s12">
             <button id="crear_proyecto" type="button" name="button" class="btn orange lighten-1 waves-effect waves-light">Crear</button>
@@ -109,10 +128,27 @@
           </div>
         </div>
 
-        {if $proyectos != 0}
-          {for $i = 0 to count($proyectos) - 1 }
-          <div class="row">
-            <div class="col s12 m10">
+        <div class="row" id="loadListaProyects" hidden="hidden">
+          <div class="col s12">
+            <div class="preloader-wrapper small active">
+              <div class="spinner-layer spinner-blue-only">
+                <div class="circle-clipper left">
+                  <div class="circle"></div>
+                </div><div class="gap-patch">
+                  <div class="circle"></div>
+                </div><div class="circle-clipper right">
+                  <div class="circle"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="listaProyects">
+          {if $proyectos != 0}
+            {for $i = 0 to count($proyectos) - 1 }
+            <div class="row">
+              <div class="col s12 m10">
                 <div style="width: 100%;" class="card card-spacing hover">
                   <span class="grey-text text-darken-2" style="font-size: 1.4rem;">
                     {ucfirst($proyectos[$i][1])}
@@ -126,10 +162,11 @@
                     <button type="button" name="button" class="btn orange lighten-1 waves-effect waves-light">Administrar</button>
                   </a>
                 </div>
+              </div>
             </div>
-          </div>
-          {/for}
-        {/if}
+            {/for}
+          {/if}
+        </div>
 
       </div>
     </div>

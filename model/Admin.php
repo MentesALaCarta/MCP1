@@ -834,6 +834,55 @@
       parent::cerrar();
     }
 
+    public function loadProyectosNuevos()
+    {
+      parent::conectar();
+      $consulta = parent::query('select * from proyecto order by id desc');
+      while($row = mysqli_fetch_array($consulta)){
+        echo '
+        <div class="row">
+          <div class="col s12 m10">
+            <div style="width: 100%;" class="card card-spacing hover">
+              <span class="grey-text text-darken-2" style="font-size: 1.4rem;">
+                '.ucfirst($row['nombre']).'
+              </span>
+              <br>
+              <span class="grey-text spacing-parrafo">
+                '.ucfirst($row['descripcion']).'
+              </span>
+              <br>
+              <a href="?view=adminProyect&proyect='.$row['id'].'">
+                <button type="button" name="button" class="btn orange lighten-1 waves-effect waves-light">Administrar</button>
+              </a>
+            </div>
+          </div>
+        </div>
+        ';
+      }
+      parent::cerrar();
+    }
+
+    public function deleteProyecto($id)
+    {
+      parent::conectar();
+      $id = parent::salvar($id);
+      parent::query('delete from proyecto where id="'.$id.'"');
+      parent::cerrar();
+    }
+
+    public function actualizarProyecto($id, $nombre, $descripcion)
+    {
+      parent::conectar();
+
+      $id = parent::filtrar($id);
+      $nombre = parent::filtrar($nombre);
+      $descripcion = parent::filtrar($descripcion);
+
+      parent::query('update proyecto set nombre ="'.$nombre.'", descripcion="'.$descripcion.'" where id="'.$id.'"');
+      
+      parent::cerrar();
+    }
+
   } // END Class
 
 

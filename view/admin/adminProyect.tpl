@@ -68,6 +68,23 @@
       <div class="col s12 no-padding">
         <div class="spacing-1"></div>
 
+        <div class="row">
+          <div class="col s6 m2">
+            <i class="fa fa-pencil grey-text"></i>
+            <a  href="#modal1">
+              <span class="hover underline grey-text">
+                Editar proyecto
+              </span>
+            </a>
+          </div>
+          <div class="col s6 m2">
+              <i class="fa fa-trash grey-text"></i>
+              <span class="hover underline grey-text eliminar_proyect" id="{$smarty.get['proyect']}">
+                Eliminar proyecto
+              </span>
+          </div>
+        </div>
+
         <!-- Nombre del proyecto -->
         <div class="row">
           <div class="col s12">
@@ -150,5 +167,37 @@
   </div>
 
 </div>
+
+ <!-- Modal Structure -->
+ <div id="modal1" class="modal modal-fixed-footer">
+   <div class="modal-content">
+     <h4 class="grey-text text-darken-2">Editar proyecto</h4>
+     <p class="grey-text">Ingresa los datos del proyecto: </p>
+
+     <div class="row">
+       <div class="col s12 input-field">
+         <input id="nombre" type="text" class="validate grey-text" value="{ucfirst($proyectos[0])}">
+         <label for="nombre" class="grey-text text-darken-2">Nombre del proyecto</label>
+       </div>
+     </div>
+
+     <div class="row">
+       <div class="col s12 input-field">
+         <textarea id="textarea" class="materialize-textarea grey-text">{ucfirst($proyectos[1])}</textarea>
+         <label for="textarea" class="grey-text text-darken-2">Descripcion del proyecto</label>
+       </div>
+     </div>
+
+     <div class="row">
+       <div class="col s12">
+         <button class="btn orange lighten-1 waves-effect waves-light actualizarProyect" id="{$smarty.get['proyect']}">Guardar cambios</button>
+       </div>
+     </div>
+
+   </div>
+   <div class="modal-footer">
+     <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Cancelar</a>
+   </div>
+ </div>
 {include file="view/principal/cerrarSesion.tpl"}
 {include file="view/principal/script.tpl"}

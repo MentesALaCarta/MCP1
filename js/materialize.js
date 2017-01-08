@@ -1130,15 +1130,82 @@ $(document).on('click', '#crear_proyecto', function(){
     data: {nombre: nombre, descripcion: descripcion},
     beforeSend: function(){
       // load
+      $('#loadProyect').show();
     },
     success: function(res){
+      $('#loadProyect').hide();
+
       if(res == 'error_1'){
         swal('Campo obligatorio', 'Por favor ingresa el nombre del proyecto', 'warning');
       }else if(res == 'error_2'){
         swal('Proyecto existente', 'Error: ya existe un proyecto con ese nombre', 'error');
       }else{
-        alert(res);
+
+        // Limpiar las cajas
+        $('#nombre').val('');
+        $('#textarea').val('');
+
+        // Actualizar la lista de proyectos
+        $.ajax({
+          method: 'POST',
+          url: 'controller/admin/proyecto/loadProyectos.php',
+          data: {},
+          beforeSend: function(){
+            $('#loadListaProyects').show();
+          },
+          success: function(res){
+            $('#loadListaProyects').hide();
+            $('#listaProyects').html(res);
+          }
+        });
+
+
       }
+    }
+  });
+});
+
+
+
+$(document).on('click', '.eliminar_proyect', function(){
+  swal({
+    title: "¿Estas seguro?",
+    text: "No podras recuperar los datos del proyecto",
+    type: "warning",
+    showCancelButton: true,
+    confirmButtonColor: "#ffa726",
+    confirmButtonText: "Si, eliminar proyecto!",
+    closeOnConfirm: false
+  },
+  function(){
+    var id = $('.eliminar_proyect').attr('id');
+    $.ajax({
+      method: 'POST',
+      url: 'controller/admin/proyecto/deleteProyecto.php',
+      data: {id: id},
+      success: function(res){
+        swal({
+          title: "Proyecto eliminado!",
+          text: "Removeremos los datos",
+          type: "success"
+        }, function(){
+          window.location.href = "?view=newProyect";
+        });
+      }
+    });
+
+  });
+});
+
+
+$('.actualizarProyect').click(function(){
+  var id = $(this).attr('id');
+  $.ajax({
+    method: 'POST',
+    url: 'controller/admin/proyecto/actualizarProyect.php',
+    data: {id: id, nombre: $('#nombre').val(), descripcion: $('#textarea').val()},
+    success: function(res){
+      location.reload();
     }
   });
 });
