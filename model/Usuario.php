@@ -61,6 +61,7 @@
           $_SESSION['primer_apellido']  = $apellidos[0];
           $_SESSION['segundo_apellido'] = $apellidos[1];
           $_SESSION['email']            = $email;
+          $_SESSION['cargo']            = 2;
 
           echo '?view=perfil';
         }else{

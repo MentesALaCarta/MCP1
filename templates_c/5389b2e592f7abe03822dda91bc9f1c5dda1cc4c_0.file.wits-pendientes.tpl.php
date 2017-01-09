@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-01-04 21:51:52
+/* Smarty version 3.1.30, created on 2017-01-09 08:23:40
   from "C:\xampp\htdocs\mentesCarta\view\admin\wits-pendientes.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_586d60685052a1_91288733',
+  'unifunc' => 'content_58733a7cb9c112_65502425',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5389b2e592f7abe03822dda91bc9f1c5dda1cc4c' => 
     array (
       0 => 'C:\\xampp\\htdocs\\mentesCarta\\view\\admin\\wits-pendientes.tpl',
-      1 => 1483562071,
+      1 => 1483946617,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:view/principal/script.tpl' => 1,
   ),
 ),false)) {
-function content_586d60685052a1_91288733 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58733a7cb9c112_65502425 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -119,12 +119,12 @@ for ($_smarty_tpl->tpl_vars['i']->value = 0, $_smarty_tpl->tpl_vars['i']->iterat
 $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1;$_smarty_tpl->tpl_vars['i']->last = $_smarty_tpl->tpl_vars['i']->iteration == $_smarty_tpl->tpl_vars['i']->total;?>
             <tr id="<?php echo $_smarty_tpl->tpl_vars['wit']->value[$_smarty_tpl->tpl_vars['i']->value][0];?>
 " class="grey-text">
-              <td><?php echo $_smarty_tpl->tpl_vars['wit']->value[$_smarty_tpl->tpl_vars['i']->value][1];?>
- <?php echo $_smarty_tpl->tpl_vars['wit']->value[$_smarty_tpl->tpl_vars['i']->value][2];?>
+              <td><?php echo ucfirst($_smarty_tpl->tpl_vars['wit']->value[$_smarty_tpl->tpl_vars['i']->value][1]);?>
+ <?php echo ucfirst($_smarty_tpl->tpl_vars['wit']->value[$_smarty_tpl->tpl_vars['i']->value][2]);?>
 </td>
               <td><?php echo $_smarty_tpl->tpl_vars['wit']->value[$_smarty_tpl->tpl_vars['i']->value][3];?>
 </td>
-              <td><?php echo $_smarty_tpl->tpl_vars['wit']->value[$_smarty_tpl->tpl_vars['i']->value][4];?>
+              <td><?php echo ucfirst($_smarty_tpl->tpl_vars['wit']->value[$_smarty_tpl->tpl_vars['i']->value][4]);?>
 </td>
               <td><a href="?view=perfil-wit&#38;id=<?php echo $_smarty_tpl->tpl_vars['wit']->value[$_smarty_tpl->tpl_vars['i']->value][0];?>
 ">Ver perfil</a></td>

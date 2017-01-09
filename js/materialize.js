@@ -15,8 +15,6 @@ $(".button-collapse").show();
  var slides3 = $('#slider-3').find('div').length;
  var next3 = 0;
 
-
-
 //Slider
 var pasar_slider;
  var pasar =  function(){
@@ -571,35 +569,31 @@ $(document).on('click', '.aprobar', function(){
   var id = $(this).attr('id');
 
       swal({
-      title: "Aprobar wit",
+      title: "¿Aprobar Mente a la Carta?",
       text: "",
       type: "warning",
       showCancelButton: true,
-      confirmButtonColor: "#DD6B55",
+      confirmButtonColor: "#FFA726",
       confirmButtonText: "Aprobar",
       cancelButtonText: "Cancelar",
       closeOnConfirm: false,
-      closeOnCancel: false
+      closeOnCancel: true
     },
-    function(isConfirm){
-      if (isConfirm) {
-        swal({
-          title: "Wit aprobado",
-          text: "Se ha aprobado el wit correctamente",
-          type: "success"
-        }, function(){
-          $.ajax({
-            method: 'POST',
-            url: 'controller/admin/aprobar.php',
-            data: {id: id},
-            success: function(res){
-              location.reload();
-            }
-          });
+    function(){
+      swal({
+        title: "Aprobado",
+        text: "Se ha aprobado la Mente correctamente",
+        type: "success"
+      }, function(){
+        $.ajax({
+          method: 'POST',
+          url: 'controller/admin/aprobar.php',
+          data: {id: id},
+          success: function(res){
+            location.reload();
+          }
         });
-      } else {
-    	    swal("Cancelado", "Se ha cancelado el proceso", "error");
-      }
+      });
     });
 
 
@@ -610,21 +604,21 @@ $(document).on('click', '.denegar', function(){
   var id = $(this).attr('id');
 
       swal({
-      title: "No aprobar wit",
+      title: "¿No aprobar Mente a la Carta?",
       text: "",
       type: "warning",
       showCancelButton: true,
-      confirmButtonColor: "#DD6B55",
+      confirmButtonColor: "#FFA726",
       confirmButtonText: "No aprobar",
       cancelButtonText: "Cancelar",
       closeOnConfirm: false,
-      closeOnCancel: false
+      closeOnCancel: true
     },
-    function(isConfirm){
-      if (isConfirm) {
+    function(){
+
         swal({
-          title: "Denegar wit",
-          text: "El wit ha sido denegado en Mentes a la carta correctamente",
+          title: "Proceso terminado",
+          text: "La Mente ha sido denegada en Mentes a la carta correctamente",
           type: "success"
         }, function(){
           $.ajax({
@@ -636,9 +630,7 @@ $(document).on('click', '.denegar', function(){
             }
           });
         });
-      } else {
-          swal("Cancelado", "Se ha cancelado el proceso", "error");
-      }
+
     });
 });
 
@@ -1207,5 +1199,69 @@ $('.actualizarProyect').click(function(){
     success: function(res){
       location.reload();
     }
+  });
+});
+
+$(document).on('click', '.proyecto_mente', function(){
+
+  var id = $(this).attr('id');
+  var wit = $('#id_wit').html();
+
+  $.ajax({
+    method: 'POST',
+    url: 'controller/admin/proyecto/asignarProyect.php',
+    data: {id: id, wit: wit},
+    beforeSend: function(){
+      $('#load_proyecto').show();
+    },
+    success: function(res){
+      $('#load_proyecto').hide();
+
+      if(res == 'error_1'){
+        swal('Error', 'La Mente a la Carta ya se encuentra asignado al proyecto seleccionado', 'error');
+      }else{
+        swal('Proyecto asignado', 'La Mente a la Carta ha sido asignado al proyecto ' + res + ' satisfactoriamente', 'success');
+      }
+
+    }
+  });
+
+
+});
+
+
+$(document).on('click', '.eliminar_mente_proyecto', function(){
+
+  var wit = $(this).attr('id');
+
+  swal({
+    title: "¿Seguro?",
+    text: "Eliminaras a una Mente a la Carta del proyecto",
+    type: "warning",
+    showCancelButton: true,
+    confirmButtonColor: "#FFA726",
+    confirmButtonText: "Si, Eliminar!",
+    closeOnConfirm: false
+  },
+  function(){
+
+    var id = $('#id_proyecto').html();
+
+    swal({
+      title: "¡Eliminado!",
+      text: "La Mente a la Carta ya no pertenece al proyecto",
+      type: "success"
+    }, function(){
+      $.ajax({
+        method: 'POST',
+        url: 'controller/admin/proyecto/eliminarWitProyect.php',
+        data: {id: id, wit: wit},
+        success: function(res){
+          location.reload();
+        }
+      });
+    });
+
+
   });
 });

@@ -792,7 +792,7 @@
         echo 'error_2';
       }else{
         $descripcion = parent::filtrar($descripcion);
-        parent::query('insert into proyecto(nombre, descripcion) values("'.$nombre.'", "'.$descripcion.'")');
+        parent::query('insert into proyecto(nombre, descripcion, estado) values("'.$nombre.'", "'.$descripcion.'", "A")');
         echo 'success';
       }
 
@@ -802,7 +802,7 @@
     public function loadProyectos()
     {
       parent::conectar();
-      $sql = 'select id, nombre, descripcion from proyecto order by id desc';
+      $sql = 'select id, nombre, descripcion from proyecto where estado ="A" order by id desc';
       $verificar = parent::verificarRegistros($sql);
       if($verificar > 0){
         $datos = array();
@@ -822,10 +822,10 @@
     {
       parent::conectar();
       $id = parent::salvar($id);
-      $validar = parent::verificarRegistros('select nombre from proyecto where id="'.$id.'"');
+      $validar = parent::verificarRegistros('select nombre from proyecto where id="'.$id.'" and estado ="A"');
       if($validar > 0 ){
         $datos = array();
-        $proyecto = parent::consultaArreglo('select nombre, descripcion from proyecto where id="'.$id.'" ');
+        $proyecto = parent::consultaArreglo('select nombre, descripcion from proyecto where id="'.$id.'" and estado ="A"');
         $datos = array($proyecto['nombre'], $proyecto['descripcion']);
         return $datos;
       }else{
@@ -837,7 +837,7 @@
     public function loadProyectosNuevos()
     {
       parent::conectar();
-      $consulta = parent::query('select * from proyecto order by id desc');
+      $consulta = parent::query('select * from proyecto where estado ="A" order by id desc');
       while($row = mysqli_fetch_array($consulta)){
         echo '
         <div class="row">
@@ -866,7 +866,7 @@
     {
       parent::conectar();
       $id = parent::salvar($id);
-      parent::query('delete from proyecto where id="'.$id.'"');
+      parent::query('update proyecto set estado = "I" where id="'.$id.'"');
       parent::cerrar();
     }
 
@@ -879,7 +879,68 @@
       $descripcion = parent::filtrar($descripcion);
 
       parent::query('update proyecto set nombre ="'.$nombre.'", descripcion="'.$descripcion.'" where id="'.$id.'"');
-      
+
+      parent::cerrar();
+    }
+
+    public function loadMentesProyecto($proyecto)
+    {
+      parent::conectar();
+
+      $proyecto = parent::filtrar($proyecto);
+
+      $validar = parent::verificarRegistros('select id from proyecto_mente where proyecto_id="'.$proyecto.'"');
+
+      if($validar > 0){
+
+        $id_mente = parent::query('select usuario_id from proyecto_mente where proyecto_id="'.$proyecto.'" ');
+
+        $datos = array();
+
+        while($row = mysqli_fetch_array($id_mente)){
+
+          $datos_mente = parent::query('select u.id, u.primer_nombre, u.primer_apellido, c.imagen from usuario u inner join contacto c on u.id = c.usuario_id  where u.id="'.$row['usuario_id'].'"');
+
+          while($mente = mysqli_fetch_array($datos_mente)){
+            $datos[] = array($mente['id'], $mente['primer_nombre'], $mente['primer_apellido'], $mente['imagen']);
+          }
+
+        }
+
+        return $datos;
+
+      }else{
+        return 0;
+      }
+      parent::cerrar();
+    }
+
+
+    public function asignarProyect($id, $wit)
+    {
+      parent::conectar();
+      $id = parent::filtrar($id);
+      $wit = parent::filtrar($wit);
+      $validar = parent::verificarRegistros('select id from proyecto_mente where usuario_id="'.$wit.'" and proyecto_id="'.$id.'" ');
+      if($validar > 0)
+      {
+        echo 'error_1';
+      }else{
+        parent::query('insert into proyecto_mente(usuario_id, proyecto_id) values("'.$wit.'", "'.$id.'")');
+        $proyecto = parent::consultaArreglo('select nombre from proyecto where id="'.$id.'"');
+        echo ucfirst($proyecto['nombre']);
+      }
+      parent::cerrar();
+    }
+
+    public function desasignarProyect($id, $wit)
+    {
+      parent::conectar();
+
+      $id = parent::filtrar($id);
+      $wit = parent::filtrar($wit);
+
+      parent::query('delete from proyecto_mente where usuario_id="'.$wit.'" and proyecto_id="'.$id.'"');
       parent::cerrar();
     }
 

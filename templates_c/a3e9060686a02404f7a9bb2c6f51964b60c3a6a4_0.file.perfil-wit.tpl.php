@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-01-05 05:52:20
+/* Smarty version 3.1.30, created on 2017-01-09 08:30:17
   from "C:\xampp\htdocs\mentesCarta\view\wits\perfil-wit.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_586dd104bbf369_86255514',
+  'unifunc' => 'content_58733c09bda6d0_95137833',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a3e9060686a02404f7a9bb2c6f51964b60c3a6a4' => 
     array (
       0 => 'C:\\xampp\\htdocs\\mentesCarta\\view\\wits\\perfil-wit.tpl',
-      1 => 1483591939,
+      1 => 1483947015,
       2 => 'file',
     ),
   ),
@@ -22,11 +22,12 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:view/principal/script.tpl' => 1,
   ),
 ),false)) {
-function content_586dd104bbf369_86255514 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58733c09bda6d0_95137833 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
-
+<span id="id_wit" hidden="hidden"><?php echo $_GET['id'];?>
+</span>
 <div class="row">
 
   <div class="col s4 nav-wit z-depth-5 hide-on-small-only">
@@ -429,7 +430,9 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
   </a>
   <ul>
     <li><a class="btn-floating tooltipped waves-effect waves-light" data-position="left" data-delay="50" data-tooltip="Descargar perfil" style="background-color: #727272;"><i class="fa fa-file-pdf-o" aria-hidden="true" style="font-size: 1.2rem;"></i></a></li>
-    <li><a class="btn-floating tooltipped waves-effect waves-light" data-position="left" data-delay="50" data-tooltip="Asignar proyecto" style="background-color: #727272;"><i class="fa fa-briefcase" aria-hidden="true" style="font-size: 1.2rem;"></i></a></li>
+    <?php if ($_smarty_tpl->tpl_vars['estado']->value != 'I') {?>
+    <li><a href="#modal1" class="btn-floating tooltipped waves-effect waves-light" data-position="left" data-delay="50" data-tooltip="Asignar proyecto" style="background-color: #727272;"><i class="fa fa-briefcase" aria-hidden="true" style="font-size: 1.2rem;"></i></a></li>
+    <?php }?>
     <li><a class="btn-floating tooltipped waves-effect waves-light" data-position="left" data-delay="50" data-tooltip="Enviar mensaje" style="background-color: #727272;"><i class="fa fa-envelope" aria-hidden="true" style="font-size: 1.2rem;"></i></a></li>
   </ul>
 </div>
@@ -437,6 +440,47 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
 <?php }?>
 
 <div class="spacing-3"></div>
+
+<!-- Modal Structure -->
+<div id="modal1" class="modal">
+  <div class="modal-content">
+    <h4 class="grey-text text-darken-2">Lista de proyectos</h4>
+    <div class="row">
+      <div class="col s12">
+
+        <div id="load_proyecto" hidden="hidden">
+          <span class="grey-text text-darken-1">Asignando proyecto...</span>
+          <div class="progress">
+            <div class="indeterminate"></div>
+          </div>
+        </div>
+
+        <div class="spacing-1"></div>
+        <?php if ($_smarty_tpl->tpl_vars['proyectos']->value != 0) {?>
+        <ul class="collection grey-text text-darken-1">
+          <?php
+$_smarty_tpl->tpl_vars['i'] = new Smarty_Variable(null, $_smarty_tpl->isRenderingCache);$_smarty_tpl->tpl_vars['i']->step = 1;$_smarty_tpl->tpl_vars['i']->total = (int) ceil(($_smarty_tpl->tpl_vars['i']->step > 0 ? count($_smarty_tpl->tpl_vars['proyectos']->value)-1+1 - (0) : 0-(count($_smarty_tpl->tpl_vars['proyectos']->value)-1)+1)/abs($_smarty_tpl->tpl_vars['i']->step));
+if ($_smarty_tpl->tpl_vars['i']->total > 0) {
+for ($_smarty_tpl->tpl_vars['i']->value = 0, $_smarty_tpl->tpl_vars['i']->iteration = 1;$_smarty_tpl->tpl_vars['i']->iteration <= $_smarty_tpl->tpl_vars['i']->total;$_smarty_tpl->tpl_vars['i']->value += $_smarty_tpl->tpl_vars['i']->step, $_smarty_tpl->tpl_vars['i']->iteration++) {
+$_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1;$_smarty_tpl->tpl_vars['i']->last = $_smarty_tpl->tpl_vars['i']->iteration == $_smarty_tpl->tpl_vars['i']->total;?>
+          <li class="collection-item hover proyecto_mente" id="<?php echo $_smarty_tpl->tpl_vars['proyectos']->value[$_smarty_tpl->tpl_vars['i']->value][0];?>
+"><?php echo ucfirst($_smarty_tpl->tpl_vars['proyectos']->value[$_smarty_tpl->tpl_vars['i']->value][1]);?>
+</li>
+          <?php }
+}
+?>
+
+        </ul>
+        <?php } else { ?>
+          No se encontraron proyectos
+        <?php }?>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer modal-fixed-footer">
+    <a href="#!" class=" modal-action modal-close waves-effect waves-light btn-flat">Cancelar</a>
+  </div>
+</div>
 
 <?php $_smarty_tpl->_subTemplateRender("file:view/principal/script.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>

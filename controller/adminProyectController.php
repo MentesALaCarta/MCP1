@@ -22,7 +22,11 @@
     header('location: ?view=principal');
   }
 
+  # Datos del proyecto
   $template -> assign('proyectos', $admin->loadproyecto($_GET['proyect']));
+
+  # Mentes a la carta del proyecto
+  $template -> assign('mentes', $admin->loadMentesProyecto($_GET['proyect']));
 
   $template -> display('view/admin/adminProyect.tpl');
 

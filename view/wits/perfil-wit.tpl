@@ -1,5 +1,5 @@
 {include file="view/principal/header.tpl"}
-
+<span id="id_wit" hidden="hidden">{$smarty.get['id']}</span>
 <div class="row">
 
   <div class="col s4 nav-wit z-depth-5 hide-on-small-only">
@@ -359,7 +359,9 @@
   </a>
   <ul>
     <li><a class="btn-floating tooltipped waves-effect waves-light" data-position="left" data-delay="50" data-tooltip="Descargar perfil" style="background-color: #727272;"><i class="fa fa-file-pdf-o" aria-hidden="true" style="font-size: 1.2rem;"></i></a></li>
-    <li><a class="btn-floating tooltipped waves-effect waves-light" data-position="left" data-delay="50" data-tooltip="Asignar proyecto" style="background-color: #727272;"><i class="fa fa-briefcase" aria-hidden="true" style="font-size: 1.2rem;"></i></a></li>
+    {if $estado != 'I'}
+    <li><a href="#modal1" class="btn-floating tooltipped waves-effect waves-light" data-position="left" data-delay="50" data-tooltip="Asignar proyecto" style="background-color: #727272;"><i class="fa fa-briefcase" aria-hidden="true" style="font-size: 1.2rem;"></i></a></li>
+    {/if}
     <li><a class="btn-floating tooltipped waves-effect waves-light" data-position="left" data-delay="50" data-tooltip="Enviar mensaje" style="background-color: #727272;"><i class="fa fa-envelope" aria-hidden="true" style="font-size: 1.2rem;"></i></a></li>
   </ul>
 </div>
@@ -367,5 +369,37 @@
 {/if}
 
 <div class="spacing-3"></div>
+
+<!-- Modal Structure -->
+<div id="modal1" class="modal">
+  <div class="modal-content">
+    <h4 class="grey-text text-darken-2">Lista de proyectos</h4>
+    <div class="row">
+      <div class="col s12">
+
+        <div id="load_proyecto" hidden="hidden">
+          <span class="grey-text text-darken-1">Asignando proyecto...</span>
+          <div class="progress">
+            <div class="indeterminate"></div>
+          </div>
+        </div>
+
+        <div class="spacing-1"></div>
+        {if $proyectos != 0}
+        <ul class="collection grey-text text-darken-1">
+          {for $i = 0 to count($proyectos) - 1}
+          <li class="collection-item hover proyecto_mente" id="{$proyectos[$i][0]}">{ucfirst($proyectos[$i][1])}</li>
+          {/for}
+        </ul>
+        {else}
+          No se encontraron proyectos
+        {/if}
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer modal-fixed-footer">
+    <a href="#!" class=" modal-action modal-close waves-effect waves-light btn-flat">Cancelar</a>
+  </div>
+</div>
 
 {include file="view/principal/script.tpl"}

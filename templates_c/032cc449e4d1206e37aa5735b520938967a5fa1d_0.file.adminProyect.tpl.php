@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-01-06 23:22:08
+/* Smarty version 3.1.30, created on 2017-01-09 08:01:51
   from "C:\xampp\htdocs\mentesCarta\view\admin\adminProyect.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_587018904a6326_60091744',
+  'unifunc' => 'content_5873355f840c30_72647608',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '032cc449e4d1206e37aa5735b520938967a5fa1d' => 
     array (
       0 => 'C:\\xampp\\htdocs\\mentesCarta\\view\\admin\\adminProyect.tpl',
-      1 => 1483740726,
+      1 => 1483945310,
       2 => 'file',
     ),
   ),
@@ -23,9 +23,12 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:view/principal/script.tpl' => 1,
   ),
 ),false)) {
-function content_587018904a6326_60091744 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5873355f840c30_72647608 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
+
+<span id="id_proyecto" hidden="hidden"><?php echo $_GET['proyect'];?>
+</span>
 
 <!-- principal -->
 <div class="row">
@@ -155,42 +158,73 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
           </div>
         </div>
 
-        <div class="row no-margin-b">
-          <div class="col s12 m8">
-            <div class="card no-margin-b" style="padding: 10px 20px 0px 0px;">
-              <div class="row no-margin-b">
+        <?php if ($_smarty_tpl->tpl_vars['mentes']->value != 0) {?>
+          <?php
+$_smarty_tpl->tpl_vars['i'] = new Smarty_Variable(null, $_smarty_tpl->isRenderingCache);$_smarty_tpl->tpl_vars['i']->step = 1;$_smarty_tpl->tpl_vars['i']->total = (int) ceil(($_smarty_tpl->tpl_vars['i']->step > 0 ? count($_smarty_tpl->tpl_vars['mentes']->value)-1+1 - (0) : 0-(count($_smarty_tpl->tpl_vars['mentes']->value)-1)+1)/abs($_smarty_tpl->tpl_vars['i']->step));
+if ($_smarty_tpl->tpl_vars['i']->total > 0) {
+for ($_smarty_tpl->tpl_vars['i']->value = 0, $_smarty_tpl->tpl_vars['i']->iteration = 1;$_smarty_tpl->tpl_vars['i']->iteration <= $_smarty_tpl->tpl_vars['i']->total;$_smarty_tpl->tpl_vars['i']->value += $_smarty_tpl->tpl_vars['i']->step, $_smarty_tpl->tpl_vars['i']->iteration++) {
+$_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1;$_smarty_tpl->tpl_vars['i']->last = $_smarty_tpl->tpl_vars['i']->iteration == $_smarty_tpl->tpl_vars['i']->total;?>
+            <div class="row no-margin-b">
+              <div class="col s12 m8">
+                <div class="card no-margin-b" style="padding: 10px 20px 0px 0px;">
+                  <div class="row no-margin-b">
 
-                <div class="col s2">
-                  <img src="images/perfiles/perfil1.png" style="border-radius: 5px;" alt="foto de perfil de michael" width="100%">
+                    <div class="col s2">
+                      <img src="images/<?php echo $_smarty_tpl->tpl_vars['mentes']->value[$_smarty_tpl->tpl_vars['i']->value][3];?>
+" style="border-radius: 5px;" alt="foto de perfil de michael" width="100%">
+                    </div>
+
+                    <div class="col s4">
+                      <div class="spacing-1"></div>
+                      <span class="grey-text text-darken-1">
+                        <?php echo ucfirst($_smarty_tpl->tpl_vars['mentes']->value[$_smarty_tpl->tpl_vars['i']->value][1]);?>
+ <?php echo ucfirst($_smarty_tpl->tpl_vars['mentes']->value[$_smarty_tpl->tpl_vars['i']->value][2]);?>
+
+                      </span>
+                    </div>
+
+                    <div class="col s3">
+                      <div class="spacing-1"></div>
+                      <i class="fa fa-user grey-text"></i>
+                      <a href="?view=perfil-wit&id=<?php echo $_smarty_tpl->tpl_vars['mentes']->value[$_smarty_tpl->tpl_vars['i']->value][0];?>
+" class="grey-text">
+                        <span class="hover underline">
+                          Ver perfil
+                        </span>
+                      </a>
+                    </div>
+
+                    <div class="col s3 grey-text">
+                      <div class="spacing-1"></div>
+                      <i class="fa fa-trash"></i>
+                      <span class="hover underline eliminar_mente_proyecto" id="<?php echo $_smarty_tpl->tpl_vars['mentes']->value[$_smarty_tpl->tpl_vars['i']->value][0];?>
+">
+                        Eliminar
+                      </span>
+                    </div>
+
+                  </div>
                 </div>
-
-                <div class="col s4">
-                  <div class="spacing-1"></div>
-                  <span class="grey-text text-darken-1">
-                    Michael yara
-                  </span>
-                </div>
-
-                <div class="col s3 grey-text">
-                  <div class="spacing-1"></div>
-                  <i class="fa fa-user"></i>
-                  <span class="hover underline">
-                    Ver perfil
-                  </span>
-                </div>
-
-                <div class="col s3 grey-text">
-                  <div class="spacing-1"></div>
-                  <i class="fa fa-trash"></i>
-                  <span class="hover underline">
-                    Eliminar
-                  </span>
-                </div>
-
               </div>
             </div>
+          <?php }
+}
+?>
+
+        <?php } else { ?>
+        <div class="row">
+          <div class="col s12">
+            <span class="grey-text">
+              No hay Mentes asosiadas al proyecto
+            </span>
+            <br>
+            <div class="spacing-1"></div>
+            <a href="?view=panel">
+              <button type="button" class="btn orange lighten-1 waves-effect waves-light" name="button">Buscar mentes</button>
+            </a>
           </div>
         </div>
+        <?php }?>
 
       </div>
     </div>

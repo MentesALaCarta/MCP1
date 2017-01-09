@@ -804,6 +804,23 @@
       parent::cerrar();
     }
 
+    public function getProyects()
+    {
+      parent::conectar();
+      $validar = parent::verificarRegistros('select id from proyecto');
+      if($validar > 0 ){
+        $proyectos = parent::query('select id, nombre from proyecto where estado ="A" order by id desc');
+        $datos = array();
+        while($row = mysqli_fetch_array($proyectos)){
+          $datos[] = array($row['id'], $row['nombre']);
+        }
+        return $datos;
+      }else{
+        return 0;
+      }
+      parent::cerrar();
+    }
+
   } // End class
 
 

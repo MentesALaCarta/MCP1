@@ -1,4 +1,6 @@
 {include file="view/principal/header.tpl"}
+<span id="id_proyecto" hidden="hidden">{$smarty.get['proyect']}</span>
+
 <!-- principal -->
 <div class="row">
   <div class="col s3 no-padding-1 nav-right1 hide-on-med-and-down z-depth-1">
@@ -124,42 +126,61 @@
           </div>
         </div>
 
-        <div class="row no-margin-b">
-          <div class="col s12 m8">
-            <div class="card no-margin-b" style="padding: 10px 20px 0px 0px;">
-              <div class="row no-margin-b">
+        {if $mentes != 0}
+          {for $i = 0 to count($mentes) - 1}
+            <div class="row no-margin-b">
+              <div class="col s12 m8">
+                <div class="card no-margin-b" style="padding: 10px 20px 0px 0px;">
+                  <div class="row no-margin-b">
 
-                <div class="col s2">
-                  <img src="images/perfiles/perfil1.png" style="border-radius: 5px;" alt="foto de perfil de michael" width="100%">
+                    <div class="col s2">
+                      <img src="images/{$mentes[$i][3]}" style="border-radius: 5px;" alt="foto de perfil de michael" width="100%">
+                    </div>
+
+                    <div class="col s4">
+                      <div class="spacing-1"></div>
+                      <span class="grey-text text-darken-1">
+                        {ucfirst($mentes[$i][1])} {ucfirst($mentes[$i][2])}
+                      </span>
+                    </div>
+
+                    <div class="col s3">
+                      <div class="spacing-1"></div>
+                      <i class="fa fa-user grey-text"></i>
+                      <a href="?view=perfil-wit&id={$mentes[$i][0]}" class="grey-text">
+                        <span class="hover underline">
+                          Ver perfil
+                        </span>
+                      </a>
+                    </div>
+
+                    <div class="col s3 grey-text">
+                      <div class="spacing-1"></div>
+                      <i class="fa fa-trash"></i>
+                      <span class="hover underline eliminar_mente_proyecto" id="{$mentes[$i][0]}">
+                        Eliminar
+                      </span>
+                    </div>
+
+                  </div>
                 </div>
-
-                <div class="col s4">
-                  <div class="spacing-1"></div>
-                  <span class="grey-text text-darken-1">
-                    Michael yara
-                  </span>
-                </div>
-
-                <div class="col s3 grey-text">
-                  <div class="spacing-1"></div>
-                  <i class="fa fa-user"></i>
-                  <span class="hover underline">
-                    Ver perfil
-                  </span>
-                </div>
-
-                <div class="col s3 grey-text">
-                  <div class="spacing-1"></div>
-                  <i class="fa fa-trash"></i>
-                  <span class="hover underline">
-                    Eliminar
-                  </span>
-                </div>
-
               </div>
             </div>
+          {/for}
+        {else}
+        <div class="row">
+          <div class="col s12">
+            <span class="grey-text">
+              No hay Mentes asosiadas al proyecto
+            </span>
+            <br>
+            <div class="spacing-1"></div>
+            <a href="?view=panel">
+              <button type="button" class="btn orange lighten-1 waves-effect waves-light" name="button">Buscar mentes</button>
+            </a>
           </div>
         </div>
+        {/if}
 
       </div>
     </div>
