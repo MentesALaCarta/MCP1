@@ -499,7 +499,7 @@
 
         // Consulta que extraiga a las mentes a la carta aprobadas
         // Nombre completos, sectores (limit 3), ciudad, pais
-        $mentes = parent::query('select u.id, u.primer_nombre, c.imagen, u.primer_apellido, c.ciudad, c.pais from usuario u inner join contacto c on u.id = c.usuario_id where (u.estado ="A" and c.imagen <> "perfiles/perfil.png") ORDER BY u.id desc LIMIT '.$inicializador.', '.$paginador.' ');
+        $mentes = parent::query('select u.id, u.primer_nombre, c.imagen, u.primer_apellido, c.ciudad, c.pais from usuario u inner join contacto c on u.id = c.usuario_id where (u.estado ="A" and c.imagen <> "perfiles/perfil.png") ORDER BY u.id LIMIT '.$inicializador.', '.$paginador.' ');
         $rows = parent::verificarRegistros('select u.id from usuario u inner join contacto c on u.id = c.usuario_id where (u.estado ="A" and c.imagen <> "perfiles/perfil.png")');
 
         $total_paginas = round($rows / $paginador);

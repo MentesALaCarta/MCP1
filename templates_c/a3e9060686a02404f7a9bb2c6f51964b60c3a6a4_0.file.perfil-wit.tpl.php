@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-01-09 08:30:17
+/* Smarty version 3.1.30, created on 2017-01-09 19:04:46
   from "C:\xampp\htdocs\mentesCarta\view\wits\perfil-wit.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58733c09bda6d0_95137833',
+  'unifunc' => 'content_5873d0beb95fd7_22208139',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a3e9060686a02404f7a9bb2c6f51964b60c3a6a4' => 
     array (
       0 => 'C:\\xampp\\htdocs\\mentesCarta\\view\\wits\\perfil-wit.tpl',
-      1 => 1483947015,
+      1 => 1483985080,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:view/principal/script.tpl' => 1,
   ),
 ),false)) {
-function content_58733c09bda6d0_95137833 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5873d0beb95fd7_22208139 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -424,12 +424,13 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
 <?php }?>
 
 <?php if (isset($_SESSION['id']) && $_SESSION['cargo'] == 1) {?>
-<div class="fixed-action-btn click-to-toggle vertical hide-on-small-only">
+<div class="fixed-action-btn click-to-toggle vertical">
   <a class="btn-floating btn-large white waves-effect">
     <i style="font-size: 1.7em; color: #727272;" class="fa fa-bars" aria-hidden="true"></i>
   </a>
   <ul>
-    <li><a class="btn-floating tooltipped waves-effect waves-light" data-position="left" data-delay="50" data-tooltip="Descargar perfil" style="background-color: #727272;"><i class="fa fa-file-pdf-o" aria-hidden="true" style="font-size: 1.2rem;"></i></a></li>
+    <li><a href="?view=download&id=<?php echo $_GET['id'];?>
+" target="_blank" class="btn-floating tooltipped waves-effect waves-light" data-position="left" data-delay="50" data-tooltip="Descargar perfil" style="background-color: #727272;"><i class="fa fa-file-pdf-o" aria-hidden="true" style="font-size: 1.2rem;"></i></a></li>
     <?php if ($_smarty_tpl->tpl_vars['estado']->value != 'I') {?>
     <li><a href="#modal1" class="btn-floating tooltipped waves-effect waves-light" data-position="left" data-delay="50" data-tooltip="Asignar proyecto" style="background-color: #727272;"><i class="fa fa-briefcase" aria-hidden="true" style="font-size: 1.2rem;"></i></a></li>
     <?php }?>

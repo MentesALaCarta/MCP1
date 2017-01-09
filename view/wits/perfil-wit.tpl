@@ -353,12 +353,12 @@
 {/if}
 
 {if isset($smarty.session.id) && $smarty.session.cargo == 1}
-<div class="fixed-action-btn click-to-toggle vertical hide-on-small-only">
+<div class="fixed-action-btn click-to-toggle vertical">
   <a class="btn-floating btn-large white waves-effect">
     <i style="font-size: 1.7em; color: #727272;" class="fa fa-bars" aria-hidden="true"></i>
   </a>
   <ul>
-    <li><a class="btn-floating tooltipped waves-effect waves-light" data-position="left" data-delay="50" data-tooltip="Descargar perfil" style="background-color: #727272;"><i class="fa fa-file-pdf-o" aria-hidden="true" style="font-size: 1.2rem;"></i></a></li>
+    <li><a href="?view=download&id={$smarty.get['id']}" target="_blank" class="btn-floating tooltipped waves-effect waves-light" data-position="left" data-delay="50" data-tooltip="Descargar perfil" style="background-color: #727272;"><i class="fa fa-file-pdf-o" aria-hidden="true" style="font-size: 1.2rem;"></i></a></li>
     {if $estado != 'I'}
     <li><a href="#modal1" class="btn-floating tooltipped waves-effect waves-light" data-position="left" data-delay="50" data-tooltip="Asignar proyecto" style="background-color: #727272;"><i class="fa fa-briefcase" aria-hidden="true" style="font-size: 1.2rem;"></i></a></li>
     {/if}

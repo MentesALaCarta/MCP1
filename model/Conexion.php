@@ -104,6 +104,18 @@
           return $res;
         }
 
+        # Convierte el acento de base de datos a acentos humanos
+        public function rescatar($string)
+        {
+
+          $reemplazar = array('á', 'é', 'í', 'ó', 'ú', 'Á', 'É', 'Í', 'Ó', 'Ú', 'ñ', 'Ñ');
+          $buscar = array('&aacute','&eacute', '&iacute', '&oacute', '&uacute', '&Aacute', '&Eacute', '&Iacute', '&Oacute', '&Uacute', '&ntilde', '&Ntilde');
+
+          $res = str_replace($buscar, $reemplazar, $string);
+
+          return $res;
+        }
+
 
     }
 
