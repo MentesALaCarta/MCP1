@@ -79,40 +79,39 @@
 
          /* Notificar email */
 
-        //  //título
-        //  $titulo = 'Registro de un nuevo usuario';
-         //
-        //  $mensaje = "
-        //  <html>
-        //  <head>
-        //  <title>Registro de usuario</title>
-        //  </head>
-        //  <body>
-        //  ";
-         //
-        //  $mensaje .= "
-         //
-        //  <h4 style='color: #03BBED;'>Datos Wits:<h4>
-        //  <br>
-        //  <span>Nombre: ".$nombres[0] . ' ' . $nombres[1] ."</span><br>
-        //  <span>Apellido: ".$apellidos[0].' ' . $apellidos[1] ."</span><br>
-        //  <span>E-mail: ".$email."<span><br>
-        //  ";
-         //
-        //  $mensaje .="
-        //  </body>
-        //  </html>
-        //  ";
-         //
-         //
-        //  # Cabeceras
-        //  $cabeceras  = 'MIME-Version: 1.0' . "\r\n";
-        //  $cabeceras .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-        //  $cabeceras .= "From:". "juliana@witpick.com.co";
-         //
-        //  # Envio de mensaje
-        //  mail('juliana@mentesalacarta.com', $titulo, $mensaje, $cabeceras);
-        //  mail('mjyara9@gmail.com', $titulo, $mensaje, $cabeceras);
+         //título
+         $titulo = 'Registro de un nuevo usuario';
+
+         $mensaje = "
+         <html>
+         <head>
+         <title>Registro de usuario</title>
+         </head>
+         <body>
+         ";
+
+         $mensaje .= "
+
+         <h4 style='color: #03BBED;'>Datos Wits:<h4>
+         <br>
+         <span>Nombre: ".$nombres[0] . ' ' . $nombres[1] ."</span><br>
+         <span>Apellido: ".$apellidos[0].' ' . $apellidos[1] ."</span><br>
+         <span>E-mail: ".$email."<span><br>
+         ";
+
+         $mensaje .="
+         </body>
+         </html>
+         ";
+
+
+         # Cabeceras
+         $cabeceras  = 'MIME-Version: 1.0' . "\r\n";
+         $cabeceras .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+         $cabeceras .= "From:". "juliana@witpick.com.co";
+
+         # Envio de mensaje
+         mail('juliana@mentesalacarta.com', $titulo, $mensaje, $cabeceras);
 
 
       }

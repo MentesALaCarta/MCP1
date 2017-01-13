@@ -562,7 +562,7 @@ $('#tweets').keyup(function(Event){
 
 $(document).on('click', '.verPerfil', function(){
   var id = $(this).attr('id');
-  window.location.href="?view=perfil-wit&id="+id;
+  window.open("?view=perfil-wit&id="+id, '_blank');
 });
 
 $(document).on('click', '.aprobar', function(){

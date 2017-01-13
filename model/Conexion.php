@@ -7,16 +7,16 @@
 
         # Atributos de la clase conexion
 
-        private $mysqli = '';
-        private $usuario = 'root';
-        private $clave = '';
-        private $server = 'localhost';
-        private $db = 'mentes';
-        //
-        // private $usuario = 'witpickc_mentes';
-        // private $clave = 'Maicolyara11079?';
+        // private $mysqli = '';
+        // private $usuario = 'root';
+        // private $clave = '';
         // private $server = 'localhost';
-        // private $db = 'witpickc_mentes';
+        // private $db = 'mentes';
+        //
+        private $usuario = 'witpickc_mentes';
+        private $clave = 'Maicolyara11079?';
+        private $server = 'localhost';
+        private $db = 'witpickc_mentes';
 
 
         # Funcion que permite conectarnos a la base de datos

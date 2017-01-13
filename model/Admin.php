@@ -87,7 +87,7 @@
        <div style="padding: 2em; border-radius:4px;border:1px #eaeaea solid; width: 100%; margin: 0px auto; color:#444444; font-size:11pt; font-family:proxima_nova,Arial,Verdana,Tahoma; max-width:454px">
 
            <div style="text-align: center;">
-             <h1>¡Felicitaciones '.$user['primer_nombre'].'!</h1>
+             <h1>¡Felicitaciones '.ucfirst($user['primer_nombre']).'!</h1>
            </div>
 
            <span>

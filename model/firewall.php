@@ -36,7 +36,7 @@
           $_SESSION['cargo'] = $user['cargo'];
 
           if($user['cargo'] == 1){
-            echo '?view=panel';
+            echo '?view=principal';
           }else{
             echo '?view=perfil';
           }
