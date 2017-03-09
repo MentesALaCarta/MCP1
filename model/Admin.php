@@ -9,7 +9,7 @@
   class Admin extends Conexion
   {
 
-    public function listarWitsNoAprovados()
+    public function listarWitsNoAprovados() 
     {
       parent::conectar();
       $datos = array();
@@ -775,7 +775,7 @@
     public function totalNoAdmintidos()
     {
       parent::conectar();
-      $datos = parent::verificarRegistros('select id from usuario where estado ="I" and cargo = 2');
+      $datos = parent::verificarRegistros('select u.id from usuario u inner join fire_step f on f.usuario_id = u.id where u.estado ="I" and u.cargo = "2" and f.step ="5"');
       parent::cerrar();
       return $datos;
     }

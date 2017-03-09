@@ -46,7 +46,7 @@
     </div>
 
     <div class="col s12 center-align">
-      <span class="grey-text text-darken-1">Al inscribirte aceptas <a href="#">los términos y condiciones de servicio</a></span>
+      <span class="grey-text text-darken-1">Al inscribirte aceptas <a href="?view=politicas" target="_blank">los términos y condiciones de servicio</a></span>
     </div>
 
 

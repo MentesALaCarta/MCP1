@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-01-03 15:33:36
+/* Smarty version 3.1.30, created on 2017-01-25 01:30:17
   from "C:\xampp\htdocs\mentesCarta\view\principal\footer.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_586bb6403692f2_80216688',
+  'unifunc' => 'content_5887f1994c2d40_50562778',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '06228f66f18a8594f3d3e77a5d5984168df58a95' => 
     array (
       0 => 'C:\\xampp\\htdocs\\mentesCarta\\view\\principal\\footer.tpl',
-      1 => 1483453826,
+      1 => 1485304216,
       2 => 'file',
     ),
   ),
@@ -20,13 +20,13 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_586bb6403692f2_80216688 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5887f1994c2d40_50562778 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
 <footer class="page-footer grey darken-3">
     <div class="contenedor">
             <div class="row">
-              <div class="col l4 s12">
+              <div class="col s12 l3">
                <section class="row">
                    <article class="col s12 m8">
                        <img src="images/bradlogo2.png" alt="logo witpick mentes a la carta" width="100%">
@@ -39,7 +39,7 @@ function content_586bb6403692f2_80216688 (Smarty_Internal_Template $_smarty_tpl)
                    </article>
                </section>
               </div>
-              <div class="col s12 l3 offset-l1 ">
+              <div class="col s12 l3">
                 <h5 class="white-text font-300 footer-title">Redes sociales</h5>
                 <ul class="size-descripcion-footer font-300">
                   <li>
@@ -78,8 +78,7 @@ function content_586bb6403692f2_80216688 (Smarty_Internal_Template $_smarty_tpl)
                   </li>
                 </ul>
               </div>
-
-              <div class="col s12 l4">
+              <div class="col s12 l3">
                   <h5 class="white-text font-300 footer-title">Contáctanos</h5>
                   <ul class="size-descripcion-footer font-300">
                       <li class="grey-text text-lighten-3">
@@ -98,6 +97,17 @@ function content_586bb6403692f2_80216688 (Smarty_Internal_Template $_smarty_tpl)
                       </li>
                   </ul>
               </div>
+              <div class="col s12 l3">
+                  <h5 class="white-text font-300 footer-title">Nuestras politicas</h5>
+                  <ul>
+                    <li>
+                      <a href="?view=privacidad" target="_blank" class="white-text">
+                        Política de Privacidad
+                      </a>
+                    </li>
+                  </ul>
+              </div>
+
             </div>
       </div>
           <div class="footer-copyright resaltado-footer">

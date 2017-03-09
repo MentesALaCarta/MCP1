@@ -1,7 +1,9 @@
 {include file="view/principal/header.tpl"}
+
 <!-- principal -->
 <div class="row">
   <div class="col s3 no-padding-1 nav-right1 hide-on-med-and-down z-depth-1">
+
         <section class="row no-margin-b">
           <article class="col l4 offset-l2" style="padding-top: 1em;">
             <img src="images/bradlogo.png" width="100%" class="" alt="logo mentes a la carta">
@@ -54,7 +56,7 @@
 
   </div>
 
-  <div class="col s12 m9 offset-m3 seccion-panel">
+  <div class="col s12 m9 offset-m3" style="padding: 0px;">
 
     <div class="navbar-fixed">
       <nav class="orange lighten-1">
@@ -65,42 +67,30 @@
     </div>
 
     <div class="row" style="padding: 0px 20px;">
-      <div class="col s10 no-padding">
+
+      <div class="col s12 no-padding">
         <div class="spacing-1"></div>
 
-        <h5 class="grey-text text-darken-2">1. Selecciona una plantilla</h5>
-        <div class="spacing-2"></div>
-        <h5 class="grey-text text-darken-1">Masivos</h5>
-        <div class="divider"></div>
-        <div class="spacing-1"></div>
-        <div class="row">
-          <div class="col s6 m4 center-align">
-            <a href="?view=masivo1">
-              <img style="border-radius: 5px;" class="hover" src="images/emails/masivos1.png" alt="email masivos" width="370px">
-            </a>
+        <div class="row" style="margin-top: 5rem;">
+          <div class="col s12">
+            <div class="input-field col s6">
+              <input id="asunto" type="text" class="validate" >
+              <label for="asunto">Asunto</label>
+            </div>
+            <div class="col s12">
+              <button class="btn orange lighten-1 waves-effect waves-light" id="asunto_email">Continuar</button>
+            </div>
           </div>
         </div>
-        <div class="spacing-2"></div>
-        <h5 class="grey-text text-darken-1">Individuales</h5>
-        <div class="divider"></div>
-        <div class="spacing-1"></div>
-        <div class="row">
-          <div class="col s6 m6 center-align">
-            <a href="?view=individual1">
-              <img style="border-radius: 5px;" class="hover" src="images/emails/only1.png" alt="email masivos" width="300px">
-            </a>
-          </div>
-          <div class="col s6 m6 center-align">
-            <a href="?view=individual2">
-              <img style="border-radius: 5px;" class="hover" src="images/emails/only2.png" alt="email masivos" width="300px">
-            </a>
-          </div>
-        </div>
+
       </div>
+
     </div>
 
   </div>
 
 </div>
-{include file="view/principal/cerrarSesion.tpl"}
+
+<!-- / End Login mentes a la carta -->
+
 {include file="view/principal/script.tpl"}

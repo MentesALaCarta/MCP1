@@ -55,7 +55,7 @@
   $datos = $admin -> getHabilidades();
   $template -> assign('habilidades', $datos);
 
-  # total wits 
+  # total wits
   $datos = $admin -> totalAdmintidos();
   $template -> assign('totalAdmintidos', $datos);
 

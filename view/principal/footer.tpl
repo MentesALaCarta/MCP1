@@ -2,7 +2,7 @@
 <footer class="page-footer grey darken-3">
     <div class="contenedor">
             <div class="row">
-              <div class="col l4 s12">
+              <div class="col s12 l3">
                <section class="row">
                    <article class="col s12 m8">
                        <img src="images/bradlogo2.png" alt="logo witpick mentes a la carta" width="100%">
@@ -15,7 +15,7 @@
                    </article>
                </section>
               </div>
-              <div class="col s12 l3 offset-l1 ">
+              <div class="col s12 l3">
                 <h5 class="white-text font-300 footer-title">Redes sociales</h5>
                 <ul class="size-descripcion-footer font-300">
                   <li>
@@ -54,8 +54,7 @@
                   </li>
                 </ul>
               </div>
-
-              <div class="col s12 l4">
+              <div class="col s12 l3">
                   <h5 class="white-text font-300 footer-title">Contáctanos</h5>
                   <ul class="size-descripcion-footer font-300">
                       <li class="grey-text text-lighten-3">
@@ -74,6 +73,17 @@
                       </li>
                   </ul>
               </div>
+              <div class="col s12 l3">
+                  <h5 class="white-text font-300 footer-title">Nuestras politicas</h5>
+                  <ul>
+                    <li>
+                      <a href="?view=privacidad" target="_blank" class="white-text">
+                        Política de Privacidad
+                      </a>
+                    </li>
+                  </ul>
+              </div>
+
             </div>
       </div>
           <div class="footer-copyright resaltado-footer">

@@ -1,5 +1,5 @@
 {include file="view/principal/header.tpl"}
-
+<span id="id_masivo">{$smarty.get['id']}</span>
 <div class="row">
   <div class="spacing-1"></div>
   <div class="col s12">

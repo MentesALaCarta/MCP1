@@ -1265,3 +1265,177 @@ $(document).on('click', '.eliminar_mente_proyecto', function(){
 
   });
 });
+
+
+// Emails
+
+// Actualizar imagen de perfil
+$('#seleccion_imagen1').change(function(){
+
+  var formData = new FormData(document.getElementById("destacado1"));
+  formData.append("destacado", "1");
+  formData.append("id_masivo", $('#id_masivo').html());
+
+  $.ajax({
+    method: 'POST',
+    url: 'controller/admin/emails/subirImagen.php',
+    data: formData ,
+    dataType: "html",
+    contentType: false,
+    processData: false,
+    beforeSend: function(){
+      $('#load1').show();
+    },
+    success: function(answer){
+      $('#load1').hide();
+      if(answer == 'Formato no valido'){
+        swal('error', 'Solo se permiten imagenes', 'error');
+      }else{
+        $('#picture1').attr('src', answer);
+      }
+
+      $('#seleccion_imagen1').val('');
+
+    }
+  });
+
+});
+
+$('#asunto_email').click(function(){
+  var asunto = $('#asunto').val();
+  $.ajax({
+    method: 'POST',
+    url: 'controller/admin/emails/asunto.php',
+    data: {asunto: asunto},
+    success: function(respuesta){
+      window.location.href= respuesta;
+    }
+  });
+});
+
+
+// Actualizar imagen de perfil
+$('#seleccion_imagen2').change(function(){
+
+  var formData = new FormData(document.getElementById("destacado2"));
+  formData.append("destacado", "2");
+  formData.append("id_masivo", $('#id_masivo').html());
+
+  $.ajax({
+    method: 'POST',
+    url: 'controller/admin/emails/subirImagen.php',
+    data: formData ,
+    dataType: "html",
+    contentType: false,
+    processData: false,
+    beforeSend: function(){
+      $('#load2').show();
+    },
+    success: function(answer){
+      $('#load2').hide();
+
+      if(answer == 'Formato no valido'){
+        swal('error', 'Solo se permiten imagenes', 'error');
+      }else{
+        $('#picture2').attr('src', answer);
+      }
+      $('#seleccion_imagen2').val('');
+
+    }
+  });
+
+});
+
+
+// Actualizar imagen de perfil
+$('#seleccion_imagen3').change(function(){
+
+  var formData = new FormData(document.getElementById("destacado3"));
+  formData.append("destacado", "3");
+  formData.append("id_masivo", $('#id_masivo').html());
+
+  $.ajax({
+    method: 'POST',
+    url: 'controller/admin/emails/subirImagen.php',
+    data: formData ,
+    dataType: "html",
+    contentType: false,
+    processData: false,
+    beforeSend: function(){
+      $('#load3').show();
+    },
+    success: function(answer){
+      $('#load3').hide();
+
+      if(answer == 'Formato no valido'){
+        swal('error', 'Solo se permiten imagenes', 'error');
+      }else{
+        $('#picture3').attr('src', answer);
+      }
+      $('#seleccion_imagen3').val('');
+
+    }
+  });
+
+});
+
+
+$('#enviar_email_masivo').click(function(){
+
+  // Leemos las variables
+
+  var empresa1 = $('#empresa1').val();
+  var sector1 = $('#sector1').val();
+  var textarea1 = $('#textarea1').val();
+
+  var empresa2 = $('#empresa2').val();
+  var sector2 = $('#sector2').val();
+  var textarea2 = $('#textarea2').val();
+
+  var empresa3 = $('#empresa3').val();
+  var sector3 = $('#sector3').val();
+  var textarea3 = $('#textarea3').val();
+
+  var masivo = $('#id_masivo').html();
+
+  $.ajax({
+    method: 'POST',
+    url: 'controller/admin/emails/datosMasivo.php',
+    data: {
+      empresa1:empresa1,
+      sector1:sector1,
+      textarea1:textarea1,
+      empresa2:empresa2,
+      sector2:sector2,
+      textarea2:textarea2,
+      empresa3:empresa3,
+      sector3:sector3,
+      textarea3:textarea3,
+      masivo: masivo
+    },
+    beforeSend: function(){
+
+      $('#des_load').html('Actualizando datos...');
+      $('#load').show();
+      $("html, body").animate({scrollTop:"600px"});
+    },
+    success: function(res){
+      $.ajax({
+        method: 'POST',
+        url: 'controller/admin/emails/sendEmailMasivo.php',
+        data: {masivo: masivo},
+        beforeSend: function(){
+          $('#des_load').html('Enviando correos...');
+        },
+        success: function(respuesta){
+          $('#load').hide();
+          console.log(respuesta);
+        }
+      });
+    }
+  });
+
+});
+
+
+// END emails

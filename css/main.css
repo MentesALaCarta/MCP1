@@ -1,0 +1,306 @@
+.fondo-principal {
+
+  /* Ubicación de la imagen */
+  background-image: url(../images/bg03.png);
+
+  /* Nos aseguramos que la imagen de fondo este centrada vertical y
+   horizontalmente en todo momento */
+
+  background-position: center center;
+
+  /* La imagen de fondo no se repite */
+
+  background-repeat: no-repeat;
+
+  /* La imagen de fondo está fija en el viewport, de modo que no se mueva cuando
+
+     la altura del contenido supere la altura de la imagen. */
+
+  background-attachment: fixed;
+
+
+  /* La imagen de fondo se reescala cuando se cambia el ancho de ventana
+
+     del navegador */
+
+  background-size: cover;
+
+
+  /* Fijamos un color de fondo para que se muestre mientras se está
+    cargando la imagen de fondo o si hay problemas para cargarla  */
+
+  background-color: #464646;
+
+}
+
+.item-desafio{
+  color: #03BBED;
+}
+
+.item-desafio-des{
+  color: #aeaeae;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .fondo-principal {
+    background-image: url(../images/bg03.png);
+  }
+}
+
+
+.navbar-personalizado-1{
+    border-radius: 0px;
+    background-color: rgba(33, 150, 243, 0.5);
+    border-color: transparent !important;
+}
+
+.navbar-personalizado-2{
+    border-radius: 0px;
+    background-color: rgba(33, 150, 243, 1);
+    border-color: transparent !important;
+}
+
+/*Botones del menu*/
+
+.btn-menu{
+    color: white !important;
+}
+
+.btn-menu:hover{
+    background-color: transparent !important;
+    color: #fff !important;
+}
+
+.btn-menu:active{
+    background-color: transparent !important;
+}
+
+.btn-menu:focus{
+    background-color: transparent !important;
+}
+/*Establece un color de fondo de blanco*/
+.bg-white {
+    background-color: #fff;
+}
+
+.spacing-1 {
+    margin-top: 6.5em;
+}
+
+.white-text {
+    color: white;
+}
+
+.spacing-2 {
+    margin-top: 3.5em;
+}
+
+.spacing-phone {
+    margin-top: 1.5em;
+}
+
+.btn-home {
+    background-color: transparent;
+    border-color: white;
+    color: white;
+    transition: 0.5s;
+    /*border-radius: 0px;*/
+}
+
+.btn-home:hover{
+    background-color: rgba(255,255,255, 1);
+    /*border-color: #03BBED; */
+    color: #03BBED;
+    transition: 0.5s;
+}
+
+.btn-home:focus{
+    background-color: transparent;
+    border-color: white;
+    color: white;
+}
+
+.btn-home:active{
+    background-color: transparent;
+    border-color: white;
+    color: white;
+}
+
+
+.video {
+    width: 100%;
+    height: 20em;
+}
+
+.text-home-phone {
+    font-size: 1.5em;
+    font-weight: 100;
+}
+
+.enlace {
+    text-decoration: none !important;
+}
+
+.text-home {
+    color: white;
+    text-shadow: 0.2em 0.1em 0.5em black;
+}
+
+#index{
+    z-index: 100;
+}
+
+
+
+.caja {
+    background-color: transparent;
+    width: 100%;
+    padding: 25px 10px;
+    border: 1px solid rgb(238, 164, 32);
+}
+
+.caja:hover {
+    cursor: pointer;
+}
+
+.hover:hover{
+  cursor: pointer;
+  text-decoration: underline;
+}
+.caja-2 {
+    background-color: cornflowerblue;
+    width: 100%;
+    height: 150px;
+}
+
+.item-innovacion {
+
+}
+
+.accent-color {
+    color: #373E48 !important;
+}
+
+
+
+/*Escritorio super grande*/
+@media only screen and (max-width: 2000px) {
+
+}
+
+/*Escritorio grande*/
+@media only screen and (max-width: 1500px) {
+
+}
+
+
+/*Escritorio pequeño*/
+@media only screen and (max-width: 992px) {
+
+}
+
+/*Acercandose a escritorio*/
+@media only screen and (max-width: 800px) {
+
+}
+
+/*En Celulares pequeños*/
+@media only screen and (max-width: 420px) {
+
+}
+
+
+.textarea {
+    resize: none;
+}
+
+.spacing-3 {
+    margin-top: 1.5em;
+}
+
+.label-control {
+    font-weight: 300;
+}
+
+.label-control:hover{
+    cursor: pointer;
+}
+
+.contenedor {
+    border: 1px solid #CBCBCB;
+    border-radius: 5px;
+    padding: 1em;
+}
+
+.spacing-add {
+    display: block;
+    margin-top: 1em;
+}
+
+.center-align {
+    text-align: center;
+}
+
+.left-align {
+    text-align: left;
+}
+
+.spacing-4 {
+    margin-top: 0.5em;
+}
+
+.resize {
+    resize: none;
+}
+
+.no-padding {
+    padding-left: 0px;
+}
+
+.strong {
+    font-weight: bold;
+}
+
+.no-m-t {
+    margin-top: 0px;
+}
+
+.text-accent {
+   color: #828282 !important;
+}
+
+.accent-text {
+    color: #626262 !important;
+}
+
+.btn-primario {
+    color: white;
+    background-color: #1565c0;
+    border-color: #1565c0;
+}
+
+.btn-primario:hover {
+    color: white !important;
+    background-color: #1565c0 !important;
+    border-color: #1565c0 !important;
+}
+
+.btn-primario:active {
+    color: white !important;
+    background-color: #1565c0 !important;
+    border-color: #1565c0 !important;
+}
+
+.btn-primario:focus {
+    color: white !important;
+    background-color: #1565c0 !important;
+    border-color: #1565c0 !important;
+}
+
+.poscicion {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 100;
+}

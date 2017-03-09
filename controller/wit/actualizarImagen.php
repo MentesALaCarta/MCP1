@@ -12,8 +12,6 @@
 
       if($tipo == "image/x-png" || $tipo == "image/png" || $tipo == "image/gif" || $tipo == "image/pjpeg" || $tipo == "image/jpeg"){
 
-
-
         $imagen = new upload($_FILES['imagen_perfil']);
 
         if(file_exists('../../images/perfiles/perfil'.$_SESSION['id'].'.png')){

@@ -2,6 +2,6 @@
 
   $template = new smarty();
 
-  $template -> display('view/email/aprobar.tpl');
+  $template -> display('view/email/plantillaMasivo.tpl');
 
 ?>

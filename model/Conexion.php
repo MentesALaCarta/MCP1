@@ -7,16 +7,16 @@
 
         # Atributos de la clase conexion
 
-        // private $mysqli = '';
-        // private $usuario = 'root';
-        // private $clave = '';
-        // private $server = 'localhost';
-        // private $db = 'mentes';
-        //
-        private $usuario = 'witpickc_mentes';
-        private $clave = 'Maicolyara11079?';
+        private $mysqli = '';
+        private $usuario = 'root';
+        private $clave = '';
         private $server = 'localhost';
-        private $db = 'witpickc_mentes';
+        private $db = 'mentes';
+
+        // private $usuario = 'witpickc_mentes';
+        // private $clave = 'Maicolyara11079?';
+        // private $server = 'localhost';
+        // private $db = 'witpickc_mentes';
 
 
         # Funcion que permite conectarnos a la base de datos
@@ -108,8 +108,8 @@
         public function rescatar($string)
         {
 
-          $reemplazar = array('á', 'é', 'í', 'ó', 'ú', 'Á', 'É', 'Í', 'Ó', 'Ú', 'ñ', 'Ñ');
           $buscar = array('&aacute','&eacute', '&iacute', '&oacute', '&uacute', '&Aacute', '&Eacute', '&Iacute', '&Oacute', '&Uacute', '&ntilde', '&Ntilde');
+          $reemplazar = array('á', 'é', 'í', 'ó', 'ú', 'Á', 'É', 'Í', 'Ó', 'Ú', 'ñ', 'Ñ');
 
           $res = str_replace($buscar, $reemplazar, $string);
 

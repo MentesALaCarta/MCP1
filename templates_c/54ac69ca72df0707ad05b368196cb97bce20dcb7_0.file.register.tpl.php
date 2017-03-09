@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-01-09 08:13:52
+/* Smarty version 3.1.30, created on 2017-01-25 00:23:59
   from "C:\xampp\htdocs\mentesCarta\view\user\register.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58733830ac7fb7_84142822',
+  'unifunc' => 'content_5887e20f85d122_39752711',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '54ac69ca72df0707ad05b368196cb97bce20dcb7' => 
     array (
       0 => 'C:\\xampp\\htdocs\\mentesCarta\\view\\user\\register.tpl',
-      1 => 1483453826,
+      1 => 1485300237,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:view/principal/script.tpl' => 1,
   ),
 ),false)) {
-function content_58733830ac7fb7_84142822 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5887e20f85d122_39752711 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -73,7 +73,7 @@ $_smarty_tpl->_subTemplateRender("file:view/principal/header.tpl", $_smarty_tpl-
     </div>
 
     <div class="col s12 center-align">
-      <span class="grey-text text-darken-1">Al inscribirte aceptas <a href="#">los términos y condiciones de servicio</a></span>
+      <span class="grey-text text-darken-1">Al inscribirte aceptas <a href="?view=politicas" target="_blank">los términos y condiciones de servicio</a></span>
     </div>
 
 
