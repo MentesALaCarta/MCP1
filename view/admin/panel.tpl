@@ -104,7 +104,7 @@
           <option value="" disabled selected>Ciudad</option>
           {for $i = 0 to count($ciudad) -1}
             <option value="{$ciudad[$i]}">{ucwords($ciudad[$i])}</option>
-          {/for} 
+          {/for}
         </select>
         <label class="grey-text">Ciudades</label>
       </div>

@@ -34,7 +34,7 @@
       <!-- Más mentes -->
       <div class="row hide-on-small-only">
         <div class="col s11 right-align">
-          <a href="?view=Mentes-a-la-Carta">
+          <a href="?view=mentes-a-la-carta">
             <i class="fa fa-users" aria-hidden="true" style="letter-spacing: 7px; color: white; font-size: 2em;"></i> <span class="white-text" style="font-size: 1.2rem;">Ver más Mentes a la Carta</span>
           </a>
         </div>

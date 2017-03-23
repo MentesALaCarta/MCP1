@@ -47,7 +47,7 @@
   $datos = $admin -> getPaises();
   $template -> assign('paises', $datos);
 
-  # Idiomas
+  # Idiomas 
   $datos = $admin -> getIdiomas();
   $template -> assign('idiomas', $datos);
 

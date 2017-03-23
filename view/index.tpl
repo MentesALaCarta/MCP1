@@ -291,7 +291,6 @@
     </div>
 
     <div class="row">
-      <!-- Quiero ser una mente -->
       <div class="col s12 m6 offset-m3">
         <a href="?view=registrar">
           <button type="button" name="button" class="btn grey waves-effect waves-light" style="width: 100%;">Quiero ser una mente a la carta</button>

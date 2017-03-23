@@ -522,7 +522,7 @@ $(document).ready(function(){
 
 <div class="barra hide-on-med-and-up" style="width: 100%;background-color: white; position: fixed; z-index: 100; bottom: 0px;">
   <div class="row no-margin-b">
-    <a href="?view=Mentes-a-la-Carta">
+    <a href="?view=mentes-a-la-carta">
       <div class="col s6 center-align grey-text waves-effect" style="padding-top: 10px;">
         <i class="fa fa-users" style="font-size: 1.6rem;"></i>
         <br>
